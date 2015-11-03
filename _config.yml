@@ -18,4 +18,3 @@ defaults:
     type: posts
   values:
     foo: bar
-test: test
