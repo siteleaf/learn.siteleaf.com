@@ -1,0 +1,21 @@
+---
+title: Siteleaf Learn
+url: http://learn.siteleaf.com
+timezone: Eastern Time (US & Canada)
+collections:
+  getting-started:
+    title: Getting Started
+    output: true
+  managing-content:
+    title: Managing Content
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    foo: bar
+test: test
