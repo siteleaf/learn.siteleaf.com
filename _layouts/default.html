@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="generator" content="Siteleaf, http://siteleaf.com" />
+
+    <title>Siteleaf Learn</title>
+  </head>
+  <body>
+    <header>
+      <h1>Siteleaf Learn</h1>
+      <nav>
+        <ul>
+          {% for page in site.pages %}
+            <li><a href="{{ page.url }}"</a>{{ page.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <aside>
+        {% assign sections = site.collections | sort:"weight" %}
+        {% for section in sections %}
+          <nav>
+            <h3>{{ section.title }}</h3>
+            <ul>
+              {% for document in section.docs %}
+                <li><a href="{{ document.url }}">{{ document.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </nav>
+        {% endfor %}
+      </aside>
+      <section class="content">
+        {{ content }}
+      </section>
+    </main>
+  </body>
+</html>

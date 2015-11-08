@@ -1,20 +1,26 @@
 ---
 title: Siteleaf Learn
 url: http://learn.siteleaf.com
+permalink: pretty
 timezone: Eastern Time (US & Canada)
 collections:
   getting-started:
     title: Getting Started
     output: true
+    weight: 0
   managing-content:
     title: Managing Content
     output: true
+    weight: 1
   uploads:
     title: Uploads
     output: true
+    weight: 2
 defaults:
 - scope:
     path: ''
     type: posts
   values:
     foo: bar
+exclude:
+  - node_modules/
