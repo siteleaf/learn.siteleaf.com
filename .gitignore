@@ -1,5 +1,8 @@
+.sass-cache/
+node_modules/
+_site/
+
 .DS_Store
 config.ru
 .siteleaf.yml
-node_modules/
-_site/
+.jekyll-metadata

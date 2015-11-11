@@ -7,6 +7,7 @@ collections:
   getting-started:
     title: Getting Started
     output: true
+    layout: page
     weight: 0
   managing-content:
     title: Managing Content
@@ -24,3 +25,5 @@ defaults:
     foo: bar
 exclude:
   - node_modules/
+sass:
+  sass_dir: _sass
