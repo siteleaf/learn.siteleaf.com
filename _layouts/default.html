@@ -7,44 +7,44 @@
 
     <title>Siteleaf Learn</title>
 
-    <link href="/assets/css/global.css" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet">
   </head>
-  <body>
-    <header>
-      <div class="wrap">
-        <div class="logo">
-          <a href="/">Learn</a>
-        </div>
-        <!-- <nav>
-          <ul>
+  <body class="page">
+    <header class="page__header">
+      <nav class="nav">
+        <div class="wrap">
+          <a class="nav__logo" href="#">Learn</a>
+          <ul class="nav__list nav__list--header">
             {% for page in site.pages %}
               {% if page.title %}
-                <li><a href="{{ page.url }}"</a>{{ page.title }}</a></li>
+                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="{{ page.url }}"</a>{{ page.title }}</a></li>
               {% endif %}
             {% endfor %}
           </ul>
-        </nav> -->
-      </div>
+        </div>
+      </nav>
     </header>
-    <main>
+    <main class="page__main">
       <div class="wrap">
-        <aside class="sidebar">
+        <aside class="page__sidebar">
           {% assign sections = site.collections | sort:"weight" %}
           {% for section in sections %}
             {% if section.docs.size > 0 %}
-              <nav>
-                <h3>{{ section.title }}</h3>
+              <nav class="nav">
+                <h3 class="nav__header">{{ section.title }}</h3>
                 <ul>
                   {% for document in section.docs %}
-                    <li><a href="{{ document.url }}">{{ document.title }}</a></li>
+                    <li class="nav__list nav__list--sidebar"><a class="nav__link nav__link--sidebar" href="{{ document.url }}">{{ document.title }}</a></li>
                   {% endfor %}
                 </ul>
               </nav>
             {% endif %}
           {% endfor %}
         </aside>
-        <section class="content">
-          {{ content }}
+        <section class="page__content">
+          <article class="page__document">
+            {{ content }}
+          </article>
         </section>
       </div>
     </main>
