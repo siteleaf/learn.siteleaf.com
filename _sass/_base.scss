@@ -1,3 +1,125 @@
 /*
   Siteleaf Learn
 */
+
+* {
+  @include box-sizing(border-box);
+}
+
+html {
+  font-size: $font-size-html;
+}
+
+body {
+  @include antialias;
+
+  color: $color-gray-a2;
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-0;
+  letter-spacing: $letter-spacing-base;
+  line-height: $line-height-base;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: $font-size-3;
+}
+
+h2 {
+  font-size: $font-size-2;
+}
+
+h3 {
+  font-size: $font-size-n3;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+.page {
+  &__header {
+    border-bottom: 1px solid $color-gray-n2;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+    margin-top: 1em;
+  }
+
+  &__sidebar {
+    float: left;
+    width: 15%;
+  }
+
+  &__content {
+    float: right;
+    width: 80%;
+  }
+
+  &__search {
+    margin-bottom: 1em;
+  }
+}
+
+.nav {
+  @include clearfix;
+
+  & + & {
+    margin-top: 1em;
+  }
+
+  &__logo {
+    font-size: $font-size-1;
+    font-weight: $font-weight-semibold;
+    display: inline-block;
+    float: left;
+  }
+
+  &__header {
+    font-size: $font-size-n3;
+    font-weight: $font-weight-semibold;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    list-style-type: none;
+
+    &--header {
+      float: right;
+      display: inline-block;
+      text-align: right;
+    }
+  }
+
+  &__item {
+    font-size: $font-size-n1;
+
+    &--header {
+      display: inline-block;
+      line-height: $font-size-4;
+
+      & + & {
+        margin-left: 1.5em;
+      }
+    }
+  }
+}
+
+.form {
+  &__input {
+    &--search {
+      padding: 0.5em;
+      width: 99%;
+    }
+  }
+}

@@ -32,9 +32,9 @@
             {% if section.docs.size > 0 %}
               <nav class="nav">
                 <h3 class="nav__header">{{ section.title }}</h3>
-                <ul>
+                <ul class="nav__list nav__list--sidebar">
                   {% for document in section.docs %}
-                    <li class="nav__list nav__list--sidebar"><a class="nav__link nav__link--sidebar" href="{{ document.url }}">{{ document.title }}</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="{{ document.url }}">{{ document.title }}</a></li>
                   {% endfor %}
                 </ul>
               </nav>
@@ -42,6 +42,11 @@
           {% endfor %}
         </aside>
         <section class="page__content">
+          <div class="page__search">
+            <form class="form">
+              <p><input class="form__input--search" type="search" placeholder="Search..."></p>
+            </form>
+          </div>
           <article class="page__document">
             {{ content }}
           </article>
