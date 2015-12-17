@@ -21,8 +21,13 @@ body {
 }
 
 a {
-  color: inherit;
+  color: $color-blue;
   text-decoration: none;
+
+  &:hover {
+    color: $color-blue-dark;
+    text-decoration: underline;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -30,7 +35,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: $font-size-3;
+  font-size: $font-size-4;
+  font-weight: $font-weight-light;
+  line-height: $line-height-tighter;
 }
 
 h2 {
@@ -38,23 +45,16 @@ h2 {
 }
 
 h3 {
-  font-size: $font-size-n3;
+  // font-size: $font-size-1;
   font-weight: $font-weight-semibold;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 }
 
 p {
   margin-bottom: 1em;
 }
 
-.page {
-  &__header {
-    border-bottom: 1px solid $color-gray-n2;
-    padding-bottom: 1em;
-    margin-bottom: 2em;
-    margin-top: 1em;
-  }
-
+.main {
   &__sidebar {
     float: left;
     width: 15%;
@@ -64,62 +64,20 @@ p {
     float: right;
     width: 80%;
   }
-
-  &__search {
-    margin-bottom: 1em;
-  }
-}
-
-.nav {
-  @include clearfix;
-
-  & + & {
-    margin-top: 1em;
-  }
-
-  &__logo {
-    font-size: $font-size-1;
-    font-weight: $font-weight-semibold;
-    display: inline-block;
-    float: left;
-  }
-
-  &__header {
-    font-size: $font-size-n3;
-    font-weight: $font-weight-semibold;
-    margin-bottom: 0;
-    text-transform: uppercase;
-  }
-
-  &__list {
-    list-style-type: none;
-
-    &--header {
-      float: right;
-      display: inline-block;
-      text-align: right;
-    }
-  }
-
-  &__item {
-    font-size: $font-size-n1;
-
-    &--header {
-      display: inline-block;
-      line-height: $font-size-4;
-
-      & + & {
-        margin-left: 1.5em;
-      }
-    }
-  }
 }
 
 .form {
+  &__search {
+    border-bottom: 2px solid $color-gray-an2;
+    padding-bottom: $v / 2;
+    margin-bottom: $v / 2;
+  }
+
   &__input {
     &--search {
+      font-size: $font-size-n3;
       padding: 0.5em;
-      width: 99%;
+      width: 87%;
     }
   }
 }

@@ -10,10 +10,10 @@
     <link href="/assets/css/main.css" rel="stylesheet">
   </head>
   <body class="page">
-    <header class="page__header">
+    <header class="header">
       <nav class="nav">
         <div class="wrap">
-          <a class="nav__logo" href="#">Learn</a>
+          <a class="nav__logo" href="/">Learn</a>
           <ul class="nav__list nav__list--header">
             {% for page in site.pages %}
               {% if page.title %}
@@ -24,9 +24,13 @@
         </div>
       </nav>
     </header>
-    <main class="page__main">
+    <main class="main">
       <div class="wrap">
-        <aside class="page__sidebar">
+        <aside class="main__sidebar">
+          <form class="form__search">
+            <input class="form__input--search" type="search" placeholder="Search">
+          </form>
+
           {% assign sections = site.collections | sort:"weight" %}
           {% for section in sections %}
             {% if section.docs.size > 0 %}
@@ -41,12 +45,12 @@
             {% endif %}
           {% endfor %}
         </aside>
-        <section class="page__content">
-          <div class="page__search">
+        <section class="main__content">
+          <!-- <div class="page__search">
             <form class="form">
               <p><input class="form__input--search" type="search" placeholder="Search..."></p>
             </form>
-          </div>
+          </div> -->
           <article class="page__document">
             {{ content }}
           </article>

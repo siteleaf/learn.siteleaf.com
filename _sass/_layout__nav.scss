@@ -3,5 +3,64 @@
 */
 
 .nav {
-  
+  @include clearfix;
+
+  & + & {
+    margin-top: $v;
+  }
+
+  &__logo {
+    color: $color-white;
+    font-size: $font-size-1;
+    font-weight: $font-weight-semibold;
+    display: inline-block;
+    line-height: $line-height-tighter;
+    float: left;
+
+    &:hover {
+      color: rgba($color-white, 0.6);
+      text-decoration: none;
+    }
+  }
+
+  &__header {
+    color: $color-gray-a2;
+    margin-bottom: 0;
+    font-size: $font-size-n1;
+  }
+
+  &__list {
+    list-style-type: none;
+
+    &--header {
+      float: right;
+      display: inline-block;
+      text-align: right;
+    }
+  }
+
+  &__item {
+    // font-size: $font-size-n1;
+    font-size: $font-size-n2;
+
+    &--header {
+      display: inline-block;
+      line-height: $line-height-tight;
+
+      & + & {
+        margin-left: 1.5em;
+      }
+    }
+  }
+
+  &__link {
+    &--header {
+      color: $color-white;
+
+      &:hover {
+        color: rgba($color-white, 0.6);
+        text-decoration: none;
+      }
+    }
+  }
 }
