@@ -1,9 +1,9 @@
 ---
+title: Theme Park
+date: 2015-12-01 18:50:00 -05:00
+permalink: "/themes"
 layout: page
 regenerate: true
-title: Theme Park
-permalink: /themes
-date: 2015-12-01 19:50:00 -04:00
 ---
 
 Theme park!
