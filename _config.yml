@@ -13,10 +13,15 @@ collections:
     title: Managing Content
     output: true
     weight: 1
-  uploads:
-    title: Uploads
+  users-and-settings:
+    title: Users and Settings
     output: true
     weight: 2
+  publishing:
+    title: Publishing
+    output: true
+    weight: 3
+
 defaults:
 - scope:
     path: ''
