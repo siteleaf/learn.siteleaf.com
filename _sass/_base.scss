@@ -39,7 +39,9 @@ h1 {
   font-size: $font-size-4;
   font-weight: $font-weight-light;
   line-height: $line-height-tighter;
-  margin-bottom: $v / 2;
+  border-bottom: 2px solid $color-gray-an2;
+  padding-bottom: $v;
+  margin-bottom: $v;
 }
 
 h2 {
@@ -53,7 +55,7 @@ h3 {
 }
 
 p {
-  margin-bottom: 1em;
+  margin-bottom: $v;
 }
 
 .main {
@@ -71,7 +73,7 @@ p {
 .form {
   &__search {
     border-bottom: 2px solid $color-gray-an2;
-    padding-bottom: $v;
+    padding-bottom: $v + 0.275rem;
     margin-bottom: $v;
   }
 
@@ -82,5 +84,25 @@ p {
       display: block;
       width: 100%;
     }
+  }
+}
+
+.document {
+  &__summary {
+    border-left: 5px solid $color-gray-an2;
+    color: $color-gray-a1;
+    margin-bottom: $v / 2;
+    padding-left: $v / 2;
+  }
+}
+
+.footer {
+
+  .wrap {
+    border-top: 1px solid $color-gray-an2;
+    padding-top: $v;
+    font-size: $font-size-html-sm;
+    margin-bottom: $v;
+    margin-top: $v;
   }
 }
