@@ -33,7 +33,6 @@
 
           {% assign sections = site.collections | sort:"weight" %}
           {% for section in sections %}
-            {% if section.docs.size > 0 %}
               <nav class="nav">
                 <h3 class="nav__header">{{ section.title }}</h3>
                 <ul class="nav__list nav__list--sidebar">
@@ -42,18 +41,10 @@
                   {% endfor %}
                 </ul>
               </nav>
-            {% endif %}
           {% endfor %}
         </aside>
         <section class="main__content">
-          <!-- <div class="page__search">
-            <form class="form">
-              <p><input class="form__input--search" type="search" placeholder="Search..."></p>
-            </form>
-          </div> -->
-          <article class="page__document">
-            {{ content }}
-          </article>
+          {{ content }}
         </section>
       </div>
     </main>
