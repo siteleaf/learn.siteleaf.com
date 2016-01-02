@@ -6,12 +6,23 @@ collections:
   getting-started:
     title: Getting Started
     output: true
+    weight: 0
   managing-content:
     title: Managing Content
     output: true
-  uploads:
-    title: Uploads
+    weight: 1
+  theme-development:
+    title: Theme Development
     output: true
+    weight: 2
+  users-and-settings:
+    title: Users and Settings
+    output: true
+    weight: 3
+  publishing:
+    title: Publishing
+    output: true
+    weight: 4
 defaults:
 - scope:
     path: ''

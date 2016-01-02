@@ -93,11 +93,18 @@ p {
     color: $color-gray-a1;
     margin-bottom: $v / 2;
     padding-left: $v / 2;
+
+    h3 {
+      margin-bottom: 0;
+    }
   }
 }
 
-.footer {
+.highlight {
+  margin-bottom: $v;
+}
 
+.footer {
   .wrap {
     border-top: 1px solid $color-gray-an2;
     padding-top: $v;
