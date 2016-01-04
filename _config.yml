@@ -22,6 +22,7 @@ defaults:
   values:
     foo: bar
 - scope:
-    path: defaults
+    path: ''
+    type: defaults
   values:
     hello: world
