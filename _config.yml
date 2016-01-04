@@ -21,8 +21,3 @@ defaults:
     type: posts
   values:
     foo: bar
-- scope:
-    path: ''
-    type: defaults
-  values:
-    hello: world
