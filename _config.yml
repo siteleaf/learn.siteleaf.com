@@ -3,9 +3,6 @@ title: Siteleaf Learn
 url: http://learn.siteleaf.com
 timezone: Eastern Time (US & Canada)
 collections:
-  defaults:
-    title: Defaults
-    output: true
   getting-started:
     title: Getting Started
     output: true
