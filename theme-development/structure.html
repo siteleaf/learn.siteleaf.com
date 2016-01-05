@@ -110,7 +110,7 @@
         </aside>
         <section class="main__content">
           <div class="document">
-  <h1 class="document__title">What is Siteleaf?</h1>
+  <h1 class="document__title">Theme structure</h1>
 
   <!-- <nav class="nav nav--breadcrumbs">
     <ul class="nav__list nav__list--breadcrumbs">
@@ -121,15 +121,34 @@
   
 
   <div class="document__content">
-    <p>Siteleaf is a smart, lightweight platform for creating and maintaining websites. We believe that content management shouldn’t be hard. That you should be able to host your website anywhere you want. That websites should be able to outlive their CMS. That our tools should be simplified, not dumbed down.</p>
+    <p>Directory structure and naming is very important to Jekyll.</p>
 
-<p>Siteleaf is fully compatible with <a href="http://jekyllrb.com">Jekyll</a>, the same open source technology GitHub uses to power over half a million websites. Enjoy the benefits of a large open source community, along with the accessibility of the Siteleaf interface you’ve come to love. Use any off-the-shelf Jekyll theme, or take your Siteleaf theme with you.</p>
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">_layouts/
+  default.html
+_includes/
+  partial.html
+_posts/
+  2016-01-02-2015-a-post.markdown
+_stuff/
+  a-thing.markdown
+_site/
+  ...
+_config.yml
+index.markdown</code></pre></figure>
 
-<p>For a long time, static site generators have been the ideal tool for developers: they’re wicked fast, work easily with version control, and are easier to set up compared to other content management systems.</p>
+<h2 id="layouts"><code>_layouts/</code></h2>
 
-<p>But when it comes to people that are less tech-saavy, static site generators are difficult to use. They often require knowledge of the command line, and text editors aren’t always the easiest programs to write content in.</p>
+<p>The <code>_layouts/</code> directory contains the layouts that Jekyll will use to render content. The default template (<code>default.html</code>) is what Jekyll will use if it isn’t told to use another layout. Generally, the layout is defined in the frontmatter of the content by giving the file name without an extension:</p>
 
-<p>This is where Siteleaf comes in. Siteleaf gives developers the ease of working with static site generators, while giving clients the interface of a bigger CMS.</p>
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">---
+layout: other
+---</code></pre></figure>
+
+<h2 id="includes"><code>_includes/</code></h2>
+
+<p>The <code>_includes/</code> directory contains fragments of code that aren’t necessarily entire templates. For example, you could contain the code for a blog post in one file and use it in multiple places.</p>
+
+<h2 id="posts"><code>_posts/</code></h2>
 
   </div>
 </div>
