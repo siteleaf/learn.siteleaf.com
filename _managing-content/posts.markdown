@@ -32,7 +32,7 @@ This changes the timestamp associated with the post.
 
 ### Permalink
 
-The permalink changes the URL this post is accessible at on your site. Unlike a path, this
+The permalink changes the URL this post is accessible at on your site. Unlike a path, this can change the URL to be anywhere on the site, not just under `/posts/`.
 
 ### Layout
 
