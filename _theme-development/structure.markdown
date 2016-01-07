@@ -53,3 +53,7 @@ This is the directory where your site gets generated into. It's a good idea to k
 ## `_config.yml`
 
 This is your Jekyll configuration file. The [Jekyll documentation](http://jekyllrb.com/docs/configuration/) goes into great detail about configuration.
+
+## Further Reading
+
+- [Jekyll: Directory Structure](http://jekyllrb.com/docs/structure/)

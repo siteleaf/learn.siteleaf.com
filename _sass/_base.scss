@@ -53,13 +53,17 @@ h2 {
 }
 
 h3 {
-  // font-size: $font-size-1;
   font-weight: $font-weight-semibold;
-  // text-transform: uppercase;
 }
 
 p {
   margin-bottom: $v;
+}
+
+ul, ol {
+  li {
+    margin-left: $v * 1.5
+  }
 }
 
 strong {
@@ -124,6 +128,12 @@ table {
 
   &__improve {
     font-size: $font-size-html-sm;
+    margin-top: $v * 2;
+  }
+
+  #further-reading {
+    border-top: 1px solid $color-gray-an2;
+    padding-top: $v;
     margin-top: $v * 2;
   }
 }

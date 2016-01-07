@@ -42,6 +42,8 @@
   &__item {
     // font-size: $font-size-n1;
     font-size: $font-size-n2;
+    margin-left: 0;
+    padding-left: 0;
 
     &--header {
       display: inline-block;

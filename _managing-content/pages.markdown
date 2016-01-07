@@ -16,7 +16,7 @@ Changing the path changes the location of the generated Markdown file and the pa
 
 By default, pages are visible. You can change this by switching it to hidden.
 
-### Published on
+### Date
 
 This changes the timestamp associated with the page.
 
@@ -27,3 +27,7 @@ The permalink changes the path the page is accessible at on your site.
 ### Layout
 
 The layout field lets you select which layout in `_layouts/` this page should use.
+
+## Further Reading
+
+- [Jekyll: Creating pages](http://jekyllrb.com/docs/pages/)

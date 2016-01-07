@@ -5,55 +5,14 @@ layout: page
 weight: 1
 ---
 
-Siteleaf uses Ruby and RubyGems, and you’ll need them installed to start developing your own themes. The [Ruby website](https://www.ruby-lang.org/en/documentation/installation/) describes how to install Ruby and RubyGems for various platforms. You’ll also need to install Bundler:
+To make a theme for Siteleaf, all you need to know is HTML and Liquid (which you can read more about in our [Liquid documentation](/theme-development/liquid.html)). To set up your local environment, check out our [local development guide](/theme-development/local-development.html).
 
-```
-$ gem install bundler
-```
+Once you're up and running, [GitHub Sync](/theme-development/github-sync.html) makes it incredibly simple to ensure your GitHub repository and Siteleaf site have the same content and theme.
 
-Once you have everything installed, we’ll go ahead and create a new project. Create a new directory, and we’ll make a new `Gemfile`:
+A great resource for theme creation is [Jekyll's documentation](http://jekyllrb.com/docs): they go into depth with how different content types work and what Liquid tags and objects you have available for making your themes.
 
-{% highlight ruby %}
-source 'https://rubygems.org'
+## Further Reading
 
-gem 'siteleaf', '2.0.0.pre.beta7'
-gem 'jekyll'
-{% endhighlight %}
-
-Once you run `bundle install`, authorize your Siteleaf account:
-
-```
-$ bundle exec siteleaf auth
-```
-
-At this point you have everything you need to get going. Go ahead and run:
-
-```
-$ bundle exec jekyll serve
-```
-
-Now go and visit [localhost:4000](http://localhost:4000) to see your site!
-
-## Creating a new site
-
-```
-$ siteleaf new yoursite.com
-```
-
-This will create a new theme folder called `yoursite.com` in the directory where you ran this command. It will also create the site for you in your Siteleaf account. If you prefer not to create a new directory, run `siteleaf new yoursite.com .` instead.
-
-## Using an existing site
-
-In a new directory, configure your site:
-
-```
-$ siteleaf config yoursite.com
-```
-
-You can then pull the Jekyll configuration, content, and current theme:
-
-```
-$ siteleaf pull
-```
-
-At this point, it's probably a good idea to add a `Gemfile` (see above).
+- [Jekyll documentation](http://jekyllrb.com/docs)
+- [Jekyll: Quick-Start Guide](http://jekyllrb.com/docs/quickstart/)
+- [GitHub: Using Jekyll with Pages](https://help.github.com/articles/using-jekyll-with-pages/)

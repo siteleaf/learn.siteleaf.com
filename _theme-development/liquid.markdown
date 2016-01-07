@@ -1,5 +1,5 @@
 ---
-title: Liquid basics
+title: Liquid
 date: 2015-10-31 20:03:00 -04:00
 weight: 2
 layout: page
@@ -41,7 +41,12 @@ Filters are used to modify the output of attributes (i.e., strings, numbers, var
 
 {% highlight liquid %}
 {% raw %}
-{{ 'sales' | append: '.jpg' }} 
+{{ 'sales' | append: '.jpg' }}
 <!-- Outputs: sales.jpg -->
 {% endraw %}
 {% endhighlight %}
+
+## Further Reading
+
+- [Shopify: Liquid wiki](https://github.com/Shopify/liquid/wiki)
+- [Jekyll: Variables](http://jekyllrb.com/docs/variables/)

@@ -26,7 +26,7 @@ Tags are a way to link common posts with each other. Separate multiple tags with
 
 A category is an overarching theme that a post has. Separate multiple categories with a comma.
 
-### Published on
+### Date
 
 This changes the timestamp associated with the post.
 
@@ -37,3 +37,8 @@ The permalink changes the URL this post is accessible at on your site. Unlike a 
 ### Layout
 
 The layout field lets you select which layout in `_layouts/` this post should use.
+
+## Further Reading
+
+- [Jekyll: Writing posts](http://jekyllrb.com/docs/posts/)
+- [Jekyll: Working with drafts](http://jekyllrb.com/docs/drafts/)

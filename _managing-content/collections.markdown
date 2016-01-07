@@ -16,3 +16,7 @@ collections:
 {% endhighlight %}
 
 When you create a document, a new file in your collections directory is also created, named `[permalink].markdown`. The document includes some frontmatter (like any other bit of content).
+
+## Further Reading
+
+- [Jekyll: Collections](http://jekyllrb.com/docs/collections/)
