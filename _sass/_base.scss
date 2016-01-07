@@ -66,6 +66,20 @@ strong {
   font-weight: $font-weight-semibold;
 }
 
+table {
+  font-size: $font-size-html-sm;
+  text-align: left;
+  width: 100%;
+
+  th {
+    font-weight: $font-weight-semibold;
+  }
+
+  thead {
+    border-bottom: 1px solid $color-gray-an2;
+  }
+}
+
 .main {
   &__sidebar {
     float: left;
@@ -75,16 +89,6 @@ strong {
   &__content {
     float: right;
     width: 70%;
-  }
-}
-
-table {
-  margin-bottom: $v;
-  text-align: left;
-  width: 100%;
-
-  th {
-    font-weight: $font-weight-semibold;
   }
 }
 
