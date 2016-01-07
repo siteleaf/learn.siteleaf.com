@@ -107,16 +107,6 @@
               </nav>
             
           
-            
-              <nav class="nav">
-                <h3 class="nav__header">Publishing</h3>
-                <ul class="nav__list nav__list--sidebar">
-                  
-                  
-                </ul>
-              </nav>
-            
-          
         </aside>
         <section class="main__content">
           <div class="document">
@@ -149,17 +139,19 @@
 
 <h2 id="objects">Objects</h2>
 
-<p>An object is a piece of data that has attributes with content. An object can be your site, a post, a set of posts, an so on. For example:</p>
+<p>An object is a piece of data that has attributes with content. An object can be your site, a post, a set of posts, and so on. For example:</p>
 
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="nv">show</span><span class="p">.</span><span class="nv">name</span><span class="w"> </span><span class="p">}}</span> &lt;!-- Output: Seinfeld --&gt;</code></pre></figure>
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="nv">post</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="p">}}</span></code></pre></figure>
 
 <h2 id="filters">Filters</h2>
 
 <p>Filters are used to modify the output of attributes (i.e., strings, numbers, variables, and objects):</p>
 
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="s1">'sales'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">append</span><span class="p">:</span><span class="w"> </span><span class="s1">'.jpg'</span><span class="w"> </span><span class="p">}}</span> &lt;!-- Output: sales.jpg --&gt;</code></pre></figure>
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="s1">'sales'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">append</span><span class="p">:</span><span class="w"> </span><span class="s1">'.jpg'</span><span class="w"> </span><span class="p">}}</span> 
+&lt;!-- Outputs: sales.jpg --&gt;</code></pre></figure>
 
 
+    <p class="document__improve"><a href="https://github.com/oakstudios/learn.siteleaf.com/blob/master/_theme-development/liquid-basics.markdown">Improve this page</a></p>
   </div>
 </div>
 

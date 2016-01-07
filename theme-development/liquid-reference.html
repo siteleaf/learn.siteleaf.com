@@ -107,16 +107,6 @@
               </nav>
             
           
-            
-              <nav class="nav">
-                <h3 class="nav__header">Publishing</h3>
-                <ul class="nav__list nav__list--sidebar">
-                  
-                  
-                </ul>
-              </nav>
-            
-          
         </aside>
         <section class="main__content">
           <div class="document">
@@ -174,9 +164,60 @@
       <td><code>files</code></td>
       <td>A list of files belonging to the collection.</td>
     </tr>
+    <tr>
+      <td><code>relative_directory</code></td>
+      <td>The relative path of the collection’s source directory.</td>
+    </tr>
+    <tr>
+      <td><code>directory</code></td>
+      <td>The full path of the collection’s source directory.</td>
+    </tr>
+    <tr>
+      <td><code>output</code></td>
+      <td>If the collection’s documents will be output as individual files.</td>
+    </tr>
   </tbody>
 </table>
 
+<h2 id="documents">Documents</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>content</code></td>
+      <td>The (unrendered) content of the document.</td>
+    </tr>
+    <tr>
+      <td><code>output</code></td>
+      <td>The rendered <code>content</code>.</td>
+    </tr>
+    <tr>
+      <td><code>path</code></td>
+      <td>The full path to the document’s source file.</td>
+    </tr>
+    <tr>
+      <td><code>relative_path</code></td>
+      <td>The path to the document’s source file relative to the site source.</td>
+    </tr>
+    <tr>
+      <td><code>url</code></td>
+      <td>The URL of the rendered document.</td>
+    </tr>
+    <tr>
+      <td><code>collection</code></td>
+      <td>The name of the document’s parent collection.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+    <p class="document__improve"><a href="https://github.com/oakstudios/learn.siteleaf.com/blob/master/_theme-development/liquid-reference.markdown">Improve this page</a></p>
   </div>
 </div>
 
