@@ -129,7 +129,7 @@
 
 <p>A tag is a piece of logic that will tell the templating engine what to do. This includes operations like <code>if</code>, <code>for</code>, <code>foreach</code>, and <code>capture</code>. For example:</p>
 
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">condition</span><span class="w"> </span><span class="p">%}</span>
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'Home'</span><span class="w"> </span><span class="p">%}</span>
   Do something if condition is true
 <span class="p">{%</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">%}</span>
   Do something if condition is false
