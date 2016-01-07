@@ -2,6 +2,7 @@
 title: Hosting
 date: 2015-12-17 08:02:00 -05:00
 layout: page
+weight: 3
 ---
 
 ## GitHub Pages

@@ -2,6 +2,7 @@
 title: Posts
 date: 2015-11-03 08:01:00 -05:00
 layout: page
+weight: 2
 ---
 
 Posts are a bit like special documents. Siteleaf, like Jekyll, is "blog-aware" — blogging is built in by default.
