@@ -20,11 +20,11 @@ By default, posts are visible. You can change them to hidden or draft (in which 
 
 ### Tags
 
-Tags are a way to link common posts with each other. You can just type out a tag and hit `,` to create multiple tags.
+Tags are a way to link common posts with each other. Separate multiple tags with a comma.
 
 ### Categories
 
-A category is an overarching theme that a post has. Similar to tags, you can just type out a tag and hit `,` to create multiple categories.
+A category is an overarching theme that a post has. Separate multiple categories with a comma.
 
 ### Published on
 
