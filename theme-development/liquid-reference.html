@@ -120,7 +120,7 @@
         </aside>
         <section class="main__content">
           <div class="document">
-  <h1 class="document__title">Posts</h1>
+  <h1 class="document__title">Liquid reference</h1>
 
   <!-- <nav class="nav nav--breadcrumbs">
     <ul class="nav__list nav__list--breadcrumbs">
@@ -131,39 +131,51 @@
   
 
   <div class="document__content">
-    <p>Posts are a bit like special documents. Siteleaf, like Jekyll, is “blog-aware” — blogging is built in by default.</p>
+    <h2 id="sites">Sites</h2>
 
-<p>Creating a post will create a Markdown file in the <code>_posts/</code> directory that will include the timestamp and date (for example, a post titled “New York” that was created on January 6th, 2016 will turn into <code>2016-01-06-new-york.markdown</code>).</p>
+<table>
+  <thead>
+    <tr>
+      <th>Liquid</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>site.collections</code></td>
+      <td>Get all collections belonging to the site.</td>
+    </tr>
+    <tr>
+      <td><code>site.[collection name]</code></td>
+      <td>Get a specific collection (e.g., you’d use <code>site.episodes</code> to get the <code>episodes</code> collection).</td>
+    </tr>
+  </tbody>
+</table>
 
-<h2 id="options">Options</h2>
+<h2 id="collections">Collections</h2>
 
-<h3 id="path">Path</h3>
-
-<p>The path changes the URL this post is accessible at on your site within the <code>/posts/</code> subdirectory.</p>
-
-<h3 id="visibility">Visibility</h3>
-
-<p>By default, posts are visible. You can change them to hidden or drafts (in which case, they’d be moved to the <code>_drafts/</code> directory).</p>
-
-<h3 id="tags">Tags</h3>
-
-<p>Tags are a way to link common posts with each other. You can just type out a tag and hit <code>,</code> to create multiple tags.</p>
-
-<h3 id="categories">Categories</h3>
-
-<p>A category is an overarching theme that a post has. Similar to tags, you can just type out a tag and hit <code>,</code> to create multiple categories.</p>
-
-<h3 id="published-on">Published on</h3>
-
-<p>This changes the timestamp associated with the post.</p>
-
-<h3 id="permalink">Permalink</h3>
-
-<p>The permalink changes the URL this post is accessible at on your site. Unlike a path, this</p>
-
-<h3 id="layout">Layout</h3>
-
-<p>The layout field lets you select which layout in <code>_layouts/</code> this post should use.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>label</code></td>
+      <td>Name of the collection.</td>
+    </tr>
+    <tr>
+      <td><code>docs</code></td>
+      <td>A list of documents belonging to the collection.</td>
+    </tr>
+    <tr>
+      <td><code>files</code></td>
+      <td>A list of files belonging to the collection.</td>
+    </tr>
+  </tbody>
+</table>
 
   </div>
 </div>

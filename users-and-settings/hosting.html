@@ -120,7 +120,7 @@
         </aside>
         <section class="main__content">
           <div class="document">
-  <h1 class="document__title">Posts</h1>
+  <h1 class="document__title">Hosting</h1>
 
   <!-- <nav class="nav nav--breadcrumbs">
     <ul class="nav__list nav__list--breadcrumbs">
@@ -131,39 +131,31 @@
   
 
   <div class="document__content">
-    <p>Posts are a bit like special documents. Siteleaf, like Jekyll, is “blog-aware” — blogging is built in by default.</p>
+    <h2 id="github-pages">GitHub Pages</h2>
 
-<p>Creating a post will create a Markdown file in the <code>_posts/</code> directory that will include the timestamp and date (for example, a post titled “New York” that was created on January 6th, 2016 will turn into <code>2016-01-06-new-york.markdown</code>).</p>
+<p>To publish to <a href="https://pages.github.com/">GitHub Pages</a>, first connect your GitHub account to Siteleaf. You can choose the repository you’re using, domain (by default it will use <code>username.github.io/repo</code>), branch (<code>gh-pages</code> by default), and whether or not you’d like GitHub Pages (Jekyll version 2.4) or Siteleaf (Jekyll version 3.0) to compile your site.</p>
 
-<h2 id="options">Options</h2>
+<p>The repository you use must already exist. To make things easier, we suggest that you put your theme files on the <code>master</code> branch and the published site on the <code>gh-pages</code> branch.</p>
 
-<h3 id="path">Path</h3>
+<p>For help with GitHub Pages, check out <a href="https://help.github.com/categories/github-pages-basics/">their help page</a>.</p>
 
-<p>The path changes the URL this post is accessible at on your site within the <code>/posts/</code> subdirectory.</p>
+<h2 id="amazon-s3">Amazon S3</h2>
 
-<h3 id="visibility">Visibility</h3>
+<p>To publish to <a href="https://aws.amazon.com/s3/">Amazon S3</a>, you’ll first need your access key and secret key. You can either use existing keys or <a href="https://console.aws.amazon.com/iam/home#home">create an Identity and Access Management user</a>.</p>
 
-<p>By default, posts are visible. You can change them to hidden or drafts (in which case, they’d be moved to the <code>_drafts/</code> directory).</p>
+<p>You can use an existing bucket, or create a new one. Make sure you take note of the region!</p>
 
-<h3 id="tags">Tags</h3>
+<p>For more information on Amazon S3, take a look at <a href="https://aws.amazon.com/documentation/s3/">their documentation</a>.</p>
 
-<p>Tags are a way to link common posts with each other. You can just type out a tag and hit <code>,</code> to create multiple tags.</p>
+<h2 id="rackspace-cloud-files">Rackspace Cloud Files</h2>
 
-<h3 id="categories">Categories</h3>
+<p>To publish to <a href="https://www.rackspace.com/cloud/files">Rackspace Cloud Files</a>, you’ll need your Rackspace username and an API key, which can be found in your Account Settings. You can use an existing container, just make sure you know which region it is in.</p>
 
-<p>A category is an overarching theme that a post has. Similar to tags, you can just type out a tag and hit <code>,</code> to create multiple categories.</p>
+<p>For more help with Rackspace Cloud Files, see <a href="https://www.rackspace.com/knowledge_center/getting-started/cloud-files">their documentation</a>.</p>
 
-<h3 id="published-on">Published on</h3>
+<h2 id="ftp-or-sftp">FTP or SFTP</h2>
 
-<p>This changes the timestamp associated with the post.</p>
-
-<h3 id="permalink">Permalink</h3>
-
-<p>The permalink changes the URL this post is accessible at on your site. Unlike a path, this</p>
-
-<h3 id="layout">Layout</h3>
-
-<p>The layout field lets you select which layout in <code>_layouts/</code> this post should use.</p>
+<p>If you’d like to use your own server, you can use FTP/SFTP. Make sure you know the host, port, username, and password, as well as the path you’d like to compile to.</p>
 
   </div>
 </div>

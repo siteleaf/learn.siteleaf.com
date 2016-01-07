@@ -121,6 +121,10 @@ p { margin-bottom: 1.625rem; }
 
 strong { font-weight: 600; }
 
+table { font-size: 17.5px; text-align: left; width: 100%; }
+table th { font-weight: 600; }
+table thead { border-bottom: 1px solid rgba(45, 65, 84, 0.1); }
+
 .main__sidebar { float: left; width: 25%; }
 .main__content { float: right; width: 70%; }
 

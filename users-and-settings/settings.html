@@ -43,14 +43,9 @@
 
           
           
-              <nav class="nav">
-                <h3 class="nav__header">Uploads</h3>
-                <ul class="nav__list nav__list--sidebar">
-                  
-                  
-                </ul>
-              </nav>
+            
           
+            
               <nav class="nav">
                 <h3 class="nav__header">Getting Started</h3>
                 <ul class="nav__list nav__list--sidebar">
@@ -60,23 +55,27 @@
                   
                 </ul>
               </nav>
+            
           
+            
               <nav class="nav">
                 <h3 class="nav__header">Managing Content</h3>
                 <ul class="nav__list nav__list--sidebar">
                   
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/collections.html">Collections and documents</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/collections.html">Collections</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/meta-fields.html">Meta fields</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/pages.html">Pages</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/posts.html">Posts</a></li>
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/sync.html">Sync</a></li>
-                  
                 </ul>
               </nav>
+            
           
+            
               <nav class="nav">
                 <h3 class="nav__header">Theme Development</h3>
                 <ul class="nav__list nav__list--sidebar">
@@ -86,19 +85,29 @@
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid-basics.html">Liquid basics</a></li>
                   
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid-reference.html">Liquid reference</a></li>
+                  
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/structure.html">Theme structure</a></li>
                   
                 </ul>
               </nav>
+            
           
+            
               <nav class="nav">
                 <h3 class="nav__header">Users and Settings</h3>
                 <ul class="nav__list nav__list--sidebar">
                   
                   
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/hosting.html">Hosting</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/settings.html">Settings</a></li>
+                  
                 </ul>
               </nav>
+            
           
+            
               <nav class="nav">
                 <h3 class="nav__header">Publishing</h3>
                 <ul class="nav__list nav__list--sidebar">
@@ -106,11 +115,12 @@
                   
                 </ul>
               </nav>
+            
           
         </aside>
         <section class="main__content">
           <div class="document">
-  <h1 class="document__title">Sync</h1>
+  <h1 class="document__title">Settings</h1>
 
   <!-- <nav class="nav nav--breadcrumbs">
     <ul class="nav__list nav__list--breadcrumbs">
@@ -121,7 +131,50 @@
   
 
   <div class="document__content">
-    <p>Users!</p>
+    <p>Under the “General” tab in your site settings, you can change several aspects of the site.</p>
+
+<h3 id="site-title-sitetitle">Site title (<code>site.title</code>)</h3>
+
+<p>The site title is required.</p>
+
+<h3 id="timezone">Timezone</h3>
+
+<p>This is what Siteleaf bases your timestamps off of.</p>
+
+<h3 id="permalink">Permalink</h3>
+
+<p>This is an advanced Jekyll option that changes the format of your permalinks. By default, Siteleaf uses the <code>pretty</code> permalink style.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Style</th>
+      <th>URL Template</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>date</code></td>
+      <td><code>/:categories/:year/:month/:day/:title.html</code></td>
+    </tr>
+    <tr>
+      <td><code>pretty</code></td>
+      <td><code>/:categories/:year/:month/:day/:title</code></td>
+    </tr>
+    <tr>
+      <td><code>ordinal</code></td>
+      <td><code>/:categories/:year/:y_day/:title.html</code></td>
+    </tr>
+    <tr>
+      <td><code>none</code></td>
+      <td><code>/:categories/:title.html</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="meta-fields-sitemeta">Meta fields (<code>site.meta</code>)</h3>
+
+<p>You can also add meta fields to your site. See the <a href="/managing-content/meta-fields">meta fields</a> documentation for more information.</p>
 
   </div>
 </div>

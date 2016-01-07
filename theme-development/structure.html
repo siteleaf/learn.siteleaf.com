@@ -43,14 +43,9 @@
 
           
           
-              <nav class="nav">
-                <h3 class="nav__header">Uploads</h3>
-                <ul class="nav__list nav__list--sidebar">
-                  
-                  
-                </ul>
-              </nav>
+            
           
+            
               <nav class="nav">
                 <h3 class="nav__header">Getting Started</h3>
                 <ul class="nav__list nav__list--sidebar">
@@ -60,23 +55,27 @@
                   
                 </ul>
               </nav>
+            
           
+            
               <nav class="nav">
                 <h3 class="nav__header">Managing Content</h3>
                 <ul class="nav__list nav__list--sidebar">
                   
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/collections.html">Collections and documents</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/collections.html">Collections</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/meta-fields.html">Meta fields</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/pages.html">Pages</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/posts.html">Posts</a></li>
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/sync.html">Sync</a></li>
-                  
                 </ul>
               </nav>
+            
           
+            
               <nav class="nav">
                 <h3 class="nav__header">Theme Development</h3>
                 <ul class="nav__list nav__list--sidebar">
@@ -86,19 +85,29 @@
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid-basics.html">Liquid basics</a></li>
                   
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid-reference.html">Liquid reference</a></li>
+                  
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/structure.html">Theme structure</a></li>
                   
                 </ul>
               </nav>
+            
           
+            
               <nav class="nav">
                 <h3 class="nav__header">Users and Settings</h3>
                 <ul class="nav__list nav__list--sidebar">
                   
                   
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/hosting.html">Hosting</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/settings.html">Settings</a></li>
+                  
                 </ul>
               </nav>
+            
           
+            
               <nav class="nav">
                 <h3 class="nav__header">Publishing</h3>
                 <ul class="nav__list nav__list--sidebar">
@@ -106,6 +115,7 @@
                   
                 </ul>
               </nav>
+            
           
         </aside>
         <section class="main__content">
@@ -129,6 +139,8 @@ _includes/
   partial.html
 _posts/
   2016-01-02-2015-a-post.markdown
+_sass/
+  _partial.sass
 _stuff/
   a-thing.markdown
 _site/
@@ -149,6 +161,20 @@ layout: other
 <p>The <code>_includes/</code> directory contains fragments of code that aren’t necessarily entire templates. For example, you could contain the code for a blog post in one file and use it in multiple places.</p>
 
 <h2 id="posts"><code>_posts/</code></h2>
+
+<p>The <code>_posts/</code> directory is where you put posts. Posts filenames include the timestamp and date (for example, a post titled “New York” that was created on January 6th, 2016 will turn into <code>2016-01-06-new-york.markdown</code>).</p>
+
+<h2 id="sass"><code>_sass/</code></h2>
+
+<p>Jekyll will automatically compile Sass/SCSS. You can add a partial to this directory (prefaced with a <code>_</code>), and then reference it in another file.</p>
+
+<h2 id="site"><code>_site/</code></h2>
+
+<p>This is the directory where your site gets generated into. It’s a good idea to keep this out of version control!</p>
+
+<h2 id="configyml"><code>_config.yml</code></h2>
+
+<p>This is your Jekyll configuration file. The <a href="http://jekyllrb.com/docs/configuration/">Jekyll documentation</a> goes into great detail about configuration.</p>
 
   </div>
 </div>

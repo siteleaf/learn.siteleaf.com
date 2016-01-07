@@ -120,7 +120,7 @@
         </aside>
         <section class="main__content">
           <div class="document">
-  <h1 class="document__title">Posts</h1>
+  <h1 class="document__title">Meta fields</h1>
 
   <!-- <nav class="nav nav--breadcrumbs">
     <ul class="nav__list nav__list--breadcrumbs">
@@ -131,39 +131,38 @@
   
 
   <div class="document__content">
-    <p>Posts are a bit like special documents. Siteleaf, like Jekyll, is “blog-aware” — blogging is built in by default.</p>
+    <p>Meta fields are bits of data that are attached to your pages, posts, collections, or documents, as well as your site itself. There are a few different types of meta fields that you can use: simple, list, and object.</p>
 
-<p>Creating a post will create a Markdown file in the <code>_posts/</code> directory that will include the timestamp and date (for example, a post titled “New York” that was created on January 6th, 2016 will turn into <code>2016-01-06-new-york.markdown</code>).</p>
+<p>Meta fields are converted to YAML when saved. For meta fields on pages, posts, and documents, the field will be added to its frontmatter. For sites and collections, it will be added to your <code>_config.yml</code> file.</p>
 
-<h2 id="options">Options</h2>
+<h3 id="simple">Simple</h3>
 
-<h3 id="path">Path</h3>
+<p>A simple meta field consists of two bits of text: a key that will let you look up the field, and a value that belongs to that key.</p>
 
-<p>The path changes the URL this post is accessible at on your site within the <code>/posts/</code> subdirectory.</p>
+<p><em>Tip:</em> If you end your key in <code>file</code>, <code>image</code>, or <code>asset</code>, the value field will reveal an upload button. You can then upload a file and insert the URL of the file into the value field.</p>
 
-<h3 id="visibility">Visibility</h3>
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">key: value</code></pre></figure>
 
-<p>By default, posts are visible. You can change them to hidden or drafts (in which case, they’d be moved to the <code>_drafts/</code> directory).</p>
+<h3 id="list">List</h3>
 
-<h3 id="tags">Tags</h3>
+<p>A list meta field contains a key and many values.</p>
 
-<p>Tags are a way to link common posts with each other. You can just type out a tag and hit <code>,</code> to create multiple tags.</p>
+<p><em>Tip:</em> A list value can contain a simple meta field, or it can contain other lists or objects.</p>
 
-<h3 id="categories">Categories</h3>
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">key:
+  - value1
+  - value2
+  - value3:
+    - subvalue1
+    - subvalue2</code></pre></figure>
 
-<p>A category is an overarching theme that a post has. Similar to tags, you can just type out a tag and hit <code>,</code> to create multiple categories.</p>
+<h3 id="objects">Objects</h3>
 
-<h3 id="published-on">Published on</h3>
+<p>An object meta field is similar to a simple meta field, but is inside the value field.</p>
 
-<p>This changes the timestamp associated with the post.</p>
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">key:
+  key1: value1</code></pre></figure>
 
-<h3 id="permalink">Permalink</h3>
-
-<p>The permalink changes the URL this post is accessible at on your site. Unlike a path, this</p>
-
-<h3 id="layout">Layout</h3>
-
-<p>The layout field lets you select which layout in <code>_layouts/</code> this post should use.</p>
 
   </div>
 </div>

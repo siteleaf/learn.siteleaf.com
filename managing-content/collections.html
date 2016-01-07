@@ -43,14 +43,9 @@
 
           
           
-              <nav class="nav">
-                <h3 class="nav__header">Uploads</h3>
-                <ul class="nav__list nav__list--sidebar">
-                  
-                  
-                </ul>
-              </nav>
+            
           
+            
               <nav class="nav">
                 <h3 class="nav__header">Getting Started</h3>
                 <ul class="nav__list nav__list--sidebar">
@@ -60,23 +55,27 @@
                   
                 </ul>
               </nav>
+            
           
+            
               <nav class="nav">
                 <h3 class="nav__header">Managing Content</h3>
                 <ul class="nav__list nav__list--sidebar">
                   
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/collections.html">Collections and documents</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/collections.html">Collections</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/meta-fields.html">Meta fields</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/pages.html">Pages</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/posts.html">Posts</a></li>
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/sync.html">Sync</a></li>
-                  
                 </ul>
               </nav>
+            
           
+            
               <nav class="nav">
                 <h3 class="nav__header">Theme Development</h3>
                 <ul class="nav__list nav__list--sidebar">
@@ -86,19 +85,29 @@
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid-basics.html">Liquid basics</a></li>
                   
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid-reference.html">Liquid reference</a></li>
+                  
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/structure.html">Theme structure</a></li>
                   
                 </ul>
               </nav>
+            
           
+            
               <nav class="nav">
                 <h3 class="nav__header">Users and Settings</h3>
                 <ul class="nav__list nav__list--sidebar">
                   
                   
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/hosting.html">Hosting</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/settings.html">Settings</a></li>
+                  
                 </ul>
               </nav>
+            
           
+            
               <nav class="nav">
                 <h3 class="nav__header">Publishing</h3>
                 <ul class="nav__list nav__list--sidebar">
@@ -106,11 +115,12 @@
                   
                 </ul>
               </nav>
+            
           
         </aside>
         <section class="main__content">
           <div class="document">
-  <h1 class="document__title">Collections and documents</h1>
+  <h1 class="document__title">Collections</h1>
 
   <!-- <nav class="nav nav--breadcrumbs">
     <ul class="nav__list nav__list--breadcrumbs">
@@ -123,28 +133,12 @@
   <div class="document__content">
     <p>There will be times where you don’t need a page or a post, but still need to group bits of content together. This is exactly what <em>collections</em> are: they are groups of <em>documents</em> that aren’t in any particular order.</p>
 
-<h2 id="managing-collections">Managing collections</h2>
-
-<p>On the sidebar, under “Content”, click “New collection”. Choose a name, and click “Create”.</p>
-
-<p><em>add image here</em></p>
-
-<h3 id="what-happens-behind-the-scenes">What happens behind the scenes?</h3>
-
 <p>For each collection, a new directory will be created in your project called <code>_[collection name]/</code> (e.g., <code>_people/</code>). Additionally, a piece of configuration will be added to your <code>_config.yml</code> file that defines the collection with its title and some metadata:</p>
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">collections</span><span class="pi">:</span>
   <span class="s">people</span><span class="pi">:</span>
     <span class="s">title</span><span class="pi">:</span> <span class="s">People</span>
     <span class="s">output</span><span class="pi">:</span> <span class="s">true</span></code></pre></figure>
-
-<h2 id="managing-documents">Managing documents</h2>
-
-<p>When you’re inside a collection, next to the collection title, click the link that says “new”.</p>
-
-<p><em>add image here</em></p>
-
-<h3 id="what-happens-behind-the-scenes-1">What happens behind the scenes?</h3>
 
 <p>When you create a document, a new file in your collections directory is also created, named <code>[permalink].markdown</code>. The document includes some frontmatter (like any other bit of content).</p>
 
