@@ -31,7 +31,7 @@ An object is a piece of data that has attributes with content. An object can be 
 
 {% highlight liquid %}
 {% raw %}
-{{ show.name }} <!-- Output: Seinfeld -->
+{{ post.title }}
 {% endraw %}
 {% endhighlight %}
 
@@ -41,6 +41,7 @@ Filters are used to modify the output of attributes (i.e., strings, numbers, var
 
 {% highlight liquid %}
 {% raw %}
-{{ 'sales' | append: '.jpg' }} <!-- Output: sales.jpg -->
+{{ 'sales' | append: '.jpg' }} 
+<!-- Outputs: sales.jpg -->
 {% endraw %}
 {% endhighlight %}
