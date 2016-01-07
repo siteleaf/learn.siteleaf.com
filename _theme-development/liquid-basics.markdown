@@ -15,7 +15,7 @@ A tag is a piece of logic that will tell the templating engine what to do. This 
 
 {% highlight liquid %}
 {% raw %}
-{% if condition %}
+{% if page.path == '/' %}
   Do something if condition is true
 {% else %}
   Do something if condition is false
