@@ -11,10 +11,6 @@ collections:
     title: Managing Content
     output: true
     weight: 1
-  publishing:
-    title: Publishing
-    output: true
-    weight: 4
   theme-development:
     title: Theme Development
     output: true
