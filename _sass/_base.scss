@@ -78,6 +78,16 @@ strong {
   }
 }
 
+table {
+  margin-bottom: $v;
+  text-align: left;
+  width: 100%;
+
+  th {
+    font-weight: $font-weight-semibold;
+  }
+}
+
 .form {
   &__search {
     border-bottom: 2px solid $color-gray-an2;

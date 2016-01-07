@@ -14,6 +14,8 @@ _includes/
   partial.html
 _posts/
   2016-01-02-2015-a-post.markdown
+_sass/
+  _partial.sass
 _stuff/
   a-thing.markdown
 _site/
@@ -37,3 +39,17 @@ layout: other
 The `_includes/` directory contains fragments of code that aren't necessarily entire templates. For example, you could contain the code for a blog post in one file and use it in multiple places.
 
 ## `_posts/`
+
+The `_posts/` directory is where you put posts. Posts filenames include the timestamp and date (for example, a post titled "New York" that was created on January 6th, 2016 will turn into `2016-01-06-new-york.markdown`).
+
+## `_sass/`
+
+Jekyll will automatically compile Sass/SCSS. You can add a partial to this directory (prefaced with a `_`), and then reference it in another file.
+
+## `_site/`
+
+This is the directory where your site gets generated into. It's a good idea to keep this out of version control!
+
+## `_config.yml`
+
+This is your Jekyll configuration file. The [Jekyll documentation](http://jekyllrb.com/docs/configuration/) goes into great detail about configuration.

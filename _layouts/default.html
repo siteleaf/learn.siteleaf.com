@@ -33,6 +33,7 @@
 
           {% assign sections = site.collections | sort:"weight" %}
           {% for section in sections %}
+            {% unless section.title == "Uploads" %}
               <nav class="nav">
                 <h3 class="nav__header">{{ section.title }}</h3>
                 <ul class="nav__list nav__list--sidebar">
@@ -42,6 +43,7 @@
                   {% endfor %}
                 </ul>
               </nav>
+            {% endunless %}
           {% endfor %}
         </aside>
         <section class="main__content">
