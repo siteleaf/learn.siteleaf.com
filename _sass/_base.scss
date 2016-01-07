@@ -121,6 +121,11 @@ table {
       margin-bottom: 0;
     }
   }
+
+  &__improve {
+    font-size: $font-size-html-sm;
+    margin-top: $v * 2;
+  }
 }
 
 .highlight {
