@@ -1,8 +1,8 @@
 ---
 title: Liquid basics
 date: 2015-10-31 20:03:00 -04:00
-layout: page
 weight: 2
+layout: page
 ---
 
 Liquid is an open-source templating language that was developed by [Shopify](http://shopify.com). It uses tags, objects, and filters to render out content into a theme.
@@ -27,7 +27,7 @@ Note that each tag is ended with the same tag, prepended with `end`.
 
 ## Objects
 
-An object is a piece of data that has attributes with content. An object can be your site, a post, a set of posts, an so on. For example:
+An object is a piece of data that has attributes with content. An object can be your site, a post, a set of posts, and so on. For example:
 
 {% highlight liquid %}
 {% raw %}
