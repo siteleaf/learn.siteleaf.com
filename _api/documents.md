@@ -1,12 +1,12 @@
 ---
 title: Documents
-date: 2016-01-14 17:23:30.394000000 -05:00
-example_input: |
+date: 2016-01-14 17:23:00 -05:00
+example_input: |-
   {
     "id": 123,
     "document": "input"
   }
-example_response: |
+example_response: |-
   {
     "basename": "the-great-gatsby.md",
     "body": "Lorem ipsum…",
@@ -165,4 +165,3 @@ DELETE {{ site.data.api.url | append: 'documents/:document_id' }}
   "deleted": true
 }
 ~~~
-
