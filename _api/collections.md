@@ -1,5 +1,6 @@
 ---
 title: Collections
+date: 2016-01-14 17:23:30.394000000 -05:00
 example_input: |
   {
     "title": "Library",
