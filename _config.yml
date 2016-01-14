@@ -24,9 +24,6 @@ collections:
       icon: write
     output: true
     weight: 1
-  posts:
-    title: Posts
-    output: true
   theme-development:
     title: Theme Development
     meta:
@@ -34,9 +31,6 @@ collections:
       icon: bezier
     output: true
     weight: 2
-  uploads:
-    title: Uploads
-    output: true
   users-and-settings:
     title: Users and Settings
     meta:
