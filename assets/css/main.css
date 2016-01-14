@@ -90,7 +90,7 @@ td, th { padding: 0; }
 */
 /* Siteleaf Learn
 */
-.wrap, .container { zoom: 1; margin-left: auto; margin-right: auto; width: 85%; max-width: 1100px; }
+.wrap, .container { zoom: 1; margin-left: auto; margin-right: auto; width: 85%; max-width: 55rem; }
 .wrap:before, .wrap:after, .container:before, .container:after { content: ""; display: table; }
 .wrap:after, .container:after { clear: both; }
 
@@ -100,7 +100,7 @@ td, th { padding: 0; }
 */
 *, *:before, *:after { -webkit-box-sizing: inherit; -moz-box-sizing: inherit; -ms-box-sizing: inherit; box-sizing: inherit; }
 
-html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; font-size: 20px; }
+html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; font-size: 18px; }
 
 body { -webkit-font-smoothing: antialiased; -font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: rgba(45, 65, 84, 0.9); font-family: "Source Sans Pro", sans-serif; font-size: 1em; letter-spacing: 0; line-height: 1.625; }
 
@@ -155,7 +155,7 @@ table thead { border-bottom: 1px solid rgba(45, 65, 84, 0.1); }
 .nav__header { color: rgba(45, 65, 84, 0.9); margin-bottom: 0; font-size: 0.9167em; }
 .nav__list { list-style-type: none; }
 .nav__list--header { float: right; display: inline-block; text-align: right; }
-.nav__item { font-size: 0.8333em; margin-left: 0; padding-left: 0; }
+.nav__item { font-size: 0.9167em; margin-left: 0; padding-left: 0; }
 .nav__item--header { display: inline-block; line-height: 1.375; }
 .nav__item--header + .nav__item--header { margin-left: 1.5em; }
 .nav__link--header { color: #FFF; }
@@ -170,3 +170,5 @@ table thead { border-bottom: 1px solid rgba(45, 65, 84, 0.1); }
 .api__content pre code { background-color: transparent; padding: 0; }
 
 .api__headers pre { background-color: #eee; margin-bottom: 0; }
+
+.api__toc { margin-bottom: 1.625rem; }
