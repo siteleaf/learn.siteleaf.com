@@ -42,8 +42,7 @@ example_response: |
 1. [Get a page](#get-a-page)
 1. [Update a page](#update-a-page)
 1. [Delete a page](#delete-a-page)
-
-
+{: .api__toc}
 
 
 

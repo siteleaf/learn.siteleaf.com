@@ -17,7 +17,7 @@ example_response: |
 
 1. [List users](#list-users)
 1. [Get the currently authenticated user](#current-user)
-
+{: .api__toc}
 
 
 
@@ -59,4 +59,3 @@ GET {{ site.data.api.url | append: 'users/me' }}
 ~~~
 {{ page.example_response }}
 ~~~
-

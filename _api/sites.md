@@ -46,6 +46,7 @@ example_response: |
 1. [Publish a site](#publish-a-site)
 1. [List post tags](#list-post-tags)
 1. [List post categories](#list-post-categories)
+{: .api__toc}
 
 
 ## List your sites
