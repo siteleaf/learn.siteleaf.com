@@ -9,6 +9,7 @@ collections:
     meta:
       description: Interact directly with our API
       icon: globe
+      in_nav: true
     weight: 4
   getting-started:
     title: Getting Started
@@ -16,6 +17,7 @@ collections:
     meta:
       description: Learn more about Siteleaf itself
       icon: home
+      in_nav: true
     weight: 0
   managing-content:
     title: Managing Content
@@ -23,6 +25,7 @@ collections:
     meta:
       description: How to manage content
       icon: write
+      in_nav: true
     weight: 1
   posts:
     title: Posts
@@ -33,6 +36,7 @@ collections:
     meta:
       description: How to make your own themes
       icon: bezier
+      in_nav: true
     weight: 2
   uploads:
     title: Uploads
@@ -43,6 +47,7 @@ collections:
     meta:
       description: Add your friends and host
       icon: users
+      in_nav: true
     weight: 3
 defaults:
 - scope:

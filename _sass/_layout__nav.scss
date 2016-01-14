@@ -58,6 +58,7 @@
 
     &--grid {
       @include clearfix;
+
       display: block;
       width: 100%;
     }
@@ -89,10 +90,6 @@
         margin-left: 0;
       }
 
-      &:last-child {
-        // float: right;
-      }
-
       &:hover {
         border-color: $color-gray-an1;
       }
@@ -117,6 +114,7 @@
 
       &:hover {
         text-decoration: none;
+        color: $color-gray-a2;
       }
 
       p {

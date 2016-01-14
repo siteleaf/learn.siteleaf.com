@@ -12,7 +12,7 @@ layout: default
 <nav class="nav nav--grid">
   <ul class="nav__list nav__list--grid">
     {% for section in sections %}
-      {% if section.title and section.title != "Uploads" %}
+      {% if section.title and section.meta.in_nav == true %}
         <li class="nav__item nav__item--grid">
           <a class="nav__link nav__link--grid" href="{{ section.docs.first.url }}">
             <i class="nav__icon nav__icon--grid ss-icon">{{ section.meta.icon }}</i>
