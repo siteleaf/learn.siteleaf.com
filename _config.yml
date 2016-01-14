@@ -5,38 +5,44 @@ timezone: Eastern Time (US & Canada)
 collections:
   api:
     title: API
+    output: true
     meta:
       description: Interact directly with our API
       icon: globe
-    output: true
     weight: 4
   getting-started:
     title: Getting Started
+    output: true
     meta:
       description: Learn more about Siteleaf itself
       icon: home
-    output: true
     weight: 0
   managing-content:
     title: Managing Content
+    output: true
     meta:
       description: How to manage content
       icon: write
-    output: true
     weight: 1
+  posts:
+    title: Posts
+    output: true
   theme-development:
     title: Theme Development
+    output: true
     meta:
       description: How to make your own themes
       icon: bezier
-    output: true
     weight: 2
+  uploads:
+    title: Uploads
+    output: true
   users-and-settings:
     title: Users and Settings
+    output: true
     meta:
       description: Add your friends and host
       icon: users
-    output: true
     weight: 3
 defaults:
 - scope:
