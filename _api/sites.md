@@ -1,5 +1,6 @@
 ---
 title: Sites
+date: 2016-01-14 15:50:46.559000000 -05:00
 example_input: |
   {
     "title": "Hello World",
@@ -9,7 +10,7 @@ example_input: |
       "foo": "bar"
     }
   }
-example_response: >
+example_response: |
   {
     "id": "5697cc7b16d5640c40000002",
     "title": "Bar Lawrence",
@@ -34,7 +35,6 @@ example_response: >
     "user_id": "5697cc7b16d5640c40000000"
   }
 ---
-
 
 ## Overview
 

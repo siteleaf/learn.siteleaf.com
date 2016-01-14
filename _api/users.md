@@ -1,5 +1,6 @@
 ---
 title: Users
+date: 2016-01-14 15:50:46.559000000 -05:00
 example_response: |
   {
     "id": "5697cc7b16d5640c40000000",
@@ -11,7 +12,6 @@ example_response: |
     "updated_at": "2015-08-30 20:31:31 +0000"
   }
 ---
-
 
 ## Overview
 

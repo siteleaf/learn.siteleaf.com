@@ -1,5 +1,6 @@
 ---
 title: Pages
+date: 2016-01-14 15:50:46.559000000 -05:00
 example_input: |
   {
     "title": "Foo Bar",
@@ -33,7 +34,6 @@ example_response: |
     "updated_at": "2016-01-14 05:37:58 +0000"
   }
 ---
-
 
 ## Overview
 
