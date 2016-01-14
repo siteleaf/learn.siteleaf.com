@@ -1,0 +1,29 @@
+.api__content {
+  font-size: 16px;
+
+  table {
+    font-size: 100%;
+  }
+
+  pre, code {
+    color: $color-gray-2;
+    font-size: 12px;
+    background-color: #f5f5f5;
+    padding: 1px 4px 2px;
+  }
+
+  pre {
+    line-height: 1.2;
+    padding: 0.75rem;
+
+    code {
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+}
+
+.api__headers pre {
+  background-color: #eee;
+  margin-bottom: 0;
+}

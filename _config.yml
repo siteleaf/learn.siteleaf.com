@@ -25,9 +25,18 @@ collections:
     title: Users and Settings
     output: true
     weight: 3
+  api:
+    title: API
+    output: true
+    weight: 4
 defaults:
-- scope:
-    path: ''
-    type: posts
-  values:
-    foo: bar
+  - scope:
+      path: ''
+      type: posts
+    values:
+      foo: bar
+  - scope:
+      path: ''
+      type: api
+    values:
+      layout: api
