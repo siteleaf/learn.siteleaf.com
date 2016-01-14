@@ -1,7 +1,7 @@
 ---
 title: Pages
 date: 2016-01-14 15:50:46.559000000 -05:00
-example_input: |
+example_input: |-
   {
     "title": "Foo Bar",
     "body": "Lorem ipsum …"
@@ -9,7 +9,7 @@ example_input: |
       "FizzBuzz": [1, 2, "fizz"]
     }
   }
-example_response: |
+example_response: |-
   {
     "id": "5697cc7b16d5640c40000003",
     "title": "My page",

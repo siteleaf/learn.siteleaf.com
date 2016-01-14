@@ -1,11 +1,11 @@
 ---
 title: resources
-example_input: |
+example_input: |-
   {
     "id": 123,
     "resource": "input"
   }
-example_response: |
+example_response: |-
   {
     "id": 123,
     "resource": "response"
