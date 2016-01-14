@@ -17,19 +17,12 @@
           <ul class="nav__list nav__list--header">
             
               
-                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/"</a>Documentation</a></li>
-              
-            
-              
-                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/home.html"</a>Home</a></li>
+                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/">Documentation</a></li>
               
             
               
             
-              
-                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/themes"</a>Theme Park</a></li>
-              
-            
+            <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="http://status.siteleaf.com/">Status</a></li>
           </ul>
         </div>
       </nav>
@@ -42,6 +35,16 @@
           </form>
 
           
+          
+            
+              <nav class="nav">
+                <h3 class="nav__header">Posts</h3>
+                <ul class="nav__list nav__list--sidebar">
+                  
+                  
+                </ul>
+              </nav>
+            
           
             
           
@@ -63,13 +66,15 @@
                 <ul class="nav__list nav__list--sidebar">
                   
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/collections.html">Collections</a></li>
-                  
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/meta-fields.html">Meta fields</a></li>
-                  
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/pages.html">Pages</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/posts.html">Posts</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/collections.html">Collections</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/documents.html">Documents</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/meta-fields.html">Meta fields</a></li>
                   
                 </ul>
               </nav>
@@ -83,11 +88,13 @@
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/getting-started.html">Getting started</a></li>
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid-basics.html">Liquid basics</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/local-development.html">Local development</a></li>
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid-reference.html">Liquid reference</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid.html">Liquid</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/structure.html">Theme structure</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/github-sync.html">GitHub Sync</a></li>
                   
                 </ul>
               </nav>
@@ -99,9 +106,29 @@
                 <ul class="nav__list nav__list--sidebar">
                   
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/hosting.html">Hosting</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/users.html">Users</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/settings.html">Settings</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/hosting.html">Hosting</a></li>
+                  
+                </ul>
+              </nav>
+            
+          
+            
+              <nav class="nav">
+                <h3 class="nav__header">API</h3>
+                <ul class="nav__list nav__list--sidebar">
+                  
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/pages.html">Pages</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/sites.html">Sites</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/users.html">Users</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/authentication.html">Authentication</a></li>
                   
                 </ul>
               </nav>
@@ -121,56 +148,19 @@
   
 
   <div class="document__content">
-    <p>Siteleaf uses Ruby and RubyGems, and you’ll need them installed to start developing your own themes. The <a href="https://www.ruby-lang.org/en/documentation/installation/">Ruby website</a> describes how to install Ruby and RubyGems for various platforms. You’ll also need to install Bundler:</p>
+    <p>To make a theme for Siteleaf, all you need to know is HTML and Liquid (which you can read more about in our <a href="/theme-development/liquid.html">Liquid documentation</a>). To set up your local environment, check out our <a href="/theme-development/local-development.html">local development guide</a>.</p>
 
-<p><code>
-$ gem install bundler
-</code></p>
+<p>Once you’re up and running, <a href="/theme-development/github-sync.html">GitHub Sync</a> makes it incredibly simple to ensure your GitHub repository and Siteleaf site have the same content and theme.</p>
 
-<p>Once you have everything installed, we’ll go ahead and create a new project. Create a new directory, and we’ll make a new <code>Gemfile</code>:</p>
+<p>A great resource for theme creation is <a href="http://jekyllrb.com/docs">Jekyll’s documentation</a>: they go into depth with how different content types work and what Liquid tags and objects you have available for making your themes.</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">source</span> <span class="s1">'https://rubygems.org'</span>
+<h2 id="further-reading">Further Reading</h2>
 
-<span class="n">gem</span> <span class="s1">'siteleaf'</span><span class="p">,</span> <span class="s1">'2.0.0.pre.beta7'</span>
-<span class="n">gem</span> <span class="s1">'jekyll'</span></code></pre></figure>
-
-<p>Once you run <code>bundle install</code>, authorize your Siteleaf account:</p>
-
-<p><code>
-$ bundle exec siteleaf auth
-</code></p>
-
-<p>At this point you have everything you need to get going. Go ahead and run:</p>
-
-<p><code>
-$ bundle exec jekyll serve
-</code></p>
-
-<p>Now go and visit <a href="http://localhost:4000">localhost:4000</a> to see your site!</p>
-
-<h2 id="creating-a-new-site">Creating a new site</h2>
-
-<p><code>
-$ siteleaf new yoursite.com
-</code></p>
-
-<p>This will create a new theme folder called <code>yoursite.com</code> in the directory where you ran this command. It will also create the site for you in your Siteleaf account. If you prefer not to create a new directory, run <code>siteleaf new yoursite.com .</code> instead.</p>
-
-<h2 id="using-an-existing-site">Using an existing site</h2>
-
-<p>In a new directory, configure your site:</p>
-
-<p><code>
-$ siteleaf config yoursite.com
-</code></p>
-
-<p>You can then pull the Jekyll configuration, content, and current theme:</p>
-
-<p><code>
-$ siteleaf pull
-</code></p>
-
-<p>At this point, it’s probably a good idea to add a <code>Gemfile</code> (see above).</p>
+<ul>
+  <li><a href="http://jekyllrb.com/docs">Jekyll documentation</a></li>
+  <li><a href="http://jekyllrb.com/docs/quickstart/">Jekyll: Quick-Start Guide</a></li>
+  <li><a href="https://help.github.com/articles/using-jekyll-with-pages/">GitHub: Using Jekyll with Pages</a></li>
+</ul>
 
 
     <p class="document__improve"><a href="https://github.com/oakstudios/learn.siteleaf.com/blob/master/_theme-development/getting-started.markdown">Help improve this page</a></p>

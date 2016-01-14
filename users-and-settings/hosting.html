@@ -17,19 +17,12 @@
           <ul class="nav__list nav__list--header">
             
               
-                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/"</a>Documentation</a></li>
-              
-            
-              
-                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/home.html"</a>Home</a></li>
+                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/">Documentation</a></li>
               
             
               
             
-              
-                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/themes"</a>Theme Park</a></li>
-              
-            
+            <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="http://status.siteleaf.com/">Status</a></li>
           </ul>
         </div>
       </nav>
@@ -42,6 +35,16 @@
           </form>
 
           
+          
+            
+              <nav class="nav">
+                <h3 class="nav__header">Posts</h3>
+                <ul class="nav__list nav__list--sidebar">
+                  
+                  
+                </ul>
+              </nav>
+            
           
             
           
@@ -63,13 +66,15 @@
                 <ul class="nav__list nav__list--sidebar">
                   
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/collections.html">Collections</a></li>
-                  
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/meta-fields.html">Meta fields</a></li>
-                  
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/pages.html">Pages</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/posts.html">Posts</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/collections.html">Collections</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/documents.html">Documents</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/meta-fields.html">Meta fields</a></li>
                   
                 </ul>
               </nav>
@@ -83,11 +88,13 @@
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/getting-started.html">Getting started</a></li>
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid-basics.html">Liquid basics</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/local-development.html">Local development</a></li>
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid-reference.html">Liquid reference</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid.html">Liquid</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/structure.html">Theme structure</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/github-sync.html">GitHub Sync</a></li>
                   
                 </ul>
               </nav>
@@ -99,9 +106,29 @@
                 <ul class="nav__list nav__list--sidebar">
                   
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/hosting.html">Hosting</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/users.html">Users</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/settings.html">Settings</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/hosting.html">Hosting</a></li>
+                  
+                </ul>
+              </nav>
+            
+          
+            
+              <nav class="nav">
+                <h3 class="nav__header">API</h3>
+                <ul class="nav__list nav__list--sidebar">
+                  
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/pages.html">Pages</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/sites.html">Sites</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/users.html">Users</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/authentication.html">Authentication</a></li>
                   
                 </ul>
               </nav>
@@ -123,9 +150,9 @@
   <div class="document__content">
     <h2 id="github-pages">GitHub Pages</h2>
 
-<p>To publish to <a href="https://pages.github.com/">GitHub Pages</a>, first connect your GitHub account to Siteleaf. You can choose the repository you’re using, domain (by default it will use <code>username.github.io/repo</code>), branch (<code>gh-pages</code> by default), and whether or not you’d like GitHub Pages (Jekyll version 2.4) or Siteleaf (Jekyll version 3.0) to compile your site.</p>
+<p>To publish to <a href="https://pages.github.com/">GitHub Pages</a>, first connect your GitHub account to Siteleaf. You can choose the repository you’re using, domain (by default it will use <code class="highlighter-rouge">username.github.io/repo</code>), branch (<code class="highlighter-rouge">gh-pages</code> by default), and whether or not you’d like GitHub Pages (Jekyll version 2.4) or Siteleaf (Jekyll version 3.0) to compile your site.</p>
 
-<p>The repository you use must already exist. To make things easier, we suggest that you put your theme files on the <code>master</code> branch and the published site on the <code>gh-pages</code> branch.</p>
+<p>The repository you use must already exist. To make things easier, we suggest that you put your theme files on the <code class="highlighter-rouge">master</code> branch and the published site on the <code class="highlighter-rouge">gh-pages</code> branch.</p>
 
 <p>For help with GitHub Pages, check out <a href="https://help.github.com/categories/github-pages-basics/">their help page</a>.</p>
 

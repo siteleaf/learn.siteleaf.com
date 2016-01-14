@@ -17,19 +17,12 @@
           <ul class="nav__list nav__list--header">
             
               
-                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/"</a>Documentation</a></li>
-              
-            
-              
-                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/home.html"</a>Home</a></li>
+                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/">Documentation</a></li>
               
             
               
             
-              
-                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/themes"</a>Theme Park</a></li>
-              
-            
+            <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="http://status.siteleaf.com/">Status</a></li>
           </ul>
         </div>
       </nav>
@@ -42,6 +35,16 @@
           </form>
 
           
+          
+            
+              <nav class="nav">
+                <h3 class="nav__header">Posts</h3>
+                <ul class="nav__list nav__list--sidebar">
+                  
+                  
+                </ul>
+              </nav>
+            
           
             
           
@@ -63,13 +66,15 @@
                 <ul class="nav__list nav__list--sidebar">
                   
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/collections.html">Collections</a></li>
-                  
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/meta-fields.html">Meta fields</a></li>
-                  
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/pages.html">Pages</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/posts.html">Posts</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/collections.html">Collections</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/documents.html">Documents</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/meta-fields.html">Meta fields</a></li>
                   
                 </ul>
               </nav>
@@ -83,11 +88,13 @@
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/getting-started.html">Getting started</a></li>
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid-basics.html">Liquid basics</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/local-development.html">Local development</a></li>
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid-reference.html">Liquid reference</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid.html">Liquid</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/structure.html">Theme structure</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/github-sync.html">GitHub Sync</a></li>
                   
                 </ul>
               </nav>
@@ -99,9 +106,29 @@
                 <ul class="nav__list nav__list--sidebar">
                   
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/hosting.html">Hosting</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/users.html">Users</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/settings.html">Settings</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/hosting.html">Hosting</a></li>
+                  
+                </ul>
+              </nav>
+            
+          
+            
+              <nav class="nav">
+                <h3 class="nav__header">API</h3>
+                <ul class="nav__list nav__list--sidebar">
+                  
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/pages.html">Pages</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/sites.html">Sites</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/users.html">Users</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/authentication.html">Authentication</a></li>
                   
                 </ul>
               </nav>
@@ -110,7 +137,7 @@
         </aside>
         <section class="main__content">
           <div class="document">
-  <h1 class="document__title">Theme Park</h1>
+  <h1 class="document__title">GitHub Sync</h1>
 
   <!-- <nav class="nav nav--breadcrumbs">
     <ul class="nav__list nav__list--breadcrumbs">
@@ -121,10 +148,12 @@
   
 
   <div class="document__content">
-    <p>Theme park!</p>
+    <p>When you’re making a theme, you’ll want to keep your content on Siteleaf and your code on GitHub to be in sync. This is exactly what GitHub Sync was made for.</p>
+
+<p>When you turn on Sync, you’ll be asked to “Connect with GitHub”. You’ll then need to choose a repository to sync to. Once this is all set up, every time you update Siteleaf or GitHub, the change will be reflected within the other site.</p>
 
 
-    <p class="document__improve"><a href="https://github.com/oakstudios/learn.siteleaf.com/blob/master/">Help improve this page</a></p>
+    <p class="document__improve"><a href="https://github.com/oakstudios/learn.siteleaf.com/blob/master/_theme-development/github-sync.markdown">Help improve this page</a></p>
   </div>
 </div>
 

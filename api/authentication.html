@@ -137,44 +137,43 @@
         </aside>
         <section class="main__content">
           <div class="document">
-  <h1 class="document__title">Collections</h1>
-
-  <!-- <nav class="nav nav--breadcrumbs">
-    <ul class="nav__list nav__list--breadcrumbs">
-      <li class="nav__item nav__item--breadcrumbs"></li>
-    </ul>
-  </nav> -->
+  <h1 class="document__title">Authentication</h1>
 
   
 
-  <div class="document__content">
-    <p>There will be times where you don’t need a page or a post, but still need to group bits of content together. This is exactly what <em>collections</em> are: they are groups of <a href="/managing-content/documents.html"><em>documents</em></a> that aren’t in any particular order.</p>
+  <div class="document__content api__content">
+    <h2 id="overview">Overview</h2>
 
-<p>For each collection, a new directory will be created in your project called <code class="highlighter-rouge">_[collection name]/</code> (e.g., <code class="highlighter-rouge">_people/</code>). Additionally, a piece of configuration will be added to your <code class="highlighter-rouge">_config.yml</code> file that defines the collection with its title and some metadata:</p>
+<p>The Siteleaf API requires all requests to be authenticated via Basic Auth with an API key and secret. These can be found on <a href="https://manage.v2.siteleaf.com/account">your account page</a> in the web app, or programmatically via the API as described below.</p>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">collections</span><span class="pi">:</span>
-  <span class="s">people</span><span class="pi">:</span>
-    <span class="s">title</span><span class="pi">:</span> <span class="s">People</span>
-    <span class="s">output</span><span class="pi">:</span> <span class="s">true</span></code></pre></figure>
+<h2 id="get-an-api-key-and-secret">Get an API key and secret</h2>
 
-<h2 id="options">Options</h2>
+<p>The authentication endpoint requires Basic Auth with a users email and password, and is the only endpoint that accepts this method of authentication. It returns the unique key and secret that can be used to authenticate with the rest of the Siteleaf API.</p>
 
-<h3 id="path">Path</h3>
+<h3 id="endpoint">Endpoint</h3>
 
-<p>Changing the path changes the location of the generated collection directory and the path the collection is accessible at on your site.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>POST https://api.v2.siteleaf.com/v2/auth
+</code></pre>
+</div>
 
-<h3 id="permalink">Permalink</h3>
+<h3 id="response">Response</h3>
+<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
+</code></pre>
+</div>
 
-<p>The permalink changes the path the collection is accessible at on your site.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"api_key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pgYWJZyGvCY60Eys..."</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"api_secret"</span><span class="p">:</span><span class="w"> </span><span class="s2">"m8IibnCkXISebc9b..."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
 
-<h2 id="further-reading">Further Reading</h2>
 
-<ul>
-  <li><a href="http://jekyllrb.com/docs/collections/">Jekyll: Collections</a></li>
-</ul>
-
-
-    <p class="document__improve"><a href="https://github.com/oakstudios/learn.siteleaf.com/blob/master/_managing-content/collections.markdown">Help improve this page</a></p>
+    <p class="document__improve">
+      <a href="https://github.com/oakstudios/learn.siteleaf.com/blob/master/_api/authentication.md">
+        Help improve this page
+      </a>
+    </p>
   </div>
 </div>
 

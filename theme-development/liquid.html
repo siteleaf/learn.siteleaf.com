@@ -17,19 +17,12 @@
           <ul class="nav__list nav__list--header">
             
               
-                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/"</a>Documentation</a></li>
-              
-            
-              
-                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/home.html"</a>Home</a></li>
+                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/">Documentation</a></li>
               
             
               
             
-              
-                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/themes"</a>Theme Park</a></li>
-              
-            
+            <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="http://status.siteleaf.com/">Status</a></li>
           </ul>
         </div>
       </nav>
@@ -42,6 +35,16 @@
           </form>
 
           
+          
+            
+              <nav class="nav">
+                <h3 class="nav__header">Posts</h3>
+                <ul class="nav__list nav__list--sidebar">
+                  
+                  
+                </ul>
+              </nav>
+            
           
             
           
@@ -63,13 +66,15 @@
                 <ul class="nav__list nav__list--sidebar">
                   
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/collections.html">Collections</a></li>
-                  
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/meta-fields.html">Meta fields</a></li>
-                  
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/pages.html">Pages</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/posts.html">Posts</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/collections.html">Collections</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/documents.html">Documents</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/meta-fields.html">Meta fields</a></li>
                   
                 </ul>
               </nav>
@@ -83,11 +88,13 @@
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/getting-started.html">Getting started</a></li>
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid-basics.html">Liquid basics</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/local-development.html">Local development</a></li>
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid-reference.html">Liquid reference</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid.html">Liquid</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/structure.html">Theme structure</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/github-sync.html">GitHub Sync</a></li>
                   
                 </ul>
               </nav>
@@ -99,9 +106,29 @@
                 <ul class="nav__list nav__list--sidebar">
                   
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/hosting.html">Hosting</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/users.html">Users</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/settings.html">Settings</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/hosting.html">Hosting</a></li>
+                  
+                </ul>
+              </nav>
+            
+          
+            
+              <nav class="nav">
+                <h3 class="nav__header">API</h3>
+                <ul class="nav__list nav__list--sidebar">
+                  
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/pages.html">Pages</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/sites.html">Sites</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/users.html">Users</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/authentication.html">Authentication</a></li>
                   
                 </ul>
               </nav>
@@ -110,7 +137,7 @@
         </aside>
         <section class="main__content">
           <div class="document">
-  <h1 class="document__title">Liquid basics</h1>
+  <h1 class="document__title">Liquid</h1>
 
   <!-- <nav class="nav nav--breadcrumbs">
     <ul class="nav__list nav__list--breadcrumbs">
@@ -127,7 +154,7 @@
 
 <h2 id="tags">Tags</h2>
 
-<p>A tag is a piece of logic that will tell the templating engine what to do. This includes operations like <code>if</code>, <code>for</code>, <code>foreach</code>, and <code>capture</code>. For example:</p>
+<p>A tag is a piece of logic that will tell the templating engine what to do. This includes operations like <code class="highlighter-rouge">if</code>, <code class="highlighter-rouge">for</code>, <code class="highlighter-rouge">foreach</code>, and <code class="highlighter-rouge">capture</code>. For example:</p>
 
 <figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'Home'</span><span class="w"> </span><span class="p">%}</span>
   Do something if condition is true
@@ -135,7 +162,7 @@
   Do something if condition is false
 <span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span></code></pre></figure>
 
-<p>Note that each tag is ended with the same tag, prepended with <code>end</code>.</p>
+<p>Note that each tag is ended with the same tag, prepended with <code class="highlighter-rouge">end</code>.</p>
 
 <h2 id="objects">Objects</h2>
 
@@ -147,11 +174,18 @@
 
 <p>Filters are used to modify the output of attributes (i.e., strings, numbers, variables, and objects):</p>
 
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="s1">'sales'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">append</span><span class="p">:</span><span class="w"> </span><span class="s1">'.jpg'</span><span class="w"> </span><span class="p">}}</span> 
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="s1">'sales'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">append</span><span class="p">:</span><span class="w"> </span><span class="s1">'.jpg'</span><span class="w"> </span><span class="p">}}</span>
 &lt;!-- Outputs: sales.jpg --&gt;</code></pre></figure>
 
+<h2 id="further-reading">Further Reading</h2>
 
-    <p class="document__improve"><a href="https://github.com/oakstudios/learn.siteleaf.com/blob/master/_theme-development/liquid-basics.markdown">Help improve this page</a></p>
+<ul>
+  <li><a href="https://github.com/Shopify/liquid/wiki">Shopify: Liquid wiki</a></li>
+  <li><a href="http://jekyllrb.com/docs/variables/">Jekyll: Variables</a></li>
+</ul>
+
+
+    <p class="document__improve"><a href="https://github.com/oakstudios/learn.siteleaf.com/blob/master/_theme-development/liquid.markdown">Help improve this page</a></p>
   </div>
 </div>
 

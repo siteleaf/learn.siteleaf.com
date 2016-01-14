@@ -137,44 +137,82 @@
         </aside>
         <section class="main__content">
           <div class="document">
-  <h1 class="document__title">Collections</h1>
-
-  <!-- <nav class="nav nav--breadcrumbs">
-    <ul class="nav__list nav__list--breadcrumbs">
-      <li class="nav__item nav__item--breadcrumbs"></li>
-    </ul>
-  </nav> -->
+  <h1 class="document__title">Users</h1>
 
   
 
-  <div class="document__content">
-    <p>There will be times where you don’t need a page or a post, but still need to group bits of content together. This is exactly what <em>collections</em> are: they are groups of <a href="/managing-content/documents.html"><em>documents</em></a> that aren’t in any particular order.</p>
+  <div class="document__content api__content">
+    <h2 id="overview">Overview</h2>
 
-<p>For each collection, a new directory will be created in your project called <code class="highlighter-rouge">_[collection name]/</code> (e.g., <code class="highlighter-rouge">_people/</code>). Additionally, a piece of configuration will be added to your <code class="highlighter-rouge">_config.yml</code> file that defines the collection with its title and some metadata:</p>
+<ol>
+  <li><a href="#list-users">List users</a></li>
+  <li><a href="#current-user">Get the currently authenticated user</a></li>
+</ol>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">collections</span><span class="pi">:</span>
-  <span class="s">people</span><span class="pi">:</span>
-    <span class="s">title</span><span class="pi">:</span> <span class="s">People</span>
-    <span class="s">output</span><span class="pi">:</span> <span class="s">true</span></code></pre></figure>
+<h2 id="list-users">List users</h2>
 
-<h2 id="options">Options</h2>
+<h3 id="endpoint">Endpoint</h3>
 
-<h3 id="path">Path</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>GET https://api.v2.siteleaf.com/v2/sites/:site_id/users
+</code></pre>
+</div>
 
-<p>Changing the path changes the location of the generated collection directory and the path the collection is accessible at on your site.</p>
+<h3 id="response">Response</h3>
 
-<h3 id="permalink">Permalink</h3>
+<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
+Link: &lt;https://api.v2.siteleaf.com/v2/:path?page=2&gt;; rel="next",
+      &lt;https://api.v2.siteleaf.com/v2/:path?page=9&gt;; rel="last"
+</code></pre>
+</div>
 
-<p>The permalink changes the path the collection is accessible at on your site.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>[
+  {
+    "id": "5697cc7b16d5640c40000000",
+    "email": "jill@siteleaf.com",
+    "firstname": "Jill",
+    "lastname": "Smith",
+    "fullname": "Jill Smith",
+    "created_at": "2013-06-03 04:42:35 +0000",
+    "updated_at": "2015-08-30 20:31:31 +0000"
+  }
+]
+</code></pre>
+</div>
 
-<h2 id="further-reading">Further Reading</h2>
+<h2 id="current-user">Get the currently authenticated user</h2>
 
-<ul>
-  <li><a href="http://jekyllrb.com/docs/collections/">Jekyll: Collections</a></li>
-</ul>
+<h3 id="endpoint-1">Endpoint</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>GET https://api.v2.siteleaf.com/v2/users/me
+</code></pre>
+</div>
+
+<h3 id="response-1">Response</h3>
+
+<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jill@siteleaf.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"firstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jill"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"lastname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Smith"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"fullname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jill Smith"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2013-06-03 04:42:35 +0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-08-30 20:31:31 +0000"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+</div>
 
 
-    <p class="document__improve"><a href="https://github.com/oakstudios/learn.siteleaf.com/blob/master/_managing-content/collections.markdown">Help improve this page</a></p>
+
+    <p class="document__improve">
+      <a href="https://github.com/oakstudios/learn.siteleaf.com/blob/master/_api/users.md">
+        Help improve this page
+      </a>
+    </p>
   </div>
 </div>
 

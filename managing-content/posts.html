@@ -17,19 +17,12 @@
           <ul class="nav__list nav__list--header">
             
               
-                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/"</a>Documentation</a></li>
-              
-            
-              
-                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/home.html"</a>Home</a></li>
+                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/">Documentation</a></li>
               
             
               
             
-              
-                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/themes"</a>Theme Park</a></li>
-              
-            
+            <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="http://status.siteleaf.com/">Status</a></li>
           </ul>
         </div>
       </nav>
@@ -42,6 +35,16 @@
           </form>
 
           
+          
+            
+              <nav class="nav">
+                <h3 class="nav__header">Posts</h3>
+                <ul class="nav__list nav__list--sidebar">
+                  
+                  
+                </ul>
+              </nav>
+            
           
             
           
@@ -63,13 +66,15 @@
                 <ul class="nav__list nav__list--sidebar">
                   
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/collections.html">Collections</a></li>
-                  
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/meta-fields.html">Meta fields</a></li>
-                  
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/pages.html">Pages</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/posts.html">Posts</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/collections.html">Collections</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/documents.html">Documents</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/meta-fields.html">Meta fields</a></li>
                   
                 </ul>
               </nav>
@@ -83,11 +88,13 @@
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/getting-started.html">Getting started</a></li>
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid-basics.html">Liquid basics</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/local-development.html">Local development</a></li>
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid-reference.html">Liquid reference</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid.html">Liquid</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/structure.html">Theme structure</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/github-sync.html">GitHub Sync</a></li>
                   
                 </ul>
               </nav>
@@ -99,9 +106,29 @@
                 <ul class="nav__list nav__list--sidebar">
                   
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/hosting.html">Hosting</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/users.html">Users</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/settings.html">Settings</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/hosting.html">Hosting</a></li>
+                  
+                </ul>
+              </nav>
+            
+          
+            
+              <nav class="nav">
+                <h3 class="nav__header">API</h3>
+                <ul class="nav__list nav__list--sidebar">
+                  
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/pages.html">Pages</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/sites.html">Sites</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/users.html">Users</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/authentication.html">Authentication</a></li>
                   
                 </ul>
               </nav>
@@ -123,17 +150,17 @@
   <div class="document__content">
     <p>Posts are a bit like special documents. Siteleaf, like Jekyll, is “blog-aware” — blogging is built in by default.</p>
 
-<p>Creating a post will create a Markdown file in the <code>_posts/</code> directory that will include the timestamp and date (for example, a post titled “New York” that was created on January 6th, 2016 will turn into <code>2016-01-06-new-york.markdown</code>).</p>
+<p>Creating a post will create a Markdown file in the <code class="highlighter-rouge">_posts/</code> directory that will include the timestamp and date (for example, a post titled “New York” that was created on January 6th, 2016 will turn into <code class="highlighter-rouge">2016-01-06-new-york.markdown</code>).</p>
 
 <h2 id="options">Options</h2>
 
 <h3 id="path">Path</h3>
 
-<p>The path changes the URL this post is accessible at on your site within the <code>/posts/</code> subdirectory.</p>
+<p>The path changes the URL this post is accessible at on your site within the <code class="highlighter-rouge">/posts/</code> subdirectory.</p>
 
 <h3 id="visibility">Visibility</h3>
 
-<p>By default, posts are visible. You can change them to hidden or draft (in which case, they’d be moved to the <code>_drafts/</code> directory).</p>
+<p>By default, posts are visible. You can change them to hidden or draft (in which case, they’d be moved to the <code class="highlighter-rouge">_drafts/</code> directory).</p>
 
 <h3 id="tags">Tags</h3>
 
@@ -143,17 +170,24 @@
 
 <p>A category is an overarching theme that a post has. Separate multiple categories with a comma.</p>
 
-<h3 id="published-on">Published on</h3>
+<h3 id="date">Date</h3>
 
 <p>This changes the timestamp associated with the post.</p>
 
 <h3 id="permalink">Permalink</h3>
 
-<p>The permalink changes the URL this post is accessible at on your site. Unlike a path, this can change the URL to be anywhere on the site, not just under <code>/posts/</code>.</p>
+<p>The permalink changes the URL this post is accessible at on your site. Unlike a path, this can change the URL to be anywhere on the site, not just under <code class="highlighter-rouge">/posts/</code>.</p>
 
 <h3 id="layout">Layout</h3>
 
-<p>The layout field lets you select which layout in <code>_layouts/</code> this post should use.</p>
+<p>The layout field lets you select which layout in <code class="highlighter-rouge">_layouts/</code> this post should use.</p>
+
+<h2 id="further-reading">Further Reading</h2>
+
+<ul>
+  <li><a href="http://jekyllrb.com/docs/posts/">Jekyll: Writing posts</a></li>
+  <li><a href="http://jekyllrb.com/docs/drafts/">Jekyll: Working with drafts</a></li>
+</ul>
 
 
     <p class="document__improve"><a href="https://github.com/oakstudios/learn.siteleaf.com/blob/master/_managing-content/posts.markdown">Help improve this page</a></p>

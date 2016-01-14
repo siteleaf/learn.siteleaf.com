@@ -17,19 +17,12 @@
           <ul class="nav__list nav__list--header">
             
               
-                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/"</a>Documentation</a></li>
-              
-            
-              
-                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/home.html"</a>Home</a></li>
+                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/">Documentation</a></li>
               
             
               
             
-              
-                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/themes"</a>Theme Park</a></li>
-              
-            
+            <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="http://status.siteleaf.com/">Status</a></li>
           </ul>
         </div>
       </nav>
@@ -42,6 +35,16 @@
           </form>
 
           
+          
+            
+              <nav class="nav">
+                <h3 class="nav__header">Posts</h3>
+                <ul class="nav__list nav__list--sidebar">
+                  
+                  
+                </ul>
+              </nav>
+            
           
             
           
@@ -63,13 +66,15 @@
                 <ul class="nav__list nav__list--sidebar">
                   
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/collections.html">Collections</a></li>
-                  
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/meta-fields.html">Meta fields</a></li>
-                  
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/pages.html">Pages</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/posts.html">Posts</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/collections.html">Collections</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/documents.html">Documents</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/meta-fields.html">Meta fields</a></li>
                   
                 </ul>
               </nav>
@@ -83,11 +88,13 @@
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/getting-started.html">Getting started</a></li>
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid-basics.html">Liquid basics</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/local-development.html">Local development</a></li>
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid-reference.html">Liquid reference</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid.html">Liquid</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/structure.html">Theme structure</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/github-sync.html">GitHub Sync</a></li>
                   
                 </ul>
               </nav>
@@ -99,9 +106,29 @@
                 <ul class="nav__list nav__list--sidebar">
                   
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/hosting.html">Hosting</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/users.html">Users</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/settings.html">Settings</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/hosting.html">Hosting</a></li>
+                  
+                </ul>
+              </nav>
+            
+          
+            
+              <nav class="nav">
+                <h3 class="nav__header">API</h3>
+                <ul class="nav__list nav__list--sidebar">
+                  
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/pages.html">Pages</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/sites.html">Sites</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/users.html">Users</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/authentication.html">Authentication</a></li>
                   
                 </ul>
               </nav>
@@ -138,33 +165,39 @@ _site/
 _config.yml
 index.markdown</code></pre></figure>
 
-<h2 id="layouts"><code>_layouts/</code></h2>
+<h2 id="layouts"><code class="highlighter-rouge">_layouts/</code></h2>
 
-<p>The <code>_layouts/</code> directory contains the layouts that Jekyll will use to render content. The default template (<code>default.html</code>) is what Jekyll will use if it isn’t told to use another layout. Generally, the layout is defined in the frontmatter of the content by giving the file name without an extension:</p>
+<p>The <code class="highlighter-rouge">_layouts/</code> directory contains the layouts that Jekyll will use to render content. The default template (<code class="highlighter-rouge">default.html</code>) is what Jekyll will use if it isn’t told to use another layout. Generally, the layout is defined in the frontmatter of the content by giving the file name without an extension:</p>
 
 <figure class="highlight"><pre><code class="language-plain" data-lang="plain">---
 layout: other
 ---</code></pre></figure>
 
-<h2 id="includes"><code>_includes/</code></h2>
+<h2 id="includes"><code class="highlighter-rouge">_includes/</code></h2>
 
-<p>The <code>_includes/</code> directory contains fragments of code that aren’t necessarily entire templates. For example, you could contain the code for a blog post in one file and use it in multiple places.</p>
+<p>The <code class="highlighter-rouge">_includes/</code> directory contains fragments of code that aren’t necessarily entire templates. For example, you could contain the code for a blog post in one file and use it in multiple places.</p>
 
-<h2 id="posts"><code>_posts/</code></h2>
+<h2 id="posts"><code class="highlighter-rouge">_posts/</code></h2>
 
-<p>The <code>_posts/</code> directory is where you put posts. Posts filenames include the timestamp and date (for example, a post titled “New York” that was created on January 6th, 2016 will turn into <code>2016-01-06-new-york.markdown</code>).</p>
+<p>The <code class="highlighter-rouge">_posts/</code> directory is where you put posts. Posts filenames include the timestamp and date (for example, a post titled “New York” that was created on January 6th, 2016 will turn into <code class="highlighter-rouge">2016-01-06-new-york.markdown</code>).</p>
 
-<h2 id="sass"><code>_sass/</code></h2>
+<h2 id="sass"><code class="highlighter-rouge">_sass/</code></h2>
 
-<p>Jekyll will automatically compile Sass/SCSS. You can add a partial to this directory (prefaced with a <code>_</code>), and then reference it in another file.</p>
+<p>Jekyll will automatically compile Sass/SCSS. You can add a partial to this directory (prefaced with a <code class="highlighter-rouge">_</code>), and then reference it in another file.</p>
 
-<h2 id="site"><code>_site/</code></h2>
+<h2 id="site"><code class="highlighter-rouge">_site/</code></h2>
 
 <p>This is the directory where your site gets generated into. It’s a good idea to keep this out of version control!</p>
 
-<h2 id="configyml"><code>_config.yml</code></h2>
+<h2 id="configyml"><code class="highlighter-rouge">_config.yml</code></h2>
 
 <p>This is your Jekyll configuration file. The <a href="http://jekyllrb.com/docs/configuration/">Jekyll documentation</a> goes into great detail about configuration.</p>
+
+<h2 id="further-reading">Further Reading</h2>
+
+<ul>
+  <li><a href="http://jekyllrb.com/docs/structure/">Jekyll: Directory Structure</a></li>
+</ul>
 
 
     <p class="document__improve"><a href="https://github.com/oakstudios/learn.siteleaf.com/blob/master/_theme-development/structure.markdown">Help improve this page</a></p>

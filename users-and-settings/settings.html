@@ -17,19 +17,12 @@
           <ul class="nav__list nav__list--header">
             
               
-                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/"</a>Documentation</a></li>
-              
-            
-              
-                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/home.html"</a>Home</a></li>
+                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/">Documentation</a></li>
               
             
               
             
-              
-                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/themes"</a>Theme Park</a></li>
-              
-            
+            <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="http://status.siteleaf.com/">Status</a></li>
           </ul>
         </div>
       </nav>
@@ -42,6 +35,16 @@
           </form>
 
           
+          
+            
+              <nav class="nav">
+                <h3 class="nav__header">Posts</h3>
+                <ul class="nav__list nav__list--sidebar">
+                  
+                  
+                </ul>
+              </nav>
+            
           
             
           
@@ -63,13 +66,15 @@
                 <ul class="nav__list nav__list--sidebar">
                   
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/collections.html">Collections</a></li>
-                  
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/meta-fields.html">Meta fields</a></li>
-                  
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/pages.html">Pages</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/posts.html">Posts</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/collections.html">Collections</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/documents.html">Documents</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/meta-fields.html">Meta fields</a></li>
                   
                 </ul>
               </nav>
@@ -83,11 +88,13 @@
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/getting-started.html">Getting started</a></li>
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid-basics.html">Liquid basics</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/local-development.html">Local development</a></li>
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid-reference.html">Liquid reference</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid.html">Liquid</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/structure.html">Theme structure</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/github-sync.html">GitHub Sync</a></li>
                   
                 </ul>
               </nav>
@@ -99,9 +106,29 @@
                 <ul class="nav__list nav__list--sidebar">
                   
                   
-                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/hosting.html">Hosting</a></li>
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/users.html">Users</a></li>
                   
                     <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/settings.html">Settings</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/hosting.html">Hosting</a></li>
+                  
+                </ul>
+              </nav>
+            
+          
+            
+              <nav class="nav">
+                <h3 class="nav__header">API</h3>
+                <ul class="nav__list nav__list--sidebar">
+                  
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/pages.html">Pages</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/sites.html">Sites</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/users.html">Users</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/authentication.html">Authentication</a></li>
                   
                 </ul>
               </nav>
@@ -123,7 +150,7 @@
   <div class="document__content">
     <p>Under the “General” tab in your site settings, you can change several aspects of the site.</p>
 
-<h3 id="site-title-sitetitle">Site title (<code>site.title</code>)</h3>
+<h3 id="title">Title</h3>
 
 <p>The site title is required.</p>
 
@@ -133,7 +160,7 @@
 
 <h3 id="permalink">Permalink</h3>
 
-<p>This is an advanced Jekyll option that changes the format of your permalinks. By default, Siteleaf uses the <code>pretty</code> permalink style.</p>
+<p>This is an advanced Jekyll option that changes the format of your post permalinks. By default, Siteleaf uses the <code class="highlighter-rouge">pretty</code> permalink style.</p>
 
 <table>
   <thead>
@@ -144,27 +171,23 @@
   </thead>
   <tbody>
     <tr>
-      <td><code>date</code></td>
-      <td><code>/:categories/:year/:month/:day/:title.html</code></td>
+      <td><code class="highlighter-rouge">date</code></td>
+      <td><code class="highlighter-rouge">/:categories/:year/:month/:day/:title.html</code></td>
     </tr>
     <tr>
-      <td><code>pretty</code></td>
-      <td><code>/:categories/:year/:month/:day/:title</code></td>
+      <td><code class="highlighter-rouge">pretty</code></td>
+      <td><code class="highlighter-rouge">/:categories/:year/:month/:day/:title</code></td>
     </tr>
     <tr>
-      <td><code>ordinal</code></td>
-      <td><code>/:categories/:year/:y_day/:title.html</code></td>
+      <td><code class="highlighter-rouge">ordinal</code></td>
+      <td><code class="highlighter-rouge">/:categories/:year/:y_day/:title.html</code></td>
     </tr>
     <tr>
-      <td><code>none</code></td>
-      <td><code>/:categories/:title.html</code></td>
+      <td><code class="highlighter-rouge">none</code></td>
+      <td><code class="highlighter-rouge">/:categories/:title.html</code></td>
     </tr>
   </tbody>
 </table>
-
-<h3 id="meta-fields-sitemeta">Meta fields (<code>site.meta</code>)</h3>
-
-<p>You can also add meta fields to your site. See the <a href="/managing-content/meta-fields">meta fields</a> documentation for more information.</p>
 
 
     <p class="document__improve"><a href="https://github.com/oakstudios/learn.siteleaf.com/blob/master/_users-and-settings/settings.markdown">Help improve this page</a></p>

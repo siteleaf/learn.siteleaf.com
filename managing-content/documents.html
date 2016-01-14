@@ -137,7 +137,7 @@
         </aside>
         <section class="main__content">
           <div class="document">
-  <h1 class="document__title">Collections</h1>
+  <h1 class="document__title">Documents</h1>
 
   <!-- <nav class="nav nav--breadcrumbs">
     <ul class="nav__list nav__list--breadcrumbs">
@@ -148,24 +148,25 @@
   
 
   <div class="document__content">
-    <p>There will be times where you don’t need a page or a post, but still need to group bits of content together. This is exactly what <em>collections</em> are: they are groups of <a href="/managing-content/documents.html"><em>documents</em></a> that aren’t in any particular order.</p>
-
-<p>For each collection, a new directory will be created in your project called <code class="highlighter-rouge">_[collection name]/</code> (e.g., <code class="highlighter-rouge">_people/</code>). Additionally, a piece of configuration will be added to your <code class="highlighter-rouge">_config.yml</code> file that defines the collection with its title and some metadata:</p>
-
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">collections</span><span class="pi">:</span>
-  <span class="s">people</span><span class="pi">:</span>
-    <span class="s">title</span><span class="pi">:</span> <span class="s">People</span>
-    <span class="s">output</span><span class="pi">:</span> <span class="s">true</span></code></pre></figure>
+    <p>Documents are pieces of related content in a <a href="/managing-content/collections.html">Collection</a>. They’re similar to <a href="/managing-content/pages.html">Pages</a>, except they belong to a collection rather than the site itself.</p>
 
 <h2 id="options">Options</h2>
 
-<h3 id="path">Path</h3>
+<h3 id="visibility">Visibility</h3>
 
-<p>Changing the path changes the location of the generated collection directory and the path the collection is accessible at on your site.</p>
+<p>By default, documents are visible. You can change this by switching it to hidden.</p>
+
+<h3 id="date">Date</h3>
+
+<p>The timestamp associated with the document.</p>
 
 <h3 id="permalink">Permalink</h3>
 
-<p>The permalink changes the path the collection is accessible at on your site.</p>
+<p>The permalink changes the path the document is accessible at on your site.</p>
+
+<h3 id="layout">Layout</h3>
+
+<p>The layout field lets you select which layout in <code class="highlighter-rouge">_layouts/</code> this document should use.</p>
 
 <h2 id="further-reading">Further Reading</h2>
 
@@ -174,7 +175,7 @@
 </ul>
 
 
-    <p class="document__improve"><a href="https://github.com/oakstudios/learn.siteleaf.com/blob/master/_managing-content/collections.markdown">Help improve this page</a></p>
+    <p class="document__improve"><a href="https://github.com/oakstudios/learn.siteleaf.com/blob/master/_managing-content/documents.markdown">Help improve this page</a></p>
   </div>
 </div>
 

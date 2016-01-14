@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="generator" content="Siteleaf, http://siteleaf.com">
+
+    <title>Siteleaf Learn</title>
+
+    <link href="/assets/css/main.css" rel="stylesheet">
+  </head>
+  <body class="page">
+    <header class="header">
+      <nav class="nav">
+        <div class="wrap">
+          <a class="nav__logo" href="/">Learn</a>
+          <ul class="nav__list nav__list--header">
+            
+              
+                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/">Documentation</a></li>
+              
+            
+              
+            
+            <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="http://status.siteleaf.com/">Status</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="wrap">
+        <aside class="main__sidebar">
+          <form class="form__search">
+            <input class="form__input--search" type="search" placeholder="Search">
+          </form>
+
+          
+          
+            
+              <nav class="nav">
+                <h3 class="nav__header">Posts</h3>
+                <ul class="nav__list nav__list--sidebar">
+                  
+                  
+                </ul>
+              </nav>
+            
+          
+            
+          
+            
+              <nav class="nav">
+                <h3 class="nav__header">Getting Started</h3>
+                <ul class="nav__list nav__list--sidebar">
+                  
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/getting-started/what-is-siteleaf.html">What is Siteleaf?</a></li>
+                  
+                </ul>
+              </nav>
+            
+          
+            
+              <nav class="nav">
+                <h3 class="nav__header">Managing Content</h3>
+                <ul class="nav__list nav__list--sidebar">
+                  
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/pages.html">Pages</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/posts.html">Posts</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/collections.html">Collections</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/documents.html">Documents</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/meta-fields.html">Meta fields</a></li>
+                  
+                </ul>
+              </nav>
+            
+          
+            
+              <nav class="nav">
+                <h3 class="nav__header">Theme Development</h3>
+                <ul class="nav__list nav__list--sidebar">
+                  
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/getting-started.html">Getting started</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/local-development.html">Local development</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid.html">Liquid</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/structure.html">Theme structure</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/github-sync.html">GitHub Sync</a></li>
+                  
+                </ul>
+              </nav>
+            
+          
+            
+              <nav class="nav">
+                <h3 class="nav__header">Users and Settings</h3>
+                <ul class="nav__list nav__list--sidebar">
+                  
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/users.html">Users</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/settings.html">Settings</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/hosting.html">Hosting</a></li>
+                  
+                </ul>
+              </nav>
+            
+          
+            
+              <nav class="nav">
+                <h3 class="nav__header">API</h3>
+                <ul class="nav__list nav__list--sidebar">
+                  
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/pages.html">Pages</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/sites.html">Sites</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/users.html">Users</a></li>
+                  
+                    <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/authentication.html">Authentication</a></li>
+                  
+                </ul>
+              </nav>
+            
+          
+        </aside>
+        <section class="main__content">
+          <div class="document">
+  <h1 class="document__title">Sites</h1>
+
+  
+
+  <div class="document__content api__content">
+    <h2 id="overview">Overview</h2>
+
+<ol>
+  <li><a href="#list-your-sites">List your sites</a></li>
+  <li><a href="#create-a-site">Create a site</a></li>
+  <li><a href="#get-a-site">Get a site</a></li>
+  <li><a href="#update-a-site">Update a site</a></li>
+  <li><a href="#delete-a-site">Delete a site</a></li>
+  <li><a href="#publish-a-site">Publish a site</a></li>
+  <li><a href="#list-post-tags">List post tags</a></li>
+  <li><a href="#list-post-categories">List post categories</a></li>
+</ol>
+
+<h2 id="list-your-sites">List your sites</h2>
+
+<h3 id="endpoint">Endpoint</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>GET https://api.v2.siteleaf.com/v2/sites
+</code></pre>
+</div>
+
+<h3 id="response">Response</h3>
+
+<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
+Link: &lt;https://api.v2.siteleaf.com/v2/:path?page=2&gt;; rel="next",
+      &lt;https://api.v2.siteleaf.com/v2/:path?page=9&gt;; rel="last"
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000002"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bar Lawrence"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"www.barlawrence.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"cname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"www.barlawrence.com.s3-website-us-east-1.amazonaws.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"defaults"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"layout"</span><span class="p">:</span><span class="w"> </span><span class="s2">"drink"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"permalink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pretty"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UTC"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"v2"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2013-06-24 15:00:39 +0000"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-08-29 20:57:17 +0000"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000000"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+</div>
+
+<h2 id="create-a-site">Create a site</h2>
+
+<h3 id="endpoint-1">Endpoint</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>POST https://api.v2.siteleaf.com/v2/sites
+</code></pre>
+</div>
+
+<h3 id="input">Input</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Desc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">title</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Sites title <strong>(required)</strong></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">domain</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Sites domain <strong>(required)</strong></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">timezone</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Sites timezone, defaults to <code class="highlighter-rouge">UTC</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">metadata</code></td>
+      <td><code class="highlighter-rouge">Hash&lt;String, *&gt;</code></td>
+      <td>Arbitrary key/value pairs</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">defaults</code></td>
+      <td><code class="highlighter-rouge">Array&lt;Hash&gt;</code></td>
+      <td>Jekyll defaults, see the <a href="/api/defaults">Defaults page</a> for more details</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">empty</code></td>
+      <td><code class="highlighter-rouge">Boolean</code></td>
+      <td>Defaults to <code class="highlighter-rouge">false</code>, if <code class="highlighter-rouge">true</code> doesn’t create the Siteleaf default theme</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="example">Example</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hello World"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"America/New_York"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"foo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bar"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+</div>
+
+<h3 id="response-1">Response</h3>
+
+<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 201 Created
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000002"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bar Lawrence"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"www.barlawrence.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"cname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"www.barlawrence.com.s3-website-us-east-1.amazonaws.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"defaults"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"layout"</span><span class="p">:</span><span class="w"> </span><span class="s2">"drink"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"permalink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pretty"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UTC"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"v2"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2013-06-24 15:00:39 +0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-08-29 20:57:17 +0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000000"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+</div>
+
+<h2 id="get-a-site">Get a site</h2>
+
+<h3 id="endpoint-2">Endpoint</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>GET https://api.v2.siteleaf.com/v2/sites/:site_id
+</code></pre>
+</div>
+
+<h3 id="response-2">Response</h3>
+
+<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000002"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bar Lawrence"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"www.barlawrence.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"cname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"www.barlawrence.com.s3-website-us-east-1.amazonaws.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"defaults"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"layout"</span><span class="p">:</span><span class="w"> </span><span class="s2">"drink"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"permalink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pretty"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UTC"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"v2"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2013-06-24 15:00:39 +0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-08-29 20:57:17 +0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000000"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+</div>
+
+<h2 id="update-a-site">Update a site</h2>
+
+<h3 id="endpoint-3">Endpoint</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>PUT https://api.v2.siteleaf.com/v2/sites/:site_id
+</code></pre>
+</div>
+
+<h3 id="input-1">Input</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Desc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">title</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Sites title</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">domain</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Sites domain</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">timezone</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Sites timezone, defaults to <code class="highlighter-rouge">UTC</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">metadata</code></td>
+      <td><code class="highlighter-rouge">Hash&lt;String, *&gt;</code></td>
+      <td>Arbitrary key/value pairs</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">defaults</code></td>
+      <td><code class="highlighter-rouge">Array&lt;Hash&gt;</code></td>
+      <td>Jekyll defaults, see the <a href="/api/defaults">Defaults page</a> for more details</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">hosting</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Valid options are <code class="highlighter-rouge">disabled</code>, <code class="highlighter-rouge">ftp</code>, <code class="highlighter-rouge">s3</code>, <code class="highlighter-rouge">cloudfiles</code> and <code class="highlighter-rouge">github</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">hosting_options</code></td>
+      <td><code class="highlighter-rouge">Hash&lt;String, String&gt;</code></td>
+      <td>See the <a href="/api/hosting-sync">Hosting/Sync page</a> for more details</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">sync</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Valid options are <code class="highlighter-rouge">disabled</code> and <code class="highlighter-rouge">github</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">sync_options</code></td>
+      <td><code class="highlighter-rouge">Hash&lt;String, String&gt;</code></td>
+      <td>See the <a href="/api/hosting-sync">Hosting/Sync page</a> for more details</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="example-1">Example</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hello World"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"America/New_York"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"foo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bar"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+</div>
+
+<h3 id="response-3">Response</h3>
+
+<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000002"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bar Lawrence"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"www.barlawrence.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"cname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"www.barlawrence.com.s3-website-us-east-1.amazonaws.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"defaults"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"layout"</span><span class="p">:</span><span class="w"> </span><span class="s2">"drink"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"permalink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pretty"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UTC"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"v2"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2013-06-24 15:00:39 +0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-08-29 20:57:17 +0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000000"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+</div>
+
+<h2 id="delete-a-site">Delete a site</h2>
+
+<h3 id="endpoint-4">Endpoint</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>DELETE https://api.v2.siteleaf.com/v2/sites/:site_id
+</code></pre>
+</div>
+
+<h3 id="response-4">Response</h3>
+
+<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000002"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"deleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h2 id="publish-a-site">Publish a site</h2>
+
+<p>Compiles and publishes your site in the background, and immediately returns a job id. Use the <a href="/api/jobs">Jobs API</a> to retrieve status updates.</p>
+
+<h3 id="endpoint-5">Endpoint</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>POST https://api.v2.siteleaf.com/v2/sites/:site_id/publish
+</code></pre>
+</div>
+
+<h3 id="response-5">Response</h3>
+
+<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 202 Accepted
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"job_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vjk6IeZVxSYa"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h2 id="list-post-tags">List post tags</h2>
+
+<p>Returns an array of all unique tags from Documents in the posts Collection.</p>
+
+<h3 id="endpoint-6">Endpoint</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>GET https://api.v2.siteleaf.com/v2/sites/:site_id/tags
+</code></pre>
+</div>
+
+<h3 id="response-6">Response</h3>
+
+<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">[</span><span class="s2">"cookies"</span><span class="p">,</span><span class="w"> </span><span class="s2">"milk"</span><span class="p">]</span><span class="w">
+</span></code></pre>
+</div>
+
+<h2 id="list-post-categories">List post categories</h2>
+
+<p>Returns an array of all unique categories from Documents in the posts Collection.</p>
+
+<h3 id="endpoint-7">Endpoint</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>GET https://api.v2.siteleaf.com/v2/sites/:site_id/categories
+</code></pre>
+</div>
+
+<h3 id="response-7">Response</h3>
+
+<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">[</span><span class="s2">"apple"</span><span class="p">,</span><span class="w"> </span><span class="s2">"linux"</span><span class="p">,</span><span class="w"> </span><span class="s2">"windows"</span><span class="p">]</span><span class="w">
+</span></code></pre>
+</div>
+
+
+    <p class="document__improve">
+      <a href="https://github.com/oakstudios/learn.siteleaf.com/blob/master/_api/sites.md">
+        Help improve this page
+      </a>
+    </p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="wrap">
+        <p class="footer__copyright">&copy; 2015. Siteleaf&trade; is made by <a href="http://oak.is">Oak</a>.</p>
+      </div>
+    </footer>
+  </body>
+</html>

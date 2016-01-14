@@ -137,7 +137,7 @@
         </aside>
         <section class="main__content">
           <div class="document">
-  <h1 class="document__title">Collections</h1>
+  <h1 class="document__title">Users</h1>
 
   <!-- <nav class="nav nav--breadcrumbs">
     <ul class="nav__list nav__list--breadcrumbs">
@@ -148,33 +148,28 @@
   
 
   <div class="document__content">
-    <p>There will be times where you don’t need a page or a post, but still need to group bits of content together. This is exactly what <em>collections</em> are: they are groups of <a href="/managing-content/documents.html"><em>documents</em></a> that aren’t in any particular order.</p>
+    <p>A lot of the time, you won’t be working alone on your site. On the Users page, you can add other collaborators by their name or email address. You can choose between three different user roles, each giving a different level of permission to your site.</p>
 
-<p>For each collection, a new directory will be created in your project called <code class="highlighter-rouge">_[collection name]/</code> (e.g., <code class="highlighter-rouge">_people/</code>). Additionally, a piece of configuration will be added to your <code class="highlighter-rouge">_config.yml</code> file that defines the collection with its title and some metadata:</p>
+<h2 id="user-roles">User Roles</h2>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">collections</span><span class="pi">:</span>
-  <span class="s">people</span><span class="pi">:</span>
-    <span class="s">title</span><span class="pi">:</span> <span class="s">People</span>
-    <span class="s">output</span><span class="pi">:</span> <span class="s">true</span></code></pre></figure>
+<h3 id="admin">Admin</h3>
 
-<h2 id="options">Options</h2>
+<p>The admin role gives full privileges to the collaborator, allowing them to manage and publish all content. This role is great for people who are helping build the site, like a developer or designer, since it allows them to upload theme files, change the site’s settings, and invite other collaborators.</p>
 
-<h3 id="path">Path</h3>
+<h3 id="publisher">Publisher</h3>
 
-<p>Changing the path changes the location of the generated collection directory and the path the collection is accessible at on your site.</p>
+<p>The publisher role is similar to the admin role, however publishers aren’t able to access theme files or the site’s settings. This is a great role to grant to a client. It allows a person to manage and publish pages, posts and assets, while protecting them from accidentally breaking the site’s theme.</p>
 
-<h3 id="permalink">Permalink</h3>
+<h3 id="writer">Writer</h3>
 
-<p>The permalink changes the path the collection is accessible at on your site.</p>
+<p>The writer role is the most limited role available. A writer can only manage their own content, and any content they create will default to “Draft” status. This means that a Publisher or Admin must approve a writer’s content first before publishing it. This role is great for sites with many collaborators who only need access in order to add content (like a blog post).</p>
 
-<h2 id="further-reading">Further Reading</h2>
+<h2 id="transferring-ownership">Transferring Ownership</h2>
 
-<ul>
-  <li><a href="http://jekyllrb.com/docs/collections/">Jekyll: Collections</a></li>
-</ul>
+<p>To transfer your site to another user, you’ll first need to add them to your site. Clicking on “Transfer ownership” will give them full ownership over the site and its contents, and your account will become an Admin on the site.</p>
 
 
-    <p class="document__improve"><a href="https://github.com/oakstudios/learn.siteleaf.com/blob/master/_managing-content/collections.markdown">Help improve this page</a></p>
+    <p class="document__improve"><a href="https://github.com/oakstudios/learn.siteleaf.com/blob/master/_users-and-settings/users.markdown">Help improve this page</a></p>
   </div>
 </div>
 
