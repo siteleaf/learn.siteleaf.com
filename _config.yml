@@ -11,6 +11,9 @@ collections:
     title: Managing Content
     output: true
     weight: 1
+  posts:
+    title: Posts
+    output: true
   theme-development:
     title: Theme Development
     output: true
