@@ -41,6 +41,12 @@
     }
   }
 
+  &__icon {
+    &--grid {
+      font-size: $font-size-4;
+    }
+  }
+
   &__list {
     list-style-type: none;
 
@@ -51,6 +57,7 @@
     }
 
     &--grid {
+      @include clearfix;
       display: block;
       width: 100%;
     }
@@ -103,6 +110,7 @@
 
     &--grid {
       display: block;
+      color: $color-gray-a2;
       padding-bottom: $v;
       padding-top: $v;
 
