@@ -5,6 +5,9 @@ timezone: Eastern Time (US & Canada)
 collections:
   api:
     title: API
+    meta:
+      description: Interact directly with our API
+      icon: globe
     output: true
     weight: 4
   getting-started:
