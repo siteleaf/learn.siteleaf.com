@@ -1,6 +1,5 @@
 ---
 title: Documents
-date: 2016-01-14 17:23:00 -05:00
 example_input: |-
   {
     "id": 123,

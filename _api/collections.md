@@ -1,12 +1,11 @@
 ---
 title: Collections
-date: 2016-01-14 17:23:30.394000000 -05:00
-example_input: |
+example_input: |-
   {
     "title": "Library",
     "output": false
   }
-example_response: |
+example_response: |-
   {
     "id": "5697cc7b16d5640c40000004",
     "title": "Books",
