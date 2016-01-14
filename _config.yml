@@ -9,10 +9,14 @@ collections:
     weight: 4
   getting-started:
     title: Getting Started
+    meta:
+      description: Learn more about Siteleaf itself
     output: true
     weight: 0
   managing-content:
     title: Managing Content
+    meta:
+      description: How to manage content
     output: true
     weight: 1
   posts:
@@ -20,6 +24,8 @@ collections:
     output: true
   theme-development:
     title: Theme Development
+    meta:
+      description: How to make your own themes
     output: true
     weight: 2
   uploads:
@@ -27,6 +33,8 @@ collections:
     output: true
   users-and-settings:
     title: Users and Settings
+    meta:
+      description: Add your friends and host
     output: true
     weight: 3
 defaults:

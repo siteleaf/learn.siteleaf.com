@@ -9,6 +9,14 @@
     margin-top: $v;
   }
 
+  &--grid {
+    text-align: center;
+
+    & + & {
+      border-top: 1px solid $color-gray-an2;
+    }
+  }
+
   &__logo {
     color: $color-white;
     font-size: $font-size-1;
@@ -27,6 +35,10 @@
     color: $color-gray-a2;
     margin-bottom: 0;
     font-size: $font-size-n1;
+
+    &--grid {
+      font-size: $font-size-1;
+    }
   }
 
   &__list {
@@ -36,6 +48,11 @@
       float: right;
       display: inline-block;
       text-align: right;
+    }
+
+    &--grid {
+      display: block;
+      width: 100%;
     }
   }
 
@@ -52,6 +69,26 @@
         margin-left: 1.5em;
       }
     }
+
+    &--grid {
+      border: 1px solid $color-gray-an2;
+      display: inline-block;
+      float: left;
+      margin-left: 1%;
+      width: 24.25%;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        float: right;
+      }
+
+      &:hover {
+        border-color: $color-gray-an1;
+      }
+    }
   }
 
   &__link {
@@ -61,6 +98,20 @@
       &:hover {
         color: rgba($color-white, 0.6);
         text-decoration: none;
+      }
+    }
+
+    &--grid {
+      display: block;
+      padding-bottom: $v;
+      padding-top: $v;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      p {
+        margin-bottom: 0;
       }
     }
   }

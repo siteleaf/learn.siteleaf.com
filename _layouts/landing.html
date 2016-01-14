@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<h1 class="document__title--landing">Your witty tagline!</h1>
+
+<form class="form__search form__search--landing">
+  <input class="form__input--search form__input--search--landing" type="search" placeholder="Search our documentation">
+</form>
+
+{% assign sections = site.collections | sort:"weight" %}
+<nav class="nav nav--grid">
+  <ul class="nav__list nav__list--grid">
+    {% for section in sections %}
+      {% unless section.title == "Uploads" %}
+        <li class="nav__item nav__item--grid">
+          <a class="nav__link nav__link--grid" href="#">
+            <!-- <i class="nav__icon nav__icon--grid ss-icon">exit</i> -->
+            <h3 class="nav__header nav__header--grid">{{ section.title }}</h3>
+            <p>{{ section.meta.description }}</p>
+          </a>
+        </li>
+      {% endunless %}
+    {% endfor %}
+  </ul>
+</nav>

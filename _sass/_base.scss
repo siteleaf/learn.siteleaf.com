@@ -43,9 +43,6 @@ h1 {
   font-size: $font-size-4;
   font-weight: $font-weight-light;
   line-height: $line-height-tighter;
-  border-bottom: 2px solid $color-gray-an2;
-  padding-bottom: $v;
-  margin-bottom: $v;
 }
 
 h2 {
@@ -110,11 +107,27 @@ table {
       padding: $v * 0.25;
       display: block;
       width: 100%;
+
+      &--landing {
+        font-size: $font-size-0;
+      }
     }
   }
 }
 
 .document {
+  &__title {
+    border-bottom: 2px solid $color-gray-an2;
+    padding-bottom: $v;
+    margin-bottom: $v;
+
+    &--landing {
+      border: none;
+      margin-bottom: $v * 1;
+      text-align: center;
+    }
+  }
+
   &__summary {
     border-left: 5px solid $color-gray-an2;
     color: $color-gray-a1;
