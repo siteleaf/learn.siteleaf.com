@@ -28,7 +28,7 @@ example_response: |-
     "sha": "4d481d526f0010ed96e43260f0e776acf6da315d",
     "visibility": "visible",
     "permalink": null,
-    "url": "/api/authentication.html",
+    "url": "/books/the-great-gatsby.html",
     "site_id": "5697cc7b16d5640c40000002",
     "user_id": "5697cc7b16d5640c40000000",
     "created_at": "2016-01-14 20:50:46 +0000",
