@@ -67,7 +67,7 @@
   &__item {
     font-size: $font-size-n1;
     margin-left: 0;
-    padding: 0 ($v / 2);
+    padding-left: 0;
 
     &--header {
       display: inline-block;
@@ -84,6 +84,7 @@
       float: left;
       margin-left: 1%;
       margin-bottom: $v / 2;
+      padding: 0 ($v / 2);
       width: 24.25%;
 
       &:nth-child(4n+1) {
