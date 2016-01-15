@@ -21,6 +21,7 @@ Template page for API resources
 1. [Get a resource](#get-a-resource)
 1. [Update a resource](#update-a-resource)
 1. [Delete a resource](#delete-a-resource)
+{: .api__toc}
 
 
 

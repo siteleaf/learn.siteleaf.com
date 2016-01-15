@@ -35,6 +35,7 @@ Lorem ipsum…
 1. [Delete a collection](#delete-a-collection)
 1. [List files](#list-files)
 1. [Create a file](#create-a-file)
+{: .api__toc}
 
 For interacting with a Collection's documents refer to the [Documents page](/api/documents).
 

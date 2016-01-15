@@ -3,47 +3,47 @@ title: Documents
 date: 2016-01-14 17:29:29.729000000 -05:00
 example_input: |-
   {
-    "id": 123,
-    "document": "input"
+    "tags": ["required reading"]
+    "metadata": {
+      "author": "F. Scott Fitzgerald"
+    }
   }
 example_response: |-
   {
-    "basename": "the-great-gatsby.md",
+    "id": "5697cc7b16d5640c40000005",
+    "title": "The Great Gatsby",
     "body": "Lorem ipsum…",
+    "filename": "_books/the-great-gatsby.md",
+    "path": "the-great-gatsby.md",
+    "basename": "the-great-gatsby.md",
+    "directory": "_books",
+    "tags": [],
     "categories": ["fiction"],
-    "created_at": "2016-01-14 20:50:46 +0000",
-    "date": null,
     "defaults": {
       "layout": "books"
     },
-    "directory": "_books",
-    "filename": "_books/the-great-gatsby.md",
-    "id": "5697cc7b16d5640c40000005",
     "metadata": {},
-    "path": "the-great-gatsby.md",
-    "permalink": null,
-    "sha": "4d481d526f0010ed96e43260f0e776acf6da315d",
-    "site_id": "5697cc7b16d5640c40000002",
-    "tags": [],
-    "title": "The Great Gatsby",
     "type": "document",
-    "updated_at": "2016-01-14 20:56:40 +0000",
+    "date": null,
+    "sha": "4d481d526f0010ed96e43260f0e776acf6da315d",
+    "visibility": "visible",
+    "permalink": null,
     "url": "/api/authentication.html",
+    "site_id": "5697cc7b16d5640c40000002",
     "user_id": "5697cc7b16d5640c40000000",
-    "visibility": "visible"
+    "created_at": "2016-01-14 20:50:46 +0000",
+    "updated_at": "2016-01-14 20:56:40 +0000"
   }
 ---
 
 ## Overview
-
-Template page for API documents
 
 1. [List documents](#list-documents)
 1. [Create a document](#create-a-document)
 1. [Get a document](#get-a-document)
 1. [Update a document](#update-a-document)
 1. [Delete a document](#delete-a-document)
-
+{: .api__toc}
 
 
 
@@ -80,7 +80,15 @@ POST {{ site.data.api.url | append: 'sites/:site_id/collections/:collection_path
 
 | Name | Type | Desc |
 |------|------|------|
-| `foo` | `String` | document foo |
+| `title` | `String` | Document title **(required)** |
+| `body` | `String` | Document body |
+| `path` | `String` | Path of the document relative to its collection |
+| `permalink` | `String` | Custom permalink, overrides the generated `url` |
+| `date` | `String` | ISO8601 formated date |
+| `visibility` | `String` | Valid options are `visible` and `hidden`, defaults to `visible` |
+| `metadata` | `Hash<String, *>` | Arbitrary key/value pairs |
+| `tags` | `Array<String>` | Document tags |
+| `categories` | `Array<String>` | Document categories |
 
 ### Example
 
@@ -129,7 +137,15 @@ PUT {{ site.data.api.url | append: 'documents/:document_id' }}
 
 | Name | Type | Desc |
 |------|------|------|
-| `foo` | `String` | document foo |
+| `title` | `String` | Document title |
+| `body` | `String` | Document body |
+| `path` | `String` | Path of the document relative to its collection |
+| `permalink` | `String` | Custom permalink, overrides the generated `url` |
+| `date` | `String` | ISO8601 formated date |
+| `visibility` | `String` | Valid options are `visible` and `hidden`, defaults to `visible` |
+| `metadata` | `Hash<String, *>` | Arbitrary key/value pairs |
+| `tags` | `Array<String>` | Document tags |
+| `categories` | `Array<String>` | Document categories |
 
 ### Example
 
