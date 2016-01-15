@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="generator" content="Siteleaf, http://siteleaf.com">
+
+    <title>Files</title>
+
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.css" rel="stylesheet">
+  </head>
+  <body class="page">
+    <header class="header">
+      <nav class="nav">
+        <div class="wrap">
+          <a class="nav__logo" href="/">Learn</a>
+          <ul class="nav__list nav__list--header">
+            
+              
+                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="/">Documentation</a></li>
+              
+            
+              
+            
+            <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="http://status.siteleaf.com/">Status</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="wrap">
+        <aside class="main__sidebar">
+  <form class="form__search">
+    <input class="form__input--search" type="search" placeholder="Search">
+  </form>
+
+  
+  
+    
+  
+    
+  
+    
+      <nav class="nav">
+        <h3 class="nav__header">Getting Started</h3>
+        <ul class="nav__list nav__list--sidebar">
+          
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/getting-started/what-is-siteleaf.html">What is Siteleaf?</a></li>
+          
+        </ul>
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h3 class="nav__header">Managing Content</h3>
+        <ul class="nav__list nav__list--sidebar">
+          
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/pages.html">Pages</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/posts.html">Posts</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/collections.html">Collections</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/documents.html">Documents</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/meta-fields.html">Meta fields</a></li>
+          
+        </ul>
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h3 class="nav__header">Theme Development</h3>
+        <ul class="nav__list nav__list--sidebar">
+          
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/getting-started.html">Getting started</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/local-development.html">Local development</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid.html">Liquid</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/structure.html">Theme structure</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/github-sync.html">GitHub Sync</a></li>
+          
+        </ul>
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h3 class="nav__header">Users and Settings</h3>
+        <ul class="nav__list nav__list--sidebar">
+          
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/users.html">Users</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/settings.html">Settings</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/hosting.html">Hosting</a></li>
+          
+        </ul>
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h3 class="nav__header">API</h3>
+        <ul class="nav__list nav__list--sidebar">
+          
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/pages.html">Pages</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/sites.html">Sites</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/users.html">Users</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/collections.html">Collections</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/documents.html">Documents</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/files.html">Files</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/authentication.html">Authentication</a></li>
+          
+        </ul>
+      </nav>
+    
+  
+</aside>
+
+
+<section class="main__content">
+  <div class="document">
+    <h1 class="document__title">Files</h1>
+
+    
+
+    <div class="document__content api__content">
+      <h2 id="overview">Overview</h2>
+
+<p>The Files API can be thought of as a filesystem view, as if you were looking at your Jekyll source code locally. It functions a little differently than the rest of the API and isn’t as structured.</p>
+
+<ol class="api__toc">
+  <li><a href="#list-files">Get files</a></li>
+  <li><a href="#create-or-replace-a-file">Create or replace a file</a></li>
+  <li><a href="#delete-a-file">Delete a file</a></li>
+</ol>
+
+<h2 id="get-files">Get files</h2>
+
+<p>Returns information about a single file or the contents of a directory. The <code class="highlighter-rouge">:name</code> is optional, and without it lists the contents of the root directory.</p>
+
+<h3 id="endpoint">Endpoint</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>GET https://api.v2.siteleaf.com/v2/sites/:site_id/files/:name
+</code></pre>
+</div>
+
+<h3 id="response-if-name-is-a-file">Response if name is a file</h3>
+
+<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"index.html"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"page"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"sha"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ba7f4bd2da35e372fc34fdf3b60cb108b7412b52"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"download_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.v2.siteleaf.com/v2/sites/56965a9dbe6765465c000007/files/index.html?download"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"51ac1ebd5dde223c94000001"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-13 14:09:33 +0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-13 14:09:33 +0000"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h3 id="response-if-name-is-a-directory">Response if name is a directory</h3>
+
+<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_config.yml"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"site"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"sha"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a25a3ad7878fdf634e55cba9fd8336d78042a27"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"download_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.v2.siteleaf.com/v2/sites/56965a9dbe6765465c000007/files/_config.yml?download"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"51ac1ebd5dde223c94000001"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-13 14:09:33 +0000"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-15 16:22:12 +0000"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"index.html"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"page"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"sha"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ba7f4bd2da35e372fc34fdf3b60cb108b7412b52"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"download_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.v2.siteleaf.com/v2/sites/56965a9dbe6765465c000007/files/index.html?download"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"51ac1ebd5dde223c94000001"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-13 14:09:33 +0000"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-13 14:09:33 +0000"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"filesize"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_posts"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"sha"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"directory"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+</div>
+
+<h2 id="create-or-replace-a-file">Create or replace a file</h2>
+
+<p>This endpoint has a couple functions:</p>
+
+<ul>
+  <li>If a file with the specified name already existed the file will be replaced.</li>
+  <li>Otherwise a new file will be created with that name and the returned <code class="highlighter-rouge">type</code> will be one of <code class="highlighter-rouge">page</code>, <code class="highlighter-rouge">document</code>, or <code class="highlighter-rouge">file</code>.</li>
+</ul>
+
+<p>It’s useful for uploading raw Jekyll source files and creating the correct type of Siteleaf resource.</p>
+
+<h3 id="endpoint-1">Endpoint</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>PUT https://api.v2.siteleaf.com/v2/sites/:site_id/files/:name
+</code></pre>
+</div>
+
+<h3 id="input">Input</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Desc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">file</code></td>
+      <td><code class="highlighter-rouge">File</code></td>
+      <td>A <code class="highlighter-rouge">multipart/form-data</code> file attachment</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="response">Response</h3>
+
+<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"index.html"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"page"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"sha"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ba7f4bd2da35e372fc34fdf3b60cb108b7412b52"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"download_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.v2.siteleaf.com/v2/sites/56965a9dbe6765465c000007/files/index.html?download"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"51ac1ebd5dde223c94000001"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-13 14:09:33 +0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-13 14:09:33 +0000"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h2 id="delete-a-file">Delete a file</h2>
+
+<p>Will not delete directories or the <code class="highlighter-rouge">_config.yml</code> file.</p>
+
+<h3 id="endpoint-2">Endpoint</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>DELETE https://api.v2.siteleaf.com/v2/sites/:site_id/files/:name
+</code></pre>
+</div>
+
+<h3 id="response-1">Response</h3>
+
+<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"index.html"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"page"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"sha"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ba7f4bd2da35e372fc34fdf3b60cb108b7412b52"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"download_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.v2.siteleaf.com/v2/sites/56965a9dbe6765465c000007/files/index.html?download"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"51ac1ebd5dde223c94000001"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-13 14:09:33 +0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-13 14:09:33 +0000"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+
+
+      <p class="document__improve">
+        <a href="https://github.com/oakstudios/learn.siteleaf.com/blob/master/_api/files.md">
+          Help improve this page
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="wrap">
+        <p class="footer__copyright">&copy; 2016. Siteleaf&trade; is made by <a href="http://oak.is">Oak</a>.</p>
+      </div>
+    </footer>
+    <script src="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.js"></script>
+  </body>
+</html>
