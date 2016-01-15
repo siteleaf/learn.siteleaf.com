@@ -5,7 +5,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
-    <title>Users</title>
+    <title>Jobs</title>
 
     <link href="/assets/css/main.css" rel="stylesheet">
     <link href="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.css" rel="stylesheet">
@@ -142,33 +142,61 @@
 
 <section class="main__content">
   <div class="document">
-    <h1 class="document__title">Users</h1>
+    <h1 class="document__title">Jobs</h1>
 
     
 
-    <div class="document__content">
-      <p>A lot of the time, you won’t be working alone on your site. On the Users page, you can add other collaborators by their name or email address. You can choose between three different user roles, each giving a different level of permission to your site.</p>
+    <div class="document__content api__content">
+      <h2 id="overview">Overview</h2>
 
-<h2 id="user-roles">User Roles</h2>
+<p>The Jobs endpoint can be used to monitor long running tasks, such as <a href="/api/sites#publish-a-site">publishing a site</a>.
+It uses <a href="https://html.spec.whatwg.org/multipage/comms.html#server-sent-events">Server Sent Events</a> (SSE) to comunicate with the client.</p>
 
-<h3 id="admin">Admin</h3>
+<h2 id="listen-to-a-job">Listen to a job</h2>
 
-<p>The admin role gives full privileges to the collaborator, allowing them to manage and publish all content. This role is great for people who are helping build the site, like a developer or designer, since it allows them to upload theme files, change the site’s settings, and invite other collaborators.</p>
+<p>Events are streamed to the client in real time, with event data encoded as JSON. When the job completes or fails the server will close the connection.  The last event is available for 30 minutes, after which the job id expires.</p>
 
-<h3 id="publisher">Publisher</h3>
+<h3 id="endpoint">Endpoint</h3>
 
-<p>The publisher role is similar to the admin role, however publishers aren’t able to access theme files or the site’s settings. This is a great role to grant to a client. It allows a person to manage and publish pages, posts and assets, while protecting them from accidentally breaking the site’s theme.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>GET https://api.v2.siteleaf.com/v2/jobs/:job_id
+</code></pre>
+</div>
 
-<h3 id="writer">Writer</h3>
+<h3 id="response">Response</h3>
 
-<p>The writer role is the most limited role available. A writer can only manage their own content, and any content they create will default to “Draft” status. This means that a Publisher or Admin must approve a writer’s content first before publishing it. This role is great for sites with many collaborators who only need access in order to add content (like a blog post).</p>
+<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
+Content-Type: text/event-stream
+</code></pre>
+</div>
+<div class="highlighter-rouge"><pre class="highlight"><code>event:status
+data:{"status":"working","message":"Working...","updated_at":"1452890740"}
 
-<h2 id="transferring-ownership">Transferring Ownership</h2>
+event:status
+data:{"status":"working","message":"Working...","updated_at":"1452890744"}
 
-<p>To transfer your site to another user, you’ll first need to add them to your site. Clicking on “Transfer ownership” will give them full ownership over the site and its contents, and your account will become an Admin on the site.</p>
+event:status
+data:{"status":"complete","message":"Done!","updated_at":"1452890745"}
+</code></pre>
+</div>
+
+<h3 id="response-after-job-expires">Response after job expires</h3>
+
+<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 410 Gone
+Content-Type: text/event-stream
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>event:status
+data:{"status":"error","message":"Job not found"}
+</code></pre>
+</div>
 
 
-      <p class="document__improve"><a href="https://github.com/oakstudios/learn.siteleaf.com/blob/master/_users-and-settings/users.markdown">Help improve this page</a></p>
+      <p class="document__improve">
+        <a href="https://github.com/oakstudios/learn.siteleaf.com/blob/master/_api/jobs.md">
+          Help improve this page
+        </a>
+      </p>
     </div>
   </div>
 </section>

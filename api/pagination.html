@@ -5,7 +5,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
-    <title>Users</title>
+    <title>Pagination</title>
 
     <link href="/assets/css/main.css" rel="stylesheet">
     <link href="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.css" rel="stylesheet">
@@ -142,33 +142,57 @@
 
 <section class="main__content">
   <div class="document">
-    <h1 class="document__title">Users</h1>
+    <h1 class="document__title">Pagination</h1>
 
     
 
-    <div class="document__content">
-      <p>A lot of the time, you won’t be working alone on your site. On the Users page, you can add other collaborators by their name or email address. You can choose between three different user roles, each giving a different level of permission to your site.</p>
+    <div class="document__content api__content">
+      <h2 id="overview">Overview</h2>
 
-<h2 id="user-roles">User Roles</h2>
+<p><code class="highlighter-rouge">GET</code> endpoints that return multiple resources support pagination. You can change the page you are on using a <code class="highlighter-rouge">page</code> query string, and change the size of the page using the <code class="highlighter-rouge">per_page</code> query string. By default you start on page 1 and the page size is 30.</p>
 
-<h3 id="admin">Admin</h3>
+<p>The presence of a <a href="http://tools.ietf.org/html/rfc5988">Link header</a> signifies that a response has been paginated, and includes full urls to the surrounding pages. It is recommended to follow the provided urls and not assemble your own.</p>
 
-<p>The admin role gives full privileges to the collaborator, allowing them to manage and publish all content. This role is great for people who are helping build the site, like a developer or designer, since it allows them to upload theme files, change the site’s settings, and invite other collaborators.</p>
+<p>An example:</p>
 
-<h3 id="publisher">Publisher</h3>
+<p>Listing the first page of my sites.</p>
 
-<p>The publisher role is similar to the admin role, however publishers aren’t able to access theme files or the site’s settings. This is a great role to grant to a client. It allows a person to manage and publish pages, posts and assets, while protecting them from accidentally breaking the site’s theme.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>curl -I <span class="s1">'https://api.v2.siteleaf.com/v2/sites'</span>
 
-<h3 id="writer">Writer</h3>
+HTTP/1.1 200 OK
+Link: &lt;https://api.v2.siteleaf.com/v2/sites?page<span class="o">=</span>2&gt;; <span class="nv">rel</span><span class="o">=</span><span class="s2">"next"</span>,
+      &lt;https://api.v2.siteleaf.com/v2/sites?page<span class="o">=</span>3&gt;; <span class="nv">rel</span><span class="o">=</span><span class="s2">"last"</span>
+</code></pre>
+</div>
 
-<p>The writer role is the most limited role available. A writer can only manage their own content, and any content they create will default to “Draft” status. This means that a Publisher or Admin must approve a writer’s content first before publishing it. This role is great for sites with many collaborators who only need access in order to add content (like a blog post).</p>
+<p>Listing my sites and specifying the <code class="highlighter-rouge">per_page</code> attribute (note the last page is now 18).</p>
 
-<h2 id="transferring-ownership">Transferring Ownership</h2>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>curl -I <span class="s1">'https://api.v2.siteleaf.com/v2/sites?per_page=2'</span>
 
-<p>To transfer your site to another user, you’ll first need to add them to your site. Clicking on “Transfer ownership” will give them full ownership over the site and its contents, and your account will become an Admin on the site.</p>
+HTTP/1.1 200 OK
+Link: &lt;https://api.v2.siteleaf.com/v2/sites?page<span class="o">=</span>2&amp;per_page<span class="o">=</span>2&gt;; <span class="nv">rel</span><span class="o">=</span><span class="s2">"next"</span>,
+      &lt;https://api.v2.siteleaf.com/v2/sites?page<span class="o">=</span>18&amp;per_page<span class="o">=</span>2&gt;; <span class="nv">rel</span><span class="o">=</span><span class="s2">"last"</span>
+</code></pre>
+</div>
+
+<p>And following the next link from above to get to page 2.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>curl -I -n <span class="s1">'https://api.v2.siteleaf.com/v2/sites?page=2&amp;per_page=2'</span>
+
+HTTP/1.1 200 OK
+Link: &lt;https://api.v2.siteleaf.com/v2/sites?page<span class="o">=</span>3&amp;per_page<span class="o">=</span>2&gt;; <span class="nv">rel</span><span class="o">=</span><span class="s2">"next"</span>,
+      &lt;https://api.v2.siteleaf.com/v2/sites?page<span class="o">=</span>18&amp;per_page<span class="o">=</span>2&gt;; <span class="nv">rel</span><span class="o">=</span><span class="s2">"last"</span>,
+      &lt;https://api.v2.siteleaf.com/v2/sites?page<span class="o">=</span>1&amp;per_page<span class="o">=</span>2&gt;; <span class="nv">rel</span><span class="o">=</span><span class="s2">"first"</span>,
+      &lt;https://api.v2.siteleaf.com/v2/sites?page<span class="o">=</span>1&amp;per_page<span class="o">=</span>2&gt;; <span class="nv">rel</span><span class="o">=</span><span class="s2">"prev"</span>
+</code></pre>
+</div>
 
 
-      <p class="document__improve"><a href="https://github.com/oakstudios/learn.siteleaf.com/blob/master/_users-and-settings/users.markdown">Help improve this page</a></p>
+      <p class="document__improve">
+        <a href="https://github.com/oakstudios/learn.siteleaf.com/blob/master/_api/pagination.md">
+          Help improve this page
+        </a>
+      </p>
     </div>
   </div>
 </section>
