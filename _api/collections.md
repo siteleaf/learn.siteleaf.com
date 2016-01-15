@@ -222,7 +222,7 @@ POST {{ site.data.api.url | append: 'sites/:site_id/collections/:path/files' }}
 
 ### Response
 
-{{ site.data.api.status_ok }}
+{{ site.data.api.status_created }}
 ~~~ json
 {
   "filename": "_uploads/IMG_2331.JPG",
