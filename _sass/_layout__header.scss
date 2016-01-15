@@ -4,3 +4,28 @@
   margin-bottom: 2em;
   padding-top: 1em;
 }
+
+.beta-notice{
+  border: 1px solid $color-gray-an2;
+  border-radius: $border-radius;
+  padding: 15px;
+  margin-bottom: 2em;
+  line-height: $line-height-tight;
+  color: $color-gray-1;
+  font-size: $font-size-html-sm;
+  font-size: $font-size-n2;
+
+  strong{
+    color: $color-gray-2;
+    display: block;
+  }
+
+  a{
+    color: $color-gray-1;
+    text-decoration: underline;
+
+    &:hover{
+      color: $color-blue-dark;
+    }
+  }
+}
