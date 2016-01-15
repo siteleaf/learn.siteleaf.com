@@ -1,11 +1,9 @@
 ---
-title: Siteleaf v2 Beta
+title: Version 2 Beta
 date: 2015-10-31 20:03:00 -04:00
-layout: page
 weight: 2
+layout: page
 ---
-
-_Thanks for beta testing Siteleaf v2. We're in the process of putting together proper help docs. In the meantime, please dig into these resources._
 
 ## Feedback
 
