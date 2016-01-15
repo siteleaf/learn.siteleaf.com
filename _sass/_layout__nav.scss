@@ -67,7 +67,7 @@
   &__item {
     font-size: $font-size-n1;
     margin-left: 0;
-    padding-left: 0;
+    padding: 0 ($v / 2);
 
     &--header {
       display: inline-block;

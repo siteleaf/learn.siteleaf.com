@@ -27,7 +27,7 @@ collections:
     output: true
     permalink: /:collection/:path/
     meta:
-      description: How to manage content
+      description: How to manage the content on your site
       icon: write
       in_nav: true
     weight: 1
@@ -39,7 +39,7 @@ collections:
     output: true
     permalink: /:collection/:path/
     meta:
-      description: How to make your own themes
+      description: Make and publish your own themes
       icon: bezier
       in_nav: true
     weight: 2
@@ -51,7 +51,7 @@ collections:
     output: true
     permalink: /:collection/:path/
     meta:
-      description: Add your friends and host
+      description: Add your BFFs and manage your site
       icon: users
       in_nav: true
     weight: 3
