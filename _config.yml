@@ -30,6 +30,9 @@ collections:
   posts:
     title: Posts
     output: true
+  siteleaf-v2-2:
+    title: Siteleaf V2 2
+    output: true
   theme-development:
     title: Theme Development
     output: true
