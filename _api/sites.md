@@ -205,7 +205,7 @@ POST {{ site.data.api.url | append: 'sites/:site_id/publish' }}
 {{ site.data.api.status_accepted }}
 ~~~ json
 {
-  "job_id": "Vjk6IeZVxSYa"
+  "job_id": "b9982d904c02307bafadd2a6"
 }
 ~~~
 

@@ -26,3 +26,17 @@ status_paginated: |
         <https://api.v2.siteleaf.com/v2/:path?page=9>; rel="last"
   ~~~
   {:.api__headers}
+
+status_sse_gone: |
+  ~~~
+  Status: 410 Gone
+  Content-Type: text/event-stream
+  ~~~
+  {:.api__headers}
+
+status_sse_ok: |
+  ~~~
+  Status: 200 OK
+  Content-Type: text/event-stream
+  ~~~
+  {:.api__headers}
