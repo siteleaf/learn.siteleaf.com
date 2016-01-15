@@ -1,7 +1,7 @@
 ---
 title: Siteleaf Learn
 url: http://learn.siteleaf.com
-timezone: Eastern Time (US & Canada)
+timezone: America/New_York
 collections:
   api:
     title: API
