@@ -33,8 +33,8 @@ Lorem ipsum…
 1. [Get a collection](#get-a-collection)
 1. [Update a collection](#update-a-collection)
 1. [Delete a collection](#delete-a-collection)
-1. [List files](#list-files)
-1. [Create a file](#create-a-file)
+1. [List collection files](#list-collection-files)
+1. [Create a collection file](#create-a-collection-file)
 {: .api__toc}
 
 For interacting with a Collection's documents refer to the [Documents page](/api/documents).
@@ -101,7 +101,7 @@ POST {{ site.data.api.url | append: 'sites/:site_id/collections' }}
 ### Endpoint
 
 ~~~
-GET {{ site.data.api.url | append: 'sites/:site_id/collections/:collection_path' }}
+GET {{ site.data.api.url | append: 'sites/:site_id/collections/:path' }}
 ~~~
 
 ### Response
@@ -119,7 +119,7 @@ GET {{ site.data.api.url | append: 'sites/:site_id/collections/:collection_path'
 ### Endpoint
 
 ~~~
-PUT {{ site.data.api.url | append: 'sites/:site_id/collections/:collection_path' }}
+PUT {{ site.data.api.url | append: 'sites/:site_id/collections/:path' }}
 ~~~
 
 ### Input
@@ -155,7 +155,7 @@ PUT {{ site.data.api.url | append: 'sites/:site_id/collections/:collection_path'
 ### Endpoint
 
 ~~~
-DELETE {{ site.data.api.url | append: 'sites/:site_id/collections/:collection_path' }}
+DELETE {{ site.data.api.url | append: 'sites/:site_id/collections/:path' }}
 ~~~
 
 ### Response
@@ -163,8 +163,80 @@ DELETE {{ site.data.api.url | append: 'sites/:site_id/collections/:collection_pa
 {{ site.data.api.status_ok }}
 ~~~ json
 {
-  "id": 123,
+  "id": "5697cc7b16d5640c40000004",
   "deleted": true
 }
 ~~~
 
+
+
+
+
+## List collection files
+
+### Endpoint
+
+~~~
+GET {{ site.data.api.url | append: 'sites/:site_id/collections/:path/files' }}
+~~~
+
+### Response
+
+{{ site.data.api.status_paginated }}
+~~~ json
+[
+  {
+    "filename": "_uploads/IMG_2331.JPG",
+    "content_type": "image/jpeg",
+    "directory": "_uploads",
+    "basename": "IMG_2331.JPG",
+    "url": "/uploads/IMG_2331.JPG",
+    "filesize": 1689833,
+    "sha": "e5ca9010389ac30e387acbc3daac3b1b0c8f8c09",
+    "download_url": "{{ site.data.api.url | append: 'sites/5697cc7b16d5640c40000002/files/_uploads/IMG_2331.JPG?download' }}",
+    "site_id": "5697cc7b16d5640c40000002",
+    "user_id": "5697cc7b16d5640c40000000",
+    "edited_by_id": null,
+    "created_at": "2016-01-15 16:22:12 +0000",
+    "updated_at": "2016-01-15 16:22:12 +0000"
+  }
+]
+~~~
+
+
+##Create a collection file
+
+Collection files only support static files, that is any file *without* YAML frontmatter. This endpoint will return an error if it detects frontmatter. If you need to upload arbitrary text files use the [Files API](/api/files) which parses file uploads and will create either a Document or File.
+
+### Endpoint
+
+~~~
+POST {{ site.data.api.url | append: 'sites/:site_id/collections/:path/files' }}
+~~~
+
+### Input
+
+| Name | Type | Desc |
+|------|------|------|
+| `file` | `File` | A `multipart/form-data` file attachment |
+
+### Response
+
+{{ site.data.api.status_ok }}
+~~~ json
+{
+  "filename": "_uploads/IMG_2331.JPG",
+  "content_type": "image/jpeg",
+  "directory": "_uploads",
+  "basename": "IMG_2331.JPG",
+  "url": "/uploads/IMG_2331.JPG",
+  "filesize": 1689833,
+  "sha": "e5ca9010389ac30e387acbc3daac3b1b0c8f8c09",
+  "download_url": "{{ site.data.api.url | append: 'sites/5697cc7b16d5640c40000002/files/_uploads/IMG_2331.JPG?download' }}",
+  "site_id": "5697cc7b16d5640c40000002",
+  "user_id": "5697cc7b16d5640c40000000",
+  "edited_by_id": null,
+  "created_at": "2016-01-15 16:22:12 +0000",
+  "updated_at": "2016-01-15 16:22:12 +0000"
+}
+~~~

@@ -3,7 +3,7 @@ title: Documents
 date: 2016-01-14 17:29:29.729000000 -05:00
 example_input: |-
   {
-    "tags": ["required reading"]
+    "tags": ["required reading"],
     "metadata": {
       "author": "F. Scott Fitzgerald"
     }
@@ -53,7 +53,7 @@ example_response: |-
 ### Endpoint
 
 ~~~
-GET {{ site.data.api.url | append: 'sites/:site_id/collections/:collection_path/documents' }}
+GET {{ site.data.api.url | append: 'sites/:site_id/collections/:path/documents' }}
 ~~~
 
 ### Response
@@ -73,7 +73,7 @@ GET {{ site.data.api.url | append: 'sites/:site_id/collections/:collection_path/
 ### Endpoint
 
 ~~~
-POST {{ site.data.api.url | append: 'sites/:site_id/collections/:collection_path/documents' }}
+POST {{ site.data.api.url | append: 'sites/:site_id/collections/:path/documents' }}
 ~~~
 
 ### Input
@@ -177,7 +177,7 @@ DELETE {{ site.data.api.url | append: 'documents/:document_id' }}
 {{ site.data.api.status_ok }}
 ~~~ json
 {
-  "id": 123,
+  "id": "5697cc7b16d5640c40000005",
   "deleted": true
 }
 ~~~
