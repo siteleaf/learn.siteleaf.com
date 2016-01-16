@@ -1,6 +1,7 @@
 ---
 title: Development workflow
 date: 2016-01-15 19:38:00 -05:00
+weight: 20
 ---
 
 Every developer has their own preferred workflow, but sometimes it's helpful to see another developer's workflow when learning a new platform or system. 
