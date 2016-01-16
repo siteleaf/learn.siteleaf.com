@@ -1,5 +1,5 @@
 ---
-title: Back up your site!
+title: Back up your site
 date: 2016-01-15 19:06:00 -05:00
 ---
 
