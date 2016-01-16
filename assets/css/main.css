@@ -184,8 +184,7 @@ table thead { border-bottom: 1px solid rgba(45, 65, 84, 0.1); }
 .nav__link--grid:hover { text-decoration: none; color: rgba(45, 65, 84, 0.9); }
 .nav__link--grid p { margin-bottom: 0; }
 
-.nav__item--current { font-weight: bold; }
-.nav__item--current .nav__link { color: #fff; background: #0091E5; display: inline-block; border-radius: 3px; padding: 2px 5px; }
+.nav__item--current .nav__link { background: rgba(45, 65, 84, 0.1); color: rgba(45, 65, 84, 0.5); display: inline-block; border-radius: 3px; padding: 2px 5px; }
 
 .header { background: #0091E5; padding-bottom: 1em; margin-bottom: 2em; padding-top: 1em; }
 
