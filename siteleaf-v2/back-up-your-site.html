@@ -5,7 +5,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
-    <title>Meta fields</title>
+    <title>Back up your site</title>
 
     <link href="/assets/css/main.css" rel="stylesheet">
     <link href="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.css" rel="stylesheet">
@@ -77,7 +77,7 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/siteleaf-v2/feedback.html">Feedback</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/siteleaf-v2/back-up-your-site.html">Back up your site</a></li>
+            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/siteleaf-v2/back-up-your-site.html">Back up your site</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/siteleaf-v2/v2-gem.html">Using the v2 Gem</a></li>
           
@@ -103,7 +103,7 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/documents.html">Documents</a></li>
           
-            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/managing-content/meta-fields.html">Meta fields</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/meta-fields.html">Meta fields</a></li>
           
         </ul>
       </nav>
@@ -178,47 +178,16 @@
 
 <section class="main__content">
   <div class="document">
-    <h1 class="document__title">Meta fields</h1>
+    <h1 class="document__title">Back up your site</h1>
 
     
 
     <div class="document__content">
-      <p>Meta fields are bits of data that are attached to your pages, posts, collections, or documents, as well as your site itself. There are a few different types of meta fields that you can use: simple, list, and object.</p>
-
-<p>Meta fields are converted to YAML when saved. For meta fields on pages, posts, and documents, the field will be added to its frontmatter. For sites and collections, it will be added to your <code class="highlighter-rouge">_config.yml</code> file.</p>
-
-<h3 id="simple">Simple</h3>
-
-<p>A simple meta field consists of two bits of text: a key that will let you look up the field, and a value that belongs to that key.</p>
-
-<p><em>Tip:</em> If you end your key in <code class="highlighter-rouge">file</code>, <code class="highlighter-rouge">image</code>, or <code class="highlighter-rouge">asset</code>, the value field will reveal an upload button. You can then upload a file and insert the URL of the file into the value field.</p>
-
-<figure class="highlight"><pre><code class="language-plain" data-lang="plain">key: value</code></pre></figure>
-
-<h3 id="list">List</h3>
-
-<p>A list meta field contains a key and many values.</p>
-
-<p><em>Tip:</em> A list value can contain a simple meta field, or it can contain other lists or objects.</p>
-
-<figure class="highlight"><pre><code class="language-plain" data-lang="plain">key:
-  - value1
-  - value2
-  - value3:
-    - subvalue1
-    - subvalue2</code></pre></figure>
-
-<h3 id="objects">Objects</h3>
-
-<p>An object meta field is similar to a simple meta field, but is inside the value field.</p>
-
-<figure class="highlight"><pre><code class="language-plain" data-lang="plain">key:
-  key1: value1</code></pre></figure>
-
+      <p>To avoid any accidental data loss during beta testing, we strongly encourage you to back up your v2 sites. You can easily back up your site by forking or cloning your GitHub repo, or create an <a href="/siteleaf-v2/v2-gem.html#a-namebackupabacking-up-your-site">offline backup</a> using the v2 beta gem.</p>
 
 
       <p class="document__improve">
-        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_managing-content/meta-fields.markdown">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_siteleaf-v2/back-up-your-site.markdown">
           Help improve this page
         </a>
       </p>
