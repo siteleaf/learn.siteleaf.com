@@ -5,12 +5,6 @@ weight: 2
 layout: page
 ---
 
-## Feedback
-
-Bug reports and beta feedback are welcomed and encouraged! While logged in to the v2 beta, you'll notice a blue speech bubble icon in the bottom left corner of your screen — use this to send us a quick note at any time (or email <team@siteleaf.com>).
-
-You're also welcome to join us on Slack for v2 beta discussions: <http://chat.siteleaf.com>
-
 ## Jekyll
 
 All Siteleaf sites are Jekyll 3.0 compatible, so all [Jekyll documentation](http://jekyllrb.com/docs/home/) can be applied to your Siteleaf site.
