@@ -7,5 +7,5 @@ Every developer has their own preferred workflow, but sometimes it's helpful to 
 
 1. Create a new site, unchecking the default theme option (since we usually build our sites from scratch or use our [own boilerplate](https://github.com/sawyerh/siteleaf-boilerplate))
 2. Create a new, empty [GitHub](http://github.com) repo for our site content and theme.
-3. In Siteleaf, we connect our GitHub repo in our via the ["Sync" tab on our site's Settings page](/theme-development/github-sync/).
-4.
+3. In Siteleaf, we setup [GitHub Sync](/theme-development/github-sync/) by connecting our GitHub repo through the "Sync" tab on our site's Settings page.
+4. We add our initial content in Siteleaf. The structure of this content really depends on your content. If you're unsure of the exact structure, don't stress too much — it's pretty simple to move things around (everything is essentially a Markdown file!).
