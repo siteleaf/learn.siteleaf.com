@@ -60,9 +60,8 @@ collections:
 defaults:
 - scope:
     path: ''
-    type: posts
   values:
-    foo: bar
+    layout: page
 - scope:
     path: ''
     type: api
