@@ -1,11 +1,11 @@
 ---
 title: Using the v2 Gem
 date: 2015-10-31 20:03:00 -04:00
-layout: page
 weight: 3
+layout: page
 ---
 
-We recommend using [GitHub sync](/theme-development/github-sync/) with v2, but you can still use the Gem if that's your preferred workflow.
+**We recommend using [GitHub sync](/theme-development/github-sync/) with v2, but you can still use the Gem if that's your preferred workflow.**
 
 The v1 gem is not compatible with v2 sites (and vice versa), so we recommend using a [Gemfile](http://bundler.io/gemfile.html) to allow both versions to be installed.
 
