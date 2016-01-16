@@ -126,11 +126,9 @@
 }
 
 .nav__item--current{
-  font-weight: bold;
-
   .nav__link{
-    color: #fff;
-    background: $color-blue;
+    background: $color-gray-an2;
+    color: $color-gray-a1;
     display: inline-block;
     border-radius: $border-radius;
     padding: 2px 5px;

@@ -2,6 +2,7 @@
 title: Siteleaf Learn
 url: http://learn.siteleaf.com
 timezone: America/New_York
+github_url: https://github.com/siteleaf/learn.siteleaf.com
 collections:
   api:
     title: API
