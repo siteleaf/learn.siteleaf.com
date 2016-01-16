@@ -124,3 +124,15 @@
     }
   }
 }
+
+.nav__item--current{
+  font-weight: bold;
+
+  .nav__link{
+    color: #fff;
+    background: $color-blue;
+    display: inline-block;
+    border-radius: $border-radius;
+    padding: 2px 5px;
+  }
+}
