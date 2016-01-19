@@ -152,6 +152,9 @@ table thead { border-bottom: 1px solid rgba(45, 65, 84, 0.1); }
 
 .footer .wrap { border-top: 1px solid rgba(45, 65, 84, 0.1); padding-top: 1.625rem; font-size: 17.5px; margin-bottom: 1.625rem; margin-top: 1.625rem; }
 
+.note__info { background-color: rgba(241, 196, 15, 0.2); border-radius: 5px; color: #927608; padding: 1em 1em 1em 3em; position: relative; }
+.note__info:before { color: #927608; font-size: 2em; position: absolute; top: 5px; left: 10px; }
+
 /* Siteleaf Learn
 */
 /* Siteleaf Learn

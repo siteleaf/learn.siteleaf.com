@@ -108,7 +108,7 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/documents.html">Documents</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/meta-fields.html">Meta fields</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/metadata.html">Metadata</a></li>
           
         </ul>
       </nav>
@@ -196,9 +196,9 @@
 
 <h2 id="file-fields">File fields</h2>
 
-<p>If you have a meta field with a key of <code class="highlighter-rouge">asset</code>, <code class="highlighter-rouge">assets</code>, <code class="highlighter-rouge">file</code>, <code class="highlighter-rouge">files</code>, <code class="highlighter-rouge">image</code>, or <code class="highlighter-rouge">images</code> Siteleaf will place a file picker button within the field, making it easy to quickly upload or select an existing upload.</p>
+<p>If you have metadata with a key of <code class="highlighter-rouge">asset</code>, <code class="highlighter-rouge">assets</code>, <code class="highlighter-rouge">file</code>, <code class="highlighter-rouge">files</code>, <code class="highlighter-rouge">image</code>, or <code class="highlighter-rouge">images</code> Siteleaf will place a file picker button within the field, making it easy to quickly upload or select an existing upload.</p>
 
-<p>If you’re coming from Siteleaf V1, you’ll probably notice that the “assets” section is no longer its own field. Instead, you can create a “List” (array) meta field and give it a key of <code class="highlighter-rouge">assets</code>. If you want to add assets with additional metadata (like maybe a caption), you could create a “List” meta field and add “Objects” to the list. Your object could have keys like <code class="highlighter-rouge">file</code> and <code class="highlighter-rouge">caption</code>. When you add a new item to the list, a new object with those same keys will be added for you, making it easy to add multiple assets with the same structure.</p>
+<p>If you’re coming from Siteleaf V1, you’ll probably notice that the “assets” section is no longer its own field. Instead, you can create a “List” (array) metadata and give it a key of <code class="highlighter-rouge">assets</code>. If you want to add assets with additional metadata (like maybe a caption), you could create a “List” metadata and add “Objects” to the list. Your object could have keys like <code class="highlighter-rouge">file</code> and <code class="highlighter-rouge">caption</code>. When you add a new item to the list, a new object with those same keys will be added for you, making it easy to add multiple assets with the same structure.</p>
 
 <h2 id="collection-fields">Collection fields</h2>
 

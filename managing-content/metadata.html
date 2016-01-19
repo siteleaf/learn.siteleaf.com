@@ -5,7 +5,7 @@
     <!-- <meta content="width=device-width, initial-scale=1" name="viewport"> -->
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
-    <title>Meta fields</title>
+    <title>Metadata</title>
 
     <link href="/assets/css/main.css" rel="stylesheet">
     <link href="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.css" rel="stylesheet">
@@ -108,7 +108,7 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/documents.html">Documents</a></li>
           
-            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/managing-content/meta-fields.html">Meta fields</a></li>
+            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/managing-content/metadata.html">Metadata</a></li>
           
         </ul>
       </nav>
@@ -183,47 +183,50 @@
 
 <section class="main__content">
   <div class="document">
-    <h1 class="document__title">Meta fields</h1>
+    <h1 class="document__title">Metadata</h1>
 
     
 
     <div class="document__content">
-      <p>Meta fields are bits of data that are attached to your pages, posts, collections, or documents, as well as your site itself. There are a few different types of meta fields that you can use: simple, list, and object.</p>
+      <p>Metadata are bits of data that are attached to your pages, posts, collections, or documents, as well as your site itself. There are a few different types of metadata that you can use: simple, list, and object.</p>
 
-<p>Meta fields are converted to YAML when saved. For meta fields on pages, posts, and documents, the field will be added to its frontmatter. For sites and collections, it will be added to your <code class="highlighter-rouge">_config.yml</code> file.</p>
+<p class="note__info ss-info">Metadata is the equivalent of Jekyll’s YAML frontmatter. When syncing Siteleaf exports metadata as frontmatter for Pages and Documents and edits the config file for Collections and Sites.</p>
 
-<h3 id="simple">Simple</h3>
+<h2 id="simple">Simple</h2>
 
-<p>A simple meta field consists of two bits of text: a key that will let you look up the field, and a value that belongs to that key.</p>
+<p>Simple metadata is a way to associate a single value with a unique key.</p>
 
-<p><em>Tip:</em> If you end your key in <code class="highlighter-rouge">file</code>, <code class="highlighter-rouge">image</code>, or <code class="highlighter-rouge">asset</code>, the value field will reveal an upload button. You can then upload a file and insert the URL of the file into the value field.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="s">simple_key</span><span class="pi">:</span> <span class="s">single value</span>
+</code></pre>
+</div>
 
-<figure class="highlight"><pre><code class="language-plain" data-lang="plain">key: value</code></pre></figure>
+<p class="note__info ss-info">If you end your key name in <code class="highlighter-rouge">file</code>, <code class="highlighter-rouge">image</code>, or <code class="highlighter-rouge">asset</code>, the value field will reveal an upload button. This lets you upload a new file or choose a previously uploaded file, and insert it’s URL into the value field.</p>
 
-<h3 id="list">List</h3>
+<h2 id="list">List</h2>
 
-<p>A list meta field contains a key and many values.</p>
+<p>List metadata is a way to associate multiple values with a unique key. List values can be simple, or contain other lists and objects.</p>
 
-<p><em>Tip:</em> A list value can contain a simple meta field, or it can contain other lists or objects.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="s">list_key</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">first value</span>
+  <span class="pi">-</span> <span class="s">second value</span>
+</code></pre>
+</div>
 
-<figure class="highlight"><pre><code class="language-plain" data-lang="plain">key:
-  - value1
-  - value2
-  - value3:
-    - subvalue1
-    - subvalue2</code></pre></figure>
+<h2 id="objects">Objects</h2>
 
-<h3 id="objects">Objects</h3>
+<p>Object metadata allows you to nest or group other metadata types under a unique key.</p>
 
-<p>An object meta field is similar to a simple meta field, but is inside the value field.</p>
-
-<figure class="highlight"><pre><code class="language-plain" data-lang="plain">key:
-  key1: value1</code></pre></figure>
-
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="s">object_key</span><span class="pi">:</span>
+  <span class="s">simple_key</span><span class="pi">:</span> <span class="s">single value</span>
+  <span class="s">list_key</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">first value</span>
+    <span class="pi">-</span> <span class="s">second value</span>
+</code></pre>
+</div>
 
 
       <p class="document__improve">
-        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_managing-content/meta-fields.markdown">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_managing-content/metadata.markdown">
           Help improve this page &rarr;
         </a>
       </p>
