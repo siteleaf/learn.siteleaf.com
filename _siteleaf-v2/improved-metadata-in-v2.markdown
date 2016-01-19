@@ -13,9 +13,9 @@ You can define Jekyll Defaults for all your content (or by collection) in your c
 
 ## File fields
 
-If you have a meta field with a key of `asset`, `assets`, `file`, `files`, `image`, or `images` Siteleaf will place a file picker button within the field, making it easy to quickly upload or select an existing upload.
+If you have metadata with a key of `asset`, `assets`, `file`, `files`, `image`, or `images` Siteleaf will place a file picker button within the field, making it easy to quickly upload or select an existing upload.
 
-If you're coming from Siteleaf V1, you'll probably notice that the "assets" section is no longer its own field. Instead, you can create a "List" (array) meta field and give it a key of `assets`. If you want to add assets with additional metadata (like maybe a caption), you could create a "List" meta field and add "Objects" to the list. Your object could have keys like `file` and `caption`. When you add a new item to the list, a new object with those same keys will be added for you, making it easy to add multiple assets with the same structure.
+If you're coming from Siteleaf V1, you'll probably notice that the "assets" section is no longer its own field. Instead, you can create a "List" (array) metadata and give it a key of `assets`. If you want to add assets with additional metadata (like maybe a caption), you could create a "List" metadata and add "Objects" to the list. Your object could have keys like `file` and `caption`. When you add a new item to the list, a new object with those same keys will be added for you, making it easy to add multiple assets with the same structure.
 
 ## Collection fields
 

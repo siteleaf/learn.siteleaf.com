@@ -184,3 +184,18 @@ table {
     margin-top: $v;
   }
 }
+
+.note__info {
+  background-color: rgba($color-yellow, 0.2);
+  border-radius: 5px;
+  color: darken($color-yellow, 20%);
+  padding: 1em 1em 1em 3em;
+  position: relative;
+  &:before {
+    color: darken($color-yellow, 20%);
+    font-size: 2em;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+  }
+}
