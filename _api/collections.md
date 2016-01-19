@@ -1,6 +1,6 @@
 ---
 title: Collections
-date: 2016-01-14 17:29:29.729000000 -05:00
+date: 2016-01-14 17:29:00 -05:00
 example_input: |-
   {
     "title": "Library",
@@ -25,8 +25,6 @@ example_response: |-
 ---
 
 ## Overview
-
-Lorem ipsum…
 
 1. [List collections](#list-collections)
 1. [Create a collection](#create-a-collection)
