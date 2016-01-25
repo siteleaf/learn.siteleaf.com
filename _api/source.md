@@ -1,13 +1,13 @@
 ---
 title: Source
-date: 2016-01-15 13:43:55.759000000 -05:00
+date: 2016-01-15 13:43:00 -05:00
 ---
 
 ## Overview
 
 The Source API can be thought of as a filesystem view, as if you were looking at your Jekyll source code locally. It functions a little differently than the rest of the API and isn't as structured.
 
-1. [List files](#list-files)
+1. [Get files](#Get-files)
 1. [Create or replace a file](#create-or-replace-a-file)
 1. [Delete a file](#delete-a-file)
 {: .api__toc}
@@ -15,7 +15,7 @@ The Source API can be thought of as a filesystem view, as if you were looking at
 
 
 
-## List files
+## Get files
 
 Returns information about a single file or the contents of a directory. The `:name` is optional, and without it lists the contents of the root directory.
 
@@ -145,4 +145,3 @@ DELETE {{ site.data.api.url | append: 'sites/:site_id/source/:name' }}
   "updated_at": "2016-01-13 14:09:33 +0000"
 }
 ~~~
-
