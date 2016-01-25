@@ -172,7 +172,7 @@ table thead { border-bottom: 1px solid rgba(45, 65, 84, 0.1); }
 .nav__icon--grid { font-size: 2em; }
 .nav__list { list-style-type: none; }
 .nav__list--header { float: right; display: inline-block; text-align: right; }
-.nav__list--grid { zoom: 1; display: block; width: 100%; }
+.nav__list--grid { zoom: 1; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; width: 100%; }
 .nav__list--grid:before, .nav__list--grid:after { content: ""; display: table; }
 .nav__list--grid:after { clear: both; }
 .nav__item { font-size: 0.9167em; margin-left: 0; padding-left: 0; }

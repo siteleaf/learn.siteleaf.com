@@ -5,7 +5,7 @@
     <!-- <meta content="width=device-width, initial-scale=1" name="viewport"> -->
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
-    <title>Files</title>
+    <title>Source</title>
 
     <link href="/assets/css/main.css" rel="stylesheet">
     <link href="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.css" rel="stylesheet">
@@ -166,7 +166,7 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/documents.html">Documents</a></li>
           
-            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/api/files.html">Files</a></li>
+            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/api/source.html">Source</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/authentication.html">Authentication</a></li>
           
@@ -183,17 +183,17 @@
 
 <section class="main__content">
   <div class="document">
-    <h1 class="document__title">Files</h1>
+    <h1 class="document__title">Source</h1>
 
     
 
     <div class="document__content api__content">
       <h2 id="overview">Overview</h2>
 
-<p>The Files API can be thought of as a filesystem view, as if you were looking at your Jekyll source code locally. It functions a little differently than the rest of the API and isn’t as structured.</p>
+<p>The Source API can be thought of as a filesystem view, as if you were looking at your Jekyll source code locally. It functions a little differently than the rest of the API and isn’t as structured.</p>
 
 <ol class="api__toc">
-  <li><a href="#list-files">Get files</a></li>
+  <li><a href="#Get-files">Get files</a></li>
   <li><a href="#create-or-replace-a-file">Create or replace a file</a></li>
   <li><a href="#delete-a-file">Delete a file</a></li>
 </ol>
@@ -204,7 +204,7 @@
 
 <h3 id="endpoint">Endpoint</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>GET https://api.v2.siteleaf.com/v2/sites/:site_id/files/:name
+<div class="highlighter-rouge"><pre class="highlight"><code>GET https://api.v2.siteleaf.com/v2/sites/:site_id/source/:name
 </code></pre>
 </div>
 
@@ -219,7 +219,7 @@
   </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"page"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"sha"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ba7f4bd2da35e372fc34fdf3b60cb108b7412b52"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"download_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.v2.siteleaf.com/v2/sites/56965a9dbe6765465c000007/files/index.html?download"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"download_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.v2.siteleaf.com/v2/sites/56965a9dbe6765465c000007/source/index.html?download"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"51ac1ebd5dde223c94000001"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-13 14:09:33 +0000"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-13 14:09:33 +0000"</span><span class="w">
@@ -238,7 +238,7 @@
     </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_config.yml"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"site"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"sha"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a25a3ad7878fdf634e55cba9fd8336d78042a27"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"download_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.v2.siteleaf.com/v2/sites/56965a9dbe6765465c000007/files/_config.yml?download"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"download_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.v2.siteleaf.com/v2/sites/56965a9dbe6765465c000007/source/_config.yml?download"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"51ac1ebd5dde223c94000001"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-13 14:09:33 +0000"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-15 16:22:12 +0000"</span><span class="w">
@@ -248,7 +248,7 @@
     </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"page"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"sha"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ba7f4bd2da35e372fc34fdf3b60cb108b7412b52"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"download_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.v2.siteleaf.com/v2/sites/56965a9dbe6765465c000007/files/index.html?download"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"download_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.v2.siteleaf.com/v2/sites/56965a9dbe6765465c000007/source/index.html?download"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"51ac1ebd5dde223c94000001"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-13 14:09:33 +0000"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-13 14:09:33 +0000"</span><span class="w">
@@ -276,7 +276,7 @@
 
 <h3 id="endpoint-1">Endpoint</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>PUT https://api.v2.siteleaf.com/v2/sites/:site_id/files/:name
+<div class="highlighter-rouge"><pre class="highlight"><code>PUT https://api.v2.siteleaf.com/v2/sites/:site_id/source/:name
 </code></pre>
 </div>
 
@@ -310,7 +310,7 @@
   </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"page"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"sha"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ba7f4bd2da35e372fc34fdf3b60cb108b7412b52"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"download_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.v2.siteleaf.com/v2/sites/56965a9dbe6765465c000007/files/index.html?download"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"download_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.v2.siteleaf.com/v2/sites/56965a9dbe6765465c000007/source/index.html?download"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"51ac1ebd5dde223c94000001"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-13 14:09:33 +0000"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-13 14:09:33 +0000"</span><span class="w">
@@ -324,7 +324,7 @@
 
 <h3 id="endpoint-2">Endpoint</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>DELETE https://api.v2.siteleaf.com/v2/sites/:site_id/files/:name
+<div class="highlighter-rouge"><pre class="highlight"><code>DELETE https://api.v2.siteleaf.com/v2/sites/:site_id/source/:name
 </code></pre>
 </div>
 
@@ -339,7 +339,7 @@
   </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"page"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"sha"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ba7f4bd2da35e372fc34fdf3b60cb108b7412b52"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"download_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.v2.siteleaf.com/v2/sites/56965a9dbe6765465c000007/files/index.html?download"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"download_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.v2.siteleaf.com/v2/sites/56965a9dbe6765465c000007/source/index.html?download"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"51ac1ebd5dde223c94000001"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-13 14:09:33 +0000"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-13 14:09:33 +0000"</span><span class="w">
@@ -348,9 +348,8 @@
 </div>
 
 
-
       <p class="document__improve">
-        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_api/files.md">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_api/source.md">
           Help improve this page &rarr;
         </a>
       </p>
