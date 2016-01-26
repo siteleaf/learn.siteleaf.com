@@ -198,33 +198,33 @@
 
 <p>Listing the first page of my sites.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>curl -I <span class="s1">'https://api.v2.siteleaf.com/v2/sites'</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>curl -I <span class="s1">'https://api.siteleaf.com/v2/sites'</span>
 
 HTTP/1.1 200 OK
-Link: &lt;https://api.v2.siteleaf.com/v2/sites?page<span class="o">=</span>2&gt;; <span class="nv">rel</span><span class="o">=</span><span class="s2">"next"</span>,
-      &lt;https://api.v2.siteleaf.com/v2/sites?page<span class="o">=</span>3&gt;; <span class="nv">rel</span><span class="o">=</span><span class="s2">"last"</span>
+Link: &lt;https://api.siteleaf.com/v2/sites?page<span class="o">=</span>2&gt;; <span class="nv">rel</span><span class="o">=</span><span class="s2">"next"</span>,
+      &lt;https://api.siteleaf.com/v2/sites?page<span class="o">=</span>3&gt;; <span class="nv">rel</span><span class="o">=</span><span class="s2">"last"</span>
 </code></pre>
 </div>
 
 <p>Listing my sites and specifying the <code class="highlighter-rouge">per_page</code> attribute (note the last page is now 18).</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>curl -I <span class="s1">'https://api.v2.siteleaf.com/v2/sites?per_page=2'</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>curl -I <span class="s1">'https://api.siteleaf.com/v2/sites?per_page=2'</span>
 
 HTTP/1.1 200 OK
-Link: &lt;https://api.v2.siteleaf.com/v2/sites?page<span class="o">=</span>2&amp;per_page<span class="o">=</span>2&gt;; <span class="nv">rel</span><span class="o">=</span><span class="s2">"next"</span>,
-      &lt;https://api.v2.siteleaf.com/v2/sites?page<span class="o">=</span>18&amp;per_page<span class="o">=</span>2&gt;; <span class="nv">rel</span><span class="o">=</span><span class="s2">"last"</span>
+Link: &lt;https://api.siteleaf.com/v2/sites?page<span class="o">=</span>2&amp;per_page<span class="o">=</span>2&gt;; <span class="nv">rel</span><span class="o">=</span><span class="s2">"next"</span>,
+      &lt;https://api.siteleaf.com/v2/sites?page<span class="o">=</span>18&amp;per_page<span class="o">=</span>2&gt;; <span class="nv">rel</span><span class="o">=</span><span class="s2">"last"</span>
 </code></pre>
 </div>
 
 <p>And following the next link from above to get to page 2.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>curl -I -n <span class="s1">'https://api.v2.siteleaf.com/v2/sites?page=2&amp;per_page=2'</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>curl -I -n <span class="s1">'https://api.siteleaf.com/v2/sites?page=2&amp;per_page=2'</span>
 
 HTTP/1.1 200 OK
-Link: &lt;https://api.v2.siteleaf.com/v2/sites?page<span class="o">=</span>3&amp;per_page<span class="o">=</span>2&gt;; <span class="nv">rel</span><span class="o">=</span><span class="s2">"next"</span>,
-      &lt;https://api.v2.siteleaf.com/v2/sites?page<span class="o">=</span>18&amp;per_page<span class="o">=</span>2&gt;; <span class="nv">rel</span><span class="o">=</span><span class="s2">"last"</span>,
-      &lt;https://api.v2.siteleaf.com/v2/sites?page<span class="o">=</span>1&amp;per_page<span class="o">=</span>2&gt;; <span class="nv">rel</span><span class="o">=</span><span class="s2">"first"</span>,
-      &lt;https://api.v2.siteleaf.com/v2/sites?page<span class="o">=</span>1&amp;per_page<span class="o">=</span>2&gt;; <span class="nv">rel</span><span class="o">=</span><span class="s2">"prev"</span>
+Link: &lt;https://api.siteleaf.com/v2/sites?page<span class="o">=</span>3&amp;per_page<span class="o">=</span>2&gt;; <span class="nv">rel</span><span class="o">=</span><span class="s2">"next"</span>,
+      &lt;https://api.siteleaf.com/v2/sites?page<span class="o">=</span>18&amp;per_page<span class="o">=</span>2&gt;; <span class="nv">rel</span><span class="o">=</span><span class="s2">"last"</span>,
+      &lt;https://api.siteleaf.com/v2/sites?page<span class="o">=</span>1&amp;per_page<span class="o">=</span>2&gt;; <span class="nv">rel</span><span class="o">=</span><span class="s2">"first"</span>,
+      &lt;https://api.siteleaf.com/v2/sites?page<span class="o">=</span>1&amp;per_page<span class="o">=</span>2&gt;; <span class="nv">rel</span><span class="o">=</span><span class="s2">"prev"</span>
 </code></pre>
 </div>
 
