@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- <meta content="width=device-width, initial-scale=1" name="viewport"> -->
+    <meta name="generator" content="Siteleaf, http://siteleaf.com">
+
+    <title>Collections</title>
+
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.css" rel="stylesheet">
+    <link rel="SHORTCUT ICON" href="/assets/images/favicon.ico">
+  </head>
+  <body class="page">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-1666437-41', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    <header class="header">
+      <nav class="nav">
+        <div class="wrap">
+          <a class="nav__logo" href="/">Learn</a>
+          <ul class="nav__list nav__list--header">
+            
+              
+            
+              
+            
+            <li class="nav__item nav__item--header">
+              <a class="nav__link nav__link--header" href="https://github.com/siteleaf/learn.siteleaf.com">Contribute</a>
+            </li>
+            <li class="nav__item nav__item--header">
+              <a class="nav__link nav__link--header" href="http://status.siteleaf.com/">Status</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="wrap">
+        <div class="beta-notice">
+          <strong>Please note</strong> This documentation is a <em>work in progress</em> and is only for Version 2 of Siteleaf. For V1 documentation, please see the <a href="http://www.siteleaf.com/help/">V1 help site</a>. You can also <a href="https://github.com/siteleaf/learn.siteleaf.com">contribute to this documentation on GitHub</a> and we'll <span class="ss-icon">love</span> you forever.
+        </div>
+
+        <aside class="main__sidebar">
+  <!-- <form class="form__search">
+    <input class="form__input--search" type="search" placeholder="Search">
+  </form> -->
+
+  
+  
+    
+  
+    
+  
+    
+      <nav class="nav">
+        <h3 class="nav__header">Getting Started</h3>
+        <ul class="nav__list nav__list--sidebar">
+          
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/getting-started/what-is-siteleaf/">What's Siteleaf?</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/getting-started/development-workflow/">Development workflow</a></li>
+          
+        </ul>
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h3 class="nav__header">Siteleaf V2</h3>
+        <ul class="nav__list nav__list--sidebar">
+          
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/siteleaf-v2/feedback/">Feedback</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/siteleaf-v2/back-up-your-site/">Back up your site</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/siteleaf-v2/v2-gem/">Using the v2 Gem</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/siteleaf-v2/export-v1/">Exporting your v1 site</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/siteleaf-v2/improved-metadata-in-v2/">Improved metadata in v2</a></li>
+          
+        </ul>
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h3 class="nav__header">Managing Content</h3>
+        <ul class="nav__list nav__list--sidebar">
+          
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/pages/">Pages</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/posts/">Posts</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/collections/">Collections</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/documents/">Documents</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/metadata/">Metadata</a></li>
+          
+        </ul>
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h3 class="nav__header">Theme Development</h3>
+        <ul class="nav__list nav__list--sidebar">
+          
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/getting-started/">Getting started</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/local-development/">Local development</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid/">Liquid</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/structure/">Theme structure</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/github-sync/">GitHub Sync</a></li>
+          
+        </ul>
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h3 class="nav__header">Users and Settings</h3>
+        <ul class="nav__list nav__list--sidebar">
+          
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/users/">Users</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/settings/">Settings</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/hosting/">Hosting</a></li>
+          
+        </ul>
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h3 class="nav__header">API</h3>
+        <ul class="nav__list nav__list--sidebar">
+          
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/pages/">Pages</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/sites/">Sites</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/users/">Users</a></li>
+          
+            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/api/collections/">Collections</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/documents/">Documents</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/source/">Source</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/authentication/">Authentication</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/jobs/">Jobs</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/pagination/">Pagination</a></li>
+          
+        </ul>
+      </nav>
+    
+  
+</aside>
+
+
+<section class="main__content">
+  <div class="document">
+    <h1 class="document__title">Collections</h1>
+
+    
+
+    <div class="document__content api__content">
+      <h2 id="overview">Overview</h2>
+
+<ol class="api__toc">
+  <li><a href="#list-collections">List collections</a></li>
+  <li><a href="#create-a-collection">Create a collection</a></li>
+  <li><a href="#get-a-collection">Get a collection</a></li>
+  <li><a href="#update-a-collection">Update a collection</a></li>
+  <li><a href="#delete-a-collection">Delete a collection</a></li>
+  <li><a href="#list-collection-files">List collection files</a></li>
+  <li><a href="#create-a-collection-file">Create a collection file</a></li>
+</ol>
+
+<p>For interacting with a Collection’s documents refer to the <a href="/api/documents">Documents page</a>.</p>
+
+<h2 id="list-collections">List collections</h2>
+
+<h3 id="endpoint">Endpoint</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/sites/:site_id/collections
+</code></pre>
+</div>
+
+<h3 id="response">Response</h3>
+
+<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
+Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
+      &lt;https://api.siteleaf.com/v2/:path?page=9&gt;; rel="last"
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000004"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Books"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"directory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"."</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"books"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"output"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"permalink"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"foo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bar"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000002"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000000"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-14 20:50:46 +0000"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-14 20:56:40 +0000"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+</div>
+
+<h2 id="create-a-collection">Create a collection</h2>
+
+<h3 id="endpoint-1">Endpoint</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>POST https://api.siteleaf.com/v2/sites/:site_id/collections
+</code></pre>
+</div>
+
+<h3 id="input">Input</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Desc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">title</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Collection title <strong>(required)</strong></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">path</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Collection path, defaults to a url safe version of <code class="highlighter-rouge">title</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">permalink</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>The permalink style for documents, see <a href="#">Permalinks</a> for more detail</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">output</code></td>
+      <td><code class="highlighter-rouge">Boolean</code></td>
+      <td>Whether the collection’s documents will be rendered, defaults to <code class="highlighter-rouge">true</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">metadata</code></td>
+      <td><code class="highlighter-rouge">Hash&lt;String, *&gt;</code></td>
+      <td>Arbitrary key/value pairs</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="example">Example</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Library"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"output"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h3 id="response-1">Response</h3>
+
+<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 201 Created
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000004"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Books"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"directory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"."</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"books"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"output"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"permalink"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"foo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bar"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000002"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-14 20:50:46 +0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-14 20:56:40 +0000"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h2 id="get-a-collection">Get a collection</h2>
+
+<h3 id="endpoint-2">Endpoint</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/sites/:site_id/collections/:path
+</code></pre>
+</div>
+
+<h3 id="response-2">Response</h3>
+
+<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000004"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Books"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"directory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"."</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"books"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"output"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"permalink"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"foo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bar"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000002"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-14 20:50:46 +0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-14 20:56:40 +0000"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h2 id="update-a-collection">Update a collection</h2>
+
+<h3 id="endpoint-3">Endpoint</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>PUT https://api.siteleaf.com/v2/sites/:site_id/collections/:path
+</code></pre>
+</div>
+
+<h3 id="input-1">Input</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Desc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">title</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Collection title</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">path</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Collection path, defaults to a url safe version of <code class="highlighter-rouge">title</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">permalink</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>The permalink style for documents, see <a href="#">Permalinks</a> for more detail</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">output</code></td>
+      <td><code class="highlighter-rouge">Boolean</code></td>
+      <td>Whether the collection’s documents will be rendered, defaults to <code class="highlighter-rouge">true</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">metadata</code></td>
+      <td><code class="highlighter-rouge">Hash&lt;String, *&gt;</code></td>
+      <td>Arbitrary key/value pairs</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="example-1">Example</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Library"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"output"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h3 id="response-3">Response</h3>
+
+<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000004"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Books"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"directory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"."</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"books"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"output"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"permalink"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"foo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bar"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000002"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-14 20:50:46 +0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-14 20:56:40 +0000"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h2 id="delete-a-collection">Delete a collection</h2>
+
+<h3 id="endpoint-4">Endpoint</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>DELETE https://api.siteleaf.com/v2/sites/:site_id/collections/:path
+</code></pre>
+</div>
+
+<h3 id="response-4">Response</h3>
+
+<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000004"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"deleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h2 id="list-collection-files">List collection files</h2>
+
+<h3 id="endpoint-5">Endpoint</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/sites/:site_id/collections/:path/files
+</code></pre>
+</div>
+
+<h3 id="response-5">Response</h3>
+
+<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
+Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
+      &lt;https://api.siteleaf.com/v2/:path?page=9&gt;; rel="last"
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"filename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_uploads/IMG_2331.JPG"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"content_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image/jpeg"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"directory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_uploads"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"basename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IMG_2331.JPG"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/uploads/IMG_2331.JPG"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"filesize"</span><span class="p">:</span><span class="w"> </span><span class="mi">1689833</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"sha"</span><span class="p">:</span><span class="w"> </span><span class="s2">"e5ca9010389ac30e387acbc3daac3b1b0c8f8c09"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"download_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.siteleaf.com/v2/sites/5697cc7b16d5640c40000002/files/_uploads/IMG_2331.JPG?download"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000002"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000000"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"edited_by_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-15 16:22:12 +0000"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-15 16:22:12 +0000"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+</div>
+
+<h2 id="create-a-collection-file">Create a collection file</h2>
+
+<p>Collection files only support static files, that is any file <em>without</em> YAML frontmatter. This endpoint will return an error if it detects frontmatter. If you need to upload arbitrary text files use the <a href="/api/files">Files API</a> which parses file uploads and will create either a Document or File.</p>
+
+<h3 id="endpoint-6">Endpoint</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>POST https://api.siteleaf.com/v2/sites/:site_id/collections/:path/files
+</code></pre>
+</div>
+
+<h3 id="input-2">Input</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Desc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">file</code></td>
+      <td><code class="highlighter-rouge">File</code></td>
+      <td>A <code class="highlighter-rouge">multipart/form-data</code> file attachment</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="response-6">Response</h3>
+
+<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 201 Created
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"filename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_uploads/IMG_2331.JPG"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"content_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image/jpeg"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"directory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_uploads"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"basename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IMG_2331.JPG"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/uploads/IMG_2331.JPG"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"filesize"</span><span class="p">:</span><span class="w"> </span><span class="mi">1689833</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"sha"</span><span class="p">:</span><span class="w"> </span><span class="s2">"e5ca9010389ac30e387acbc3daac3b1b0c8f8c09"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"download_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.siteleaf.com/v2/sites/5697cc7b16d5640c40000002/files/_uploads/IMG_2331.JPG?download"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000002"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"edited_by_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-15 16:22:12 +0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-15 16:22:12 +0000"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+
+      <p class="document__improve">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_api/collections.md">
+          Help improve this page &rarr;
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="wrap">
+        <p class="footer__copyright">&copy; 2016. Siteleaf&trade; is made by <a href="http://oak.is">Oak</a>.</p>
+      </div>
+    </footer>
+    <script src="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.js"></script>
+  </body>
+</html>
