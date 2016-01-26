@@ -2,12 +2,10 @@
 title: Siteleaf Learn
 url: http://learn.siteleaf.com
 timezone: America/New_York
-permalink: pretty
 collections:
   api:
     title: API
     output: true
-    permalink: /:collection/:path/
     meta:
       description: Interact directly with our API
       icon: globe
@@ -16,7 +14,6 @@ collections:
   getting-started:
     title: Getting Started
     output: true
-    permalink: /:collection/:path/
     meta:
       description: Learn more about Siteleaf itself
       icon: home
@@ -25,7 +22,6 @@ collections:
   managing-content:
     title: Managing Content
     output: true
-    permalink: /:collection/:path/
     meta:
       description: How to manage content
       icon: write
@@ -34,11 +30,9 @@ collections:
   posts:
     title: Posts
     output: true
-    permalink: /:collection/:path/
   siteleaf-v2:
     title: Siteleaf V2
     output: true
-    permalink: /:collection/:path/
     weight: 20
     meta:
       description: What's new in V2
@@ -47,7 +41,6 @@ collections:
   theme-development:
     title: Theme Development
     output: true
-    permalink: /:collection/:path/
     meta:
       description: How to make your own themes
       icon: bezier
@@ -59,7 +52,6 @@ collections:
   users-and-settings:
     title: Users and Settings
     output: true
-    permalink: /:collection/:path/
     meta:
       description: Add your friends and host
       icon: users
