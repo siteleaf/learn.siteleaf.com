@@ -1,4 +1,4 @@
-url: https://api.v2.siteleaf.com/v2/
+url: https://api.siteleaf.com/v2/
 manage_url: https://manage.v2.siteleaf.com/
 
 status_ok: |
@@ -22,8 +22,8 @@ status_accepted: |
 status_paginated: |
   ~~~
   Status: 200 OK
-  Link: <https://api.v2.siteleaf.com/v2/:path?page=2>; rel="next",
-        <https://api.v2.siteleaf.com/v2/:path?page=9>; rel="last"
+  Link: <https://api.siteleaf.com/v2/:path?page=2>; rel="next",
+        <https://api.siteleaf.com/v2/:path?page=9>; rel="last"
   ~~~
   {:.api__headers}
 

@@ -37,8 +37,8 @@ And following the next link from above to get to page 2.
 $ curl -I -n '{{ site.data.api.url }}sites?page=2&per_page=2'
 
 HTTP/1.1 200 OK
-Link: <https://api.v2.siteleaf.com/v2/sites?page=3&per_page=2>; rel="next",
-      <https://api.v2.siteleaf.com/v2/sites?page=18&per_page=2>; rel="last",
-      <https://api.v2.siteleaf.com/v2/sites?page=1&per_page=2>; rel="first",
-      <https://api.v2.siteleaf.com/v2/sites?page=1&per_page=2>; rel="prev"
+Link: <{{ site.data.api.url }}sites?page=3&per_page=2>; rel="next",
+      <{{ site.data.api.url }}sites?page=18&per_page=2>; rel="last",
+      <{{ site.data.api.url }}sites?page=1&per_page=2>; rel="first",
+      <{{ site.data.api.url }}sites?page=1&per_page=2>; rel="prev"
 ~~~

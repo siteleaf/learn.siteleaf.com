@@ -34,7 +34,7 @@ GET {{ site.data.api.url | append: 'sites/:site_id/source/:name' }}
   "type": "page",
   "sha": "ba7f4bd2da35e372fc34fdf3b60cb108b7412b52",
   "url": "/",
-  "download_url": "https://api.v2.siteleaf.com/v2/sites/56965a9dbe6765465c000007/source/index.html?download",
+  "download_url": "{{ site.data.api.url }}sites/56965a9dbe6765465c000007/source/index.html?download",
   "user_id": "51ac1ebd5dde223c94000001",
   "created_at": "2016-01-13 14:09:33 +0000",
   "updated_at": "2016-01-13 14:09:33 +0000"
@@ -50,7 +50,7 @@ GET {{ site.data.api.url | append: 'sites/:site_id/source/:name' }}
     "name": "_config.yml",
     "type": "site",
     "sha": "5a25a3ad7878fdf634e55cba9fd8336d78042a27",
-    "download_url": "https://api.v2.siteleaf.com/v2/sites/56965a9dbe6765465c000007/source/_config.yml?download",
+    "download_url": "{{ site.data.api.url }}sites/56965a9dbe6765465c000007/source/_config.yml?download",
     "user_id": "51ac1ebd5dde223c94000001",
     "created_at": "2016-01-13 14:09:33 +0000",
     "updated_at": "2016-01-15 16:22:12 +0000"
@@ -60,7 +60,7 @@ GET {{ site.data.api.url | append: 'sites/:site_id/source/:name' }}
     "type": "page",
     "sha": "ba7f4bd2da35e372fc34fdf3b60cb108b7412b52",
     "url": "/",
-    "download_url": "https://api.v2.siteleaf.com/v2/sites/56965a9dbe6765465c000007/source/index.html?download",
+    "download_url": "{{ site.data.api.url }}sites/56965a9dbe6765465c000007/source/index.html?download",
     "user_id": "51ac1ebd5dde223c94000001",
     "created_at": "2016-01-13 14:09:33 +0000",
     "updated_at": "2016-01-13 14:09:33 +0000"
@@ -109,7 +109,7 @@ PUT {{ site.data.api.url | append: 'sites/:site_id/source/:name' }}
   "type": "page",
   "sha": "ba7f4bd2da35e372fc34fdf3b60cb108b7412b52",
   "url": "/",
-  "download_url": "https://api.v2.siteleaf.com/v2/sites/56965a9dbe6765465c000007/source/index.html?download",
+  "download_url": "{{ site.data.api.url }}sites/56965a9dbe6765465c000007/source/index.html?download",
   "user_id": "51ac1ebd5dde223c94000001",
   "created_at": "2016-01-13 14:09:33 +0000",
   "updated_at": "2016-01-13 14:09:33 +0000"
@@ -139,7 +139,7 @@ DELETE {{ site.data.api.url | append: 'sites/:site_id/source/:name' }}
   "type": "page",
   "sha": "ba7f4bd2da35e372fc34fdf3b60cb108b7412b52",
   "url": "/",
-  "download_url": "https://api.v2.siteleaf.com/v2/sites/56965a9dbe6765465c000007/source/index.html?download",
+  "download_url": "{{ site.data.api.url }}sites/56965a9dbe6765465c000007/source/index.html?download",
   "user_id": "51ac1ebd5dde223c94000001",
   "created_at": "2016-01-13 14:09:33 +0000",
   "updated_at": "2016-01-13 14:09:33 +0000"
