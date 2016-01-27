@@ -5,7 +5,7 @@ layout: page
 weight: 3
 ---
 
-There will be times where you don't need a page or a post, but still need to group bits of content together. This is exactly what _collections_ are: they are groups of [_documents_](/managing-content/documents.html) that aren't in any particular order.
+There will be times where you don't need a page or a post, but still need to group bits of content together. This is exactly what _collections_ are: they are groups of [_documents_](/managing-content/documents/) that aren't in any particular order.
 
 For each collection, a new directory will be created in your project called `_[collection name]/` (e.g., `_people/`). Additionally, a piece of configuration will be added to your `_config.yml` file that defines the collection with its title and some metadata:
 
