@@ -75,3 +75,5 @@ defaults:
     layout: api
 permalink: pretty
 github_url: https://github.com/siteleaf/learn.siteleaf.com
+sass:
+  style: compressed
