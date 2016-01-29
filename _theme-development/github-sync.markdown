@@ -1,7 +1,7 @@
 ---
 title: GitHub Sync
 date: 2015-10-31 20:03:00 -04:00
-weight: 5
+weight: 6
 layout: page
 ---
 
