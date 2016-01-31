@@ -11,7 +11,7 @@ If you have a large site, you may want to have a sitemap. Adding a sitemap is ea
 
 ### GitHub Pages
 
-If you're using GitHub Pages as your host, head into your Site Settings and add a new list metadata called `gems`, with an entry called `jekyll-sitemap`. Save, publish, and you're done! GitHub Pages will automatically see you'd like to use the [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap) Gem and add a sitemap.
+If you're using GitHub Pages as your host, head into your Site Settings and add a new [list metadata](/managing-content/metadata/#list) called `gems`, with an entry called `jekyll-sitemap`. Save, publish, and you're done! GitHub Pages will automatically see you'd like to use the [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap) Gem and add a sitemap.
 
 ### Other Hosts
 
@@ -76,7 +76,7 @@ Adding an Atom or RSS feed is similar to adding a sitemap.
 
 ### GitHub Pages
 
-If you're using GitHub Pages as your host, head into your Site Settings and add a new list metadata called `gems`, with an entry called `jekyll-rss`. Save, publish, and you're done! GitHub Pages will automatically see you'd like to use the [jekyll-feed](https://github.com/jekyll/jekyll-feed) Gem and add an Atom feed.
+If you're using GitHub Pages as your host, head into your Site Settings and add a new [list metadata](/managing-content/metadata/#list) called `gems`, with an entry called `jekyll-rss`. Save, publish, and you're done! GitHub Pages will automatically see you'd like to use the [jekyll-feed](https://github.com/jekyll/jekyll-feed) Gem and add an Atom feed.
 
 ### Other Hosts
 
