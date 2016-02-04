@@ -37,14 +37,14 @@ $ bundle exec siteleaf config yoursite.com
 4) Pull your content and theme from Siteleaf:
 
 {% highlight plain %}
-bundle exec siteleaf pull
+$ bundle exec siteleaf pull
 {% endhighlight %}
 
 
 5) Push your content and theme to Siteleaf:
 
 {% highlight plain %}
-bundle exec siteleaf push
+$ bundle exec siteleaf push
 {% endhighlight %}
 
 ## <a name="backup"></a>Backing up your site
@@ -52,11 +52,11 @@ bundle exec siteleaf push
 Creating a full backup of your v2 site is simple. Just copy your `Gemfile` to an empty directory and do a `pull`:
 
 {% highlight plain %}
-cp Gemfile /path/to/backup/
-cd /path/to/backup/
-bundle install
-bundle exec siteleaf config yoursite.com
-bundle exec siteleaf pull
+$ cp Gemfile /path/to/backup/
+$ cd /path/to/backup/
+$ bundle install
+$ bundle exec siteleaf config yoursite.com
+$ bundle exec siteleaf pull
 {% endhighlight %}
 
 This will include your entire site, including theme files, assets, content, and site metadata.

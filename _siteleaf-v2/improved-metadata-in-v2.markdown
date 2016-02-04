@@ -5,7 +5,7 @@ layout: page
 weight: 5
 ---
 
-We've greatly improved the metadata user experience in V2! Now you can define defaults on a per-page basis, have repeatable fields, and fields can now be arrays or objects, in addition to the standard text field.
+We've greatly improved the metadata user experience in v2! Now you can define defaults on a per-page basis, have repeatable fields, and fields can now be lists or objects in addition to the standard text field.
 
 ## Setting default fields
 
@@ -15,7 +15,7 @@ You can define Jekyll Defaults for all your content (or by collection) in your c
 
 If you have metadata with a key of `asset`, `assets`, `file`, `files`, `image`, or `images` Siteleaf will place a file picker button within the field, making it easy to quickly upload or select an existing upload.
 
-If you're coming from Siteleaf V1, you'll probably notice that the "assets" section is no longer its own field. Instead, you can create a "List" (array) metadata and give it a key of `assets`. If you want to add assets with additional metadata (like maybe a caption), you could create a "List" metadata and add "Objects" to the list. Your object could have keys like `file` and `caption`. When you add a new item to the list, a new object with those same keys will be added for you, making it easy to add multiple assets with the same structure.
+If you're coming from Siteleaf v1, you'll probably notice that the "assets" section is no longer its own field. Instead, you can create a "List" (array) metadata and give it a key of `assets`. If you want to add assets with additional metadata (like maybe a caption), you could create a "List" metadata and add "Objects" to the list. Your object could have keys like `file` and `caption`. When you add a new item to the list, a new object with those same keys will be added for you, making it easy to add multiple assets with the same structure.
 
 ## Collection fields
 

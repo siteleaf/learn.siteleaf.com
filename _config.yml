@@ -34,7 +34,7 @@ collections:
     title: Posts
     output: true
   siteleaf-v2:
-    title: Siteleaf V2
+    title: Siteleaf v2
     output: true
     permalink: "/:collection/:path/"
     weight: 20

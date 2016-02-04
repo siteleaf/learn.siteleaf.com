@@ -5,7 +5,10 @@ layout: page
 weight: 1
 ---
 
-A page is the most basic content type in Siteleaf. A page is linked to a Markdown file in your project that contains frontmatter and your body.
+A page is the most basic content type in Siteleaf. They belong directly to your site, and don't belong to a particular collection.
+
+A page is linked to a Markdown file in your project that contains frontmatter and your body.
+{: .note__info.ss-info}
 
 ## Options
 

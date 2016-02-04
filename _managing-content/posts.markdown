@@ -5,15 +5,16 @@ layout: page
 weight: 2
 ---
 
-Posts are a bit like special documents. Siteleaf, like Jekyll, is "blog-aware" — blogging is built in by default.
+Posts are a bit like special documents — they belong to the Posts collection, and have some special properties (such as being able to be marked as a draft).
 
 Creating a post will create a Markdown file in the `_posts/` directory that will include the timestamp and date (for example, a post titled "New York" that was created on January 6th, 2016 will turn into `2016-01-06-new-york.markdown`).
+{: .note__info.ss-info}
 
 ## Options
 
 ### Path
 
-The path changes the URL this post is accessible at on your site within the `/posts/` subdirectory.
+The path changes the URL this post is accessible at on your site within the `/posts/` path.
 
 ### Visibility
 

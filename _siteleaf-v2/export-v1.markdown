@@ -12,20 +12,20 @@ Included in the export will be all your pages, posts, site metadata, and uploade
 1) First, make sure to update to the latest Siteleaf Gem (1.0.3 or higher). If you need to update your Gem, run:
 
 {% highlight plain %}
-gem update siteleaf
+$ gem update siteleaf
 {% endhighlight %}
 
 2) If you do not already have your v1 site configured, change your site's directory and run config (skip if already configured):
 
 {% highlight plain %}
-cd /path/to/yoursite
-siteleaf config yoursite.com
+$ cd /path/to/yoursite
+$ siteleaf config yoursite.com
 {% endhighlight %}
 
 3) Now you can export your site:
 
 {% highlight plain %}
-siteleaf export
+$ siteleaf export
 {% endhighlight %}
 
 4) Finally, you will be asked to enter your site's main posts path. This should be the slug where we can find your site's posts. For example, if your site uses `/blog/hello-world`, you would enter `blog`. Press enter to accept the default name `posts`.
@@ -39,7 +39,7 @@ Your site will be exported to a folder called `export` within the current direct
 **Tip**: You can also export your site to a directory of your choice by adding an argument to the export command:
 
 {% highlight plain %}
-siteleaf export mydir
+$ siteleaf export mydir
 {% endhighlight %}
 
 In this case your export will be saved a folder called `mydir`.
