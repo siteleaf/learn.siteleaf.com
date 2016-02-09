@@ -116,17 +116,18 @@ table {
 
 .form {
   &__search {
-    border-bottom: 2px solid $color-gray-an2;
     padding-bottom: $v + 0.275rem;
     margin-bottom: $v;
   }
 
   &__input {
-    &--search {
+    &--search.st-default-search-input {
+
       font-size: $font-size-n3;
-      padding: $v * 0.25;
       display: block;
       width: 100%;
+      box-sizing: border-box;
+      height: auto;
 
       &--landing {
         font-size: $font-size-0;
