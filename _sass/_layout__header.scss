@@ -16,6 +16,10 @@
   font-size: $font-size-n2;
   background: $bg_gray;
 
+  @media (max-width: $max-width-narrow) {
+    display: none;
+  }
+
   strong{
     color: $color-gray-2;
     display: block;

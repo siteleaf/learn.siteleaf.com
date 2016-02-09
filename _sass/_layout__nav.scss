@@ -17,6 +17,14 @@
     }
   }
 
+  &__toggle {
+    display: none;
+
+    @media (max-width: $max-width-narrow) {
+      display: block;
+    }
+  }
+
   &__logo {
     color: $color-white;
     font-size: $font-size-1;
@@ -94,6 +102,10 @@
       margin-bottom: $v / 2;
       padding: 0 ($v / 2);
       width: 24%;
+
+      @media (max-width: $max-width-narrow) {
+        width: 100%;
+      }
 
       &:nth-child(4n+1) {
         margin-left: 0px;
