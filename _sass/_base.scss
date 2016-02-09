@@ -145,6 +145,20 @@ table {
       }
     }
   }
+
+  @media (max-width: $max-width-narrow) {
+    &__sidebar, &__content {
+      width: 100%;
+    }
+
+    &__sidebar {
+      margin-bottom: $v;
+
+      nav {
+        display: none;
+      }
+    }
+  }
 }
 
 .form {
