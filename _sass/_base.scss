@@ -116,21 +116,25 @@ table {
 
 .form {
   &__search {
-    padding-bottom: $v + 0.275rem;
+    // padding-bottom: $v + 0.275rem;
     margin-bottom: $v;
   }
 
   &__input {
     &--search.st-default-search-input {
-
-      font-size: $font-size-n3;
-      display: block;
-      width: 100%;
       box-sizing: border-box;
+      border: 1px solid $color-gray-an2;
+      border-radius: 0;
+      font-family: $font-family-sans-serif;
+      font-size: $font-size-n2;
+      display: block;
       height: auto;
+      height: $v * 2;
+      width: 100%;
+      background-position-y: center;
 
-      &--landing {
-        font-size: $font-size-0;
+      &:focus {
+        border-color: $color-gray-a1;
       }
     }
   }
