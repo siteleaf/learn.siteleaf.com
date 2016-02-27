@@ -17,8 +17,15 @@
     }
   }
 
+  &--mobile {
+    margin-top: $v;
+  }
+
   &__toggle {
+    // background: $color-blue-dark;
+    // color: $color-white;
     display: none;
+    // width: 100%;
 
     @media (max-width: $max-width-narrow) {
       display: block;

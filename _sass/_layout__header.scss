@@ -1,8 +1,11 @@
 .header {
   background: $color-blue;
   padding-bottom: 1em;
-  // margin-bottom: 2em;
   padding-top: 1em;
+
+  @media (min-width: $max-width-narrow) {
+    margin-bottom: 2em;
+  }
 }
 
 .beta-notice{
