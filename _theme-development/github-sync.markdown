@@ -5,16 +5,55 @@ weight: 6
 layout: page
 ---
 
-When you're working on a site, you'll want to keep your theme and content in sync. This is exactly what GitHub Sync was made for.
+When working on your site, you'll want to keep your theme and content in sync. This is exactly what GitHub Sync was made for. Once GitHub Sync is enabled, every time you update your Siteleaf site or your [GitHub](https://github.com) repo, the changes will be synced between the two.
 
-**To enable GitHub Sync:**
+## Enable GitHub Sync
 
-1) After creating a site, go to the Sync tab under Settings
+1. After creating a site, go to the **Sync** tab under **Settings**
+2. Connect to GitHub
+3. Choose a repo, and optionally a branch name. We generally recommend using the `master` branch for syncing source files, and if using GitHub Pages for hosting, the `gh-pages` branch in the same repo for published sites. However you may use two separate repos, or any configuration you wish.
 
-2) Choose a repo, and optionally a branch name.
+## Local development with GitHub Sync
 
-We generally recommend using the `master` branch for syncing source files, and if using GitHub Pages for hosting, the `gh-pages` branch in the same repo for published sites. However you may use two separate repos, or any configuration you wish.
+1) Initialize or clone your GitHub repo locally to your machine
 
-3) Commit changes to this branch using your favorite Git tools (like [GitHub Desktop](https://desktop.github.com/)), and Siteleaf will automatically pick up on any changes using webhooks.
+2) Create a file called `Gemfile` in your site's root folder on your machine and add the Jekyll gem to your bundle:
 
-Once this is all set up, every time you update your Siteleaf site or your GitHub repo, the changes will be synced between the two.
+{% highlight ruby %}
+source 'http://rubygems.org'
+gem 'jekyll'
+{% endhighlight %}
+
+3) Install the bundle:
+
+{% highlight plain %}
+$ gem install bundler
+$ bundle install
+{% endhighlight %}
+
+4) Start the Jekyll server:
+
+{% highlight plain %}
+$ bundle exec jekyll serve
+{% endhighlight %}
+
+Now visit [localhost:4000](http://localhost:4000) to see your site!
+
+5) Make some changes then sync them
+
+If pushing and pulling changes from the command line isn't your thing, you can download [GitHub Desktop](https://desktop.github.com/) to do it through a user-friendly interface.
+{: .note__info.ss-info}
+
+Push local changes to GitHub and Siteleaf:
+
+{% highlight plain %}
+$ git add .
+$ git commit -m "Describe your changes here"
+$ git push
+{% endhighlight %}
+
+Or pull the latest changes from GitHub and Siteleaf:
+
+{% highlight plain %}
+$ git pull
+{% endhighlight %}

@@ -14,7 +14,7 @@ html {
 body {
   @include antialias;
 
-  color: $color-gray-a2;
+  color: $text_normal;
   font-family: $font-family-sans-serif;
   font-size: $font-size-0;
   letter-spacing: $letter-spacing-base;
@@ -37,6 +37,7 @@ em {
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: $v / 2;
+  color: $text_dark;
 }
 
 h1 {
@@ -47,6 +48,7 @@ h1 {
 
 h2 {
   font-size: $font-size-2;
+  font-weight: $font-weight-semibold;
 }
 
 h3 {
@@ -57,7 +59,7 @@ img {
   max-width: 100%;
 }
 
-p {
+p, ul, ol {
   margin-bottom: $v;
 }
 
@@ -65,6 +67,7 @@ pre, code {
   color: $color-gray-2;
   background-color: #f5f5f5;
   padding: 1px 4px 2px;
+  font-size: 0.95em;
 }
 
 pre {
@@ -85,6 +88,7 @@ ul, ol {
 
 strong {
   font-weight: $font-weight-semibold;
+  color: $text_dark;
 }
 
 table {
@@ -172,7 +176,7 @@ table {
   #further-reading {
     border-top: 1px solid $color-gray-an2;
     padding-top: $v;
-    margin-top: $v * 2;
+    margin-top: $v;
   }
 }
 

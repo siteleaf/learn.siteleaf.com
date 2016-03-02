@@ -32,7 +32,7 @@
   }
 
   &__header {
-    color: $color-gray-a2;
+    color: $text_dark;
     margin-bottom: 0;
     font-size: $font-size-n1;
 
@@ -49,6 +49,7 @@
 
   &__list {
     list-style-type: none;
+    margin-bottom: 0;
 
     &--header {
       float: right;

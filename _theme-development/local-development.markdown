@@ -6,58 +6,25 @@ weight: 2
 layout: page
 ---
 
-Siteleaf uses Ruby and RubyGems, and you’ll need them installed to start developing your own themes. The [Ruby website](https://www.ruby-lang.org/en/documentation/installation/) describes how to install Ruby and RubyGems for various platforms. You’ll also need to install Bundler, a package manager for Ruby:
- 
+Siteleaf uses Ruby and RubyGems, and you’ll need them installed to start developing your own themes locally. The [Ruby website](https://www.ruby-lang.org/en/documentation/installation/) describes how to install Ruby and RubyGems for various platforms. You’ll also need to install Bundler, a package manager for Ruby:
+
 ```
 $ gem install bundler
 ```
 
-Once you have everything installed, we’ll go ahead and create a new project. Create a new directory, and we’ll make a new `Gemfile`:
+Once you have everything installed, we’ll go ahead and create a new project. Create a new directory on your machine (eg. `my-site`), and then create a new `Gemfile` within that directory.
 
-{% highlight ruby %}
-source 'https://rubygems.org'
+The gems you include in the `Gemfile` and the method for sycning your site's content depends on your preferred development workflow. **Below are the two options available:**
 
-gem 'siteleaf', '2.0.0.pre.beta7'
-gem 'jekyll'
-{% endhighlight %}
+## Option 1: GitHub Sync (suggested)
 
-Once you run `bundle install`, authorize your Siteleaf account:
+This is our suggested workflow for local development and eliminates the need for the Siteleaf Gem.
 
-```
-$ bundle exec siteleaf auth
-```
+**[Learn how to develop your site locally using Jekyll and GitHub Sync](/theme-development/github-sync/)** &rarr;
 
-At this point you have everything you need to get going. Go ahead and run:
+## Option 2: Siteleaf Gem
 
-```
-$ bundle exec jekyll serve
-```
-
-Now go and visit [localhost:4000](http://localhost:4000) to see your site!
-
-## Creating a new site
-
-```
-$ siteleaf new yoursite.com
-```
-
-This will create a new theme folder called `yoursite.com` in the directory where you ran this command. It will also create the site for you in your Siteleaf account. If you prefer not to create a new directory, run `siteleaf new yoursite.com .` instead.
-
-## Using an existing site
-
-In a new directory, configure your site:
-
-```
-$ siteleaf config yoursite.com
-```
-
-You can then pull the Jekyll configuration, content, and current theme:
-
-```
-$ siteleaf pull
-```
-
-At this point, it's probably a good idea to add a `Gemfile` (see above).
+**[Learn how to develop your site locally using Jekyll and the Siteleaf Gem](/theme-development/gem/)** &rarr;
 
 ## Further Reading
 
