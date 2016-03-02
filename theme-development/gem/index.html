@@ -5,7 +5,7 @@
     <!-- <meta content="width=device-width, initial-scale=1" name="viewport"> -->
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
-    <title>Using the v2 Gem</title>
+    <title>Siteleaf Gem | Siteleaf Learn</title>
 
     <link href="/assets/css/main.css" rel="stylesheet">
     <link href="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.css" rel="stylesheet">
@@ -17,13 +17,10 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
       ga('create', 'UA-1666437-41', 'auto');
       ga('send', 'pageview');
-
     </script>
-
-    <header class="header">
+    <header class="header" data-swiftype-index='false'>
       <nav class="nav">
         <div class="wrap">
           <a class="nav__logo" href="/">Learn</a>
@@ -43,16 +40,26 @@
         </div>
       </nav>
     </header>
+    <div class="beta-notice" data-swiftype-index='false'>
+      <div class="wrap">
+        <strong>Please note</strong> This documentation is a <em>work in progress</em> and is only for Version 2 of Siteleaf. For V1 documentation, please see the <a href="http://www.siteleaf.com/help/">V1 help site</a>. You can also <a href="https://github.com/siteleaf/learn.siteleaf.com">contribute to this documentation on GitHub</a> and we'll <span class="ss-icon">love</span> you forever.
+      </div>
+    </div>
     <main class="main">
       <div class="wrap">
-        <div class="beta-notice">
-          <strong>Please note</strong> This documentation is a <em>work in progress</em> and is only for Version 2 of Siteleaf. For V1 documentation, please see the <a href="http://www.siteleaf.com/help/">V1 help site</a>. You can also <a href="https://github.com/siteleaf/learn.siteleaf.com">contribute to this documentation on GitHub</a> and we'll <span class="ss-icon">love</span> you forever.
-        </div>
-
         <aside class="main__sidebar">
-  <!-- <form class="form__search">
-    <input class="form__input--search" type="search" placeholder="Search">
-  </form> -->
+
+  <form class="form__search">
+    <input class="form__input--search st-default-search-input" type="search" placeholder="Search">
+  </form>
+
+  <script type="text/javascript">
+    (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+    })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+    _st('install','WgemsSzpiSJN3aaHTqYn','2.0.0');
+    </script>
 
   
   
@@ -83,8 +90,6 @@
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/siteleaf-v2/feedback/">Feedback</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/siteleaf-v2/back-up-your-site/">Back up your site</a></li>
-          
-            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/siteleaf-v2/v2-gem/">Using the v2 Gem</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/siteleaf-v2/export-v1/">Exporting your v1 site</a></li>
           
@@ -123,6 +128,8 @@
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/getting-started/">Getting started</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/local-development/">Local development</a></li>
+          
+            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/theme-development/gem/">Siteleaf Gem</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid/">Liquid</a></li>
           
@@ -185,22 +192,27 @@
 
 <section class="main__content">
   <div class="document">
-    <h1 class="document__title">Using the v2 Gem</h1>
+    <h1 class="document__title">Siteleaf Gem</h1>
 
     
 
     <div class="document__content">
-      <p><strong>We recommend using <a href="/theme-development/github-sync/">GitHub sync</a> with v2, but you can still use the Gem if that’s your preferred workflow.</strong></p>
+      <p class="note__info ss-info">We recommend using <a href="/theme-development/github-sync/">GitHub sync</a> for local development, but you can still use the Gem if that’s your preferred workflow.</p>
+
+<h2 id="differences-between-v1-and-v2-gems">Differences between v1 and v2 gems</h2>
 
 <p>The v1 gem is not compatible with v2 sites (and vice versa), so we recommend using a <a href="http://bundler.io/gemfile.html">Gemfile</a> to allow both versions to be installed.</p>
 
-<p><strong>Important note:</strong> when using push/pull in v2, both theme and content files are included. Always make sure to do a <code class="highlighter-rouge">pull</code> first to avoid overwriting your Siteleaf content on <code class="highlighter-rouge">push</code>. Your local directory must have a <code class="highlighter-rouge">_config.yml</code> in order to push.</p>
+<p><strong>Important:</strong> When using <code class="highlighter-rouge">push</code>/<code class="highlighter-rouge">pull</code> in v2, both theme and content files are included. Always make sure to do a <code class="highlighter-rouge">pull</code> first to avoid overwriting your Siteleaf content on <code class="highlighter-rouge">push</code>. Your local directory must have a <code class="highlighter-rouge">_config.yml</code> in order to push.</p>
 
-<p>1) Create a file called <code class="highlighter-rouge">Gemfile</code> in your site’s root folder and add the v2 beta gem to your bundle:</p>
+<h2 id="local-development-using-the-siteleaf-gem">Local development using the Siteleaf gem</h2>
+
+<p>1) Create a file called <code class="highlighter-rouge">Gemfile</code> in your site’s root folder and add the v2 beta gem and Jekyll to your bundle:</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">source</span> <span class="s1">'http://rubygems.org'</span>
 
-<span class="n">gem</span> <span class="s1">'siteleaf'</span><span class="p">,</span> <span class="ss">github: </span><span class="s1">'siteleaf/siteleaf-gem'</span><span class="p">,</span> <span class="ss">branch: </span><span class="s1">'2.0.0.pre'</span></code></pre></figure>
+<span class="n">gem</span> <span class="s1">'siteleaf'</span><span class="p">,</span> <span class="s1">'2.0.0.pre.beta9'</span>
+<span class="n">gem</span> <span class="s1">'jekyll'</span></code></pre></figure>
 
 <p><small>For help with Bundler or Gemfiles, please see: <a href="http://bundler.io/gemfile.html">http://bundler.io/gemfile.html</a></small></p>
 
@@ -209,19 +221,37 @@
 <figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ gem install bundler
 $ bundle install</code></pre></figure>
 
-<p>3) Configure your v2 site:</p>
+<p>3) Authorize your Siteleaf account:</p>
+
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ bundle exec siteleaf auth</code></pre></figure>
+
+<p>4) Create or connect to a Siteleaf v2 site:</p>
+
+<p><strong>To create a new Siteleaf site:</strong></p>
+
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ bundle exec siteleaf new yoursite.com</code></pre></figure>
+
+<p>This will create a new theme folder called <code class="highlighter-rouge">yoursite.com</code> in the directory where you ran this command. It will also create the site for you in your Siteleaf account. If you prefer not to create a new directory, run <code class="highlighter-rouge">bundle exec siteleaf new yoursite.com .</code> instead.</p>
+
+<p><strong>To use an existing Siteleaf site:</strong></p>
 
 <figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ bundle exec siteleaf config yoursite.com</code></pre></figure>
 
-<p>4) Pull your content and theme from Siteleaf:</p>
+<p>You can then pull the Jekyll configuration, content, and current theme:</p>
 
-<figure class="highlight"><pre><code class="language-plain" data-lang="plain">bundle exec siteleaf pull</code></pre></figure>
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ bundle exec siteleaf pull</code></pre></figure>
+
+<p>5) Start the Jekyll server:</p>
+
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ bundle exec jekyll serve</code></pre></figure>
+
+<p>Now visit <a href="http://localhost:4000">localhost:4000</a> to see your site!</p>
 
 <p>5) Push your content and theme to Siteleaf:</p>
 
-<figure class="highlight"><pre><code class="language-plain" data-lang="plain">bundle exec siteleaf push</code></pre></figure>
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ bundle exec siteleaf push</code></pre></figure>
 
-<h2 id="a-namebackupabacking-up-your-site"><a name="backup"></a>Backing up your site</h2>
+<h2 id="backing-up-your-site">Backing up your site</h2>
 
 <p>Creating a full backup of your v2 site is simple. Just copy your <code class="highlighter-rouge">Gemfile</code> to an empty directory and do a <code class="highlighter-rouge">pull</code>:</p>
 
@@ -235,7 +265,7 @@ bundle exec siteleaf pull</code></pre></figure>
 
 
       <p class="document__improve">
-        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_siteleaf-v2/v2-gem.markdown">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_theme-development/gem.markdown">
           Help improve this page &rarr;
         </a>
       </p>
@@ -245,7 +275,7 @@ bundle exec siteleaf pull</code></pre></figure>
 
       </div>
     </main>
-    <footer class="footer">
+    <footer class="footer" data-swiftype-index='false'>
       <div class="wrap">
         <p class="footer__copyright">&copy; 2016. Siteleaf&trade; is made by <a href="http://oak.is">Oak</a>.</p>
       </div>
