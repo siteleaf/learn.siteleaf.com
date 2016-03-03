@@ -5,7 +5,7 @@
     <!-- <meta content="width=device-width, initial-scale=1" name="viewport"> -->
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
-    <title>Metadata | Siteleaf Learn</title>
+    <title>Hosting and Sync options | Siteleaf Learn</title>
 
     <link href="/assets/css/main.css" rel="stylesheet">
     <link href="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.css" rel="stylesheet">
@@ -113,7 +113,7 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/documents/">Documents</a></li>
           
-            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/managing-content/metadata/">Metadata</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/metadata/">Metadata</a></li>
           
         </ul>
       </nav>
@@ -183,7 +183,7 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/pagination/">Pagination</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/hosting-sync/">Hosting and Sync options</a></li>
+            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/api/hosting-sync/">Hosting and Sync options</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/defaults/">Defaults</a></li>
           
@@ -196,50 +196,179 @@
 
 <section class="main__content">
   <div class="document">
-    <h1 class="document__title">Metadata</h1>
+    <h1 class="document__title">Hosting and Sync options</h1>
 
     
 
-    <div class="document__content">
-      <p>Metadata are bits of data that are attached to your pages, posts, collections, or documents, as well as your site itself. There are a few different types of metadata that you can use: simple, list, and object.</p>
+    <div class="document__content api__content">
+      <h2 id="overview">Overview</h2>
 
-<p class="note__info ss-info">Metadata is the equivalent of Jekyll’s YAML frontmatter. When syncing Siteleaf exports metadata as frontmatter for Pages and Documents and edits the config file for Collections and Sites.</p>
+<ol>
+  <li><a href="#hosting-options">Hosting options</a></li>
+  <li><a href="#sync-options">Sync options</a></li>
+</ol>
 
-<h2 id="simple">Simple</h2>
+<h2 id="hosting-options">Hosting options</h2>
 
-<p>Simple metadata is a way to associate a single value with a unique key.</p>
+<p>Depending on your sites <code class="highlighter-rouge">hosting</code> value, the <code class="highlighter-rouge">hosting_options</code> fields are:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="s">simple_key</span><span class="pi">:</span> <span class="s">single value</span>
-</code></pre>
-</div>
+<h3 id="hosting-github">Hosting: <code class="highlighter-rouge">github</code></h3>
 
-<p class="note__info ss-info">If you end your key name in <code class="highlighter-rouge">file</code>, <code class="highlighter-rouge">image</code>, or <code class="highlighter-rouge">asset</code>, the value field will reveal an upload button. This lets you upload a new file or choose a previously uploaded file, and insert it’s URL into the value field.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">access_token</code></td>
+      <td>Github Access Token <strong>(required)</strong></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">path</code></td>
+      <td>Full repository name <code class="highlighter-rouge">&lt;user name&gt;/&lt;repo name&gt;</code> <strong>(required)</strong></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">branch</code></td>
+      <td>Branch name, <code class="highlighter-rouge">gh-pages</code> by default</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">format</code></td>
+      <td><code class="highlighter-rouge">raw</code> or <code class="highlighter-rouge">compiled</code> (Github Pages or Siteleaf compile) <strong>(required)</strong></td>
+    </tr>
+  </tbody>
+</table>
 
-<h2 id="list">List</h2>
+<h3 id="hosting-s3">Hosting: <code class="highlighter-rouge">s3</code></h3>
 
-<p>List metadata is a way to associate multiple values with a unique key. List values can be simple, or contain other lists and objects.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">access_key</code></td>
+      <td>AWS Access Key <strong>(required)</strong></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">secret_key</code></td>
+      <td>AWS Secret Key <strong>(required)</strong></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">path</code></td>
+      <td>S3 bucket name <strong>(required)</strong></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">region</code></td>
+      <td>Region of S3 bucket <strong>(required)</strong></td>
+    </tr>
+  </tbody>
+</table>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="s">list_key</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">first value</span>
-  <span class="pi">-</span> <span class="s">second value</span>
-</code></pre>
-</div>
+<h3 id="hosting-ftp">Hosting: <code class="highlighter-rouge">ftp</code></h3>
 
-<h2 id="objects">Objects</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">protocol</code></td>
+      <td><code class="highlighter-rouge">ftp</code> or <code class="highlighter-rouge">sftp</code> <strong>(required)</strong></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">host</code></td>
+      <td>Host name <strong>(required)</strong></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">port</code></td>
+      <td>Port number, 21 if ftp or 22 if sftp by default</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">username</code></td>
+      <td>FTP username <strong>(required)</strong></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">password</code></td>
+      <td>FTP password <strong>(required)</strong></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">path</code></td>
+      <td>Path where site will be published <strong>(required)</strong></td>
+    </tr>
+  </tbody>
+</table>
 
-<p>Object metadata allows you to nest or group other metadata types under a unique key.</p>
+<h3 id="hosting-cloudfiles">Hosting: <code class="highlighter-rouge">cloudfiles</code></h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="s">object_key</span><span class="pi">:</span>
-  <span class="s">simple_key</span><span class="pi">:</span> <span class="s">single value</span>
-  <span class="s">list_key</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="s">first value</span>
-    <span class="pi">-</span> <span class="s">second value</span>
-</code></pre>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">username</code></td>
+      <td>Rackspace username <strong>(required)</strong></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">api_key</code></td>
+      <td>Rackspace API key <strong>(required)</strong></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">path</code></td>
+      <td>Container name <strong>(required)</strong></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">region</code></td>
+      <td>Region of container <strong>(required)</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="sync-options">Sync options</h2>
+
+<p>Github is currently the only <code class="highlighter-rouge">sync</code> provider, the <code class="highlighter-rouge">sync_options</code> are:</p>
+
+<h3 id="sync-github">Sync: <code class="highlighter-rouge">github</code></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">access_token</code></td>
+      <td>Github Access Token <strong>(required)</strong></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">path</code></td>
+      <td>Full repository name <code class="highlighter-rouge">&lt;user name&gt;/&lt;repo name&gt;</code> <strong>(required)</strong></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">branch</code></td>
+      <td>Branch name, <code class="highlighter-rouge">master</code> by default</td>
+    </tr>
+  </tbody>
+</table>
+
 
 
       <p class="document__improve">
-        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_managing-content/metadata.markdown">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_api/hosting-sync.md">
           Help improve this page &rarr;
         </a>
       </p>

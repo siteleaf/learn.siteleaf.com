@@ -5,7 +5,7 @@
     <!-- <meta content="width=device-width, initial-scale=1" name="viewport"> -->
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
-    <title>Metadata | Siteleaf Learn</title>
+    <title>Defaults | Siteleaf Learn</title>
 
     <link href="/assets/css/main.css" rel="stylesheet">
     <link href="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.css" rel="stylesheet">
@@ -113,7 +113,7 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/documents/">Documents</a></li>
           
-            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/managing-content/metadata/">Metadata</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/metadata/">Metadata</a></li>
           
         </ul>
       </nav>
@@ -185,7 +185,7 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/hosting-sync/">Hosting and Sync options</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/defaults/">Defaults</a></li>
+            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/api/defaults/">Defaults</a></li>
           
         </ul>
       </nav>
@@ -196,50 +196,78 @@
 
 <section class="main__content">
   <div class="document">
-    <h1 class="document__title">Metadata</h1>
+    <h1 class="document__title">Defaults</h1>
 
     
 
-    <div class="document__content">
-      <p>Metadata are bits of data that are attached to your pages, posts, collections, or documents, as well as your site itself. There are a few different types of metadata that you can use: simple, list, and object.</p>
+    <div class="document__content api__content">
+      <h2 id="overview">Overview</h2>
 
-<p class="note__info ss-info">Metadata is the equivalent of Jekyll’s YAML frontmatter. When syncing Siteleaf exports metadata as frontmatter for Pages and Documents and edits the config file for Collections and Sites.</p>
+<p>Defaults are a great way to add common values across a range of content. If you find yourself repeating metadata fields across pages, or using a certain layout for all your posts, defaults can help you out.</p>
 
-<h2 id="simple">Simple</h2>
+<p>Check out the <a href="https://jekyllrb.com/docs/configuration/#front-matter-defaults">Jekyll documentation</a> for more examples.</p>
 
-<p>Simple metadata is a way to associate a single value with a unique key.</p>
+<h2 id="default">Default</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="s">simple_key</span><span class="pi">:</span> <span class="s">single value</span>
-</code></pre>
-</div>
+<p>A default is a hash of scoped values that apply to particular content.</p>
 
-<p class="note__info ss-info">If you end your key name in <code class="highlighter-rouge">file</code>, <code class="highlighter-rouge">image</code>, or <code class="highlighter-rouge">asset</code>, the value field will reveal an upload button. This lets you upload a new file or choose a previously uploaded file, and insert it’s URL into the value field.</p>
+<h3 id="input">Input</h3>
 
-<h2 id="list">List</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Desc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">path</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>File path to scope values to, otherwise applies to everything</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">type</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Type of file to apply to: <code class="highlighter-rouge">pages</code>, <code class="highlighter-rouge">posts</code>, <code class="highlighter-rouge">drafts</code> or a collection</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">values</code></td>
+      <td><code class="highlighter-rouge">Hash&lt;String, *&gt;</code></td>
+      <td>Arbitrary key/value pairs</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>List metadata is a way to associate multiple values with a unique key. List values can be simple, or contain other lists and objects.</p>
+<h3 id="example">Example</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="s">list_key</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">first value</span>
-  <span class="pi">-</span> <span class="s">second value</span>
-</code></pre>
-</div>
+<p>Defaults are added via the <a href="/api/sites">Sites endpoint</a> within the <code class="highlighter-rouge">defaults</code> array.</p>
 
-<h2 id="objects">Objects</h2>
-
-<p>Object metadata allows you to nest or group other metadata types under a unique key.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="s">object_key</span><span class="pi">:</span>
-  <span class="s">simple_key</span><span class="pi">:</span> <span class="s">single value</span>
-  <span class="s">list_key</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="s">first value</span>
-    <span class="pi">-</span> <span class="s">second value</span>
-</code></pre>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"defaults"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"posts"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"layout"</span><span class="p">:</span><span class="w"> </span><span class="s2">"post"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jill Smith"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"projects"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"layout"</span><span class="p">:</span><span class="w"> </span><span class="s2">"project"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 </div>
 
 
       <p class="document__improve">
-        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_managing-content/metadata.markdown">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_api/defaults.md">
           Help improve this page &rarr;
         </a>
       </p>
