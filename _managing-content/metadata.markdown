@@ -13,33 +13,21 @@ Metadata is the equivalent of Jekyll's YAML frontmatter. When syncing Siteleaf e
 
 ## Simple
 
-Simple metadata is a way to associate a single value with a unique key.
+Simple metadata is just a way to associate a single key with a bit of text.
 
-~~~ yaml
-simple_key: single value
-~~~
+![Simple metadata](/uploads/metadata/simple.png)
 
-If you end your key name in `file`, `image`, or `asset`, the value field will reveal an upload button. This lets you upload a new file or choose a previously uploaded file, and insert it's URL into the value field.
+If you end your key name in `file`, `image`, or `asset`, the value field will reveal an upload button. This lets you upload a new file or choose a previously uploaded file and insert its URL into the value field.
 {: .note__info.ss-info}
 
 ## List
 
-List metadata is a way to associate multiple values with a unique key. List values can be simple, or contain other lists and objects.
+List metadata is just that: a list. But each list item doesn't just need to be a bit of text — it can be another list or an object as well!
 
-~~~ yaml
-list_key:
-  - first value
-  - second value
-~~~
+![List metadata](/uploads/metadata/list.png)
 
 ## Objects
 
-Object metadata allows you to nest or group other metadata types under a unique key.
+Object metadata allows you to nest other types of metadata inside it. This can be a piece of simple metadata, a list, or other objects.
 
-~~~ yaml
-object_key:
-  simple_key: single value
-  list_key:
-    - first value
-    - second value
-~~~
+![Object metadata](/uploads/metadata/object.png)

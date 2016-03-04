@@ -113,6 +113,11 @@ table {
   &__content {
     float: right;
     width: 70%;
+
+    img {
+      border: 5px solid $color-gray-an3;
+      box-sizing: border-box;
+    }
   }
 }
 
