@@ -5,6 +5,9 @@ layout: page
 weight: 2
 ---
 
+
+Blogging is built right into Siteleaf. This means that you can just go ahead and start writing your posts and we'll handle it for you!
+
 Posts are a bit like special documents — they belong to the Posts collection, and have some special properties (such as being able to be marked as a draft).
 
 Creating a post will create a Markdown file in the `_posts/` directory that will include the timestamp and date (for example, a post titled "New York" that was created on January 6th, 2016 will turn into `2016-01-06-new-york.markdown`).
@@ -38,7 +41,7 @@ The permalink changes the URL this post is accessible at on your site. Unlike a 
 
 ### Layout
 
-The layout field lets you select which layout in `_layouts/` this post should use.
+Choose which layout you'd like to use. Any layout you have in `_layouts` will be listed here.
 
 ## Further Reading
 

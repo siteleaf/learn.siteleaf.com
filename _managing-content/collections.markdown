@@ -5,7 +5,7 @@ layout: page
 weight: 3
 ---
 
-There will be times where you don't need a page or a post, but still need to group bits of content together. This is exactly what _collections_ are: they are groups of [_documents_](/managing-content/documents/) that aren't in any particular order.
+There will be times where you don't need a page or a post, but still need to group bits of content together. This is exactly what collections are: they are groups of [documents](/managing-content/documents/) that aren't in any particular order.
 
 **Tip**: By default, a collection's documents aren't generated when you publish your site. If you'd like to output these documents, add a bit of [metadata](/managing-content/metadata) called `output` with the value `true`.
 
