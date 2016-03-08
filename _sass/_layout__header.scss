@@ -3,12 +3,12 @@
   padding-bottom: 1em;
   padding-top: 1em;
 
-  @media (min-width: $max-width-narrow) {
+  @media (max-width: $max-width-narrow) {
     margin-bottom: 2em;
   }
 }
 
-.beta-notice{
+.beta-notice {
   border: 1px solid $color-gray-an2;
   border-radius: $border-radius;
   padding: 15px;

@@ -152,11 +152,10 @@ table {
     }
 
     &__sidebar {
+      border-bottom: 5px solid $color-gray-an2;
+      padding-bottom: $v;
       margin-bottom: $v;
-
-      nav {
-        display: none;
-      }
+      display: none;
     }
   }
 }

@@ -25,17 +25,13 @@ if (list != null) {
 }
 
 // Toggle the nav on click on mobile.
-var nav_toggle = document.querySelector('.nav__toggle');
-var navs = document.querySelectorAll('.nav--mobile');
+var toggle = document.querySelector('.nav__toggle');
+var sidebar = document.querySelector('.main__sidebar');
 
-nav_toggle.onclick = function() {
-  for (var i = 0; i < navs.length; i++) {
-    var nav = navs[i];
-
-    if (nav.style.display === "block") {
-      navs[i].style.display = "none";
-    } else {
-      navs[i].style.display = "block";
-    }
+toggle.onclick = function() {
+  if (sidebar.style.display === "block") {
+    sidebar.style.display = "none";
+  } else {
+    sidebar.style.display = "block";
   }
 };
