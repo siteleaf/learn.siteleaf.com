@@ -8,7 +8,7 @@ weight: 2
 
 Blogging is built right into Siteleaf. This means that you can just go ahead and start writing your posts and we'll handle it for you!
 
-Posts are a bit like special documents — they belong to the Posts collection, and have some special properties (such as being able to be marked as a draft).
+Posts are a bit like special documents — they belong to the Posts collection, but unlike regular documents, you can set them to be a draft.
 
 Creating a post will create a Markdown file in the `_posts/` directory that will include the timestamp and date (for example, a post titled "New York" that was created on January 6th, 2016 will turn into `2016-01-06-new-york.markdown`).
 {: .note__info.ss-info}
@@ -21,7 +21,7 @@ The path changes the URL this post is accessible at on your site within the `/po
 
 ### Visibility
 
-By default, posts are visible. You can change them to hidden or draft (in which case, they'd be moved to the `_drafts/` directory).
+By default, posts are visible. You can change them to hidden or draft, in which case they'd be moved to the `_drafts/` directory.
 
 ### Tags
 
