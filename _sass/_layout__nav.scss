@@ -34,20 +34,20 @@
     font-size: $font-size-2;
     font-weight: $font-weight-semibold;
     display: block;
-    height: $v * 3;
+    height: $v * 2;
     float: left;
 
     img {
-      height: $v * 3;
+      height: $v * 2;
       max-width: 100%;
-      padding-right: $v * 0.5;
+      padding-right: $v * 0;
       display: inline-block;
       float: left;
     }
 
     span {
       display: inline-block;
-      line-height: $v * 3;
+      line-height: $v * 2;
       margin-left: $v / 2;
     }
 
@@ -93,9 +93,9 @@
     &--header {
       float: right;
       display: block;
-      line-height: $v * 3;
+      line-height: $v * 2;
       text-align: right;
-      height: $v * 3;
+      height: $v * 2;
     }
 
     &--grid {
