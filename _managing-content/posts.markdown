@@ -5,7 +5,6 @@ layout: page
 weight: 2
 ---
 
-
 Blogging is built right into Siteleaf. This means that you can just go ahead and start writing your posts and we'll handle it for you!
 
 Posts are a bit like special documents — they belong to the Posts collection, but unlike regular documents, you can set them to be a draft.
