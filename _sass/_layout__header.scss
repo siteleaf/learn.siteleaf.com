@@ -1,7 +1,7 @@
 .header {
   background: $color-blue;
   padding-bottom: 1em;
-  margin-bottom: 2em;
+  // margin-bottom: 2em;
   padding-top: 1em;
 }
 
@@ -9,11 +9,12 @@
   border: 1px solid $color-gray-an2;
   border-radius: $border-radius;
   padding: 15px;
-  margin-bottom: 2em;
+  margin-bottom: 40px;
   line-height: $line-height-tight;
   color: $color-gray-1;
   font-size: $font-size-html-sm;
   font-size: $font-size-n2;
+  background: $bg_gray;
 
   strong{
     color: $color-gray-2;

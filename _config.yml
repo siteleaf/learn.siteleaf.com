@@ -34,7 +34,7 @@ collections:
     title: Posts
     output: true
   siteleaf-v2:
-    title: Siteleaf v2
+    title: Siteleaf V2
     output: true
     permalink: "/:collection/:path/"
     weight: 20
@@ -78,4 +78,4 @@ github_url: https://github.com/siteleaf/learn.siteleaf.com
 sass:
   style: compressed
 gems:
-  - jekyll-sitemap
+- jekyll-sitemap

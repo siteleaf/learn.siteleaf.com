@@ -32,7 +32,7 @@
   }
 
   &__header {
-    color: $color-gray-a2;
+    color: $text_dark;
     margin-bottom: 0;
     font-size: $font-size-n1;
 
@@ -50,6 +50,7 @@
   &__list {
     margin-bottom: 0;
     list-style-type: none;
+    margin-bottom: 0;
 
     &--header {
       float: right;
@@ -59,7 +60,6 @@
 
     &--grid {
       @include clearfix;
-
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -67,7 +67,7 @@
       -webkit-flex-wrap: wrap;
           -ms-flex-wrap: wrap;
               flex-wrap: wrap;
-      width: 100%;
+      width: calc(100% + 9.65px);
     }
   }
 
@@ -87,15 +87,16 @@
 
     &--grid {
       border: 1px solid $color-gray-an2;
+      display: flex;
       display: inline-block;
       float: left;
-      margin-left: 1%;
+      margin-left: 10px;
       margin-bottom: $v / 2;
       padding: 0 ($v / 2);
-      width: 24.25%;
+      width: 24%;
 
       &:nth-child(4n+1) {
-        margin-left: 0;
+        margin-left: 0px;
       }
 
       &:hover {

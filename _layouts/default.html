@@ -5,7 +5,7 @@
     <!-- <meta content="width=device-width, initial-scale=1" name="viewport"> -->
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
-    <title>{% if page.title != "Documentation" %}{{ page.title }}{% else %}Siteleaf Learn{% endif %}</title>
+    <title>{% if page.title != "Documentation" %}{{ page.title }} | Siteleaf Learn{% else %}Siteleaf Learn{% endif %}</title>
 
     <link href="/assets/css/main.css" rel="stylesheet">
     <link href="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.css" rel="stylesheet">
@@ -17,13 +17,10 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
       ga('create', 'UA-1666437-41', 'auto');
       ga('send', 'pageview');
-
     </script>
-
-    <header class="header">
+    <header class="header" data-swiftype-index='false'>
       <nav class="nav">
         <div class="wrap">
           <a class="nav__logo" href="/">Learn</a>
@@ -43,16 +40,17 @@
         </div>
       </nav>
     </header>
+    <div class="beta-notice" data-swiftype-index='false'>
+      <div class="wrap">
+        <strong>Please note</strong> This documentation is a <em>work in progress</em> and is only for Version 2 of Siteleaf. For V1 documentation, please see the <a href="http://www.siteleaf.com/help/">V1 help site</a>. You can also <a href="{{ site.github_url }}">contribute to this documentation on GitHub</a> and we'll <span class="ss-icon">love</span> you forever.
+      </div>
+    </div>
     <main class="main">
       <div class="wrap">
-        <div class="beta-notice">
-          <strong>Please note</strong> This documentation is a <em>work in progress</em> and is only for Version 2 of Siteleaf. For V1 documentation, please see the <a href="http://www.siteleaf.com/help/">V1 help site</a>. You can also <a href="{{ site.github_url }}">contribute to this documentation on GitHub</a> and we'll <span class="ss-icon">love</span> you forever.
-        </div>
-
         {{ content }}
       </div>
     </main>
-    <footer class="footer">
+    <footer class="footer" data-swiftype-index='false'>
       <div class="wrap">
         <p class="footer__copyright">&copy; {{ site.time | date: '%Y' }}. Siteleaf&trade; is made by <a href="http://oak.is">Oak</a>.</p>
       </div>

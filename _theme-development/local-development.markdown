@@ -1,46 +1,30 @@
 ---
 title: Local development
 date: 2015-10-31 20:03:00 -04:00
-layout: page
+position: 1
 weight: 2
+layout: page
 ---
 
-Siteleaf is incredibly easy to develop for. With GitHub Sync, local development is even easier.
+Siteleaf uses Ruby and RubyGems, and you’ll need them installed to start developing your own themes locally. The [Ruby website](https://www.ruby-lang.org/en/documentation/installation/) describes how to install Ruby and RubyGems for various platforms. You’ll also need to install Bundler, a package manager for Ruby:
 
-# Requirements
-
-Siteleaf and Jekyll both run using [Ruby](http://ruby-lang.org) and you’ll need it installed. The Ruby website [lists various ways of installing Ruby and RubyGems](https://www.ruby-lang.org/en/documentation/installation).
-
-After that’s installed, head into your terminal and install Bundler.
-
-{% highlight plain %}
+```
 $ gem install bundler
-{% endhighlight %}
+```
 
-Installing Bundler will allow you to use `Gemfile`s. Typically, a theme will use a `Gemfile` to dictate which RubyGems it uses. In most cases, your `Gemfile` will look something like this:
+Once you have everything installed, we’ll go ahead and create a new project. Create a new directory on your machine (eg. `my-site`), and then create a new `Gemfile` within that directory.
 
-{% highlight ruby %}
-source 'https://rubygems.org'
+The gems you include in the `Gemfile` and the method for sycning your site's content depends on your preferred development workflow. **Below are the two options available:**
 
-gem 'jekyll'
-gem 'siteleaf'
-{% endhighlight %}
+## Option 1: GitHub Sync (suggested)
 
-Now, you can just use Bundler to install your dependencies:
+This is our suggested workflow for local development and eliminates the need for the Siteleaf Gem.
 
-{% highlight plain %}
-$ bundle install
-{% endhighlight %}
+**[Learn how to develop your site locally using Jekyll and GitHub Sync](/theme-development/github-sync/)** &rarr;
 
-# Running your site locally
+## Option 2: Siteleaf Gem
 
-Using Jekyll, you can preview your site locally. Just run the built-in server:
-
-{% highlight plain %}
-$ bundle exec jekyll serve
-{% endhighlight %}
-
-Now you can head on over to [localhost:3000](http://localhost:3000) and see your site.
+**[Learn how to develop your site locally using Jekyll and the Siteleaf Gem](/theme-development/gem/)** &rarr;
 
 ## Further Reading
 
