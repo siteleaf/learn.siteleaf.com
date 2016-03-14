@@ -5,7 +5,10 @@ layout: page
 weight: 1
 ---
 
-A page is the most basic content type in Siteleaf. A page is linked to a Markdown file in your project that contains frontmatter and your body.
+A page is the most basic content type in Siteleaf. Pages are free-floating and belong to your site rather than any particular collection.
+
+A page is linked to a Markdown file in your project that contains frontmatter and your body.
+{: .note__info.ss-info}
 
 ## Options
 
@@ -23,11 +26,11 @@ This changes the timestamp associated with the page.
 
 ### Permalink
 
-The permalink changes the path the page is accessible at on your site.
+The permalink also changes the path the page is accessible at on your site.
 
 ### Layout
 
-The layout field lets you select which layout in `_layouts/` this page should use.
+Choose which layout you'd like to use. Any layout you have in `_layouts` will be listed here.
 
 ## Further Reading
 

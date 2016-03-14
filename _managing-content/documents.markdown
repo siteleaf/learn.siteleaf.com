@@ -23,7 +23,7 @@ The permalink changes the path the document is accessible at on your site.
 
 ### Layout
 
-The layout field lets you select which layout in `_layouts/` this document should use.
+Choose which layout you'd like to use. Any layout you have in `_layouts` will be listed here.
 
 ## Further Reading
 
