@@ -1,8 +1,8 @@
 ---
 title: Settings
 date: 2015-12-17 08:02:00 -05:00
-layout: page
 position: 2
+layout: page
 ---
 
 Under the "General" tab in your site settings, you can change several aspects of the site.

@@ -1,8 +1,8 @@
 ---
 title: Users
 date: 2015-12-17 08:02:00 -05:00
-layout: page
 position: 1
+layout: page
 ---
 
 A lot of the time, you won't be working alone on your site. On the Users page, you can add other collaborators by their name or email address. You can choose between three different user roles, each giving a different level of permission to your site.

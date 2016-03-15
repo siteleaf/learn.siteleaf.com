@@ -1,8 +1,8 @@
 ---
 title: Improved metadata in v2
 date: 2015-10-31 20:03:00 -04:00
-layout: page
 position: 5
+layout: page
 ---
 
 We've greatly improved the metadata user experience in v2! Now you can define defaults on a per-page basis, have repeatable fields, and fields can now be lists or objects in addition to the standard text field.

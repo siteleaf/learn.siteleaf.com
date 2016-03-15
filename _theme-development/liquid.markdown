@@ -1,8 +1,8 @@
 ---
 title: Liquid
 date: 2015-10-31 20:03:00 -04:00
-layout: page
 position: 3
+layout: page
 ---
 
 Liquid is an open-source templating language that was developed by [Shopify](http://shopify.com). It uses tags, objects, and filters to render out content into a theme.

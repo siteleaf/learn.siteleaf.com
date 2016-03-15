@@ -1,8 +1,8 @@
 ---
 title: Theme structure
 date: 2015-10-31 20:03:00 -04:00
-layout: page
 position: 4
+layout: page
 ---
 
 Directory structure and naming is very important to Jekyll.

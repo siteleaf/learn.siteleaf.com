@@ -1,8 +1,8 @@
 ---
 title: Documents
 date: 2015-12-17 08:02:00 -05:00
-layout: page
 position: 4
+layout: page
 ---
 
 Documents are pieces of related content in a [Collection](/managing-content/collections/). They're similar to [Pages](/managing-content/pages/), except they belong to a collection rather than the site itself.
