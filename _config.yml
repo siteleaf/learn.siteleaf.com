@@ -30,9 +30,6 @@ collections:
       icon: write
       in_nav: true
     position: 30
-  posts:
-    title: Posts
-    output: true
   siteleaf-v2:
     title: Siteleaf V2
     output: true
