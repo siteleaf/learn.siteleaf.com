@@ -7,7 +7,7 @@ weight: 3
 
 ## GitHub Pages
 
-To publish to [GitHub Pages](https://pages.github.com/), first connect your GitHub account to Siteleaf. You can choose the repository you're using, domain (by default it will use `username.github.io/repo`), branch (`gh-pages` by default), and whether or not you'd like GitHub Pages (Jekyll version 2.4) or Siteleaf (Jekyll version 3.0) to compile your site.
+To publish to [GitHub Pages](https://pages.github.com/), first connect your GitHub account to Siteleaf. You can choose the repository you're using, domain (by default it will use `username.github.io/repo`), and branch (`gh-pages` by default).
 
 The repository you use must already exist. To make things easier, we suggest that you put your theme files on the `master` branch and the published site on the `gh-pages` branch.
 
@@ -27,7 +27,7 @@ gems:
   - jekyll-paginate
 {% endhighlight %}
 
-There are also a few pieces that you _can_ override:
+There are also a few pieces that you _cannot_ override:
 
 {% highlight yaml %}
 lsi: false
