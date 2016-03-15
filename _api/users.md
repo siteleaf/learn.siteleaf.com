@@ -1,6 +1,7 @@
 ---
 title: Users
 date: 2016-01-14 15:50:46.559000000 -05:00
+position: 10
 example_response: |-
   {
     "id": "5697cc7b16d5640c40000000",

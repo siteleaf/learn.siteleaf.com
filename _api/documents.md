@@ -1,6 +1,7 @@
 ---
 title: Documents
 date: 2016-01-14 17:29:29.729000000 -05:00
+position: 6
 example_input: |-
   {
     "tags": ["required reading"],
