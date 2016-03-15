@@ -1,7 +1,7 @@
 ---
 title: Sass and SCSS
 date: 2015-10-31 20:03:00 -04:00
-position: 5
+position: 6
 layout: page
 ---
 
