@@ -1,7 +1,7 @@
 ---
 title: Hosting and Sync options
 date: 2016-03-03 15:51:08.268000000 -05:00
-position: 6
+position: 7
 ---
 
 ## Overview
