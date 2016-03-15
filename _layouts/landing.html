@@ -16,13 +16,13 @@ layout: default
   _st('install','WgemsSzpiSJN3aaHTqYn','2.0.0');
 </script>
 
-{% assign sections = site.collections | sort:"weight" %}
+{% assign sections = site.collections | sort:"position" %}
 <nav class="nav nav--grid">
   <ul class="nav__list nav__list--grid">
     {% for section in sections %}
       {% if section.title and section.meta.in_nav == true %}
         <li class="nav__item nav__item--grid">
-          {% assign docs = section.docs | sort:"weight" %}
+          {% assign docs = section.docs | sort:"position" %}
           <a class="nav__link nav__link--grid" href="{{ docs.first.url }}">
             <i class="nav__icon nav__icon--grid ss-icon">{{ section.meta.icon }}</i>
             <h3 class="nav__header nav__header--grid">{{ section.title }}</h3>

@@ -11,7 +11,7 @@ collections:
       description: Interact directly with our API
       icon: globe
       in_nav: true
-    weight: 60
+    position: 60
   getting-started:
     title: Getting Started
     output: true
@@ -20,7 +20,7 @@ collections:
       description: Learn more about Siteleaf itself
       icon: home
       in_nav: true
-    weight: 10
+    position: 10
   managing-content:
     title: Managing Content
     output: true
@@ -29,7 +29,7 @@ collections:
       description: How to manage content
       icon: write
       in_nav: true
-    weight: 30
+    position: 30
   posts:
     title: Posts
     output: true
@@ -37,7 +37,7 @@ collections:
     title: Siteleaf V2
     output: true
     permalink: "/:collection/:path/"
-    weight: 20
+    position: 20
     meta:
       description: What's new in V2
       icon: info
@@ -50,7 +50,7 @@ collections:
       description: How to make your own themes
       icon: bezier
       in_nav: true
-    weight: 40
+    position: 40
   uploads:
     title: Uploads
     output: true
@@ -62,7 +62,7 @@ collections:
       description: Add your friends and host
       icon: users
       in_nav: true
-    weight: 50
+    position: 50
 defaults:
 - scope:
     path: ''

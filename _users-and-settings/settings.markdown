@@ -2,7 +2,7 @@
 title: Settings
 date: 2015-12-17 08:02:00 -05:00
 layout: page
-weight: 2
+position: 2
 ---
 
 Under the "General" tab in your site settings, you can change several aspects of the site.

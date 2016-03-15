@@ -2,7 +2,7 @@
 title: Sitemaps and Feeds
 date: 2015-10-31 20:03:00 -04:00
 layout: page
-weight: 6
+position: 6
 ---
 
 ## Sitemaps

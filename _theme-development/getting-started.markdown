@@ -2,7 +2,7 @@
 title: Getting started
 date: 2015-10-31 20:03:00 -04:00
 layout: page
-weight: 1
+position: 1
 ---
 
 To make a theme for Siteleaf, all you need to know is HTML and Liquid (which you can read more about in our [Liquid documentation](/theme-development/liquid/)). To set up your local environment, check out our [local development guide](/theme-development/local-development/).

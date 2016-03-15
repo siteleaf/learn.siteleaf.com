@@ -2,7 +2,7 @@
 title: Pages
 date: 2015-11-03 08:02:00 -05:00
 layout: page
-weight: 1
+position: 1
 ---
 
 A page is the most basic content type in Siteleaf. Pages are free-floating and belong to your site rather than any particular collection.

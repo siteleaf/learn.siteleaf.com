@@ -2,7 +2,7 @@
 title: Posts
 date: 2015-11-03 08:01:00 -05:00
 layout: page
-weight: 2
+position: 2
 ---
 
 Blogging is built right into Siteleaf. This means that you can just go ahead and start writing your posts and we'll handle it for you!

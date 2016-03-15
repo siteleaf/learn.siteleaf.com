@@ -2,7 +2,7 @@
 title: Metadata
 date: 2015-12-17 08:02:00 -05:00
 layout: page
-weight: 5
+position: 5
 ---
 
 Metadata are bits of data that are attached to your pages, posts, collections, or documents, as well as your site itself. There are a few different types of metadata that you can use: simple, list, and object.

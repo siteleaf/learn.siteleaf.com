@@ -2,7 +2,7 @@
 title: Documents
 date: 2015-12-17 08:02:00 -05:00
 layout: page
-weight: 4
+position: 4
 ---
 
 Documents are pieces of related content in a [Collection](/managing-content/collections/). They're similar to [Pages](/managing-content/pages/), except they belong to a collection rather than the site itself.

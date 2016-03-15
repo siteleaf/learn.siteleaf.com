@@ -12,13 +12,13 @@
     _st('install','WgemsSzpiSJN3aaHTqYn','2.0.0');
     </script>
 
-  {% assign sections = site.collections | sort:"weight" %}
+  {% assign sections = site.collections | sort:"position" %}
   {% for section in sections %}
     {% if section.title and section.meta.in_nav == true %}
       <nav class="nav">
         <h3 class="nav__header">{{ section.title }}</h3>
         <ul class="nav__list nav__list--sidebar">
-          {% assign documents = section.docs | sort:"weight" %}
+          {% assign documents = section.docs | sort:"position" %}
           {% for document in documents %}
             <li class="nav__item nav__item--sidebar{% if page.url == document.url %} nav__item--current{% endif %}"><a class="nav__link nav__link--sidebar" href="{{ document.url }}">{{ document.title }}</a></li>
           {% endfor %}
