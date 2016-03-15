@@ -13,6 +13,10 @@ The repository you use must already exist. To make things easier, we suggest tha
 
 For help with GitHub Pages, check out [their help page](https://help.github.com/categories/github-pages-basics/).
 
+### Machine users
+
+If you're uncomfortable with giving Siteleaf permission to all of your GitHub repositories, you can avoid this by creating a [machine user](https://developer.github.com/guides/managing-deploy-keys/#machine-users). This is a new GitHub user that you create that will have access to only the repositories you want Siteleaf to also have access to. When you connect GitHub to Siteleaf, use this user instead, and Siteleaf will only have access to those repositories.
+
 ### Configuring GitHub Pages
 
 There are a few pieces of site metadata that you can override:
@@ -27,7 +31,7 @@ gems:
   - jekyll-paginate
 {% endhighlight %}
 
-There are also a few pieces that you _cannot_ override:
+There are also a few settings that you _cannot_ override:
 
 {% highlight yaml %}
 lsi: false
