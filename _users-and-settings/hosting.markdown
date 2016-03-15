@@ -13,6 +13,32 @@ The repository you use must already exist. To make things easier, we suggest tha
 
 For help with GitHub Pages, check out [their help page](https://help.github.com/categories/github-pages-basics/).
 
+### Configuring GitHub Pages
+
+There are a few pieces of site metadata that you can override:
+
+{% highlight yaml %}
+github: [metadata]
+kramdown:
+  input: GFM
+  hard_wrap: false
+gems:
+  - jekyll-coffeescript
+  - jekyll-paginate
+{% endhighlight %}
+
+There are also a few pieces that you _can_ override:
+
+{% highlight yaml %}
+lsi: false
+safe: true
+source: [your repo's top level directory]
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+{% endhighlight %}
+
 ## Amazon S3
 
 To publish to [Amazon S3](https://aws.amazon.com/s3/), you'll first need your access key and secret key. You can either use existing keys or [create an Identity and Access Management user](https://console.aws.amazon.com/iam/home#home).
