@@ -7,11 +7,41 @@ layout: page
 
 ## GitHub Pages
 
-To publish to [GitHub Pages](https://pages.github.com/), first connect your GitHub account to Siteleaf. You can choose the repository you're using, domain (by default it will use `username.github.io/repo`), branch (`gh-pages` by default), and whether or not you'd like GitHub Pages (Jekyll version 2.4) or Siteleaf (Jekyll version 3.0) to compile your site.
+To publish to [GitHub Pages](https://pages.github.com/), first connect your GitHub account to Siteleaf. You can choose the repository you're using, domain (by default it will use `username.github.io/repo`), and branch (`gh-pages` by default).
 
 The repository you use must already exist. To make things easier, we suggest that you put your theme files on the `master` branch and the published site on the `gh-pages` branch.
 
 For help with GitHub Pages, check out [their help page](https://help.github.com/categories/github-pages-basics/).
+
+### Machine users
+
+If you're uncomfortable with giving Siteleaf permission to all of your GitHub repositories, you can avoid this by creating a [machine user](https://developer.github.com/guides/managing-deploy-keys/#machine-users). This is a new GitHub user that you create that will have access to only the repositories you want Siteleaf to also have access to. When you connect GitHub to Siteleaf, use this user instead, and Siteleaf will only have access to those repositories.
+
+### Configuring GitHub Pages
+
+There are a few pieces of site metadata that you can override:
+
+{% highlight yaml %}
+github: [metadata]
+kramdown:
+  input: GFM
+  hard_wrap: false
+gems:
+  - jekyll-coffeescript
+  - jekyll-paginate
+{% endhighlight %}
+
+There are also a few settings that you _cannot_ override:
+
+{% highlight yaml %}
+lsi: false
+safe: true
+source: [your repo's top level directory]
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+{% endhighlight %}
 
 ## Amazon S3
 
