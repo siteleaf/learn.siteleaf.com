@@ -93,8 +93,6 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/siteleaf-v2/export-v1/">Exporting your v1 site</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/siteleaf-v2/improved-metadata-in-v2/">Improved metadata in v2</a></li>
-          
         </ul>
       </nav>
     
@@ -203,29 +201,81 @@
     
 
     <div class="document__content">
-      <p>Metadata are bits of data that are attached to your pages, posts, collections, or documents, as well as your site itself. There are a few different types of metadata that you can use: simple, list, and object.</p>
+      <p>Metadata are additional pieces of data which you can attach to your pages, documents, collections, and even site-wide. Metadata fields give you a ton of power and flexibility to create a system that fits your content.</p>
 
-<p class="note__info ss-info">Metadata is the equivalent of Jekyll’s YAML frontmatter. When syncing Siteleaf exports metadata as frontmatter for Pages and Documents and edits the config file for Collections and Sites.</p>
+<p class="note__aside">Metadata is the equivalent of <a href="https://jekyllrb.com/docs/frontmatter/">Jekyll’s YAML frontmatter</a>. When syncing, Siteleaf exports metadata as frontmatter for Pages and Documents and edits the config file for Collections and Sites.</p>
 
-<h2 id="simple">Simple</h2>
+<h2 id="field-types">Field types</h2>
 
-<p>Simple metadata is just a way to associate a single key with a bit of text.</p>
+<p>There are three types of metadata fields you can create in Siteleaf: Simple, List, and Object. These three types of fields give you a ton of flexibility when setting up your content structure and you’re even able to nest different field types within each other. No single person should have all this power! But we’re giving it to you…</p>
+
+<h3 id="simple">Simple</h3>
+
+<p>A “Simple” metadata field accepts a name and text value. These fields might be simple, but they’re also smart. See the “Smart Field Names” section below for more info.</p>
 
 <p><img src="/uploads/metadata/simple.png" alt="Simple metadata" /></p>
 
-<p class="note__info ss-info">If you end your key name in <code class="highlighter-rouge">file</code>, <code class="highlighter-rouge">image</code>, or <code class="highlighter-rouge">asset</code>, the value field will reveal an upload button. This lets you upload a new file or choose a previously uploaded file and insert its URL into the value field.</p>
+<p>Accessing this page field in your template would look like this:</p>
 
-<h2 id="list">List</h2>
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="nv">page</span><span class="p">[</span><span class="s1">'prep time'</span><span class="p">]</span><span class="w"> </span><span class="p">}}</span></code></pre></figure>
 
-<p>List metadata is just that: a list. But each list item doesn’t just need to be a bit of text — it can be another list or an object as well!</p>
+<h3 id="list">List</h3>
+
+<p>A “List” metadata field accepts a name and a list (AKA an array) of other metadata fields, which can be any field type. You can have a list of simple metadata fields, a list of lists, or a list of objects. This makes entering repeatable content very easy.</p>
 
 <p><img src="/uploads/metadata/list.png" alt="List metadata" /></p>
 
-<h2 id="objects">Objects</h2>
+<p>An example of looping through this page field in your template would look like:</p>
 
-<p>Object metadata allows you to nest other types of metadata inside it. This can be a piece of simple metadata, a list, or other objects.</p>
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>ingredient<span class="w"> </span>in<span class="w"> </span>page.ingredients<span class="w"> </span><span class="p">%}</span>
+  <span class="p">{{</span><span class="w"> </span><span class="nv">ingredient</span><span class="w"> </span><span class="p">}}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span></code></pre></figure>
+
+<h3 id="objects">Objects</h3>
+
+<p>An “Object” metadata field is the most descriptive of field types, allowing you to create a field that has many name/value pairs, where the value can be a field of any type (simple, list, or object). For example, you could create an “Author” object field where you could set their name, bio, and list of links.</p>
 
 <p><img src="/uploads/metadata/object.png" alt="Object metadata" /></p>
+
+<p>Accessing this page field in your template would look like this:</p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="nv">author</span><span class="p">.</span><span class="nv">name</span><span class="w"> </span><span class="p">}}</span>
+
+&lt;img src="<span class="p">{{</span><span class="w"> </span><span class="nv">author</span><span class="p">.</span><span class="nv">image</span><span class="w"> </span><span class="p">}}</span>" /&gt;
+
+<span class="p">{{</span><span class="w"> </span><span class="nv">author</span><span class="p">.</span><span class="nv">bio</span><span class="w"> </span><span class="p">}}</span></code></pre></figure>
+
+<h2 id="smart-field-names">Smart Field Names</h2>
+
+<p>To get the most out of Siteleaf, you should know about the different “Smart Field Names” you can enter for a metadata field to enable additional user-friendly functionality, like file pickers, autocompletion, and visual text editing.</p>
+
+<h3 id="file-fields">File fields</h3>
+
+<p>If you have metadata field with a name ending in <code class="highlighter-rouge">asset</code>, <code class="highlighter-rouge">assets</code>, <code class="highlighter-rouge">file</code>, <code class="highlighter-rouge">files</code>, <code class="highlighter-rouge">image</code>, or <code class="highlighter-rouge">images</code> Siteleaf will place a file picker button within the field, making it easy to quickly upload or select an existing upload.</p>
+
+<p>For example you could take things to the next level by creating a “List” metadata field and give it a name of <code class="highlighter-rouge">assets</code> or <code class="highlighter-rouge">portfolio_images</code>. If you want to add assets with additional metadata (like maybe a caption), you could create a “List” metadata field and add “Object” fields to the list. Your object field could have names like <code class="highlighter-rouge">file</code> and <code class="highlighter-rouge">caption</code>. When you add a new item to the list, a new object with those same names will be added for you, making it easy to add multiple assets with the same structure.</p>
+
+<h3 id="collection-fields">Collection fields</h3>
+
+<p>To create a field for “associated” documents, create a new field with a name of the singular or plural collection name. For example, if you have a post and want to have an autocomplete field for documents in your “People” collection, create a field with a name of <code class="highlighter-rouge">person</code> or <code class="highlighter-rouge">people</code>.</p>
+
+<h3 id="text-editors">Text editors</h3>
+
+<p>To create a field with markdown or visual text editing functionality (like the body text field), create a new field with a name ending in <code class="highlighter-rouge">body</code>, <code class="highlighter-rouge">markdown</code>, or <code class="highlighter-rouge">md</code>.</p>
+
+<p><strong>Note</strong>: When you reference this field in your template, it won’t automatically output in HTML. You can achieve this though using the <a href="http://jekyllrb.com/docs/templates/"><code class="highlighter-rouge">markdownify</code> Liquid filter</a>. For example:</p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">caption_markdown</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">markdownify</span><span class="w"> </span><span class="p">}}</span></code></pre></figure>
+
+<h2 id="defining-default-fields">Defining default fields</h2>
+
+<p>You can define defaults for all your content (or by collection) in your config file. <a href="http://jekyllrb.com/docs/configuration/#front-matter-defaults">More information on setting defaults can be found in the Jekyll docs.</a></p>
+
+<h2 id="further-reading">Further reading</h2>
+
+<ul>
+  <li><a href="https://jekyllrb.com/docs/frontmatter/">Jekyll Frontmatter</a></li>
+</ul>
 
 
       <p class="document__improve">
