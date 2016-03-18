@@ -42,7 +42,7 @@ Now visit [localhost:4000](http://localhost:4000) to see your site!
 5) Make some changes then sync them
 
 If pushing and pulling changes from the command line isn't your thing, you can download [GitHub Desktop](https://desktop.github.com/) to do it through a user-friendly interface.
-{: .note__info.ss-info}
+{: .note__info}
 
 Push local changes to GitHub and Siteleaf:
 

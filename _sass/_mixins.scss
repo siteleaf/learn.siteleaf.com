@@ -12,6 +12,22 @@
   }
 }
 
+@mixin icon {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "SSGizmo";
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  /*-webkit-font-feature-settings: "liga" Currently broken in Chrome >= v22. Falls back to text-rendering. Safari is unaffected. */
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
 @mixin antialias {
   -webkit-font-smoothing: antialiased;
   -font-smoothing: antialiased;

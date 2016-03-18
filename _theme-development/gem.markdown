@@ -6,7 +6,7 @@ layout: page
 ---
 
 We recommend using [GitHub sync](/theme-development/github-sync/) for local development, but you can still use the Gem if that's your preferred workflow.
-{: .note__info.ss-info}
+{: .note__info}
 
 ## Differences between v1 and v2 gems
 
