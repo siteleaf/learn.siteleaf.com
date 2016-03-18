@@ -87,7 +87,7 @@
         <ul class="nav__list nav__list--sidebar">
           
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/siteleaf-v2/feedback/">Feedback</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/siteleaf-v2/feedback/">Feedback and help</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/siteleaf-v2/back-up-your-site/">Back up your site</a></li>
           
@@ -107,11 +107,11 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/pages/">Pages</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/posts/">Posts</a></li>
-          
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/collections/">Collections</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/documents/">Documents</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/posts/">Posts</a></li>
           
             <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/managing-content/metadata/">Metadata</a></li>
           
@@ -127,17 +127,19 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/getting-started/">Getting started</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/local-development/">Local development</a></li>
-          
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/gem/">Siteleaf Gem</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/structure/">Theme structure</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/liquid/">Liquid</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/structure/">Theme structure</a></li>
-          
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/sitemaps-and-feeds/">Sitemaps and Feeds</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/local-development/">Local development</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/github-sync/">GitHub Sync</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/gem/">Siteleaf Gem</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/sass/">Sass and SCSS</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/sitemaps-and-feeds/">Sitemaps and Feeds</a></li>
           
         </ul>
       </nav>
@@ -165,11 +167,11 @@
         <ul class="nav__list nav__list--sidebar">
           
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/pages/">Pages</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/authentication/">Authentication</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/sites/">Sites</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/users/">Users</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/pages/">Pages</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/collections/">Collections</a></li>
           
@@ -177,15 +179,15 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/source/">Source</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/authentication/">Authentication</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/pagination/">Pagination</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/defaults/">Defaults</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/jobs/">Jobs</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/pagination/">Pagination</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/users/">Users</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/hosting-sync/">Hosting and Sync options</a></li>
-          
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/defaults/">Defaults</a></li>
           
         </ul>
       </nav>
@@ -207,35 +209,23 @@
 
 <h2 id="simple">Simple</h2>
 
-<p>Simple metadata is a way to associate a single value with a unique key.</p>
+<p>Simple metadata is just a way to associate a single key with a bit of text.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="s">simple_key</span><span class="pi">:</span> <span class="s">single value</span>
-</code></pre>
-</div>
+<p><img src="/uploads/metadata/simple.png" alt="Simple metadata" /></p>
 
-<p class="note__info ss-info">If you end your key name in <code class="highlighter-rouge">file</code>, <code class="highlighter-rouge">image</code>, or <code class="highlighter-rouge">asset</code>, the value field will reveal an upload button. This lets you upload a new file or choose a previously uploaded file, and insert it’s URL into the value field.</p>
+<p class="note__info ss-info">If you end your key name in <code class="highlighter-rouge">file</code>, <code class="highlighter-rouge">image</code>, or <code class="highlighter-rouge">asset</code>, the value field will reveal an upload button. This lets you upload a new file or choose a previously uploaded file and insert its URL into the value field.</p>
 
 <h2 id="list">List</h2>
 
-<p>List metadata is a way to associate multiple values with a unique key. List values can be simple, or contain other lists and objects.</p>
+<p>List metadata is just that: a list. But each list item doesn’t just need to be a bit of text — it can be another list or an object as well!</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="s">list_key</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">first value</span>
-  <span class="pi">-</span> <span class="s">second value</span>
-</code></pre>
-</div>
+<p><img src="/uploads/metadata/list.png" alt="List metadata" /></p>
 
 <h2 id="objects">Objects</h2>
 
-<p>Object metadata allows you to nest or group other metadata types under a unique key.</p>
+<p>Object metadata allows you to nest other types of metadata inside it. This can be a piece of simple metadata, a list, or other objects.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="s">object_key</span><span class="pi">:</span>
-  <span class="s">simple_key</span><span class="pi">:</span> <span class="s">single value</span>
-  <span class="s">list_key</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="s">first value</span>
-    <span class="pi">-</span> <span class="s">second value</span>
-</code></pre>
-</div>
+<p><img src="/uploads/metadata/object.png" alt="Object metadata" /></p>
 
 
       <p class="document__improve">

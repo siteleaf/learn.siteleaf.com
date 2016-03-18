@@ -5,7 +5,7 @@
     <!-- <meta content="width=device-width, initial-scale=1" name="viewport"> -->
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
-    <title>Posts | Siteleaf Learn</title>
+    <title>Sass and SCSS | Siteleaf Learn</title>
 
     <link href="/assets/css/main.css" rel="stylesheet">
     <link href="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.css" rel="stylesheet">
@@ -111,7 +111,7 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/documents/">Documents</a></li>
           
-            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/managing-content/posts/">Posts</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/posts/">Posts</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/managing-content/metadata/">Metadata</a></li>
           
@@ -137,7 +137,7 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/gem/">Siteleaf Gem</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/sass/">Sass and SCSS</a></li>
+            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/theme-development/sass/">Sass and SCSS</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/sitemaps-and-feeds/">Sitemaps and Feeds</a></li>
           
@@ -198,57 +198,34 @@
 
 <section class="main__content">
   <div class="document">
-    <h1 class="document__title">Posts</h1>
+    <h1 class="document__title">Sass and SCSS</h1>
 
     
 
     <div class="document__content">
-      <p>Blogging is built right into Siteleaf. This means that you can just go ahead and start writing your posts and we’ll handle it for you!</p>
+      <p>Siteleaf comes with support for <a href="http://sass-lang.com/">Sass and SCSS</a> preprocessing right out of the box! It’s pretty easy to get going, too: just put a <code class="highlighter-rouge">.scss</code> or <code class="highlighter-rouge">.sass</code> anywhere in your theme with added frontmatter to have Jekyll compile the Sass/SCSS to CSS. For example:</p>
 
-<p>Posts are a bit like special documents — they belong to the Posts collection, but unlike regular documents, you can set them to be a draft.</p>
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nt">---</span>
+<span class="nt">---</span>
 
-<p class="note__info ss-info">Creating a post will create a Markdown file in the <code class="highlighter-rouge">_posts/</code> directory that will include the timestamp and date (for example, a post titled “New York” that was created on January 6th, 2016 will turn into <code class="highlighter-rouge">2016-01-06-new-york.markdown</code>).</p>
+<span class="nt">body</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">red</span></code></pre></figure>
 
-<h2 id="options">Options</h2>
+<p>Saving this file to <code class="highlighter-rouge">assets/stylesheet.sass</code> will process it and create <code class="highlighter-rouge">assets/stylesheet.css</code> on your site.</p>
 
-<h3 id="path">Path</h3>
+<h2 id="partials">Partials</h2>
 
-<p>The path changes the URL this post is accessible at on your site within the <code class="highlighter-rouge">/posts/</code> path.</p>
-
-<h3 id="visibility">Visibility</h3>
-
-<p>By default, posts are visible. You can change them to hidden or draft, in which case they’d be moved to the <code class="highlighter-rouge">_drafts/</code> directory.</p>
-
-<h3 id="tags">Tags</h3>
-
-<p>Tags are a way to link common posts with each other. Separate multiple tags with a comma.</p>
-
-<h3 id="categories">Categories</h3>
-
-<p>A category is an overarching theme that a post has. Separate multiple categories with a comma.</p>
-
-<h3 id="date">Date</h3>
-
-<p>This changes the timestamp associated with the post.</p>
-
-<h3 id="permalink">Permalink</h3>
-
-<p>The permalink changes the URL this post is accessible at on your site. Unlike a path, this can change the URL to be anywhere on the site, not just under <code class="highlighter-rouge">/posts/</code>.</p>
-
-<h3 id="layout">Layout</h3>
-
-<p>Choose which layout you’d like to use. Any layout you have in <code class="highlighter-rouge">_layouts</code> will be listed here.</p>
+<p>Any partials that you’re importing with <code class="highlighter-rouge">@import</code> should be placed in the <code class="highlighter-rouge">_sass/</code> directory. All the files you put into this directory should begin with an underscore (e.g., <code class="highlighter-rouge">_sass/_header.sass</code>).</p>
 
 <h2 id="further-reading">Further Reading</h2>
 
 <ul>
-  <li><a href="http://jekyllrb.com/docs/posts/">Jekyll: Writing posts</a></li>
-  <li><a href="http://jekyllrb.com/docs/drafts/">Jekyll: Working with drafts</a></li>
+  <li><a href="https://jekyllrb.com/docs/assets/">Jekyll: Assets</a></li>
 </ul>
 
 
       <p class="document__improve">
-        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_managing-content/posts.markdown">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_theme-development/sass.markdown">
           Help improve this page &rarr;
         </a>
       </p>
