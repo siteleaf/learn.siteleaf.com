@@ -29,9 +29,5 @@ var toggle = document.querySelector('.nav__toggle');
 var sidebar = document.querySelector('.main__sidebar');
 
 toggle.onclick = function() {
-  if (sidebar.style.display === "block") {
-    sidebar.style.display = "none";
-  } else {
-    sidebar.style.display = "block";
-  }
+  sidebar.classList.toggle("main__sidebar--mobile-hidden")
 };

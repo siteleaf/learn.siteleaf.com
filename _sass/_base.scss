@@ -120,6 +120,14 @@ table {
   &__sidebar {
     float: left;
     width: 25%;
+
+    &--mobile-hidden {
+      display: none;
+
+      @media (min-width: $max-width-narrow) {
+        display: block;
+      }
+    }
   }
 
   &__content {
@@ -155,14 +163,16 @@ table {
       border-bottom: 5px solid $color-gray-an2;
       padding-bottom: $v;
       margin-bottom: $v;
-      display: none;
     }
+  }
+
+  @media (min-width: $max-width-narrow) {
+    display: block !important;
   }
 }
 
 .form {
   &__search {
-    // padding-bottom: $v + 0.275rem;
     margin-bottom: $v;
   }
 
