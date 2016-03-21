@@ -8,7 +8,7 @@ collections:
     output: true
     permalink: "/:collection/:path/"
     meta:
-      description: Interact directly with our API
+      description: Integrate directly into your site or app
       icon: cloud
       in_nav: true
     position: 60
