@@ -12,6 +12,15 @@ collections:
       icon: cloud
       in_nav: true
     position: 60
+  users-and-settings:
+    title: Deploy and collaborate
+    output: true
+    permalink: "/:collection/:path/"
+    meta:
+      description: Publish your site and invite other users
+      icon: globe
+      in_nav: true
+    position: 50
   getting-started:
     title: Getting Started
     output: true
@@ -54,15 +63,6 @@ collections:
   uploads:
     title: Uploads
     output: true
-  users-and-settings:
-    title: Deploy and collaborate
-    output: true
-    permalink: "/:collection/:path/"
-    meta:
-      description: Publish your site and invite other users
-      icon: globe
-      in_nav: true
-    position: 50
 defaults:
 - scope:
     path: ''
