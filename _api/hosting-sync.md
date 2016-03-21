@@ -1,6 +1,6 @@
 ---
-title: Hosting and Sync options
-date: 2016-03-03 15:51:08.268000000 -05:00
+title: Hosting and Sync
+date: 2016-03-03 15:51:00 -05:00
 position: 10
 ---
 
@@ -63,5 +63,3 @@ Github is currently the only `sync` provider, the `sync_options` are:
 | `access_token` | Github Access Token **(required)** |
 | `path` | Full repository name `<user name>/<repo name>` **(required)** |
 | `branch` | Branch name, `master` by default |
-
-
