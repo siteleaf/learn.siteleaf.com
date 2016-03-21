@@ -2,8 +2,8 @@
 title: Metadata
 date: 2015-12-17 08:02:00 -05:00
 position: 4
-layout: page
 prep time: blah
+layout: page
 ---
 
 Metadata are additional pieces of data which you can attach to your pages, documents, collections, and even site-wide. Metadata fields give you a ton of power and flexibility to create a system that fits your content.
@@ -79,7 +79,7 @@ To create a field for "associated" documents, create a new field with a name of 
 
 ### Text editors
 
-To create a field with markdown or visual text editing functionality (like the body text field), create a new field with a name ending in `body`, `markdown`, or `md`.
+To create a field with markdown or visual text editing functionality (like the body text field), create a new field with a name ending in `body`, `description`, `excerpt`, `markdown`, `md`, or `text`.
 
 **Note**: When you reference this field in your template, it won't automatically output in HTML. You can achieve this though using the [`markdownify` Liquid filter](http://jekyllrb.com/docs/templates/). For example:
 
