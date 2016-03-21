@@ -24,11 +24,11 @@
   &__toggle {
     // background: $color-blue-dark;
     // color: $color-white;
-    display: none;
+    display: none !important;
     // width: 100%;
 
     @media (max-width: $max-width-narrow) {
-      display: block;
+      display: inline-block !important;
     }
   }
 
