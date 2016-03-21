@@ -1,5 +1,5 @@
 ---
-title: Siteleaf Learn
+title: Siteleaf Documentation
 url: http://learn.siteleaf.com
 timezone: America/New_York
 collections:
@@ -9,7 +9,7 @@ collections:
     permalink: "/:collection/:path/"
     meta:
       description: Interact directly with our API
-      icon: globe
+      icon: cloud
       in_nav: true
     position: 60
   getting-started:
@@ -26,7 +26,7 @@ collections:
     output: true
     permalink: "/:collection/:path/"
     meta:
-      description: How to manage content
+      description: Pages, collections, posts, metadata
       icon: write
       in_nav: true
     position: 30
@@ -47,7 +47,7 @@ collections:
     output: true
     permalink: "/:collection/:path/"
     meta:
-      description: How to make your own themes
+      description: Liquid, Sass, Jekyll, syncing, local dev
       icon: bezier
       in_nav: true
     position: 40
@@ -55,12 +55,12 @@ collections:
     title: Uploads
     output: true
   users-and-settings:
-    title: Users and Settings
+    title: Deploy and collaborate
     output: true
     permalink: "/:collection/:path/"
     meta:
-      description: Add your friends and host
-      icon: users
+      description: Publish your site and invite other users
+      icon: globe
       in_nav: true
     position: 50
 defaults:

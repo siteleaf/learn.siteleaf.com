@@ -5,7 +5,7 @@
     <!-- <meta content="width=device-width, initial-scale=1" name="viewport"> -->
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
-    <title>{% if page.title != "Documentation" %}{{ page.title }} | Siteleaf Learn{% else %}Siteleaf Learn{% endif %}</title>
+    <title>{% if page.title != "Documentation" %}{{ page.title }} | Siteleaf Documentation{% else %}Siteleaf Documentation{% endif %}</title>
 
     <link href="/assets/css/main.css" rel="stylesheet">
     <link href="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.css" rel="stylesheet">
@@ -23,7 +23,7 @@
     <header class="header" data-swiftype-index='false'>
       <nav class="nav">
         <div class="wrap">
-          <a class="nav__logo" href="/">Learn</a>
+          <a class="nav__logo" href="/">Siteleaf Documentation</a>
           <ul class="nav__list nav__list--header">
             {% for page in site.pages %}
               {% if page.title and page.url != '/' %}
