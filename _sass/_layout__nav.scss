@@ -111,6 +111,7 @@
       width: 24%;
 
       @media (max-width: $max-width-narrow) {
+        margin-left: 0;
         width: 100%;
       }
 
