@@ -92,7 +92,7 @@
     padding-left: 0;
 
     &--header {
-      display: inline-block;
+      display: none;
       line-height: $line-height-tight;
 
       & + & {
