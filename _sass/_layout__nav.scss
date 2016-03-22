@@ -95,6 +95,10 @@
       display: none;
       line-height: $line-height-tight;
 
+      @media (min-width: $max-width-narrow) {
+        display: inline-block;
+      }
+
       & + & {
         margin-left: 1.5em;
       }
