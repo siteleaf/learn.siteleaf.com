@@ -122,10 +122,10 @@ table {
     width: 25%;
 
     &--mobile-hidden {
-      display: none;
+      display: block;
 
-      @media (min-width: $max-width-narrow) {
-        display: block;
+      @media (max-width: $max-width-narrow) {
+        display: none;
       }
     }
   }
@@ -147,10 +147,6 @@ table {
 
     &__sidebar {
       margin-bottom: $v;
-
-      nav {
-        display: none;
-      }
     }
   }
 
