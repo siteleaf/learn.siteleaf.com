@@ -22,10 +22,7 @@
   }
 
   &__toggle {
-    // background: $color-blue-dark;
-    // color: $color-white;
     display: none !important;
-    // width: 100%;
 
     @media (max-width: $max-width-narrow) {
       display: inline-block !important;
@@ -169,6 +166,14 @@
         margin-bottom: 0;
       }
     }
+  }
+
+  &__button {
+    background: transparent;
+    border: none;
+    color: $color-white;
+    font-size: $font-size-2;
+    outline: none;
   }
 }
 
