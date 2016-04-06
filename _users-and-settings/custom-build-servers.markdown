@@ -12,3 +12,5 @@ If you need to use custom Jekyll plugins or if you'd like to have complete contr
 3. Go to your GitHub repository and create a new custom webhook. This will alert your build server when the branch you chose is updated.
 
 After your server receives the webhook, you'll need to pull the new content and then you can compile it with Jekyll however you'd wish.
+
+_**Note**: Siteleaf's preview excludes unsupported plugins, so you may see slightly different output when using it._
