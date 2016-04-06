@@ -13,7 +13,7 @@ collections:
       in_nav: true
     position: 60
   users-and-settings:
-    title: Deploy and collaborate
+    title: Deploy and Collaborate
     output: true
     permalink: "/:collection/:path/"
     meta:
