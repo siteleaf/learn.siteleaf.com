@@ -9,19 +9,24 @@ Under the "General" tab in your site settings, you can change several aspects of
 
 ### Title
 
-The site title is required.
+The site title is required. This can be accessed through the `title` attribute on your site:
+
+{% highlight liquid %}
+{% raw %}
+{{ site.title }}
+{% endraw %}
+{% endhighlight %}
 
 ### Timezone
 
 This is what Siteleaf bases your timestamps off of.
 
-### Permalink
+### Metadata
 
-This is an advanced Jekyll option that changes the format of your post permalinks. By default, Siteleaf uses the `pretty` permalink style.
+You can also set [metadata](/managing-content/metadata) for the entire site here. In your theme, you can access this metadata on the `site` object. For example, if you had a piece of metadata called `description`, you can access it like this:
 
-Style     | URL Template
-----------|-------------
-`date`    | `/:categories/:year/:month/:day/:title.html`
-`pretty`  | `/:categories/:year/:month/:day/:title`
-`ordinal` | `/:categories/:year/:y_day/:title.html`
-`none`    | `/:categories/:title.html`
+{% highlight liquid %}
+{% raw %}
+{{ site.description }}
+{% endraw %}
+{% endhighlight %}
