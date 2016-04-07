@@ -43,12 +43,12 @@ collections:
     title: Posts
     output: true
   siteleaf-v2:
-    title: Siteleaf V2
+    title: Siteleaf v2
     output: true
     permalink: "/:collection/:path/"
     position: 20
     meta:
-      description: What's new in V2
+      description: What's new in v2
       icon: info
       in_nav: true
   theme-development:
