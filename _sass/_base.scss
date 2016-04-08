@@ -128,6 +128,12 @@ table {
         display: none;
       }
     }
+
+    .form__search {
+      @media (max-width: $max-width-narrow) {
+        display: none;
+      }
+    }
   }
 
   &__content {
