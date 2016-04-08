@@ -42,7 +42,7 @@
     </header>
     <div class="beta-notice" data-swiftype-index='false'>
       <div class="wrap">
-        <strong>Please note</strong> This documentation is a <em>work in progress</em> and is only for Version 2 of Siteleaf. For V1 documentation, please see the <a href="http://www.siteleaf.com/help/">V1 help site</a>. You can also <a href="https://github.com/siteleaf/learn.siteleaf.com">contribute to this documentation on GitHub</a> and we'll <span class="ss-icon">love</span> you forever.
+        <strong>Please note</strong> This documentation is a <em>work in progress</em> and is only for version 2 of Siteleaf. For v1 documentation, please see the <a href="http://www.siteleaf.com/help/">v1 help site</a>. You can also <a href="https://github.com/siteleaf/learn.siteleaf.com">contribute to this documentation on GitHub</a> and we'll <span class="ss-icon">love</span> you forever.
       </div>
     </div>
     <main class="main">
@@ -83,7 +83,7 @@
   
     
       <nav class="nav">
-        <h3 class="nav__header">Siteleaf V2</h3>
+        <h3 class="nav__header">Siteleaf v2</h3>
         <ul class="nav__list nav__list--sidebar">
           
           
@@ -139,13 +139,15 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/sitemaps-and-feeds/">Sitemaps and Feeds</a></li>
           
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/jekyll-plugins/">Jekyll Plugins</a></li>
+          
         </ul>
       </nav>
     
   
     
       <nav class="nav">
-        <h3 class="nav__header">Deploy and collaborate</h3>
+        <h3 class="nav__header">Deploy and Collaborate</h3>
         <ul class="nav__list nav__list--sidebar">
           
           
@@ -205,42 +207,20 @@
 
 <h3 id="title">Title</h3>
 
-<p>The site title is required.</p>
+<p>The site title is required. This can be accessed through the <code class="highlighter-rouge">title</code> attribute on your site:</p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="p">}}</span></code></pre></figure>
 
 <h3 id="timezone">Timezone</h3>
 
 <p>This is what Siteleaf bases your timestamps off of.</p>
 
-<h3 id="permalink">Permalink</h3>
+<h3 id="metadata">Metadata</h3>
 
-<p>This is an advanced Jekyll option that changes the format of your post permalinks. By default, Siteleaf uses the <code class="highlighter-rouge">pretty</code> permalink style.</p>
+<p>You can also set <a href="/managing-content/metadata">metadata</a> for the entire site here. In your theme, you can access this metadata on the <code class="highlighter-rouge">site</code> object. For example, if you had a piece of metadata called <code class="highlighter-rouge">description</code>, you can access it like this:</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Style</th>
-      <th>URL Template</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="highlighter-rouge">date</code></td>
-      <td><code class="highlighter-rouge">/:categories/:year/:month/:day/:title.html</code></td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">pretty</code></td>
-      <td><code class="highlighter-rouge">/:categories/:year/:month/:day/:title</code></td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">ordinal</code></td>
-      <td><code class="highlighter-rouge">/:categories/:year/:y_day/:title.html</code></td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">none</code></td>
-      <td><code class="highlighter-rouge">/:categories/:title.html</code></td>
-    </tr>
-  </tbody>
-</table>
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">description</span><span class="w"> </span><span class="p">}}</span></code></pre></figure>
+
 
 
       <p class="document__improve">
@@ -260,5 +240,6 @@
       </div>
     </footer>
     <script src="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.js"></script>
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>

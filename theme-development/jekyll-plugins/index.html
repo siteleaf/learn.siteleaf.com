@@ -5,7 +5,7 @@
     <!-- <meta content="width=device-width, initial-scale=1" name="viewport"> -->
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
-    <title>Authentication | Siteleaf Documentation</title>
+    <title>Jekyll Plugins | Siteleaf Documentation</title>
 
     <link href="/assets/css/main.css" rel="stylesheet">
     <link href="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.css" rel="stylesheet">
@@ -139,7 +139,7 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/sitemaps-and-feeds/">Sitemaps and Feeds</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/jekyll-plugins/">Jekyll Plugins</a></li>
+            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/theme-development/jekyll-plugins/">Jekyll Plugins</a></li>
           
         </ul>
       </nav>
@@ -167,7 +167,7 @@
         <ul class="nav__list nav__list--sidebar">
           
           
-            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/api/authentication/">Authentication</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/authentication/">Authentication</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/sites/">Sites</a></li>
           
@@ -198,40 +198,26 @@
 
 <section class="main__content">
   <div class="document">
-    <h1 class="document__title">Authentication</h1>
+    <h1 class="document__title">Jekyll Plugins</h1>
 
     
 
-    <div class="document__content api__content">
-      <h2 id="overview">Overview</h2>
+    <div class="document__content">
+      <p>Jekyll and GitHub Pages have support for a variety of external plugins, from <a href="https://github.com/jekyll/jekyll-coffeescript">Coffeescript support</a> to <a href="https://github.com/jekyll/jekyll-gist">embeddable GitHub Gists</a>. We support the same subset of plugins that GitHub Pages supports.</p>
 
-<p>The Siteleaf API requires all requests to be authenticated via Basic Auth with an API key and secret. These can be found on <a href="https://manage.v2.siteleaf.com/account">your account page</a> in the web app, or programmatically via the API as described below.</p>
+<h2 id="supported-plugins">Supported plugins</h2>
 
-<h2 id="get-an-api-key-and-secret">Get an API key and secret</h2>
+<ul class="supported-plugins"></ul>
 
-<p>The authentication endpoint requires Basic Auth with a users email and password, and is the only endpoint that accepts this method of authentication. It returns the unique key and secret that can be used to authenticate with the rest of the Siteleaf API.</p>
+<h2 id="further-reading">Further Reading</h2>
 
-<h3 id="endpoint">Endpoint</h3>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>POST https://api.siteleaf.com/v2/auth
-</code></pre>
-</div>
-
-<h3 id="response">Response</h3>
-<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
-</code></pre>
-</div>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"api_key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pgYWJZyGvCY60Eys..."</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"api_secret"</span><span class="p">:</span><span class="w"> </span><span class="s2">"m8IibnCkXISebc9b..."</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+<ul>
+  <li><a href="https://jekyllrb.com/docs/plugins/">Jekyll: Plugins</a></li>
+</ul>
 
 
       <p class="document__improve">
-        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_api/authentication.md">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_theme-development/jekyll-plugins.markdown">
           Help improve this page &rarr;
         </a>
       </p>
