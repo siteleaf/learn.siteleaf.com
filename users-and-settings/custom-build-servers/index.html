@@ -5,7 +5,7 @@
     <!-- <meta content="width=device-width, initial-scale=1" name="viewport"> -->
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
-    <title>GitHub Sync | Siteleaf Documentation</title>
+    <title>Custom build servers | Siteleaf Documentation</title>
 
     <link href="/assets/css/main.css" rel="stylesheet">
     <link href="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.css" rel="stylesheet">
@@ -131,7 +131,7 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/local-development/">Local development</a></li>
           
-            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/theme-development/github-sync/">GitHub Sync</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/github-sync/">GitHub Sync</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/theme-development/gem/">Siteleaf Gem</a></li>
           
@@ -157,7 +157,7 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/users/">Users</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/custom-build-servers/">Custom build servers</a></li>
+            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/users-and-settings/custom-build-servers/">Custom build servers</a></li>
           
         </ul>
       </nav>
@@ -200,59 +200,26 @@
 
 <section class="main__content">
   <div class="document">
-    <h1 class="document__title">GitHub Sync</h1>
+    <h1 class="document__title">Custom build servers</h1>
 
     
 
     <div class="document__content">
-      <p>When working on your site, you’ll want to keep your theme and content in sync. This is exactly what GitHub Sync was made for. Once GitHub Sync is enabled, every time you update your Siteleaf site or your <a href="https://github.com">GitHub</a> repo, the changes will be synced between the two.</p>
-
-<h2 id="enable-github-sync">Enable GitHub Sync</h2>
+      <p>If you need to use custom Jekyll plugins or if you’d like to have complete control over the build process for your site, you can use a custom build server or service like <a href="http://deploybot.com/">DeployBot</a>.</p>
 
 <ol>
-  <li>After creating a site, go to the <strong>Sync</strong> tab under <strong>Settings</strong></li>
-  <li>Connect to GitHub</li>
-  <li>Choose a repo, and optionally a branch name. We generally recommend using the <code class="highlighter-rouge">master</code> branch for syncing source files, and if using GitHub Pages for hosting, the <code class="highlighter-rouge">gh-pages</code> branch in the same repo for published sites. However you may use two separate repos, or any configuration you wish.</li>
+  <li>In your Hosting settings, choose GitHub Pages as your host.</li>
+  <li>Change the publish format to be “Compile by GitHub Pages”. Now instead of publishing generated HTML files, it will publish the raw Jekyll files (<code class="highlighter-rouge">.markdown</code> instead of <code class="highlighter-rouge">.html</code>). You can also use whichever branch you’d like.</li>
+  <li>Go to your GitHub repository and create a new custom webhook. This will alert your build server when the branch you chose is updated.</li>
 </ol>
 
-<h2 id="local-development-with-github-sync">Local development with GitHub Sync</h2>
+<p>After your server receives the webhook, you’ll need to pull the new content and then you can compile it with Jekyll however you’d wish.</p>
 
-<p>1) Initialize or clone your GitHub repo locally to your machine</p>
-
-<p>2) Create a file called <code class="highlighter-rouge">Gemfile</code> in your site’s root folder on your machine and add the Jekyll gem to your bundle:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">source</span> <span class="s1">'http://rubygems.org'</span>
-<span class="n">gem</span> <span class="s1">'jekyll'</span></code></pre></figure>
-
-<p>3) Install the bundle:</p>
-
-<figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ gem install bundler
-$ bundle install</code></pre></figure>
-
-<p>4) Start the Jekyll server:</p>
-
-<figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ bundle exec jekyll serve</code></pre></figure>
-
-<p>Now visit <a href="http://localhost:4000">localhost:4000</a> to see your site!</p>
-
-<p>5) Make some changes then sync them</p>
-
-<p class="note__info">If pushing and pulling changes from the command line isn’t your thing, you can download <a href="https://desktop.github.com/">GitHub Desktop</a> to do it through a user-friendly interface.</p>
-
-<p>Push local changes to GitHub and Siteleaf:</p>
-
-<figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ git add .
-$ git commit -m "Describe your changes here"
-$ git push</code></pre></figure>
-
-<p>Or pull the latest changes from GitHub and Siteleaf:</p>
-
-<figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ git pull</code></pre></figure>
-
+<p><em><strong>Note</strong>: Siteleaf’s preview excludes unsupported plugins, so you may see slightly different output when using it.</em></p>
 
 
       <p class="document__improve">
-        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_theme-development/github-sync.markdown">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_users-and-settings/custom-build-servers.markdown">
           Help improve this page &rarr;
         </a>
       </p>
