@@ -48,12 +48,6 @@
     margin-bottom: 0;
     font-size: $font-size-n1;
 
-    &--sidebar {
-      @media (max-width: $max-width-narrow) {
-        font-size: $font-size-2;
-      }
-    }
-
     &--grid {
       font-size: $font-size-1;
     }
@@ -89,16 +83,6 @@
 
       @media (max-width: 1024px) {
         width: 100%;
-      }
-    }
-
-    &--sidebar {
-      margin-top: $v / 4;
-    }
-
-    &--mobile-hidden {
-      @media (max-width: $max-width-narrow) {
-        display: none;
       }
     }
   }
