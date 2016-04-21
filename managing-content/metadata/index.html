@@ -209,6 +209,14 @@
 
 <p class="note__aside">Metadata is the equivalent of <a href="https://jekyllrb.com/docs/frontmatter/">Jekyll’s YAML frontmatter</a>. When syncing, Siteleaf exports metadata as frontmatter for Pages and Documents and edits the config file for Collections and Sites.</p>
 
+<ul>
+  <li><a href="#field-types">Field types</a></li>
+  <li><a href="#smart-field-names">Smart Field Names</a></li>
+  <li><a href="#defining-default-fields">Defining default fields</a></li>
+</ul>
+
+<hr />
+
 <h2 id="field-types">Field types</h2>
 
 <p>There are three types of metadata fields you can create in Siteleaf: Simple, List, and Object. These three types of fields give you a ton of flexibility when setting up your content structure and you’re even able to nest different field types within each other. No single person should have all this power! But we’re giving it to you…</p>
@@ -249,11 +257,15 @@
 
 <span class="p">{{</span><span class="w"> </span><span class="nv">author</span><span class="p">.</span><span class="nv">bio</span><span class="w"> </span><span class="p">}}</span></code></pre></figure>
 
+<hr />
+
 <h2 id="smart-field-names">Smart Field Names</h2>
 
 <p>To get the most out of Siteleaf, you should know about the different “Smart Field Names” you can enter for a metadata field to enable additional user-friendly functionality, like file pickers, autocompletion, and visual text editing.</p>
 
 <h3 id="file-fields">File fields</h3>
+
+<p><img src="/uploads/meta-file.png" alt="meta-file.png" /></p>
 
 <p>If you have metadata field with a name ending in <code class="highlighter-rouge">asset</code>, <code class="highlighter-rouge">assets</code>, <code class="highlighter-rouge">file</code>, <code class="highlighter-rouge">files</code>, <code class="highlighter-rouge">image</code>, or <code class="highlighter-rouge">images</code> Siteleaf will place a file picker button within the field, making it easy to quickly upload or select an existing upload.</p>
 
@@ -261,15 +273,41 @@
 
 <h3 id="collection-fields">Collection fields</h3>
 
+<p><img src="/uploads/meta-collection.png" alt="meta-collection.png" /></p>
+
 <p>To create a field for “associated” documents, create a new field with a name of the singular or plural collection name. For example, if you have a post and want to have an autocomplete field for documents in your “People” collection, create a field with a name of <code class="highlighter-rouge">person</code> or <code class="highlighter-rouge">people</code>.</p>
 
 <h3 id="text-editors">Text editors</h3>
+
+<p><img src="/uploads/meta-editor.png" alt="meta-editor.png" /></p>
 
 <p>To create a field with markdown or visual text editing functionality (like the body text field), create a new field with a name ending in <code class="highlighter-rouge">body</code>, <code class="highlighter-rouge">description</code>, <code class="highlighter-rouge">excerpt</code>, <code class="highlighter-rouge">markdown</code>, <code class="highlighter-rouge">md</code>, or <code class="highlighter-rouge">text</code>.</p>
 
 <p><strong>Note</strong>: When you reference this field in your template, it won’t automatically output in HTML. You can achieve this though using the <a href="http://jekyllrb.com/docs/templates/"><code class="highlighter-rouge">markdownify</code> Liquid filter</a>. For example:</p>
 
 <figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">caption_markdown</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">markdownify</span><span class="w"> </span><span class="p">}}</span></code></pre></figure>
+
+<h3 id="booleancheckbox-fields">Boolean/checkbox fields</h3>
+
+<p><img src="/uploads/meta-boolean.png" alt="meta-boolean.png" /></p>
+
+<p>Metadata fields with a name beginning with <code class="highlighter-rouge">is</code>, <code class="highlighter-rouge">has</code>, or <code class="highlighter-rouge">was</code> will have a checkbox show within the field that toggles the value between <code class="highlighter-rouge">true</code> and <code class="highlighter-rouge">false</code>. Some example keys that would enable this: <code class="highlighter-rouge">is featured</code>, <code class="highlighter-rouge">has_registration</code>, <code class="highlighter-rouge">was-open</code>, etc.</p>
+
+<p>In addition, any metadata field with a value of <code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code> will automatically have a checkbox shown within the field.</p>
+
+<h3 id="date-and-time-fields">Date and time fields</h3>
+
+<p><img src="/uploads/meta-date.png" alt="meta-date.png" /></p>
+
+<p>Metadata fields with a name ending in <code class="highlighter-rouge">at</code>, <code class="highlighter-rouge">date</code>, or <code class="highlighter-rouge">datetime</code> will have a button within your metadata field which opens a date/time picker ui. Some example keys that would enable this: <code class="highlighter-rouge">event_date</code>, <code class="highlighter-rouge">starts at</code>, <code class="highlighter-rouge">datetime</code>, etc.</p>
+
+<h3 id="color-fields">Color fields</h3>
+
+<p><img src="/uploads/meta-color.png" alt="meta-color.png" /></p>
+
+<p>Metadata fields with a name ending in <code class="highlighter-rouge">color</code>, <code class="highlighter-rouge">colour</code>, <code class="highlighter-rouge">colors</code>, <code class="highlighter-rouge">colours</code>, <code class="highlighter-rouge">hex</code>, <code class="highlighter-rouge">rgb</code>, <code class="highlighter-rouge">rgba</code>, <code class="highlighter-rouge">hsl</code>, <code class="highlighter-rouge">hsla</code>, <code class="highlighter-rouge">hsv</code>, or <code class="highlighter-rouge">hsva</code> will have a button within it which opens a color picker ui. The button will have its color set to the value of the field.</p>
+
+<hr />
 
 <h2 id="defining-default-fields">Defining default fields</h2>
 

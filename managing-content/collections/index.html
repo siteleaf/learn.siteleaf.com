@@ -213,7 +213,9 @@
 
 <h3 id="output">Output</h3>
 
-<p>By default, a collection’s documents are generated into their own files when they’re published. If you don’t want to do this, uncheck this option.</p>
+<p>By default, a collection’s documents are generated into their own pages when they’re published. It will generate these pages out into children of the parent collection. For example, if you had a document called <code class="highlighter-rouge">Ethan</code> in a collection called <code class="highlighter-rouge">People</code>, it will generate a page located at <code class="highlighter-rouge">/people/ethan</code>.</p>
+
+<p>If you turn this option off, you’ll still be able to access your documents in your layouts through the Collection Liquid attribute. For example, you’d be able to access the documents in the <code class="highlighter-rouge">People</code> collection by calling <code class="highlighter-rouge">site.people.docs</code>.</p>
 
 <h3 id="path">Path</h3>
 
