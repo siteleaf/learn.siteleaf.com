@@ -95,11 +95,20 @@ To create a field with markdown or visual text editing functionality (like the b
 {% endraw %}
 {% endhighlight %}
 
+### Boolean/checkbox fields
+
+![meta-boolean.png](/uploads/meta-boolean.png)
+
+Metadata fields with a name beginning with `is`, `has`, or `was` will have a checkbox show within the field that toggles the value between `true` and `false`. Some example keys that would enable this: `is featured`, `has_registration`, `was-open`, etc.
+
+In addition, any metadata field with a value of `true` or `false` will automatically have a checkbox shown within the field.
+
+
 ### Date and time fields
 
 ![meta-date.png](/uploads/meta-date.png)
 
-Metadata fields with a name ending in `at`, `date`, or `datetime` Siteleaf will place a button within your metadata field which opens a date/time picker ui. Some example keys that would enable this: `event_date`, `starts at`, `datetime`, etc.
+Metadata fields with a name ending in `at`, `date`, or `datetime` will have a button within your metadata field which opens a date/time picker ui. Some example keys that would enable this: `event_date`, `starts at`, `datetime`, etc.
 
 ### Color fields
 
