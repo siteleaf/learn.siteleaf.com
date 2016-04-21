@@ -64,6 +64,13 @@ p, ul, ol {
   margin-bottom: $v;
 }
 
+hr {
+  border: 0 none;
+  background: none;
+  border-top: 3px solid $color-gray-an2;
+  margin: 60px 0;
+}
+
 pre, code {
   color: $color-gray-2;
   background-color: #f5f5f5;
@@ -154,7 +161,7 @@ table {
 
 .document {
   &__title {
-    border-bottom: 2px solid $color-gray-an2;
+    border-bottom: 3px solid $color-gray-an2;
     padding-bottom: $v;
     margin-bottom: $v;
 
@@ -186,6 +193,10 @@ table {
     padding-top: $v;
     margin-top: $v;
   }
+}
+
+.document__content h3{
+  margin-top: $v * 2;
 }
 
 .highlight {

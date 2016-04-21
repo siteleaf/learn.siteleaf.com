@@ -11,6 +11,8 @@ Metadata are additional pieces of data which you can attach to your pages, docum
 Metadata is the equivalent of [Jekyll's YAML frontmatter](https://jekyllrb.com/docs/frontmatter/). When syncing, Siteleaf exports metadata as frontmatter for Pages and Documents and edits the config file for Collections and Sites.
 {: .note__aside}
 
+----
+
 ## Field types
 
 There are three types of metadata fields you can create in Siteleaf: Simple, List, and Object. These three types of fields give you a ton of flexibility when setting up your content structure and you're even able to nest different field types within each other. No single person should have all this power! But we're giving it to you&hellip;
@@ -62,6 +64,8 @@ Accessing this page field in your template would look like this:
 {{ author.bio }}
 {% endraw %}
 {% endhighlight %}
+
+----
 
 ## Smart Field Names
 
@@ -115,6 +119,8 @@ Metadata fields with a name ending in `at`, `date`, or `datetime` will have a bu
 ![meta-color.png](/uploads/meta-color.png)
 
 Metadata fields with a name ending in `color`, `colour`, `colors`, `colours`, `hex`, `rgb`, `rgba`, `hsl`, `hsla`, `hsv`, or `hsva` will have a button within it which opens a color picker ui. The button will have its color set to the value of the field.
+
+----
 
 ## Defining default fields
 
