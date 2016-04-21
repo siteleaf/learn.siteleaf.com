@@ -95,6 +95,18 @@ To create a field with markdown or visual text editing functionality (like the b
 {% endraw %}
 {% endhighlight %}
 
+### Date and time fields
+
+![meta-date.png](/uploads/meta-date.png)
+
+Metadata fields with a name ending in `at`, `date`, or `datetime` Siteleaf will place a button within your metadata field which opens a date/time picker ui. Some example keys that would enable this: `event_date`, `starts at`, `datetime`, etc.
+
+### Color fields
+
+![meta-color.png](/uploads/meta-color.png)
+
+Metadata fields with a name ending in `color`, `colour`, `colors`, `colours`, `hex`, `rgb`, `rgba`, `hsl`, `hsla`, `hsv`, or `hsva` will have a button within it which opens a color picker ui. The button will have its color set to the value of the field.
+
 ## Defining default fields
 
 You can define defaults for all your content (or by collection) in your config file. [More information on setting defaults can be found in the Jekyll docs.](http://jekyllrb.com/docs/configuration/#front-matter-defaults)
