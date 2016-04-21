@@ -69,15 +69,21 @@ To get the most out of Siteleaf, you should know about the different "Smart Fiel
 
 ### File fields
 
+![meta-file.png](/uploads/meta-file.png)
+
 If you have metadata field with a name ending in `asset`, `assets`, `file`, `files`, `image`, or `images` Siteleaf will place a file picker button within the field, making it easy to quickly upload or select an existing upload.
 
 For example you could take things to the next level by creating a "List" metadata field and give it a name of `assets` or `portfolio_images`. If you want to add assets with additional metadata (like maybe a caption), you could create a "List" metadata field and add "Object" fields to the list. Your object field could have names like `file` and `caption`. When you add a new item to the list, a new object with those same names will be added for you, making it easy to add multiple assets with the same structure.
 
 ### Collection fields
 
+![meta-collection.png](/uploads/meta-collection.png)
+
 To create a field for "associated" documents, create a new field with a name of the singular or plural collection name. For example, if you have a post and want to have an autocomplete field for documents in your "People" collection, create a field with a name of `person` or `people`.
 
 ### Text editors
+
+![meta-editor.png](/uploads/meta-editor.png)
 
 To create a field with markdown or visual text editing functionality (like the body text field), create a new field with a name ending in `body`, `description`, `excerpt`, `markdown`, `md`, or `text`.
 
