@@ -13,6 +13,9 @@ When working on your site, you'll want to keep your theme and content in sync. T
 2. Connect to GitHub
 3. Choose a repo, and optionally a branch name. We generally recommend using the `master` branch for syncing source files, and if using GitHub Pages for hosting, the `gh-pages` branch in the same repo for published sites. However you may use two separate repos, or any configuration you wish.
 
+Third-party application access needs to be turned **on** in order for Siteleaf to see your repositories. If you don't see a repository when you connect your GitHub account, go to the organization's settings and enable third-party application access.
+{: .note__info}
+
 ## Local development with GitHub Sync
 
 1) Initialize or clone your GitHub repo locally to your machine

@@ -265,9 +265,13 @@ table {
   background-color: rgba($color-yellow, 0.2);
   color: darken($color-yellow, 20%);
 
-  code{
+  code {
     background-color: rgba(#000, 0.08);
     color: darken($color-yellow, 20%);
+  }
+
+  strong {
+    color: darken($color-yellow, 30%);
   }
 
   &:before {
