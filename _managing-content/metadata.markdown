@@ -93,13 +93,13 @@ To create a field for "associated" documents, create a new field with a name of 
 
 ![meta-editor.png](/uploads/meta-editor.png)
 
-To create a field with markdown or visual text editing functionality (like the body text field), create a new field with a name ending in `body`, `description`, `excerpt`, `markdown`, `md`, or `text`.
+To create a field with markdown or visual text editing functionality (like the body text field), create a new field with a name ending in `body`, `description`, `excerpt`, `md`, or `text`.
 
 **Note**: When you reference this field in your template, it won't automatically output in HTML. You can achieve this though using the [`markdownify` Liquid filter](http://jekyllrb.com/docs/templates/). For example:
 
 {% highlight liquid %}
 {% raw %}
-{{ page.caption_markdown | markdownify }}
+{{ page.caption_text | markdownify }}
 {% endraw %}
 {% endhighlight %}
 
