@@ -5,7 +5,7 @@ position: 1
 layout: page
 ---
 
-Siteleaf is a smart, lightweight platform for creating and maintaining websites. Specifically, Siteleaf is a _static site generator_. This means that instead of dynamically generating the HTML and CSS for your website on-demand (usually by grabbing your content from a database), Siteleaf will compile your content once. This means faster sites, less overhead, and less setting up for you to do. There's no need to mess about with a database, PHP, or a server at all for that matter — you can use one of our [hosting options](/users-and-settings/hosting) instead.
+Siteleaf is a smart, lightweight platform for creating and maintaining websites. Specifically, Siteleaf is a _static site generator_. This means that instead of dynamically generating the HTML and CSS for your website on-demand (usually by grabbing your content from a database), Siteleaf will compile your content once. This means faster sites, less overhead, and less setting up for you to do. There's no need to mess about with a database, PHP, or a server at all for that matter — you can use one of our [hosting options](/sites/hosting) instead.
 
 Siteleaf is fully compatible with [Jekyll](http://jekyllrb.com), the same open source technology GitHub uses to power over half a million websites. Enjoy the benefits of a large open source community, along with the accessibility of the Siteleaf interface. Use any off-the-shelf Jekyll theme, or build your own.
 
