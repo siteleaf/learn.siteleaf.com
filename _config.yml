@@ -12,7 +12,7 @@ collections:
       icon: cloud
       in_nav: true
     position: 60
-  users-and-settings:
+  sites:
     title: Deploy and Collaborate
     output: true
     permalink: "/:collection/:path/"
