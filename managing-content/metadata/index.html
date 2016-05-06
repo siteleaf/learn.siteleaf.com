@@ -155,13 +155,15 @@
         <ul class="nav__list nav__list--sidebar">
           
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/hosting/">Hosting</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/sites/hosting/">Hosting</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/settings/">Settings</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/sites/preview/">Preview</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/users/">Users</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/sites/settings/">Settings</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/custom-build-servers/">Custom build servers</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/sites/users/">Users</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/sites/custom-build-servers/">Custom build servers</a></li>
           
         </ul>
       </nav>
@@ -285,11 +287,11 @@
 
 <p><img src="/uploads/meta-editor.png" alt="meta-editor.png" /></p>
 
-<p>To create a field with markdown or visual text editing functionality (like the body text field), create a new field with a name ending in <code class="highlighter-rouge">body</code>, <code class="highlighter-rouge">description</code>, <code class="highlighter-rouge">excerpt</code>, <code class="highlighter-rouge">markdown</code>, <code class="highlighter-rouge">md</code>, or <code class="highlighter-rouge">text</code>.</p>
+<p>To create a field with markdown or visual text editing functionality (like the body text field), create a new field with a name ending in <code class="highlighter-rouge">body</code>, <code class="highlighter-rouge">description</code>, <code class="highlighter-rouge">excerpt</code>, <code class="highlighter-rouge">md</code>, or <code class="highlighter-rouge">text</code>.</p>
 
 <p><strong>Note</strong>: When you reference this field in your template, it won’t automatically output in HTML. You can achieve this though using the <a href="http://jekyllrb.com/docs/templates/"><code class="highlighter-rouge">markdownify</code> Liquid filter</a>. For example:</p>
 
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">caption_markdown</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">markdownify</span><span class="w"> </span><span class="p">}}</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">caption_text</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">markdownify</span><span class="w"> </span><span class="p">}}</span></code></pre></figure>
 
 <h3 id="booleancheckbox-fields">Boolean/checkbox fields</h3>
 

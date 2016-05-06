@@ -5,7 +5,7 @@
     <!-- <meta content="width=device-width, initial-scale=1" name="viewport"> -->
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
-    <title>Custom build servers | Siteleaf Documentation</title>
+    <title>Hosting | Siteleaf Documentation</title>
 
     <link href="/assets/css/main.css" rel="stylesheet">
     <link href="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.css" rel="stylesheet">
@@ -155,13 +155,15 @@
         <ul class="nav__list nav__list--sidebar">
           
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/hosting/">Hosting</a></li>
+            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/sites/hosting/">Hosting</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/settings/">Settings</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/sites/preview/">Preview</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/users/">Users</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/sites/settings/">Settings</a></li>
           
-            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/users-and-settings/custom-build-servers/">Custom build servers</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/sites/users/">Users</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/sites/custom-build-servers/">Custom build servers</a></li>
           
         </ul>
       </nav>
@@ -204,26 +206,66 @@
 
 <section class="main__content">
   <div class="document">
-    <h1 class="document__title">Custom build servers</h1>
+    <h1 class="document__title">Hosting</h1>
 
     
 
     <div class="document__content">
-      <p>If you need to use custom Jekyll plugins or if you’d like to have complete control over the build process for your site, you can use a custom build server or service like <a href="http://deploybot.com/">DeployBot</a>.</p>
+      <h2 id="github-pages">GitHub Pages</h2>
 
-<ol>
-  <li>In your Hosting settings, choose GitHub Pages as your host.</li>
-  <li>Change the publish format to be “Compile by GitHub Pages”. Now instead of publishing generated HTML files, it will publish the raw Jekyll files (<code class="highlighter-rouge">.markdown</code> instead of <code class="highlighter-rouge">.html</code>). You can also use whichever branch you’d like.</li>
-  <li>Go to your GitHub repository and create a new custom webhook. This will alert your build server when the branch you chose is updated.</li>
-</ol>
+<p>To publish to <a href="https://pages.github.com/">GitHub Pages</a>, first connect your GitHub account to Siteleaf. You can choose the repository you’re using, domain (by default it will use <code class="highlighter-rouge">username.github.io/repo</code>), and branch (<code class="highlighter-rouge">gh-pages</code> by default).</p>
 
-<p>After your server receives the webhook, you’ll need to pull the new content and then you can compile it with Jekyll however you’d wish.</p>
+<p>The repository you use must already exist. To make things easier, we suggest that you put your theme files on the <code class="highlighter-rouge">master</code> branch and the published site on the <code class="highlighter-rouge">gh-pages</code> branch.</p>
 
-<p><em><strong>Note</strong>: Siteleaf’s preview excludes unsupported plugins, so you may see slightly different output when using it.</em></p>
+<p>For help with GitHub Pages, check out <a href="https://help.github.com/categories/github-pages-basics/">their help page</a>.</p>
+
+<h3 id="machine-users">Machine users</h3>
+
+<p>If you’re uncomfortable with giving Siteleaf permission to all of your GitHub repositories, you can avoid this by creating a <a href="https://developer.github.com/guides/managing-deploy-keys/#machine-users">machine user</a>. This is a new GitHub user that you create that will have access to only the repositories you want Siteleaf to also have access to. When you connect GitHub to Siteleaf, use this user instead, and Siteleaf will only have access to those repositories.</p>
+
+<h3 id="configuring-github-pages">Configuring GitHub Pages</h3>
+
+<p>There are a few pieces of site metadata that you can override:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">github</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">metadata</span><span class="pi">]</span>
+<span class="s">kramdown</span><span class="pi">:</span>
+  <span class="s">input</span><span class="pi">:</span> <span class="s">GFM</span>
+  <span class="s">hard_wrap</span><span class="pi">:</span> <span class="s">false</span>
+<span class="s">gems</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-coffeescript</span>
+  <span class="pi">-</span> <span class="s">jekyll-paginate</span></code></pre></figure>
+
+<p>There are also a few settings that you <em>cannot</em> override:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">lsi</span><span class="pi">:</span> <span class="s">false</span>
+<span class="s">safe</span><span class="pi">:</span> <span class="s">true</span>
+<span class="s">source</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">your repo's top level directory</span><span class="pi">]</span>
+<span class="s">incremental</span><span class="pi">:</span> <span class="s">false</span>
+<span class="s">highlighter</span><span class="pi">:</span> <span class="s">rouge</span>
+<span class="s">gist</span><span class="pi">:</span>
+  <span class="s">noscript</span><span class="pi">:</span> <span class="s">false</span></code></pre></figure>
+
+<h2 id="amazon-s3">Amazon S3</h2>
+
+<p>To publish to <a href="https://aws.amazon.com/s3/">Amazon S3</a>, you’ll first need your access key and secret key. You can either use existing keys or <a href="https://console.aws.amazon.com/iam/home#home">create an Identity and Access Management user</a>.</p>
+
+<p>You can use an existing bucket, or create a new one. Make sure you take note of the region!</p>
+
+<p>For more information on Amazon S3, take a look at <a href="https://aws.amazon.com/documentation/s3/">their documentation</a>.</p>
+
+<h2 id="rackspace-cloud-files">Rackspace Cloud Files</h2>
+
+<p>To publish to <a href="https://www.rackspace.com/cloud/files">Rackspace Cloud Files</a>, you’ll need your Rackspace username and an API key, which can be found in your Account Settings. You can use an existing container, just make sure you know which region it is in.</p>
+
+<p>For more help with Rackspace Cloud Files, see <a href="https://www.rackspace.com/knowledge_center/getting-started/cloud-files">their documentation</a>.</p>
+
+<h2 id="ftp-or-sftp">FTP or SFTP</h2>
+
+<p>If you’d like to use your own server, you can use FTP/SFTP. Make sure you know the host, port, username, and password, as well as the path you’d like to compile to.</p>
 
 
       <p class="document__improve">
-        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_users-and-settings/custom-build-servers.markdown">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_sites/hosting.markdown">
           Help improve this page &rarr;
         </a>
       </p>

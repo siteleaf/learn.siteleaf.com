@@ -5,7 +5,7 @@
     <!-- <meta content="width=device-width, initial-scale=1" name="viewport"> -->
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
-    <title>Users | Siteleaf Documentation</title>
+    <title>Preview | Siteleaf Documentation</title>
 
     <link href="/assets/css/main.css" rel="stylesheet">
     <link href="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.css" rel="stylesheet">
@@ -155,13 +155,15 @@
         <ul class="nav__list nav__list--sidebar">
           
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/hosting/">Hosting</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/sites/hosting/">Hosting</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/settings/">Settings</a></li>
+            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/sites/preview/">Preview</a></li>
           
-            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/users-and-settings/users/">Users</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/sites/settings/">Settings</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/users-and-settings/custom-build-servers/">Custom build servers</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/sites/users/">Users</a></li>
+          
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/sites/custom-build-servers/">Custom build servers</a></li>
           
         </ul>
       </nav>
@@ -204,34 +206,22 @@
 
 <section class="main__content">
   <div class="document">
-    <h1 class="document__title">Users</h1>
+    <h1 class="document__title">Preview</h1>
 
     
 
     <div class="document__content">
-      <p>A lot of the time, you won’t be working alone on your site. On the Users page, you can add other collaborators by their name or email address. You can choose between three different user roles, each giving a different level of permission to your site.</p>
+      <p>You can think of Siteleaf Preview as your site’s staging environment. This is where you can preview your changes before publishing them or share the pending changes with your editor or client. When you’re logged in you’ll notice a bar at the top of your site indicating the status of your site’s preview, informing you of when the preview was last generated or if there were errors encountered generating the preview.</p>
 
-<h2 id="user-roles">User Roles</h2>
+<h2 id="how-it-works">How it works</h2>
 
-<h3 id="admin">Admin</h3>
+<p>A site preview is built when you or a collaborator presses a “Generate preview” button in the Siteleaf admin. Depending on the complexity of your site, the build process may take anywhere from a few seconds to 30+ seconds.</p>
 
-<p>The admin role gives full privileges to the collaborator, allowing them to manage and publish all content. This role is great for people who are helping build the site, like a developer or designer, since it allows them to upload theme files, change the site’s settings, and invite other collaborators.</p>
-
-<h3 id="publisher">Publisher</h3>
-
-<p>The publisher role is similar to the admin role, however publishers aren’t able to access theme files or the site’s settings. This is a great role to grant to a client. It allows a person to manage and publish pages, posts and assets, while protecting them from accidentally breaking the site’s theme.</p>
-
-<h3 id="writer">Writer</h3>
-
-<p>The writer role is the most limited role available. A writer can only manage their own content, and any content they create will default to “Draft” status. This means that a Publisher or Admin must approve a writer’s content first before publishing it. This role is great for sites with many collaborators who only need access in order to add content (like a blog post).</p>
-
-<h2 id="transferring-ownership">Transferring Ownership</h2>
-
-<p>To transfer your site to another user, you’ll first need to add them to your site. Clicking on “Transfer ownership” will give them full ownership over the site and its contents, and your account will become an Admin on the site.</p>
+<p>If your site has been previewed before, you might see the old preview while we generate an updated preview with your latest changes. If its the first time your site has been previewed, or if your preview has expired, you’ll be presented with a loading screen until the preview has been built.</p>
 
 
       <p class="document__improve">
-        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_users-and-settings/users.markdown">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_sites/preview.markdown">
           Help improve this page &rarr;
         </a>
       </p>
