@@ -1,6 +1,6 @@
 ---
 title: Sites
-date: 2016-01-14 15:50:46.559000000 -05:00
+date: 2016-01-14 15:50:00 -05:00
 position: 1
 example_input: |-
   {
@@ -13,27 +13,41 @@ example_input: |-
   }
 example_response: |-
   {
-    "id": "5697cc7b16d5640c40000002",
-    "title": "Bar Lawrence",
-    "domain": "www.barlawrence.com",
-    "cname": "www.barlawrence.com.s3-website-us-east-1.amazonaws.com",
-    "defaults": [
-      {
-        "path": "",
-        "type": null,
-        "values": {
-          "layout": "drink"
-        }
-      }
-    ],
-    "metadata": {
-      "permalink": "pretty"
-    },
-    "timezone": "UTC",
-    "version": "v2",
-    "created_at": "2013-06-24 15:00:39 +0000",
-    "updated_at": "2015-08-29 20:57:17 +0000",
-    "user_id": "5697cc7b16d5640c40000000"
+      "cname": "username.github.io",
+      "created_at": "2015-11-04 15:28:42 -0500",
+      "defaults": [],
+      "domain": "testsitev2.siteleaf.biz",
+      "id": "563a6a7a1829c7081b000000",
+      "jobs": {
+          "preview": {
+              "id": null,
+              "last_at": "2016-04-12T15:49:28-04:00",
+              "last_error": null,
+              "last_id": "68f6bc647ab61e01efd4ae27"
+          },
+          "publish": {
+              "id": null,
+              "last_at": "2016-04-12T15:41:12-04:00",
+              "last_error": "Liquid syntax error (line 6): Variable '{{ fail %}' was not properly terminated with regexp: /\\}\\}/",
+              "last_id": "06184063895bb4c819165bee"
+          },
+          "sync": {
+              "id": null,
+              "last_at": "2016-04-12T15:57:09-04:00",
+              "last_error": null,
+              "last_id": "32e0dc8dcebf26a6f1148ef4"
+          }
+      },
+      "metadata": {
+          "gems": [
+              "jekyll-sitemap"
+          ]
+      },
+      "timezone": "UTC",
+      "title": "test site",
+      "updated_at": "2016-04-12 15:57:09 -0400",
+      "user_id": "533d750e1829c7785c000001",
+      "version": "v2"
   }
 ---
 
