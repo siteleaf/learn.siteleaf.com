@@ -5,7 +5,7 @@
     <!-- <meta content="width=device-width, initial-scale=1" name="viewport"> -->
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
-    <title>Jobs | Siteleaf Documentation</title>
+    <title>Posts | Siteleaf Documentation</title>
 
     <link href="/assets/css/main.css" rel="stylesheet">
     <link href="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.css" rel="stylesheet">
@@ -201,7 +201,7 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/defaults/">Defaults</a></li>
           
-            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/api/jobs/">Jobs</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/jobs/">Jobs</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/users/">Users</a></li>
           
@@ -216,58 +216,57 @@
 
 <section class="main__content">
   <div class="document">
-    <h1 class="document__title">Jobs</h1>
+    <h1 class="document__title">Posts</h1>
 
     
 
-    <div class="document__content api__content">
-      <h2 id="overview">Overview</h2>
+    <div class="document__content">
+      <p>Blogging is built right into Siteleaf. This means that you can just go ahead and start writing your posts and we’ll handle it for you!</p>
 
-<p>The Jobs endpoint can be used to monitor long running tasks, such as <a href="/api/sites#publish-a-site">publishing a site</a>.
-It uses <a href="https://html.spec.whatwg.org/multipage/comms.html#server-sent-events">Server Sent Events</a> (SSE) to comunicate with the client.</p>
+<p>Posts are a bit like special documents — they belong to the Posts collection, but unlike regular documents, you can set them to be a draft.</p>
 
-<h2 id="listen-to-a-job">Listen to a job</h2>
+<p class="note__aside">Creating a post will create a Markdown file in the <code class="highlighter-rouge">_posts/</code> directory that will include the timestamp and date (for example, a post titled “New York” that was created on January 6th, 2016 will turn into <code class="highlighter-rouge">2016-01-06-new-york.markdown</code>).</p>
 
-<p>Events are streamed to the client in real time, with event data encoded as JSON. When the job completes or fails the server will close the connection.  The last event is available for 30 minutes, after which the job id expires.</p>
+<h2 id="options">Options</h2>
 
-<h3 id="endpoint">Endpoint</h3>
+<h3 id="path">Path</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/jobs/:job_id
-</code></pre>
-</div>
+<p>The path changes the URL this post is accessible at on your site within the <code class="highlighter-rouge">/posts/</code> path.</p>
 
-<h3 id="response">Response</h3>
+<h3 id="visibility">Visibility</h3>
 
-<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
-Content-Type: text/event-stream
-</code></pre>
-</div>
-<div class="highlighter-rouge"><pre class="highlight"><code>event:status
-data:{"status":"working","message":"Working...","updated_at":"1452890740"}
+<p>By default, posts are visible. You can change them to hidden or draft, in which case they’d be moved to the <code class="highlighter-rouge">_drafts/</code> directory.</p>
 
-event:status
-data:{"status":"working","message":"Working...","updated_at":"1452890744"}
+<h3 id="tags">Tags</h3>
 
-event:status
-data:{"status":"complete","message":"Done!","updated_at":"1452890745"}
-</code></pre>
-</div>
+<p>Tags are a way to link common posts with each other. Separate multiple tags with a comma.</p>
 
-<h3 id="response-after-job-expires">Response after job expires</h3>
+<h3 id="categories">Categories</h3>
 
-<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 410 Gone
-Content-Type: text/event-stream
-</code></pre>
-</div>
+<p>A category is an overarching theme that a post has. Separate multiple categories with a comma.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>event:status
-data:{"status":"error","message":"Job not found"}
-</code></pre>
-</div>
+<h3 id="date">Date</h3>
+
+<p>This changes the timestamp associated with the post.</p>
+
+<h3 id="permalink">Permalink</h3>
+
+<p>The permalink changes the URL this post is accessible at on your site. Unlike a path, this can change the URL to be anywhere on the site, not just under <code class="highlighter-rouge">/posts/</code>.</p>
+
+<h3 id="layout">Layout</h3>
+
+<p>Choose which layout you’d like to use. Any layout you have in <code class="highlighter-rouge">_layouts</code> will be listed here.</p>
+
+<h2 id="further-reading">Further Reading</h2>
+
+<ul>
+  <li><a href="http://jekyllrb.com/docs/posts/">Jekyll: Writing posts</a></li>
+  <li><a href="http://jekyllrb.com/docs/drafts/">Jekyll: Working with drafts</a></li>
+</ul>
 
 
       <p class="document__improve">
-        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_api/jobs.md">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/">
           Help improve this page &rarr;
         </a>
       </p>

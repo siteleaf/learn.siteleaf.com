@@ -5,7 +5,7 @@
     <!-- <meta content="width=device-width, initial-scale=1" name="viewport"> -->
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
-    <title>Jobs | Siteleaf Documentation</title>
+    <title>Siteleaf Gem | Siteleaf Documentation</title>
 
     <link href="/assets/css/main.css" rel="stylesheet">
     <link href="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.css" rel="stylesheet">
@@ -147,7 +147,7 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/themes/github-sync/">GitHub Sync</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/themes/gem/">Siteleaf Gem</a></li>
+            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/themes/gem/">Siteleaf Gem</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/themes/sass/">Sass and SCSS</a></li>
           
@@ -201,7 +201,7 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/defaults/">Defaults</a></li>
           
-            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/api/jobs/">Jobs</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/jobs/">Jobs</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/users/">Users</a></li>
           
@@ -216,58 +216,80 @@
 
 <section class="main__content">
   <div class="document">
-    <h1 class="document__title">Jobs</h1>
+    <h1 class="document__title">Siteleaf Gem</h1>
 
     
 
-    <div class="document__content api__content">
-      <h2 id="overview">Overview</h2>
+    <div class="document__content">
+      <p class="note__info">We recommend using <a href="/themes/github-sync/">GitHub sync</a> for local development, but you can still use the Gem if that’s your preferred workflow.</p>
 
-<p>The Jobs endpoint can be used to monitor long running tasks, such as <a href="/api/sites#publish-a-site">publishing a site</a>.
-It uses <a href="https://html.spec.whatwg.org/multipage/comms.html#server-sent-events">Server Sent Events</a> (SSE) to comunicate with the client.</p>
+<h2 id="differences-between-v1-and-v2-gems">Differences between v1 and v2 gems</h2>
 
-<h2 id="listen-to-a-job">Listen to a job</h2>
+<p>The v1 gem is not compatible with v2 sites (and vice versa), so we recommend using a <a href="http://bundler.io/gemfile.html">Gemfile</a> to allow both versions to be installed.</p>
 
-<p>Events are streamed to the client in real time, with event data encoded as JSON. When the job completes or fails the server will close the connection.  The last event is available for 30 minutes, after which the job id expires.</p>
+<p><strong>Important:</strong> When using <code class="highlighter-rouge">push</code>/<code class="highlighter-rouge">pull</code> in v2, both theme and content files are included. Always make sure to do a <code class="highlighter-rouge">pull</code> first to avoid overwriting your Siteleaf content on <code class="highlighter-rouge">push</code>. Your local directory must have a <code class="highlighter-rouge">_config.yml</code> in order to push.</p>
 
-<h3 id="endpoint">Endpoint</h3>
+<h2 id="local-development-using-the-siteleaf-gem">Local development using the Siteleaf gem</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/jobs/:job_id
-</code></pre>
-</div>
+<p>1) Create a file called <code class="highlighter-rouge">Gemfile</code> in your site’s root folder and add the v2 beta gem and Jekyll to your bundle:</p>
 
-<h3 id="response">Response</h3>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">source</span> <span class="s1">'http://rubygems.org'</span>
 
-<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
-Content-Type: text/event-stream
-</code></pre>
-</div>
-<div class="highlighter-rouge"><pre class="highlight"><code>event:status
-data:{"status":"working","message":"Working...","updated_at":"1452890740"}
+<span class="n">gem</span> <span class="s1">'siteleaf'</span><span class="p">,</span> <span class="s1">'2.0.0.pre.beta9'</span>
+<span class="n">gem</span> <span class="s1">'jekyll'</span></code></pre></figure>
 
-event:status
-data:{"status":"working","message":"Working...","updated_at":"1452890744"}
+<p><small>For help with Bundler or Gemfiles, please see: <a href="http://bundler.io/gemfile.html">http://bundler.io/gemfile.html</a></small></p>
 
-event:status
-data:{"status":"complete","message":"Done!","updated_at":"1452890745"}
-</code></pre>
-</div>
+<p>2) Install the bundle:</p>
 
-<h3 id="response-after-job-expires">Response after job expires</h3>
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ gem install bundler
+$ bundle install</code></pre></figure>
 
-<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 410 Gone
-Content-Type: text/event-stream
-</code></pre>
-</div>
+<p>3) Authorize your Siteleaf account:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>event:status
-data:{"status":"error","message":"Job not found"}
-</code></pre>
-</div>
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ bundle exec siteleaf auth</code></pre></figure>
+
+<p>4) Create or connect to a Siteleaf v2 site:</p>
+
+<p><strong>To create a new Siteleaf site:</strong></p>
+
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ bundle exec siteleaf new yoursite.com</code></pre></figure>
+
+<p>This will create a new theme folder called <code class="highlighter-rouge">yoursite.com</code> in the directory where you ran this command. It will also create the site for you in your Siteleaf account. If you prefer not to create a new directory, run <code class="highlighter-rouge">bundle exec siteleaf new yoursite.com .</code> instead.</p>
+
+<p><strong>To use an existing Siteleaf site:</strong></p>
+
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ bundle exec siteleaf config yoursite.com</code></pre></figure>
+
+<p>You can then pull the Jekyll configuration, content, and current theme:</p>
+
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ bundle exec siteleaf pull</code></pre></figure>
+
+<p>5) Start the Jekyll server:</p>
+
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ bundle exec jekyll serve</code></pre></figure>
+
+<p>Now visit <a href="http://localhost:4000">localhost:4000</a> to see your site!</p>
+
+<p>5) Push your content and theme to Siteleaf:</p>
+
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ bundle exec siteleaf push</code></pre></figure>
+
+<h2 id="backing-up-your-site">Backing up your site</h2>
+
+<p>Creating a full backup of your v2 site is simple. Just copy your <code class="highlighter-rouge">Gemfile</code> to an empty directory and do a <code class="highlighter-rouge">pull</code>:</p>
+
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">cp Gemfile /path/to/backup/
+cd /path/to/backup/
+bundle install
+bundle exec siteleaf config yoursite.com
+bundle exec siteleaf pull</code></pre></figure>
+
+<p>This will include your entire site, including theme files, assets, content, and site metadata.</p>
 
 
       <p class="document__improve">
-        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_api/jobs.md">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_themes/gem.markdown">
           Help improve this page &rarr;
         </a>
       </p>

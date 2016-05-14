@@ -5,7 +5,7 @@
     <!-- <meta content="width=device-width, initial-scale=1" name="viewport"> -->
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
-    <title>Jobs | Siteleaf Documentation</title>
+    <title>GitHub Sync | Siteleaf Documentation</title>
 
     <link href="/assets/css/main.css" rel="stylesheet">
     <link href="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.css" rel="stylesheet">
@@ -145,7 +145,7 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/themes/local-development/">Local development</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/themes/github-sync/">GitHub Sync</a></li>
+            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/themes/github-sync/">GitHub Sync</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/themes/gem/">Siteleaf Gem</a></li>
           
@@ -201,7 +201,7 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/defaults/">Defaults</a></li>
           
-            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/api/jobs/">Jobs</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/jobs/">Jobs</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/users/">Users</a></li>
           
@@ -216,58 +216,61 @@
 
 <section class="main__content">
   <div class="document">
-    <h1 class="document__title">Jobs</h1>
+    <h1 class="document__title">GitHub Sync</h1>
 
     
 
-    <div class="document__content api__content">
-      <h2 id="overview">Overview</h2>
+    <div class="document__content">
+      <p>When working on your site, you’ll want to keep your theme and content in sync. This is exactly what GitHub Sync was made for. Once GitHub Sync is enabled, every time you update your Siteleaf site or your <a href="https://github.com">GitHub</a> repo, the changes will be synced between the two.</p>
 
-<p>The Jobs endpoint can be used to monitor long running tasks, such as <a href="/api/sites#publish-a-site">publishing a site</a>.
-It uses <a href="https://html.spec.whatwg.org/multipage/comms.html#server-sent-events">Server Sent Events</a> (SSE) to comunicate with the client.</p>
+<h2 id="enable-github-sync">Enable GitHub Sync</h2>
 
-<h2 id="listen-to-a-job">Listen to a job</h2>
+<ol>
+  <li>After creating a site, go to the <strong>Sync</strong> tab under <strong>Settings</strong></li>
+  <li>Connect to GitHub</li>
+  <li>Choose a repo, and optionally a branch name. We generally recommend using the <code class="highlighter-rouge">master</code> branch for syncing source files, and if using GitHub Pages for hosting, the <code class="highlighter-rouge">gh-pages</code> branch in the same repo for published sites. However you may use two separate repos, or any configuration you wish.</li>
+</ol>
 
-<p>Events are streamed to the client in real time, with event data encoded as JSON. When the job completes or fails the server will close the connection.  The last event is available for 30 minutes, after which the job id expires.</p>
+<p class="note__info">Third-party application access needs to be turned <strong>on</strong> in order for Siteleaf to see your repositories. If you don’t see a repository when you connect your GitHub account, go to the organization’s settings and enable third-party application access.</p>
 
-<h3 id="endpoint">Endpoint</h3>
+<h2 id="local-development-with-github-sync">Local development with GitHub Sync</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/jobs/:job_id
-</code></pre>
-</div>
+<p>1) Initialize or clone your GitHub repo locally to your machine</p>
 
-<h3 id="response">Response</h3>
+<p>2) Create a file called <code class="highlighter-rouge">Gemfile</code> in your site’s root folder on your machine and add the Jekyll gem to your bundle:</p>
 
-<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
-Content-Type: text/event-stream
-</code></pre>
-</div>
-<div class="highlighter-rouge"><pre class="highlight"><code>event:status
-data:{"status":"working","message":"Working...","updated_at":"1452890740"}
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">source</span> <span class="s1">'http://rubygems.org'</span>
+<span class="n">gem</span> <span class="s1">'jekyll'</span></code></pre></figure>
 
-event:status
-data:{"status":"working","message":"Working...","updated_at":"1452890744"}
+<p>3) Install the bundle:</p>
 
-event:status
-data:{"status":"complete","message":"Done!","updated_at":"1452890745"}
-</code></pre>
-</div>
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ gem install bundler
+$ bundle install</code></pre></figure>
 
-<h3 id="response-after-job-expires">Response after job expires</h3>
+<p>4) Start the Jekyll server:</p>
 
-<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 410 Gone
-Content-Type: text/event-stream
-</code></pre>
-</div>
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ bundle exec jekyll serve</code></pre></figure>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>event:status
-data:{"status":"error","message":"Job not found"}
-</code></pre>
-</div>
+<p>Now visit <a href="http://localhost:4000">localhost:4000</a> to see your site!</p>
+
+<p>5) Make some changes then sync them</p>
+
+<p class="note__info">If pushing and pulling changes from the command line isn’t your thing, you can download <a href="https://desktop.github.com/">GitHub Desktop</a> to do it through a user-friendly interface.</p>
+
+<p>Push local changes to GitHub and Siteleaf:</p>
+
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ git add .
+$ git commit -m "Describe your changes here"
+$ git push</code></pre></figure>
+
+<p>Or pull the latest changes from GitHub and Siteleaf:</p>
+
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ git pull</code></pre></figure>
+
 
 
       <p class="document__improve">
-        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_api/jobs.md">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_themes/github-sync.markdown">
           Help improve this page &rarr;
         </a>
       </p>

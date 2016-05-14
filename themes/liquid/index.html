@@ -5,7 +5,7 @@
     <!-- <meta content="width=device-width, initial-scale=1" name="viewport"> -->
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
-    <title>Jobs | Siteleaf Documentation</title>
+    <title>Liquid | Siteleaf Documentation</title>
 
     <link href="/assets/css/main.css" rel="stylesheet">
     <link href="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.css" rel="stylesheet">
@@ -141,7 +141,7 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/themes/structure/">Theme structure</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/themes/liquid/">Liquid</a></li>
+            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/themes/liquid/">Liquid</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/themes/local-development/">Local development</a></li>
           
@@ -201,7 +201,7 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/defaults/">Defaults</a></li>
           
-            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/api/jobs/">Jobs</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/jobs/">Jobs</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/users/">Users</a></li>
           
@@ -216,58 +216,50 @@
 
 <section class="main__content">
   <div class="document">
-    <h1 class="document__title">Jobs</h1>
+    <h1 class="document__title">Liquid</h1>
 
     
 
-    <div class="document__content api__content">
-      <h2 id="overview">Overview</h2>
+    <div class="document__content">
+      <p>Liquid is an open-source templating language that was developed by <a href="http://shopify.com">Shopify</a>. It uses tags, objects, and filters to render out content into a theme.</p>
 
-<p>The Jobs endpoint can be used to monitor long running tasks, such as <a href="/api/sites#publish-a-site">publishing a site</a>.
-It uses <a href="https://html.spec.whatwg.org/multipage/comms.html#server-sent-events">Server Sent Events</a> (SSE) to comunicate with the client.</p>
+<p>For an in-depth Liquid reference, check out the <a href="https://docs.shopify.com/themess/liquid-documentation/basics">official Liquid documentation</a>. For a full list of tags and filters, see <a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers">Shopify’s Liquid for Designers</a> wiki.</p>
 
-<h2 id="listen-to-a-job">Listen to a job</h2>
+<h2 id="tags">Tags</h2>
 
-<p>Events are streamed to the client in real time, with event data encoded as JSON. When the job completes or fails the server will close the connection.  The last event is available for 30 minutes, after which the job id expires.</p>
+<p>A tag is a piece of logic that will tell the templating engine what to do. This includes operations like <code class="highlighter-rouge">if</code>, <code class="highlighter-rouge">for</code>, <code class="highlighter-rouge">foreach</code>, and <code class="highlighter-rouge">capture</code>. For example:</p>
 
-<h3 id="endpoint">Endpoint</h3>
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'Home'</span><span class="w"> </span><span class="p">%}</span>
+  Do something if condition is true
+<span class="p">{%</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">%}</span>
+  Do something if condition is false
+<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span></code></pre></figure>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/jobs/:job_id
-</code></pre>
-</div>
+<p>Note that each tag is ended with the same tag, prepended with <code class="highlighter-rouge">end</code>.</p>
 
-<h3 id="response">Response</h3>
+<h2 id="objects">Objects</h2>
 
-<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
-Content-Type: text/event-stream
-</code></pre>
-</div>
-<div class="highlighter-rouge"><pre class="highlight"><code>event:status
-data:{"status":"working","message":"Working...","updated_at":"1452890740"}
+<p>An object is a piece of data that has attributes with content. An object can be your site, a post, a set of posts, and so on. For example:</p>
 
-event:status
-data:{"status":"working","message":"Working...","updated_at":"1452890744"}
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="nv">post</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="p">}}</span></code></pre></figure>
 
-event:status
-data:{"status":"complete","message":"Done!","updated_at":"1452890745"}
-</code></pre>
-</div>
+<h2 id="filters">Filters</h2>
 
-<h3 id="response-after-job-expires">Response after job expires</h3>
+<p>Filters are used to modify the output of attributes (i.e., strings, numbers, variables, and objects):</p>
 
-<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 410 Gone
-Content-Type: text/event-stream
-</code></pre>
-</div>
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="s1">'sales'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">append</span><span class="p">:</span><span class="w"> </span><span class="s1">'.jpg'</span><span class="w"> </span><span class="p">}}</span>
+&lt;!-- Outputs: sales.jpg --&gt;</code></pre></figure>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>event:status
-data:{"status":"error","message":"Job not found"}
-</code></pre>
-</div>
+<h2 id="further-reading">Further Reading</h2>
+
+<ul>
+  <li><a href="https://github.com/Shopify/liquid/wiki">Shopify: Liquid wiki</a></li>
+  <li><a href="http://jekyllrb.com/docs/variables/">Jekyll: Variables</a></li>
+</ul>
 
 
       <p class="document__improve">
-        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_api/jobs.md">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_themes/liquid.markdown">
           Help improve this page &rarr;
         </a>
       </p>

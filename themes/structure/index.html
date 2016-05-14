@@ -5,7 +5,7 @@
     <!-- <meta content="width=device-width, initial-scale=1" name="viewport"> -->
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
-    <title>Jobs | Siteleaf Documentation</title>
+    <title>Theme structure | Siteleaf Documentation</title>
 
     <link href="/assets/css/main.css" rel="stylesheet">
     <link href="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.css" rel="stylesheet">
@@ -139,7 +139,7 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/themes/getting-started/">Getting started</a></li>
           
-            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/themes/structure/">Theme structure</a></li>
+            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/themes/structure/">Theme structure</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/themes/liquid/">Liquid</a></li>
           
@@ -201,7 +201,7 @@
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/defaults/">Defaults</a></li>
           
-            <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/api/jobs/">Jobs</a></li>
+            <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/jobs/">Jobs</a></li>
           
             <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/users/">Users</a></li>
           
@@ -216,58 +216,65 @@
 
 <section class="main__content">
   <div class="document">
-    <h1 class="document__title">Jobs</h1>
+    <h1 class="document__title">Theme structure</h1>
 
     
 
-    <div class="document__content api__content">
-      <h2 id="overview">Overview</h2>
+    <div class="document__content">
+      <p>Directory structure and naming is very important to Jekyll.</p>
 
-<p>The Jobs endpoint can be used to monitor long running tasks, such as <a href="/api/sites#publish-a-site">publishing a site</a>.
-It uses <a href="https://html.spec.whatwg.org/multipage/comms.html#server-sent-events">Server Sent Events</a> (SSE) to comunicate with the client.</p>
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">_layouts/
+  default.html
+_includes/
+  partial.html
+_posts/
+  2016-01-02-2015-a-post.markdown
+_sass/
+  _partial.sass
+_stuff/
+  a-thing.markdown
+_site/
+  ...
+_config.yml
+index.markdown</code></pre></figure>
 
-<h2 id="listen-to-a-job">Listen to a job</h2>
+<h2 id="layouts"><code class="highlighter-rouge">_layouts/</code></h2>
 
-<p>Events are streamed to the client in real time, with event data encoded as JSON. When the job completes or fails the server will close the connection.  The last event is available for 30 minutes, after which the job id expires.</p>
+<p>The <code class="highlighter-rouge">_layouts/</code> directory contains the layouts that Jekyll will use to render content. The default template (<code class="highlighter-rouge">default.html</code>) is what Jekyll will use if it isn’t told to use another layout. Generally, the layout is defined in the frontmatter of the content by giving the file name without an extension:</p>
 
-<h3 id="endpoint">Endpoint</h3>
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">---
+layout: other
+---</code></pre></figure>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/jobs/:job_id
-</code></pre>
-</div>
+<h2 id="includes"><code class="highlighter-rouge">_includes/</code></h2>
 
-<h3 id="response">Response</h3>
+<p>The <code class="highlighter-rouge">_includes/</code> directory contains fragments of code that aren’t necessarily entire templates. For example, you could contain the code for a blog post in one file and use it in multiple places.</p>
 
-<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 200 OK
-Content-Type: text/event-stream
-</code></pre>
-</div>
-<div class="highlighter-rouge"><pre class="highlight"><code>event:status
-data:{"status":"working","message":"Working...","updated_at":"1452890740"}
+<h2 id="posts"><code class="highlighter-rouge">_posts/</code></h2>
 
-event:status
-data:{"status":"working","message":"Working...","updated_at":"1452890744"}
+<p>The <code class="highlighter-rouge">_posts/</code> directory is where you put posts. Posts filenames include the timestamp and date (for example, a post titled “New York” that was created on January 6th, 2016 will turn into <code class="highlighter-rouge">2016-01-06-new-york.markdown</code>).</p>
 
-event:status
-data:{"status":"complete","message":"Done!","updated_at":"1452890745"}
-</code></pre>
-</div>
+<h2 id="sass"><code class="highlighter-rouge">_sass/</code></h2>
 
-<h3 id="response-after-job-expires">Response after job expires</h3>
+<p>Jekyll will automatically compile Sass/SCSS. You can add a partial to this directory (prefaced with a <code class="highlighter-rouge">_</code>), and then reference it in another file.</p>
 
-<div class="api__headers highlighter-rouge"><pre class="highlight"><code>Status: 410 Gone
-Content-Type: text/event-stream
-</code></pre>
-</div>
+<h2 id="site"><code class="highlighter-rouge">_site/</code></h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>event:status
-data:{"status":"error","message":"Job not found"}
-</code></pre>
-</div>
+<p>This is the directory where your site gets generated into. It’s a good idea to keep this out of version control!</p>
+
+<h2 id="configyml"><code class="highlighter-rouge">_config.yml</code></h2>
+
+<p>This is your Jekyll configuration file. The <a href="http://jekyllrb.com/docs/configuration/">Jekyll documentation</a> goes into great detail about configuration.</p>
+
+<h2 id="further-reading">Further Reading</h2>
+
+<ul>
+  <li><a href="http://jekyllrb.com/docs/structure/">Jekyll: Directory Structure</a></li>
+</ul>
 
 
       <p class="document__improve">
-        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_api/jobs.md">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_themes/structure.markdown">
           Help improve this page &rarr;
         </a>
       </p>
