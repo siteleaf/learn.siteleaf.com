@@ -4,10 +4,10 @@
 <loc>http://learn.siteleaf.com/</loc>
 </url>
 <url>
-<loc>http://learn.siteleaf.com/api/pages/</loc>
+<loc>http://learn.siteleaf.com/api/sites/</loc>
 </url>
 <url>
-<loc>http://learn.siteleaf.com/api/sites/</loc>
+<loc>http://learn.siteleaf.com/api/pages/</loc>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/api/users/</loc>
