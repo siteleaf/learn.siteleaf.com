@@ -7,7 +7,7 @@ layout: page
 
 Liquid is an open-source templating language that was developed by [Shopify](http://shopify.com). It uses tags, objects, and filters to render out content into a theme.
 
-For an in-depth Liquid reference, check out the [official Liquid documentation](https://docs.shopify.com/themes/liquid-documentation/basics). For a full list of tags and filters, see [Shopify's Liquid for Designers](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers) wiki.
+For an in-depth Liquid reference, check out the [official Liquid documentation](https://docs.shopify.com/themess/liquid-documentation/basics). For a full list of tags and filters, see [Shopify's Liquid for Designers](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers) wiki.
 
 ## Tags
 

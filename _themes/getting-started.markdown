@@ -5,9 +5,9 @@ position: 0
 layout: page
 ---
 
-To make a theme for Siteleaf, all you need to know is HTML and Liquid (which you can read more about in our [Liquid documentation](/theme-development/liquid/)). To set up your local environment, check out our [local development guide](/theme-development/local-development/).
+To make a theme for Siteleaf, all you need to know is HTML and Liquid (which you can read more about in our [Liquid documentation](/themes/liquid/)). To set up your local environment, check out our [local development guide](/themes/local-development/).
 
-Once you're up and running, [GitHub Sync](/theme-development/github-sync/) makes it incredibly simple to ensure your GitHub repository and Siteleaf site have the same content and theme.
+Once you're up and running, [GitHub Sync](/themes/github-sync/) makes it incredibly simple to ensure your GitHub repository and Siteleaf site have the same content and theme.
 
 A great resource for theme creation is [Jekyll's documentation](http://jekyllrb.com/docs): they go into depth with how different content types work and what Liquid tags and objects you have available for making your themes.
 

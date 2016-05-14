@@ -5,7 +5,7 @@ position: 3
 layout: page
 ---
 
-Documents are pieces of related content in a [Collection](/managing-content/collections/). They're similar to [Pages](/managing-content/pages/), except they belong to a collection rather than the site itself.
+Documents are pieces of related content in a [Collection](/content/collections/). They're similar to [Pages](/content/pages/), except they belong to a collection rather than the site itself.
 
 ## Options
 

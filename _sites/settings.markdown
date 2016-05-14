@@ -23,7 +23,7 @@ This is what Siteleaf bases your timestamps off of.
 
 ### Metadata
 
-You can also set [metadata](/managing-content/metadata) for the entire site here. In your theme, you can access this metadata on the `site` object. For example, if you had a piece of metadata called `description`, you can access it like this:
+You can also set [metadata](/content/metadata) for the entire site here. In your theme, you can access this metadata on the `site` object. For example, if you had a piece of metadata called `description`, you can access it like this:
 
 {% highlight liquid %}
 {% raw %}

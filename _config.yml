@@ -30,7 +30,7 @@ collections:
       icon: home
       in_nav: true
     position: 10
-  managing-content:
+  content:
     title: Managing Content
     output: true
     permalink: "/:collection/:path/"
@@ -42,7 +42,7 @@ collections:
   posts:
     title: Posts
     output: true
-  siteleaf-v2:
+  v2:
     title: Siteleaf v2
     output: true
     permalink: "/:collection/:path/"
@@ -51,7 +51,7 @@ collections:
       description: What's new in v2
       icon: info
       in_nav: true
-  theme-development:
+  themes:
     title: Theme Development
     output: true
     permalink: "/:collection/:path/"
