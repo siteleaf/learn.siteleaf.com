@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://learn.siteleaf.com/content/collections/</loc>
-</url>
-<url>
 <loc>http://learn.siteleaf.com/</loc>
-</url>
-<url>
-<loc>http://learn.siteleaf.com/content/documents/</loc>
-</url>
-<url>
-<loc>http://learn.siteleaf.com/content/metadata/</loc>
-</url>
-<url>
-<loc>http://learn.siteleaf.com/content/pages/</loc>
-</url>
-<url>
-<loc>http://learn.siteleaf.com/content/posts/</loc>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/api/pages/</loc>
@@ -71,6 +56,21 @@
 </url>
 <url>
 <loc>http://learn.siteleaf.com/getting-started/development-workflow/</loc>
+</url>
+<url>
+<loc>http://learn.siteleaf.com/content/posts/</loc>
+</url>
+<url>
+<loc>http://learn.siteleaf.com/content/pages/</loc>
+</url>
+<url>
+<loc>http://learn.siteleaf.com/content/collections/</loc>
+</url>
+<url>
+<loc>http://learn.siteleaf.com/content/documents/</loc>
+</url>
+<url>
+<loc>http://learn.siteleaf.com/content/metadata/</loc>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/v2/export-v1/</loc>
