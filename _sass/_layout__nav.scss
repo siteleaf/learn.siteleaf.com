@@ -44,9 +44,13 @@
   }
 
   &__header {
-    color: $text_dark;
+    // color: $text_dark;
     margin-bottom: 0;
     font-size: $font-size-n1;
+
+    a {
+      color: $text_dark;
+    }
 
     &--grid {
       font-size: $font-size-1;
