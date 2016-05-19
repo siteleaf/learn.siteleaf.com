@@ -44,9 +44,21 @@
   }
 
   &__header {
-    color: $text_dark;
+    // color: $text_dark;
     margin-bottom: 0;
     font-size: $font-size-n1;
+
+    a {
+      color: $text_dark;
+    }
+
+    &--current {
+      background: $color-gray-an2;
+      color: $color-gray-a1;
+      display: inline-block;
+      border-radius: $border-radius;
+      padding: 2px 5px;
+    }
 
     &--grid {
       font-size: $font-size-1;

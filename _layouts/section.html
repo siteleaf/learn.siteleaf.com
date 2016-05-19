@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+{% include sidebar.html %}
+
+<section class="main__content">
+  <div class="document">
+    <h1 class="document__title">{{ page.title }}</h1>
+
+    <div class="document__content">
+      <ul>
+        {% for document in site[page.collection] %}
+          {% if document.title != page.title %}
+            <li><a href="{{ document.url }}">{{ document.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
