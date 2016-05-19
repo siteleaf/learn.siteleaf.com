@@ -25,11 +25,6 @@
         <div class="wrap">
           <a class="nav__logo" href="/">Siteleaf Documentation</a>
           <ul class="nav__list nav__list--header">
-            {% for page in site.pages %}
-              {% if page.title and page.url != '/' %}
-                <li class="nav__item nav__item--header"><a class="nav__link nav__link--header" href="{{ page.url }}">{{ page.title }}</a></li>
-              {% endif %}
-            {% endfor %}
             <li class="nav__item nav__item--header">
               <a class="nav__link nav__link--header" href="{{ site.github_url }}">Contribute</a>
             </li>
