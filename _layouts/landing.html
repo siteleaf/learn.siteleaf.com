@@ -2,8 +2,28 @@
 layout: default
 ---
 
-<form class="form__search form__search--landing">
+<!-- <form class="form__search form__search--landing">
   <input class="form__input--search form__input--search--landing st-default-search-input" type="search" placeholder="Search">
+</form> -->
+
+<script>
+  (function() {
+    var cx = '004611147431180351508:4g8g1ea_gqi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<div style="width: 0px; overflow: hidden; height: 0;">
+  <gcse:search></gcse:search>
+</div>
+<form class="form__search form__search--landing" id="searchbox_004611147431180351508:4g8g1ea_gqi" action="">
+  <input value="004611147431180351508:4g8g1ea_gqi" name="cx" type="hidden">
+  <input value="FORID:11" name="cof" type="hidden">
+  <input id="q" style="" name="q" class="form__input--search form__input--search--landing" type="search" placeholder="Search">
 </form>
 
 {% assign sections = site.collections | sort:"position" %}
@@ -23,11 +43,3 @@ layout: default
     {% endfor %}
   </ul>
 </nav>
-
-<script type="text/javascript">
-  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-  _st('install','WgemsSzpiSJN3aaHTqYn','2.0.0');
-</script>

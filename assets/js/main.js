@@ -26,15 +26,18 @@ if (list != null) {
 
 // Toggle the nav on click on mobile.
 var toggle = document.querySelector('.nav__toggle');
-var toggle_button = toggle.firstElementChild;
-var sidebar = document.querySelector('.main__sidebar');
 
-toggle.onclick = function() {
-  sidebar.classList.toggle("main__sidebar--mobile-hidden")
+if (toggle) {
+  var toggle_button = toggle.firstElementChild;
+  var sidebar = document.querySelector('.main__sidebar');
 
-  if (sidebar.classList.contains("main__sidebar--mobile-hidden")) {
-    toggle_button.innerHTML = "&#9776;";
-  } else {
-    toggle_button.innerHTML = "&#10006;"
-  }
-};
+  toggle.onclick = function() {
+    sidebar.classList.toggle("main__sidebar--mobile-hidden")
+
+    if (sidebar.classList.contains("main__sidebar--mobile-hidden")) {
+      toggle_button.innerHTML = "&#9776;";
+    } else {
+      toggle_button.innerHTML = "&#10006;"
+    }
+  };
+}
