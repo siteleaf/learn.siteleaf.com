@@ -15,7 +15,7 @@
   {% for section in sections %}
     {% if section.title and section.meta.in_nav == true %}
       <nav class="nav nav--mobile">
-        <h3 class="nav__header"><a href="/{{ section.label }}/">{{ section.title }}</a></h3>
+        <h3 class="nav__header{% if page.title == section.title %} nav__header--current{% endif %}"><a href="/{{ section.label }}/">{{ section.title }}</a></h3>
         <ul class="nav__list nav__list--sidebar">
           {% assign documents = section.docs | sort:"position" %}
           {% for document in documents %}
