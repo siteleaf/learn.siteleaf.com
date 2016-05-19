@@ -1,5 +1,6 @@
 ---
 title: Theme Development
-permalink: /themes/
+permalink: "/themes/"
 layout: section
 ---
+

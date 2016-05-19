@@ -1,5 +1,6 @@
 ---
 title: Managing Content
-permalink: /content/
+permalink: "/content/"
 layout: section
 ---
+

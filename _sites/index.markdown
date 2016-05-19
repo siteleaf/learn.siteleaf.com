@@ -1,5 +1,6 @@
 ---
 title: Deploy and Collaborate
-permalink: /sites/
+permalink: "/sites/"
 layout: section
 ---
+

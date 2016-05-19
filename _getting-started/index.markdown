@@ -1,5 +1,6 @@
 ---
 title: Getting Started
-permalink: /getting-started/
+permalink: "/getting-started/"
 layout: section
 ---
+
