@@ -31,14 +31,14 @@
 
   &__logo {
     color: $color-white;
-    font-size: $font-size-2;
+    font-size: $font-size-1;
     font-weight: $font-weight-semibold;
     display: block;
-    height: $v * 2;
+    height: $v * 1.5;
     float: left;
 
     img {
-      height: $v * 2;
+      height: $v * 1.5;
       max-width: 100%;
       padding-right: $v * 0;
       display: inline-block;
@@ -47,7 +47,7 @@
 
     span {
       display: inline-block;
-      line-height: $v * 2;
+      line-height: $v * 1.5;
       margin-left: $v / 2;
     }
 
@@ -93,9 +93,9 @@
     &--header {
       float: right;
       display: block;
-      line-height: $v * 2;
+      line-height: $v * 1.5;
       text-align: right;
-      height: $v * 2;
+      height: $v * 1.5;
     }
 
     &--grid {
