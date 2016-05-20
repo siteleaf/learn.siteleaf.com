@@ -1,12 +1,8 @@
-/*
-  Siteleaf Learn
-*/
-
 .wrap, .container {
   @include clearfix;
 
   margin-left: auto;
   margin-right: auto;
-  width: $width-container;
   max-width: $max-width-wide;
+  width: $width-container;
 }

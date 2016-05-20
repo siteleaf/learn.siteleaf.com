@@ -16,22 +16,22 @@
   color: $color-gray-1;
   font-size: $font-size-html-sm;
   font-size: $font-size-n2;
-  background: $bg_gray;
+  background: $color-bg-gray;
 
   @media (max-width: $max-width-narrow) {
     display: none;
   }
 
-  strong{
+  strong {
     color: $color-gray-2;
     display: block;
   }
 
-  a{
+  a {
     color: $color-gray-1;
     text-decoration: underline;
 
-    &:hover{
+    &:hover {
       color: $color-blue-dark;
     }
   }

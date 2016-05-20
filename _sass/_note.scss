@@ -1,0 +1,41 @@
+.note__info, .note__aside{
+  border-radius: $border-radius;
+  padding: 20px;
+  position: relative;
+
+  &:before {
+    @include icon;
+    font-size: 1.25em;
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    opacity: 0.3;
+  }
+}
+
+.note__info {
+  background-color: rgba($color-yellow, 0.2);
+  color: darken($color-yellow, 20%);
+
+  code {
+    background-color: rgba(#000, 0.08);
+    color: darken($color-yellow, 20%);
+  }
+
+  strong {
+    color: darken($color-yellow, 30%);
+  }
+
+  &:before {
+    content: 'ℹ';
+  }
+}
+
+.note__aside {
+  background-color: $color-bg-gray;
+  font-size: $font-size-n2;
+
+  &:before {
+    content: '';
+  }
+}

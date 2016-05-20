@@ -1,7 +1,3 @@
-/*
-  Siteleaf Learn
-*/
-
 *, *:before, *:after {
   @include box-sizing(inherit);
 }
@@ -14,7 +10,7 @@ html {
 body {
   @include antialias;
 
-  color: $text_normal;
+  color: $color-text-normal;
   font-family: $font-family-sans-serif;
   font-size: $font-size-0;
   letter-spacing: $letter-spacing-base;
@@ -37,7 +33,7 @@ em {
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: $v / 2;
-  color: $text_dark;
+  color: $color-text-dark;
 }
 
 h1 {
@@ -98,7 +94,7 @@ ul, ol {
 
 strong {
   font-weight: $font-weight-semibold;
-  color: $text_dark;
+  color: $color-text-dark;
 }
 
 table {
@@ -111,184 +107,15 @@ table {
     font-weight: $font-weight-semibold;
   }
 
+  th, td {
+    padding-right: $v / 2;
+  }
+
   thead {
     border-bottom: 1px solid $color-gray-an2;
   }
 }
 
-.main {
-  &__sidebar {
-    float: left;
-    width: 25%;
-
-    &--mobile-hidden {
-      display: block;
-
-      @media (max-width: $max-width-narrow) {
-        display: none;
-      }
-    }
-  }
-
-  &__content {
-    float: right;
-    width: 70%;
-
-    img {
-      border: 5px solid $color-gray-an3;
-      box-sizing: border-box;
-    }
-  }
-
-  @media (max-width: $max-width-narrow) {
-    &__sidebar, &__content {
-      width: 100%;
-    }
-
-    &__sidebar {
-      margin-bottom: $v;
-    }
-  }
-
-  @media (max-width: $max-width-narrow) {
-    &__sidebar, &__content {
-      width: 100%;
-    }
-
-    &__sidebar {
-      border-bottom: 5px solid $color-gray-an2;
-      padding-bottom: $v;
-      margin-bottom: $v;
-    }
-  }
-
-  @media (min-width: $max-width-narrow) {
-    display: block !important;
-  }
-}
-
-.form {
-  &__search {
-    margin-bottom: $v;
-  }
-
-  &__input {
-    &--search {
-      box-sizing: border-box;
-      border: 1px solid $color-gray-an2;
-      border-radius: 0;
-      font-family: $font-family-sans-serif;
-      font-size: $font-size-n2;
-      display: block;
-      height: auto;
-      height: $v * 2;
-      width: 100%;
-      padding: $v / 2;
-      background-position-y: center;
-
-      &:focus {
-        border-color: $color-gray-a1;
-      }
-    }
-  }
-}
-
-.document {
-  &__title {
-    border-bottom: 3px solid $color-gray-an2;
-    padding-bottom: $v;
-    margin-bottom: $v;
-
-    &--landing {
-      border: none;
-      margin-bottom: $v * 1;
-      text-align: center;
-    }
-  }
-
-  &__summary {
-    border-left: 5px solid $color-gray-an2;
-    color: $color-gray-a1;
-    margin-bottom: $v / 2;
-    padding-left: $v / 2;
-
-    h3 {
-      margin-bottom: 0;
-    }
-  }
-
-  &__improve {
-    font-size: $font-size-html-sm;
-    margin-top: $v * 2;
-  }
-
-  #further-reading {
-    border-top: 1px solid $color-gray-an2;
-    padding-top: $v;
-    margin-top: $v;
-  }
-}
-
-.document__content h3{
-  margin-top: $v * 2;
-}
-
 .highlight {
   margin-bottom: $v;
-}
-
-.footer {
-  .wrap {
-    border-top: 1px solid $color-gray-an2;
-    padding-top: $v;
-    font-size: $font-size-html-sm;
-    margin-bottom: $v;
-    margin-top: $v;
-  }
-}
-
-.note__info, .note__aside{
-  border-radius: $border-radius;
-  padding: 20px;
-  position: relative;
-
-  &:before {
-    @include icon;
-    font-size: 1.25em;
-    position: absolute;
-    top: 2px;
-    right: 10px;
-    opacity: 0.3;
-  }
-}
-
-.note__info {
-  background-color: rgba($color-yellow, 0.2);
-  color: darken($color-yellow, 20%);
-
-  code {
-    background-color: rgba(#000, 0.08);
-    color: darken($color-yellow, 20%);
-  }
-
-  strong {
-    color: darken($color-yellow, 30%);
-  }
-
-  &:before {
-    content: 'ℹ';
-  }
-}
-
-.note__aside {
-  background-color: $bg_gray;
-  font-size: $font-size-n2;
-
-  &:before {
-    content: '';
-  }
-}
-
-.gsc-control-cse .gsc-table-result {
-  margin-left: 8px;
 }

@@ -1,7 +1,3 @@
-/*
-  Siteleaf Learn
-*/
-
 .nav {
   @include clearfix;
 
@@ -58,12 +54,12 @@
   }
 
   &__header {
-    // color: $text_dark;
+    // color: $color-text-dark;
     margin-bottom: 0;
     font-size: $font-size-n1;
 
     a {
-      color: $text_dark;
+      color: $color-text-dark;
     }
 
     &--current {
