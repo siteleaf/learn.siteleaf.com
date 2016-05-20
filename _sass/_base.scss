@@ -173,7 +173,7 @@ table {
   }
 
   &__input {
-    &--search.st-default-search-input {
+    &--search {
       box-sizing: border-box;
       border: 1px solid $color-gray-an2;
       border-radius: 0;
@@ -183,6 +183,7 @@ table {
       height: auto;
       height: $v * 2;
       width: 100%;
+      padding: $v / 2;
       background-position-y: center;
 
       &:focus {
