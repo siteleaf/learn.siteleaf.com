@@ -72,7 +72,7 @@ defaults:
     type: api
   values:
     layout: api
-url: learn.siteleaf.com
+url: http://learn.siteleaf.com
 permalink: pretty
 github_url: https://github.com/siteleaf/learn.siteleaf.com
 sass:
