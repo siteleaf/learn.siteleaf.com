@@ -20,7 +20,7 @@
       ga('create', 'UA-1666437-41', 'auto');
       ga('send', 'pageview');
     </script>
-    <header class="header" data-swiftype-index="false">
+    <header class="header nocontent">
       <nav class="nav">
         <div class="wrap">
           <a class="nav__logo" href="/">Siteleaf Documentation</a>
@@ -40,25 +40,34 @@
         </div>
       </nav>
     </header>
-    <div class="beta-notice" data-swiftype-index='false'>
+    <div class="beta-notice nocontent">
       <div class="wrap">
         <strong>Please note</strong> This documentation is a <em>work in progress</em> and is only for version 2 of Siteleaf. For v1 documentation, please see the <a href="http://www.siteleaf.com/help/">v1 help site</a>. You can also <a href="https://github.com/siteleaf/learn.siteleaf.com">contribute to this documentation on GitHub</a> and we'll <span class="ss-icon">love</span> you forever.
       </div>
     </div>
     <main class="main">
       <div class="wrap">
-        <aside class="main__sidebar main__sidebar--mobile-hidden" data-swiftype-index="false">
-  <form class="form__search">
-    <input class="form__input--search st-default-search-input" type="search" placeholder="Search">
-  </form>
+        <aside class="main__sidebar main__sidebar--mobile-hidden nocontent">
+  <script>
+  (function() {
+    var cx = '004611147431180351508:4g8g1ea_gqi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<div style="width: 0px; overflow: hidden; height: 0;">
+  <gcse:search></gcse:search>
+</div>
 
-  <script type="text/javascript">
-    (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-    })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-    _st('install','WgemsSzpiSJN3aaHTqYn','2.0.0');
-    </script>
+<form class="form__search form__search--landing" id="searchbox_004611147431180351508:4g8g1ea_gqi" action="">
+  <input value="004611147431180351508:4g8g1ea_gqi" name="cx" type="hidden">
+  <input value="FORID:11" name="cof" type="hidden">
+  <input id="q" style="" name="q" class="form__input--search form__input--search--landing" type="search" placeholder="Search">
+</form>
 
   
   
@@ -745,7 +754,7 @@ Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
 
       </div>
     </main>
-    <footer class="footer" data-swiftype-index='false'>
+    <footer class="footer nocontent">
       <div class="wrap">
         <p class="footer__copyright">&copy; 2016. Siteleaf&trade; is made by <a href="http://oak.is">Oak</a>.</p>
       </div>
