@@ -10,7 +10,8 @@ layout: default
 
     <div class="document__content">
       <ul>
-        {% for document in site[page.collection] %}
+        {% assign documents = site[page.collection] | sort:"position" %}
+        {% for document in documents %}
           {% if document.title != page.title %}
             <li><a href="{{ document.url }}">{{ document.title }}</a></li>
           {% endif %}
