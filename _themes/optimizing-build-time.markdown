@@ -18,3 +18,7 @@ You can exclude files and folders from the Jekyll build by adding `exclude` [lis
 ## Limiting large and nested `for` loops
 
 `for` loops can make building your site very slow, especially if you have a lot of content. For example, if you have 1,000 posts, and on each post page you are showing a full archive of your posts, Jekyll will need to loop through your entire set of posts 1,000,000 times! Nesting multiple `for` loops inside each other can also significantly increase your site build times.
+
+## Further Reading
+
+- [13 steps to a faster Jekyll website](https://wiredcraft.com/blog/make-jekyll-fast/)
