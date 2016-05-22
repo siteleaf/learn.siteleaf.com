@@ -340,6 +340,12 @@
 
 <p><code class="highlighter-rouge">for</code> loops can make building your site very slow, especially if you have a lot of content. For example, if you have 1,000 posts, and on each post page you are showing a full archive of your posts, Jekyll will need to loop through your entire set of posts 1,000,000 times! Nesting multiple <code class="highlighter-rouge">for</code> loops inside each other can also significantly increase your site build times.</p>
 
+<h2 id="using-incremental-builds">Using incremental builds</h2>
+
+<p>When you’re in development, you can have Jekyll only rebuild parts of the site that it needs to by using the <code class="highlighter-rouge">--incremental</code> flag:</p>
+
+<figure class="highlight"><pre><code class="language-plain" data-lang="plain">jekyll serve --incremental</code></pre></figure>
+
 <h2 id="further-reading">Further Reading</h2>
 
 <ul>
