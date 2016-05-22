@@ -33,9 +33,23 @@
     color: $color-white;
     font-size: $font-size-1;
     font-weight: $font-weight-semibold;
-    display: inline-block;
-    line-height: $line-height-base;
+    display: block;
+    height: $v * 1.5;
     float: left;
+
+    img {
+      height: $v * 1.5;
+      max-width: 100%;
+      padding-right: $v * 0;
+      display: inline-block;
+      float: left;
+    }
+
+    span {
+      display: inline-block;
+      line-height: $v * 1.5;
+      margin-left: $v / 2;
+    }
 
     &:hover {
       color: rgba($color-white, 0.6);
@@ -78,8 +92,10 @@
 
     &--header {
       float: right;
-      display: inline-block;
+      display: block;
+      line-height: $v * 1.5;
       text-align: right;
+      height: $v * 1.5;
     }
 
     &--grid {
@@ -105,7 +121,8 @@
     padding-left: 0;
 
     &--header {
-      display: none;
+      display: inline-block;
+      font-size: $font-size-html;
       line-height: $line-height-tight;
 
       @media (min-width: $max-width-narrow) {
