@@ -1,6 +1,7 @@
 ---
 title: Siteleaf Documentation
 timezone: America/New_York
+url: learn.siteleaf.com
 collections:
   api:
     title: API
