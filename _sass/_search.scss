@@ -1,24 +1,21 @@
-.form {
-  &__search {
-    margin-bottom: $v;
-  }
+.search {
+  margin-bottom: $v;
+}
 
-  &__input {
-    &--search.st-default-search-input {
-      box-sizing: border-box;
-      border: 1px solid $color-gray-an2;
-      border-radius: 0;
-      font-family: $font-family-sans-serif;
-      font-size: $font-size-n2;
-      display: block;
-      height: auto;
-      height: $v * 2;
-      width: 100%;
-      background-position-y: center;
+.search__input {
+  box-sizing: border-box;
+  border: 1px solid $color-gray-an2;
+  border-radius: 0;
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-n2;
+  display: block;
+  height: auto;
+  height: $v * 2;
+  width: 100%;
+  padding: $v / 2;
+  background-position-y: center;
 
-      &:focus {
-        border-color: $color-gray-a1;
-      }
-    }
+  &:focus {
+    border-color: $color-gray-a1;
   }
 }

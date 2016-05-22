@@ -102,6 +102,10 @@ table {
   margin-bottom: $v;
   text-align: left;
   width: 100%;
+  
+  thead {
+    border-bottom: 1px solid $color-gray-an2;
+  }
 
   th {
     font-weight: $font-weight-semibold;
@@ -109,10 +113,6 @@ table {
 
   th, td {
     padding-right: $v / 2;
-  }
-
-  thead {
-    border-bottom: 1px solid $color-gray-an2;
   }
 }
 
