@@ -1,7 +1,6 @@
 ---
 title: Siteleaf Documentation
 timezone: America/New_York
-url: learn.siteleaf.com
 collections:
   api:
     title: API
@@ -73,6 +72,7 @@ defaults:
     type: api
   values:
     layout: api
+url: learn.siteleaf.com
 permalink: pretty
 github_url: https://github.com/siteleaf/learn.siteleaf.com
 sass:
