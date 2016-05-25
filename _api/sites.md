@@ -73,6 +73,12 @@ example_response: |-
 GET {{ site.data.api.url | append: 'sites' }}
 ~~~
 
+### Query String Params
+
+| Name | Desc |
+|------|------|
+| `sort` | Should be formated as `field-asc` or `field-desc` |
+
 ### Response
 
 {{ site.data.api.status_paginated }}
