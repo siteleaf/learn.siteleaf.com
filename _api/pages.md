@@ -62,6 +62,7 @@ GET {{ site.data.api.url | append: 'sites/:site_id/pages' }}
 | `q`  | Searches by `title` and `path` |
 | `sort` | Should be formated as `field-asc` or `field-desc` |
 | `visibility` | Can be either `visible` or `hidden` |
+| `extensions` | A comma separated list of file extensions, or `markdown` which is equivalent to `markdown,md,mkdown,mkdn,mkd` |
 
 ### Response
 
