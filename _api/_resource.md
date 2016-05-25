@@ -35,6 +35,13 @@ Template page for API resources
 GET {{ site.data.api.url | append: 'resources' }}
 ~~~
 
+### Query String Params
+
+| Name | Desc |
+|------|------|
+| `foo` | foobar |
+
+
 ### Response
 
 {{ site.data.api.status_paginated }}

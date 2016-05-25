@@ -179,6 +179,13 @@ DELETE {{ site.data.api.url | append: 'sites/:site_id/collections/:path' }}
 GET {{ site.data.api.url | append: 'sites/:site_id/collections/:path/files' }}
 ~~~
 
+### Query String Params
+
+| Name | Desc |
+|------|------|
+| `q`  | Searches by `filename` |
+| `sort` | Should be formated as `field-asc` or `field-desc` |
+
 ### Response
 
 {{ site.data.api.status_paginated }}
