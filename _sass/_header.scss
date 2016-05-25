@@ -13,7 +13,7 @@
   padding: 15px 0;
   margin-bottom: 40px;
   line-height: $line-height-tight;
-  color: $color-gray-1;
+  color: $color-gray-2;
   font-size: $font-size-html-sm;
   font-size: $font-size-n2;
   background: $color-bg-gray;
@@ -23,12 +23,11 @@
   }
 
   strong {
-    color: $color-gray-2;
     display: block;
   }
 
   a {
-    color: $color-gray-1;
+    color: $color-gray-2;
     text-decoration: underline;
 
     &:hover {
