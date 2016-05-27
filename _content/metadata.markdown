@@ -12,8 +12,7 @@ Metadata is the equivalent of [Jekyll's YAML frontmatter](https://jekyllrb.com/d
 {: .note__aside}
 
 - [Field types](#field-types)
-- [Smart Field Names](#smart-field-names)
-- [Defining default fields](#defining-default-fields)
+- [Smart Field Names (for files, colorpickers, etc)](#smart-field-names)
 
 ----
 
