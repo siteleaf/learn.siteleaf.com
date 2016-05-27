@@ -9,8 +9,8 @@ Instead of defining fields each time you create a page, post, or document, you c
 
 The `defaults` key in your `_config.yml` file is a list of different defaults. Each list item has two objects: `scope` and `values`.
 
-- `scope` is how you choose which collection and files you're setting values to.
-- `values` is where you define the actual defaults you want to apply.
+- `scope` is how you choose which collection and files you're defining defaults on.
+- `values` is where you define your default fields.
 
 For example:
 
