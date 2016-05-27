@@ -123,8 +123,6 @@ Metadata fields with a name ending in `at`, `date`, or `datetime` will have a bu
 
 Metadata fields with a name ending in `color`, `colour`, `colors`, `colours`, `hex`, `rgb`, `rgba`, `hsl`, `hsla`, `hsv`, or `hsva` will have a button within it which opens a color picker ui. The button will have its color set to the value of the field.
 
-----
-
 ## Further reading
 
 - [Default fields](/content/defaults)
