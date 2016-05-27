@@ -54,7 +54,7 @@
               <a class="nav__link nav__link--header" href="https://github.com/siteleaf/learn.siteleaf.com">Contribute</a>
             </li>
             <li class="nav__item nav__item--header">
-              <a class="nav__link nav__link--header" href="http://status.siteleaf.com/">Status</a>
+              <a class="nav__link nav__link--header js-status" href="http://status.siteleaf.com/">Status</a>
             </li>
             
               <li class="nav__item nav__item--header nav__toggle">
@@ -172,6 +172,10 @@
           
             
               <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/content/posts/">Posts</a></li>
+            
+          
+            
+              <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/content/defaults/">Default fields</a></li>
             
           
         </ul>
@@ -345,6 +349,35 @@
 <div class="highlighter-rouge"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/sites/:site_id/collections/:path/documents
 </code></pre>
 </div>
+
+<h3 id="query-string-params">Query String Params</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Desc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">q</code></td>
+      <td>Searches by <code class="highlighter-rouge">title</code> and <code class="highlighter-rouge">path</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">sort</code></td>
+      <td>Should be formated as <code class="highlighter-rouge">field-asc</code> or <code class="highlighter-rouge">field-desc</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">visibility</code></td>
+      <td>Can be one of <code class="highlighter-rouge">visible</code>, <code class="highlighter-rouge">hidden</code> or <code class="highlighter-rouge">draft</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">extensions</code></td>
+      <td>A comma separated list of file extensions, or <code class="highlighter-rouge">markdown</code> which is equivalent to <code class="highlighter-rouge">markdown,md,mkdown,mkdn,mkd</code></td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="response">Response</h3>
 

@@ -6,25 +6,25 @@
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
     <!-- Begin Jekyll SEO tag v1.4.0 -->
-<title>Hosting and Sync - Siteleaf Documentation</title>
-<meta property="og:title" content="Hosting and Sync" />
-<meta name="description" content="Overview" />
-<meta property="og:description" content="Overview" />
-<link rel="canonical" href="http://learn.siteleaf.com/api/hosting-sync/" />
-<meta property="og:url" content="http://learn.siteleaf.com/api/hosting-sync/" />
+<title>Default fields - Siteleaf Documentation</title>
+<meta property="og:title" content="Default fields" />
+<meta name="description" content="Instead of defining fields each time you create a page, post, or document, you can set defaults in your _config.yml theme file. In most cases, it’ll be handy to set at least the default layout." />
+<meta property="og:description" content="Instead of defining fields each time you create a page, post, or document, you can set defaults in your _config.yml theme file. In most cases, it’ll be handy to set at least the default layout." />
+<link rel="canonical" href="http://learn.siteleaf.com/content/defaults/" />
+<meta property="og:url" content="http://learn.siteleaf.com/content/defaults/" />
 <meta property="og:site_name" content="Siteleaf Documentation" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2016-03-03T20:51:00+00:00" />
-<link rel="next" href="http://learn.siteleaf.com/api/defaults/" title="Defaults" />
-<link rel="prev" href="http://learn.siteleaf.com/api/pagination/" title="Pagination" />
+<meta property="article:published_time" content="2016-05-26T02:00:00+00:00" />
+<link rel="next" href="http://learn.siteleaf.com/content/" title="Managing Content" />
+<link rel="prev" href="http://learn.siteleaf.com/content/metadata/" title="Metadata" />
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
-    "headline": "Hosting and Sync",
-    "datePublished": "2016-03-03T20:51:00+00:00",
-    "description": "Overview",
-    "url": "http://learn.siteleaf.com/api/hosting-sync/"
+    "headline": "Default fields",
+    "datePublished": "2016-05-26T02:00:00+00:00",
+    "description": "Instead of defining fields each time you create a page, post, or document, you can set defaults in your _config.yml theme file. In most cases, it’ll be handy to set at least the default layout.",
+    "url": "http://learn.siteleaf.com/content/defaults/"
   }
 </script>
 <!-- End Jekyll SEO tag -->
@@ -175,7 +175,7 @@
             
           
             
-              <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/content/defaults/">Default fields</a></li>
+              <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/content/defaults/">Default fields</a></li>
             
           
         </ul>
@@ -315,7 +315,7 @@
             
           
             
-              <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/api/hosting-sync/">Hosting and Sync</a></li>
+              <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/api/hosting-sync/">Hosting and Sync</a></li>
             
           
         </ul>
@@ -327,178 +327,62 @@
 
 <section class="main__content">
   <div class="document">
-    <h1 class="document__title">Hosting and Sync</h1>
+    <h1 class="document__title">Default fields</h1>
 
     
 
-    <div class="document__content api__content">
-      <h2 id="overview">Overview</h2>
+    <div class="document__content">
+      <p>Instead of defining fields each time you create a page, post, or document, you can set defaults in your <code class="highlighter-rouge">_config.yml</code> theme file. In most cases, it’ll be handy to set at least the default layout.</p>
 
-<ol>
-  <li><a href="#hosting-options">Hosting options</a></li>
-  <li><a href="#sync-options">Sync options</a></li>
-</ol>
+<p>The <code class="highlighter-rouge">defaults</code> key in your <code class="highlighter-rouge">_config.yml</code> file is a list of different defaults. Each list item has two objects: <code class="highlighter-rouge">scope</code> and <code class="highlighter-rouge">values</code>.</p>
 
-<h2 id="hosting-options">Hosting options</h2>
+<ul>
+  <li><code class="highlighter-rouge">scope</code> is how you choose which collection and files you’re defining defaults on.</li>
+  <li><code class="highlighter-rouge">values</code> is where you define your default fields.</li>
+</ul>
 
-<p>Depending on your sites <code class="highlighter-rouge">hosting</code> value, the <code class="highlighter-rouge">hosting_options</code> fields are:</p>
+<p>For example:</p>
 
-<h3 id="hosting-github">Hosting: <code class="highlighter-rouge">github</code></h3>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">defaults</span><span class="pi">:</span>
+  <span class="pi">-</span>
+    <span class="s">scope</span><span class="pi">:</span>
+      <span class="s">path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+      <span class="s">type</span><span class="pi">:</span> <span class="s2">"</span><span class="s">posts"</span>
+    <span class="s">values</span><span class="pi">:</span>
+      <span class="s">layout</span><span class="pi">:</span> <span class="s2">"</span><span class="s">default"</span>
+      <span class="s">author</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Ethan"</span>
+  <span class="pi">-</span>
+    <span class="s">scope</span><span class="pi">:</span>
+      <span class="s">path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+      <span class="s">type</span><span class="pi">:</span> <span class="s2">"</span><span class="s">pages"</span>
+    <span class="s">values</span><span class="pi">:</span>
+      <span class="s">layout</span><span class="pi">:</span> <span class="s2">"</span><span class="s">page"</span>
+  <span class="pi">-</span>
+    <span class="s">scope</span><span class="pi">:</span>
+      <span class="s">path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">projects"</span>
+      <span class="s">type</span><span class="pi">:</span> <span class="s2">"</span><span class="s">pages"</span>
+    <span class="s">values</span><span class="pi">:</span>
+      <span class="s">layout</span><span class="pi">:</span> <span class="s2">"</span><span class="s">project"</span></code></pre></figure>
 
-<table>
-  <thead>
-    <tr>
-      <th>Key</th>
-      <th>Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="highlighter-rouge">access_token</code></td>
-      <td>Github Access Token <strong>(required)</strong></td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">path</code></td>
-      <td>Full repository name <code class="highlighter-rouge">&lt;user name&gt;/&lt;repo name&gt;</code> <strong>(required)</strong></td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">branch</code></td>
-      <td>Branch name, <code class="highlighter-rouge">gh-pages</code> by default</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">format</code></td>
-      <td><code class="highlighter-rouge">raw</code> or <code class="highlighter-rouge">compiled</code> (Github Pages or Siteleaf compile) <strong>(required)</strong></td>
-    </tr>
-  </tbody>
-</table>
+<p>In this case, we’re:</p>
 
-<h3 id="hosting-s3">Hosting: <code class="highlighter-rouge">s3</code></h3>
+<ul>
+  <li>Setting the <code class="highlighter-rouge">layout</code> and <code class="highlighter-rouge">author</code> for all posts</li>
+  <li>Setting the <code class="highlighter-rouge">layout</code> for all pages.</li>
+  <li>Overriding the previous default <code class="highlighter-rouge">layout</code> for all pages in the <code class="highlighter-rouge">projects/</code> path.</li>
+</ul>
 
-<table>
-  <thead>
-    <tr>
-      <th>Key</th>
-      <th>Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="highlighter-rouge">access_key</code></td>
-      <td>AWS Access Key <strong>(required)</strong></td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">secret_key</code></td>
-      <td>AWS Secret Key <strong>(required)</strong></td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">path</code></td>
-      <td>S3 bucket name <strong>(required)</strong></td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">region</code></td>
-      <td>Region of S3 bucket <strong>(required)</strong></td>
-    </tr>
-  </tbody>
-</table>
+<p>Note that <code class="highlighter-rouge">type</code> can be <code class="highlighter-rouge">posts</code>, <code class="highlighter-rouge">pages</code> or any other collection name (e.g. <code class="highlighter-rouge">people</code>).</p>
 
-<h3 id="hosting-ftp">Hosting: <code class="highlighter-rouge">ftp</code></h3>
+<h2 id="further-reading">Further Reading:</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Key</th>
-      <th>Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="highlighter-rouge">protocol</code></td>
-      <td><code class="highlighter-rouge">ftp</code> or <code class="highlighter-rouge">sftp</code> <strong>(required)</strong></td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">host</code></td>
-      <td>Host name <strong>(required)</strong></td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">port</code></td>
-      <td>Port number, 21 if ftp or 22 if sftp by default</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">username</code></td>
-      <td>FTP username <strong>(required)</strong></td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">password</code></td>
-      <td>FTP password <strong>(required)</strong></td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">path</code></td>
-      <td>Path where site will be published <strong>(required)</strong></td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="hosting-cloudfiles">Hosting: <code class="highlighter-rouge">cloudfiles</code></h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Key</th>
-      <th>Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="highlighter-rouge">username</code></td>
-      <td>Rackspace username <strong>(required)</strong></td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">api_key</code></td>
-      <td>Rackspace API key <strong>(required)</strong></td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">path</code></td>
-      <td>Container name <strong>(required)</strong></td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">region</code></td>
-      <td>Region of container <strong>(required)</strong></td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="sync-options">Sync options</h2>
-
-<p>Github is currently the only <code class="highlighter-rouge">sync</code> provider, the <code class="highlighter-rouge">sync_options</code> are:</p>
-
-<h3 id="sync-github">Sync: <code class="highlighter-rouge">github</code></h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Key</th>
-      <th>Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="highlighter-rouge">access_token</code></td>
-      <td>Github Access Token <strong>(required)</strong></td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">path</code></td>
-      <td>Full repository name <code class="highlighter-rouge">&lt;user name&gt;/&lt;repo name&gt;</code> <strong>(required)</strong></td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">branch</code></td>
-      <td>Branch name, <code class="highlighter-rouge">master</code> by default</td>
-    </tr>
-  </tbody>
-</table>
+<ul>
+  <li><a href="http://jekyllrb.com/docs/configuration/#front-matter-defaults">Jekyll: Front Matter defaults</a></li>
+</ul>
 
 
       <p class="document__improve">
-        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_api/hosting-sync.md">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_content/defaults.markdown">
           Help improve this page &rarr;
         </a>
       </p>
