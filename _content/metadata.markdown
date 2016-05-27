@@ -126,10 +126,7 @@ Metadata fields with a name ending in `color`, `colour`, `colors`, `colours`, `h
 
 ----
 
-## Defining default fields
-
-You can define defaults for all your content (or by collection) in your config file. [More information on setting defaults can be found in the Jekyll docs.](http://jekyllrb.com/docs/configuration/#front-matter-defaults)
-
 ## Further reading
 
+- [Default fields](/content/defaults)
 - [Jekyll Frontmatter](https://jekyllrb.com/docs/frontmatter/)

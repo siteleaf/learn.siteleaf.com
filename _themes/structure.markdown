@@ -34,6 +34,8 @@ layout: other
 ---
 {% endhighlight %}
 
+You can also define the default layout to use. [Read more about defining defaults here](/content/defaults).
+
 ## `_includes/`
 
 The `_includes/` directory contains fragments of code that aren't necessarily entire templates. For example, you could contain the code for a blog post in one file and use it in multiple places.
