@@ -16,7 +16,7 @@ example_response: |-
       "cname": "username.github.io",
       "created_at": "2015-11-04 15:28:42 -0500",
       "defaults": [],
-      "domain": "testsitev2.siteleaf.biz",
+      "domain": "testsitev2.siteleaf.net",
       "id": "563a6a7a1829c7081b000000",
       "jobs": {
           "preview": {
