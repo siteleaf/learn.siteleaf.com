@@ -49,3 +49,7 @@ Siteleaf also offers [GitHub Sync](/themes/github-sync/). With this enabled, any
 ## Plugins
 
 Jekyll and GitHub Pages support a variety of external [plugins](/themes/jekyll-plugins/). Siteleaf supports the same subset of plugins that GitHub supports.
+
+## API
+
+We also have a robust [API](/api) that allows you to integrate Siteleaf with your own site or app. With the API, you can do everything the interface can do, from publishing sites to editing content.
