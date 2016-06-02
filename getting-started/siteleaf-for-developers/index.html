@@ -6,24 +6,25 @@
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
     <!-- Begin Jekyll SEO tag v1.4.0 -->
-<title>Exporting your v1 site - Siteleaf Documentation</title>
-<meta property="og:title" content="Exporting your v1 site" />
-<meta name="description" content="You can export your v1 site to Jekyll-ready format using the Siteleaf Gem." />
-<meta property="og:description" content="You can export your v1 site to Jekyll-ready format using the Siteleaf Gem." />
-<link rel="canonical" href="http://learn.siteleaf.com/v2/export-v1/" />
-<meta property="og:url" content="http://learn.siteleaf.com/v2/export-v1/" />
+<title>Siteleaf for Developers - Siteleaf Documentation</title>
+<meta property="og:title" content="Siteleaf for Developers" />
+<meta name="description" content="Siteleaf aims to be a content management system that bridges the gap between easy to develop for and easy to use for clients. Static site generators are great for developers: they’re wicked fast, work easily with version control, and are much easier to set up compared to other content management systems. But when it comes to people that are less tech-saavy, static site generators are difficult to use. They often require knowledge of the command line, and text editors aren’t always the easiest programs to write content in." />
+<meta property="og:description" content="Siteleaf aims to be a content management system that bridges the gap between easy to develop for and easy to use for clients. Static site generators are great for developers: they’re wicked fast, work easily with version control, and are much easier to set up compared to other content management systems. But when it comes to people that are less tech-saavy, static site generators are difficult to use. They often require knowledge of the command line, and text editors aren’t always the easiest programs to write content in." />
+<link rel="canonical" href="http://learn.siteleaf.com/getting-started/siteleaf-for-developers/" />
+<meta property="og:url" content="http://learn.siteleaf.com/getting-started/siteleaf-for-developers/" />
 <meta property="og:site_name" content="Siteleaf Documentation" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2015-11-01T00:03:00+00:00" />
-<link rel="next" href="http://learn.siteleaf.com/v2/feedback/" title="Feedback and help" />
+<meta property="article:published_time" content="2016-05-31T03:00:00+00:00" />
+<link rel="next" href="http://learn.siteleaf.com/getting-started/" title="Getting Started" />
+<link rel="prev" href="http://learn.siteleaf.com/getting-started/siteleaf-for-clients/" title="Siteleaf for Clients" />
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
-    "headline": "Exporting your v1 site",
-    "datePublished": "2015-11-01T00:03:00+00:00",
-    "description": "You can export your v1 site to Jekyll-ready format using the Siteleaf Gem.",
-    "url": "http://learn.siteleaf.com/v2/export-v1/"
+    "headline": "Siteleaf for Developers",
+    "datePublished": "2016-05-31T03:00:00+00:00",
+    "description": "Siteleaf aims to be a content management system that bridges the gap between easy to develop for and easy to use for clients. Static site generators are great for developers: they’re wicked fast, work easily with version control, and are much easier to set up compared to other content management systems. But when it comes to people that are less tech-saavy, static site generators are difficult to use. They often require knowledge of the command line, and text editors aren’t always the easiest programs to write content in.",
+    "url": "http://learn.siteleaf.com/getting-started/siteleaf-for-developers/"
   }
 </script>
 <!-- End Jekyll SEO tag -->
@@ -114,7 +115,7 @@
             
           
             
-              <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/getting-started/siteleaf-for-developers/">Siteleaf for Developers</a></li>
+              <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/getting-started/siteleaf-for-developers/">Siteleaf for Developers</a></li>
             
           
             
@@ -142,7 +143,7 @@
             
           
             
-              <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/v2/export-v1/">Exporting your v1 site</a></li>
+              <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/v2/export-v1/">Exporting your v1 site</a></li>
             
           
         </ul>
@@ -330,43 +331,59 @@
 
 <section class="main__content">
   <div class="document">
-    <h1 class="document__title">Exporting your v1 site</h1>
+    <h1 class="document__title">Siteleaf for Developers</h1>
 
     
 
     <div class="document__content">
-      <p>You can export your v1 site to Jekyll-ready format using the <a href="https://github.com/siteleaf/siteleaf-gem">Siteleaf Gem</a>.</p>
+      <p>Siteleaf aims to be a content management system that bridges the gap between easy to develop for and easy to use for clients. Static site generators are great for developers: they’re wicked fast, work easily with version control, and are much easier to set up compared to other content management systems. But when it comes to people that are less tech-saavy, static site generators are difficult to use. They often require knowledge of the command line, and text editors aren’t always the easiest programs to write content in.</p>
 
-<p>Included in the export will be all your pages, posts, site metadata, and uploaded assets. It will not include theme files.</p>
+<p>By offering an easy to use interface for clients, Siteleaf gives you the ability to use a static site generator, despite your client’s tech. We are fully integrated with <a href="http://jekyllrb.com">Jekyll</a>, a popular static site generator that GitHub uses to power over half a million websites. You can enjoy the benefits of a large open source community — there are thousands of open source Jekyll themes, or you can build your own.</p>
 
-<p>1) First, make sure to update to the latest Siteleaf Gem (1.0.3 or higher). If you need to update your Gem, run:</p>
+<h2 id="templating">Templating</h2>
 
-<figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ gem update siteleaf</code></pre></figure>
+<p>Jekyll uses <a href="https://shopify.github.io/liquid/">Liquid</a>, a template language created by Shopify. Liquid makes it incredibly easy to create themes.</p>
 
-<p>2) If you do not already have your v1 site configured, change your site’s directory and run config (skip if already configured):</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
 
-<figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ cd /path/to/yoursite
-$ siteleaf config yoursite.com</code></pre></figure>
+  {% include head.html %}
 
-<p>3) Now you can export your site:</p>
+  <span class="nt">&lt;body&gt;</span>
 
-<figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ siteleaf export</code></pre></figure>
+    {% include header.html %}
 
-<p>4) Finally, you will be asked to enter your site’s main posts path. This should be the slug where we can find your site’s posts. For example, if your site uses <code class="highlighter-rouge">/blog/hello-world</code>, you would enter <code class="highlighter-rouge">blog</code>. Press enter to accept the default name <code class="highlighter-rouge">posts</code>.</p>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"wrapper"</span><span class="nt">&gt;</span>
+        {{ content }}
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
 
-<figure class="highlight"><pre><code class="language-plain" data-lang="plain">Enter your main posts path (default "posts"):</code></pre></figure>
+    {% include footer.html %}
 
-<p>Your site will be exported to a folder called <code class="highlighter-rouge">export</code> within the current directory.</p>
+  <span class="nt">&lt;/body&gt;</span>
 
-<p><strong>Tip</strong>: You can also export your site to a directory of your choice by adding an argument to the export command:</p>
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ siteleaf export mydir</code></pre></figure>
+<h2 id="github-sync">GitHub Sync</h2>
 
-<p>In this case your export will be saved a folder called <code class="highlighter-rouge">mydir</code>.</p>
+<p>Siteleaf also offers <a href="/themes/github-sync/">GitHub Sync</a>. With this enabled, any changes that are made to the site’s content on Siteleaf are committed and pushed to your site’s GitHub repository. Conversely, if you commit changes to the site on GitHub, those changes will be reflected on Siteleaf.</p>
+
+<h2 id="hosting">Hosting</h2>
+
+<p><a href="/sites/hosting/">Hosting</a> is incredibly easy to set up with Siteleaf. You can choose between pushing straight to <a href="/sites/hosting#github-pages">GitHub Pages</a>, <a href="/sites/hosting#amazon-s3">Amazon S3</a>, <a href="/sites/hosting#rackspace-cloud-files">Rackspace Cloud Files</a>, or to your own server with <a href="/sites/hosting#ftp-or-sftp">FTP/SFTP</a>.</p>
+
+<h2 id="plugins">Plugins</h2>
+
+<p>Jekyll and GitHub Pages support a variety of external <a href="/themes/jekyll-plugins/">plugins</a>. Siteleaf supports the same subset of plugins that GitHub supports.</p>
+
+<h2 id="api">API</h2>
+
+<p>We also have a robust <a href="/api">API</a> that allows you to integrate Siteleaf with your own site or app. With the API, you can do everything the interface can do, from publishing sites to editing content.</p>
 
 
       <p class="document__improve">
-        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_v2/export-v1.markdown">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_getting-started/siteleaf-for-developers.markdown">
           Help improve this page &rarr;
         </a>
       </p>

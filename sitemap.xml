@@ -61,10 +61,13 @@
 <loc>http://learn.siteleaf.com/content/</loc>
 </url>
 <url>
-<loc>http://learn.siteleaf.com/getting-started/what-is-siteleaf/</loc>
+<loc>http://learn.siteleaf.com/getting-started/development-workflow/</loc>
 </url>
 <url>
-<loc>http://learn.siteleaf.com/getting-started/development-workflow/</loc>
+<loc>http://learn.siteleaf.com/getting-started/siteleaf-for-clients/</loc>
+</url>
+<url>
+<loc>http://learn.siteleaf.com/getting-started/siteleaf-for-developers/</loc>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/getting-started/</loc>
