@@ -21,7 +21,7 @@ The v1 gem is not compatible with v2 sites (and vice versa), so we recommend usi
 {% highlight ruby %}
 source 'http://rubygems.org'
 
-gem 'siteleaf', '2.0.0.pre.beta9'
+gem 'siteleaf', '^2.0.0'
 gem 'jekyll'
 {% endhighlight %}
 
