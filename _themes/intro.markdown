@@ -5,6 +5,8 @@ position: 1
 layout: page
 ---
 
+If you haven't yet, give [Siteleaf for Developers](/getting-started/siteleaf-for-developers/) a quick read.
+
 To create a theme for your Siteleaf site, you'll need to know HTML and [Liquid](/themes/liquid/). To set up your local environment, check out our [local development guide](/themes/local-development/).
 
 Once you're up and running, [GitHub Sync](/themes/github-sync/) makes it incredibly simple to ensure your GitHub repository and Siteleaf site have the same content and theme.
