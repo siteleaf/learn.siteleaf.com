@@ -1,12 +1,12 @@
 ---
-title: Development workflow
+title: The new development workflow
 date: 2016-01-15 19:38:00 -05:00
 position: 2
 ---
 
 Every developer has their own preferred workflow, but sometimes it's helpful to see another developer's workflow when learning a new platform or system.
 
-**Here's our workflow while developing new Siteleaf sites**, taking advantage of local development using the Jekyll gem and Siteleaf's GitHub syncing feature:
+**Here's our workflow while developing new Siteleaf v2 sites**, taking advantage of local development using the Jekyll gem and Siteleaf's GitHub syncing feature:
 
 1. Create a new site
 2. Create a new, empty [GitHub](http://github.com) repository for our site content and theme.

@@ -35,7 +35,7 @@ collections:
     permalink: "/:collection/:path/"
     position: 70
     meta:
-      description: What's new in v2
+      description: Moving from v1 to v2
       icon: info
       in_nav: true
   content:

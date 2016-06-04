@@ -34,7 +34,7 @@ GET {{ site.data.api.url | append: 'sites/:site_id/users' }}
 ### Response
 
 {{ site.data.api.status_paginated }}
-~~~
+~~~json
 [
   {{  page.example_response | split:'
 ' | join:'
