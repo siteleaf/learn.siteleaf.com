@@ -21,8 +21,8 @@ The v1 gem is not compatible with v2 sites (and vice versa), so we recommend usi
 {% highlight ruby %}
 source 'http://rubygems.org'
 
-gem 'siteleaf', '^2.0.0'
-gem 'jekyll'
+gem 'siteleaf'
+gem 'github-pages', group: :jekyll_plugins
 {% endhighlight %}
 
 <small>For help with Bundler or Gemfiles, please see: <http://bundler.io/gemfile.html></small>
