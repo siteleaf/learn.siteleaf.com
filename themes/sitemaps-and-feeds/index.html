@@ -65,11 +65,7 @@
         </div>
       </nav>
     </header>
-    <div class="beta-notice nocontent">
-      <div class="wrap">
-        <strong>Please note</strong> This documentation is a <em>work in progress</em> and is only for version 2 of Siteleaf. For v1 documentation, please see the <a href="http://www.siteleaf.com/help/">v1 help site</a>. You can also <a href="https://github.com/siteleaf/learn.siteleaf.com">contribute to this documentation on GitHub</a> and we'll <span class="ss-icon">love</span> you forever.
-      </div>
-    </div>
+
     <main class="main">
       <div class="wrap">
         <aside class="main__sidebar main__sidebar--mobile-hidden nocontent">
@@ -111,39 +107,15 @@
             
           
             
-              <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/getting-started/siteleaf-for-clients/">Siteleaf for Clients</a></li>
-            
-          
-            
               <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/getting-started/siteleaf-for-developers/">Siteleaf for Developers</a></li>
             
           
             
-              <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/getting-started/development-workflow/">Development workflow</a></li>
-            
-          
-        </ul>
-      </nav>
-    
-  
-    
-      <nav class="nav nav--mobile">
-        <h3 class="nav__header"><a href="/v2/">Siteleaf v2</a></h3>
-        <ul class="nav__list nav__list--sidebar">
-          
-          
-            
-              <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/v2/feedback/">Feedback and help</a></li>
+              <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/getting-started/siteleaf-for-clients/">Siteleaf for Clients</a></li>
             
           
             
-              <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/v2/back-up-your-site/">Back up your site</a></li>
-            
-          
-            
-          
-            
-              <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/v2/export-v1/">Exporting your v1 site</a></li>
+              <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/getting-started/getting-help/">Getting help</a></li>
             
           
         </ul>
@@ -195,15 +167,15 @@
             
           
             
-              <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/themes/getting-started/">Getting started</a></li>
-            
-          
-            
-              <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/themes/structure/">Theme structure</a></li>
+              <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/themes/intro/">Intro to themes</a></li>
             
           
             
               <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/themes/liquid/">Liquid</a></li>
+            
+          
+            
+              <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/themes/structure/">Theme structure</a></li>
             
           
             
@@ -326,6 +298,26 @@
       </nav>
     
   
+    
+      <nav class="nav nav--mobile">
+        <h3 class="nav__header"><a href="/v1/">Legacy sites</a></h3>
+        <ul class="nav__list nav__list--sidebar">
+          
+          
+            
+          
+            
+              <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/v1/development-workflow/">The new development workflow</a></li>
+            
+          
+            
+              <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/v1/export-v1/">Exporting a legacy site</a></li>
+            
+          
+        </ul>
+      </nav>
+    
+  
 </aside>
 
 
@@ -338,170 +330,21 @@
     <div class="document__content">
       <h2 id="sitemaps">Sitemaps</h2>
 
-<p>If you have a large site, you may want to have a sitemap. Adding a sitemap is easy — and it’s even easier if you use GitHub Pages.</p>
+<p>If you have a large site, you may want to have a sitemap.</p>
 
-<h3 id="github-pages">GitHub Pages</h3>
+<p>To enable sitemaps, head into your Site Settings and add a new <a href="/content/metadata/#list">list metadata</a> called <code class="highlighter-rouge">gems</code>, with an entry called <code class="highlighter-rouge">jekyll-sitemap</code>. Save, publish, and you’re done! This will automatically create a <code class="highlighter-rouge">/sitemap.xml</code> for you.</p>
 
-<p>If you’re using GitHub Pages as your host, head into your Site Settings and add a new <a href="/content/metadata/#list">list metadata</a> called <code class="highlighter-rouge">gems</code>, with an entry called <code class="highlighter-rouge">jekyll-sitemap</code>. Save, publish, and you’re done! GitHub Pages will automatically see you’d like to use the <a href="https://github.com/jekyll/jekyll-sitemap">jekyll-sitemap</a> Gem and add a sitemap.</p>
+<p><img src="/uploads/jekyll-sitemap.png" alt="Enabling sitemaps" /></p>
 
-<h3 id="other-hosts">Other Hosts</h3>
-
-<p>With other hosts, you’ll need to make the sitemap yourself. Create a new file on the root of your theme called <code class="highlighter-rouge">sitemap.xml</code> and add the following:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>
----
----
-<span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-<span class="nt">&lt;urlset</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:schemaLocation=</span><span class="s">"http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"</span> <span class="na">xmlns=</span><span class="s">"http://www.sitemaps.org/schemas/sitemap/0.9"</span><span class="nt">&gt;</span>
-  {% capture site_url %}{% if site.url %}{{ site.url | append: site.baseurl }}{% else %}{{ site.github.url }}{% endif %}{% endcapture %}
-  {% for post in site.posts %}{% unless post.sitemap == false %}
-  <span class="nt">&lt;url&gt;</span>
-    <span class="nt">&lt;loc&gt;</span>{{ post.url | prepend: site_url | uri_escape }}<span class="nt">&lt;/loc&gt;</span>
-    {% if post.last_modified_at %}
-    <span class="nt">&lt;lastmod&gt;</span>{{ post.last_modified_at | date_to_xmlschema }}<span class="nt">&lt;/lastmod&gt;</span>
-    {% else %}
-    <span class="nt">&lt;lastmod&gt;</span>{{ post.date | date_to_xmlschema }}<span class="nt">&lt;/lastmod&gt;</span>
-    {% endif %}
-  <span class="nt">&lt;/url&gt;</span>
-  {% endunless %}{% endfor %}
-  {% for page in site.html_pages %}{% unless page.sitemap == false %}
-  <span class="nt">&lt;url&gt;</span>
-    <span class="nt">&lt;loc&gt;</span>{{ page.url | replace:'/index.html','/' | prepend: site_url | uri_escape }}<span class="nt">&lt;/loc&gt;</span>
-    {% if page.last_modified_at %}
-    <span class="nt">&lt;lastmod&gt;</span>{{ page.last_modified_at | date_to_xmlschema }}<span class="nt">&lt;/lastmod&gt;</span>
-    {% endif %}
-  <span class="nt">&lt;/url&gt;</span>
-  {% endunless %}{% endfor %}
-  {% for collection in site.collections %}{% unless collection.last.output == false or collection.output == false or collection.label == 'posts' %}
-  {% for doc in collection.last.docs %}{% unless doc.sitemap == false %}
-  <span class="nt">&lt;url&gt;</span>
-    <span class="nt">&lt;loc&gt;</span>{{ doc.url | replace:'/index.html','/' | prepend: site_url | uri_escape }}<span class="nt">&lt;/loc&gt;</span>
-    {% if doc.last_modified_at %}
-    <span class="nt">&lt;lastmod&gt;</span>{{ doc.last_modified_at | date_to_xmlschema }}<span class="nt">&lt;/lastmod&gt;</span>
-    {% endif %}
-  <span class="nt">&lt;/url&gt;</span>
-  {% endunless %}{% endfor %}
-  {% for doc in collection.docs %}{% unless doc.sitemap == false %}
-    <span class="nt">&lt;url&gt;</span>
-      <span class="nt">&lt;loc&gt;</span>{{ doc.url | replace:'/index.html','/' | prepend: site_url | uri_escape }}<span class="nt">&lt;/loc&gt;</span>
-      {% if doc.last_modified_at %}
-      <span class="nt">&lt;lastmod&gt;</span>{{ doc.last_modified_at | date_to_xmlschema }}<span class="nt">&lt;/lastmod&gt;</span>
-      {% endif %}
-    <span class="nt">&lt;/url&gt;</span>
-  {% endunless %}{% endfor %}
-  {% endunless %}{% endfor %}
-  {% for file in site.html_files %}
-  <span class="nt">&lt;url&gt;</span>
-    <span class="nt">&lt;loc&gt;</span>{{ file.path | prepend: site_url | uri_escape }}<span class="nt">&lt;/loc&gt;</span>
-    <span class="nt">&lt;lastmod&gt;</span>{{ file.modified_time | date_to_xmlschema }}<span class="nt">&lt;/lastmod&gt;</span>
-  <span class="nt">&lt;/url&gt;</span>
-  {% endfor %}
-<span class="nt">&lt;/urlset&gt;</span>
-
-</code></pre>
-</div>
+<p>For more info, view the <a href="https://github.com/jekyll/jekyll-sitemap">jekyll-sitemap</a> docs.</p>
 
 <h2 id="feeds">Feeds</h2>
 
 <p>Adding an Atom or RSS feed is similar to adding a sitemap.</p>
 
-<h3 id="github-pages-1">GitHub Pages</h3>
+<p>Head into your Site Settings and add a new <a href="/content/metadata/#list">list metadata</a> called <code class="highlighter-rouge">gems</code>, with an entry called <code class="highlighter-rouge">jekyll-feed</code>. Save, publish, and you’re done! This will automatically create a <code class="highlighter-rouge">feed.xml</code> file for you.</p>
 
-<p>If you’re using GitHub Pages as your host, head into your Site Settings and add a new <a href="/content/metadata/#list">list metadata</a> called <code class="highlighter-rouge">gems</code>, with an entry called <code class="highlighter-rouge">jekyll-rss</code>. Save, publish, and you’re done! GitHub Pages will automatically see you’d like to use the <a href="https://github.com/jekyll/jekyll-feed">jekyll-feed</a> Gem and add an Atom feed.</p>
-
-<h3 id="other-hosts-1">Other Hosts</h3>
-
-<p>With other hosts, you’ll need to make the feed yourself. Create a new file on the root of your theme called <code class="highlighter-rouge">feed.xml</code> (or whatever you’d like to call your feed) and add the following:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>
----
----
-<span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
-{% if site.url %}
-  {% assign url_base = site.url | append: site.baseurl %}
-{% else %}
-  {% assign url_base = site.github.url %}
-{% endif %}
-<span class="nt">&lt;feed</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2005/Atom"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;generator</span> <span class="na">uri=</span><span class="s">"http://jekyllrb.com"</span> <span class="na">version=</span><span class="s">"{{ jekyll.version }}"</span><span class="nt">&gt;</span>Jekyll<span class="nt">&lt;/generator&gt;</span>
-  <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"{{ page.url | prepend: url_base }}"</span> <span class="na">rel=</span><span class="s">"self"</span> <span class="na">type=</span><span class="s">"application/atom+xml"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"{{ url_base }}/"</span> <span class="na">rel=</span><span class="s">"alternate"</span> <span class="na">type=</span><span class="s">"text/html"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;updated&gt;</span>{{ site.time | date_to_xmlschema }}<span class="nt">&lt;/updated&gt;</span>
-  <span class="nt">&lt;id&gt;</span>{{ url_base | xml_escape }}/<span class="nt">&lt;/id&gt;</span>
-
-  {% if site.title %}
-    <span class="nt">&lt;title&gt;</span>{{ site.title | xml_escape }}<span class="nt">&lt;/title&gt;</span>
-  {% elsif site.name %}
-    <span class="nt">&lt;title&gt;</span>{{ site.name | xml_escape }}<span class="nt">&lt;/title&gt;</span>
-  {% endif %}
-
-  {% if site.description %}
-    <span class="nt">&lt;subtitle&gt;</span>{{ site.description | xml_escape }}<span class="nt">&lt;/subtitle&gt;</span>
-  {% endif %}
-
-  {% if site.author %}
-    <span class="nt">&lt;author&gt;</span>
-      {% if site.author.name %}
-        <span class="nt">&lt;name&gt;</span>{{ site.author.name | xml_escape }}<span class="nt">&lt;/name&gt;</span>
-      {% else %}
-        <span class="nt">&lt;name&gt;</span>{{ site.author | xml_escape }}<span class="nt">&lt;/name&gt;</span>
-      {% endif %}
-      {% if site.author.email %}
-        <span class="nt">&lt;email&gt;</span>{{ site.author.email | xml_escape }}<span class="nt">&lt;/email&gt;</span>
-      {% endif %}
-      {% if site.author.uri %}
-        <span class="nt">&lt;uri&gt;</span>{{ site.author.uri | xml_escape }}<span class="nt">&lt;/uri&gt;</span>
-      {% endif %}
-    <span class="nt">&lt;/author&gt;</span>
-  {% endif %}
-
-  {% for post in site.posts limit: 10 %}
-    <span class="nt">&lt;entry&gt;</span>
-      <span class="nt">&lt;title&gt;</span>{{ post.title | markdownify | strip_html | replace: '\n', ' ' | strip | xml_escape }}<span class="nt">&lt;/title&gt;</span>
-      <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"{{ post.url | prepend: url_base }}"</span> <span class="na">rel=</span><span class="s">"alternate"</span> <span class="na">type=</span><span class="s">"text/html"</span> <span class="na">title=</span><span class="s">"{{ post.title | xml_escape }}"</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;published&gt;</span>{{ post.date | date_to_xmlschema }}<span class="nt">&lt;/published&gt;</span>
-      {% if post.last_modified_at %}
-        <span class="nt">&lt;updated&gt;</span>{{ post.last_modified_at | date_to_xmlschema }}<span class="nt">&lt;/updated&gt;</span>
-      {% else %}
-        <span class="nt">&lt;updated&gt;</span>{{ post.date | date_to_xmlschema }}<span class="nt">&lt;/updated&gt;</span>
-      {% endif %}
-
-      <span class="nt">&lt;id&gt;</span>{{ post.id | prepend: url_base | xml_escape }}<span class="nt">&lt;/id&gt;</span>
-      <span class="nt">&lt;content</span> <span class="na">type=</span><span class="s">"html"</span> <span class="na">xml:base=</span><span class="s">"{{ post.url | prepend: url_base | xml_escape }}"</span><span class="nt">&gt;</span>{{ post.content | strip | xml_escape }}<span class="nt">&lt;/content&gt;</span>
-
-      {% if post.author %}
-        <span class="nt">&lt;author&gt;</span>
-          {% if post.author.name %}
-            <span class="nt">&lt;name&gt;</span>{{ post.author.name | xml_escape }}<span class="nt">&lt;/name&gt;</span>
-          {% else %}
-            <span class="nt">&lt;name&gt;</span>{{ post.author | xml_escape }}<span class="nt">&lt;/name&gt;</span>
-          {% endif %}
-          {% if post.author.email %}
-            <span class="nt">&lt;email&gt;</span>{{ post.author.email | xml_escape }}<span class="nt">&lt;/email&gt;</span>
-          {% endif %}
-          {% if post.author.uri %}
-            <span class="nt">&lt;uri&gt;</span>{{ post.author.uri | xml_escape }}<span class="nt">&lt;/uri&gt;</span>
-          {% endif %}
-        <span class="nt">&lt;/author&gt;</span>
-      {% endif %}
-
-      {% if post.category %}
-        <span class="nt">&lt;category</span> <span class="na">term=</span><span class="s">"{{ post.category | xml_escape }}"</span> <span class="nt">/&gt;</span>
-      {% endif %}
-
-      {% for tag in post.tags %}
-        <span class="nt">&lt;category</span> <span class="na">term=</span><span class="s">"{{ tag | xml_escape }}"</span> <span class="nt">/&gt;</span>
-      {% endfor %}
-
-      {% if post.excerpt and post.excerpt != empty %}
-        <span class="nt">&lt;summary&gt;</span>{{ post.excerpt | strip_html | replace: '\n', ' ' | strip | xml_escape }}<span class="nt">&lt;/summary&gt;</span>
-      {% endif %}
-    <span class="nt">&lt;/entry&gt;</span>
-  {% endfor %}
-<span class="nt">&lt;/feed&gt;</span>
-
-</code></pre>
-</div>
+<p>For more info, view the <a href="https://github.com/jekyll/jekyll-feed">jekyll-feed</a> docs.</p>
 
 
       <p class="document__improve">
