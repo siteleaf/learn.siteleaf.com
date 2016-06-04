@@ -11,4 +11,4 @@ Siteleaf is fully compatible with [Jekyll](http://jekyllrb.com), the same open s
 
 For a long time, static site generators have been the ideal tool for developers: they’re wicked fast, work easily with version control, and are easier to set up compared to other content management systems. But when it comes to people that are less tech-saavy, static site generators are difficult to use. They often require knowledge of the command line, and text editors aren’t always the easiest programs to manage content in.
 
-This is where Siteleaf comes in. Siteleaf gives developers the ease of working with static site generators, while giving clients the interface of a bigger CMS.
+This is where Siteleaf comes in. Siteleaf gives developers the ease of working with static site generators, while offering an easy to use interface for managing your site content.
