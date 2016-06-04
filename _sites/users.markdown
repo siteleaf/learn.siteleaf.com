@@ -13,7 +13,8 @@ To transfer your site to another user, you'll first need to add them to your sit
 
 ## User Roles
 
-If you're on a Team, Business, or Enterprise site plan, you can choose between three different user roles, each giving a different level of permission to your site.
+If you're on a **Team, Business, or Enterprise** site plan, you can choose between three different user roles, each giving a different level of permission to your site.
+
 ### Admin
 
 The admin role gives full privileges to the collaborator, allowing them to manage and publish all content. This role is great for people who are helping build the site, like a developer or designer, since it allows them to upload theme files, change the site’s settings, and invite other collaborators.
