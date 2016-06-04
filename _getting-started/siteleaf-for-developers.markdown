@@ -13,7 +13,7 @@ Siteleaf gives you the ability to enjoy the benefits of a static site generator,
 
 ## Templating
 
-Jekyll uses [Liquid](https://shopify.github.io/liquid/), a template language created by Shopify. Liquid makes it incredibly easy to create themes.
+Siteleaf templates use [Liquid](https://shopify.github.io/liquid/), a template language created by Shopify. Liquid makes it incredibly easy to create themes.
 
 {% highlight html %}
 {% raw %}
