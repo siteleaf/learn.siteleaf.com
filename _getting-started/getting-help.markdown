@@ -1,6 +1,7 @@
 ---
 title: Getting help
 date: 2016-01-15 19:04:00 -05:00
+position: 4
 ---
 
 All Siteleaf members are encouraged to join the [Siteleaf Slack channel](http://chat.siteleaf.com) for **community support** and discussion.
