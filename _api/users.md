@@ -5,7 +5,7 @@ position: 9
 example_response: |-
   {
     "id": "5697cc7b16d5640c40000000",
-    "email": "jill@siteleaf.com",
+    "email": "jill@example.com",
     "firstname": "Jill",
     "lastname": "Smith",
     "fullname": "Jill Smith",

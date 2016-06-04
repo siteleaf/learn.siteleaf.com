@@ -2,38 +2,7 @@
   background: $color-blue;
   padding-bottom: 1em;
   padding-top: 1em;
-
-  @media (max-width: $max-width-narrow) {
-    margin-bottom: 2em;
-  }
-}
-
-.beta-notice {
-  border-bottom: 1px solid $color-gray-an2;
-  padding: 15px 0;
-  margin-bottom: 40px;
-  line-height: $line-height-tight;
-  color: $color-gray-2;
-  font-size: $font-size-html-sm;
-  font-size: $font-size-n2;
-  background: $color-bg-gray;
-
-  @media (max-width: $max-width-narrow) {
-    display: none;
-  }
-
-  strong {
-    display: block;
-  }
-
-  a {
-    color: $color-gray-2;
-    text-decoration: underline;
-
-    &:hover {
-      color: $color-blue-dark;
-    }
-  }
+  margin-bottom: 2em;
 }
 
 .status--none,
