@@ -29,6 +29,15 @@ collections:
       icon: home
       in_nav: true
     position: 10
+  v1:
+    title: Legacy sites
+    output: true
+    permalink: "/:collection/:path/"
+    position: 70
+    meta:
+      description: What's new in v2
+      icon: info
+      in_nav: true
   content:
     title: Managing Content
     output: true
@@ -41,15 +50,6 @@ collections:
   posts:
     title: Posts
     output: true
-  v1:
-    title: Legacy sites
-    output: true
-    permalink: "/:collection/:path/"
-    position: 70
-    meta:
-      description: What's new in v2
-      icon: info
-      in_nav: true
   themes:
     title: Theme Development
     output: true
