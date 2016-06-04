@@ -24,7 +24,7 @@ Third-party application access needs to be turned **on** in order for Siteleaf t
 
 {% highlight ruby %}
 source 'http://rubygems.org'
-gem 'jekyll'
+gem 'github-pages', group: :jekyll_plugins
 {% endhighlight %}
 
 3) Install the bundle:
