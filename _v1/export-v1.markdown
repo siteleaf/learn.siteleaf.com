@@ -1,5 +1,5 @@
 ---
-title: Exporting your v1 site
+title: Exporting a legacy site
 date: 2015-10-31 20:03:00 -04:00
 position: 4
 layout: page

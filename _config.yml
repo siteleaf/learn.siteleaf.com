@@ -41,11 +41,11 @@ collections:
   posts:
     title: Posts
     output: true
-  v2:
-    title: Siteleaf v2
+  v1:
+    title: Legacy sites
     output: true
     permalink: "/:collection/:path/"
-    position: 20
+    position: 70
     meta:
       description: What's new in v2
       icon: info
