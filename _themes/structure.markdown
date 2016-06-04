@@ -42,11 +42,11 @@ The `_includes/` directory contains fragments of code that aren't necessarily en
 
 ## `_posts/`
 
-The `_posts/` directory is where you put posts. Posts filenames include the timestamp and date (for example, a post titled "New York" that was created on January 6th, 2016 will turn into `2016-01-06-new-york.markdown`).
+The `_posts/` directory is where your posts will reside. Posts filenames include the timestamp and date (for example, a post titled "New York" that was created on January 6th, 2016 will turn into `2016-01-06-new-york.markdown`).
 
 ## `_sass/`
 
-Jekyll will automatically compile Sass/SCSS. You can add a partial to this directory (prefaced with a `_`), and then reference it in another file.
+Jekyll will automatically compile Sass/SCSS. You can add a partial to this directory (prefaced with a `_`), and then reference it in another file. [Read more about using Sass here](/themes/sass/).
 
 ## `_site/`
 
