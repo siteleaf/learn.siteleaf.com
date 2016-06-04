@@ -1,5 +1,5 @@
 ---
-title: Getting started
+title: Intro to themes
 date: 2015-10-31 20:03:00 -04:00
 position: 1
 layout: page
