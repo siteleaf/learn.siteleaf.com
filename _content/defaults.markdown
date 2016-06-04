@@ -39,8 +39,8 @@ defaults:
 
 In this case, we're:
 
-- Setting the `layout` and `author` for all posts
-- Setting the `layout` for all pages.
+- Setting the default `layout` and `author` for all posts
+- Setting the default `layout` for all pages.
 - Overriding the previous default `layout` for all pages in the `projects/` path.
 
 Note that `type` can be `posts`, `pages` or any other collection name (e.g. `people`).
