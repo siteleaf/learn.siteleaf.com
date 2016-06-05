@@ -8,15 +8,9 @@ layout: page
 We recommend using [GitHub sync](/themes/github-sync/) for local development, but you can still use the Gem if that's your preferred workflow.
 {: .note__info}
 
-## Differences between v1 and v2 gems
-
-The v1 gem is not compatible with v2 sites (and vice versa), so we recommend using a [Gemfile](http://bundler.io/gemfile.html) to allow both versions to be installed.
-
-**Important:** When using `push`/`pull` in v2, both theme and content files are included. Always make sure to do a `pull` first to avoid overwriting your Siteleaf content on `push`. Your local directory must have a `_config.yml` in order to push.
-
 ## Local development using the Siteleaf gem
 
-1) Create a file called `Gemfile` in your site's root folder and add the v2 beta gem and Jekyll to your bundle:
+1) Create a file called `Gemfile` in your site's root folder and add the Siteleaf gem and Jekyll to your bundle:
 
 {% highlight ruby %}
 source 'http://rubygems.org'
@@ -40,7 +34,7 @@ $ bundle install
 $ bundle exec siteleaf auth
 {% endhighlight %}
 
-4) Create or connect to a Siteleaf v2 site:
+4) Create or connect to a Siteleaf site:
 
 **To create a new Siteleaf site:**
 
@@ -78,7 +72,7 @@ $ bundle exec siteleaf push
 
 ## Backing up your site
 
-Creating a full backup of your v2 site is simple. Just copy your `Gemfile` to an empty directory and do a `pull`:
+Creating a full backup of your site is simple. Just copy your `Gemfile` to an empty directory and do a `pull`:
 
 {% highlight plain %}
 cp Gemfile /path/to/backup/
