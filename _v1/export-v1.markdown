@@ -1,7 +1,7 @@
 ---
 title: Exporting a legacy site
 date: 2015-10-31 20:03:00 -04:00
-position: 4
+position: 2
 layout: page
 ---
 

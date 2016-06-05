@@ -1,6 +1,7 @@
 ---
 title: V1 Gem
 date: 2016-06-05 14:54:00 -04:00
+position: 3
 ---
 
 The v1 gem is not compatible with v2 sites (and vice versa), so we recommend using a [Gemfile](http://bundler.io/gemfile.html) to allow both versions to be installed.
