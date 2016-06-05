@@ -60,3 +60,17 @@ Or pull the latest changes from GitHub and Siteleaf:
 {% highlight plain %}
 $ git pull
 {% endhighlight %}
+
+## FAQ
+
+**Why is Siteleaf changing my YAML formatting after I make a commit?**
+
+In some cases, you might notice a commit from Siteleaf directly after you commit a change to GitHub. This typically arises when your YAML formatting is inconsistent with the output of our YAML parser. Jekyll uses [SafeYAML](https://github.com/dtao/safe_yaml) to parse frontmatter and we use the same. These changes shouldn't affect your final output when your frontmatter is rendered.
+
+**What happens when I setup syncing on an existing Siteleaf site?**
+
+During initial sync, all current files in Siteleaf will be saved into your repo. If you do not wish to merge or overwrite your GitHub content, you can import your repo as a new site. If you are unsure, be safe and back up your content.
+
+**What happens when I change my sync settings repo or branch?**
+
+Any files edited in Siteleaf since your site was last synced will be saved into the new repo or branch. All files already synced with the _old_ repo or branch will be replaced or removed from Siteleaf with the contents of the _new_ repo or branch. If you do not wish to merge or replace your content, you can import your repo as a new site. If you are unsure, be safe and back up your content.
