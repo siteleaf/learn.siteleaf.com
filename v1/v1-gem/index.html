@@ -6,25 +6,25 @@
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
     <!-- Begin Jekyll SEO tag v1.4.0 -->
-<title>Optimizing build time - Siteleaf Documentation</title>
-<meta property="og:title" content="Optimizing build time" />
-<meta name="description" content="As the size and complexity of your site grows, sometimes the amount of time Jekyll needs to build your site grows with it. There are several strategies you can use to keep your build times down." />
-<meta property="og:description" content="As the size and complexity of your site grows, sometimes the amount of time Jekyll needs to build your site grows with it. There are several strategies you can use to keep your build times down." />
-<link rel="canonical" href="http://learn.siteleaf.com/themes/optimizing-build-time/" />
-<meta property="og:url" content="http://learn.siteleaf.com/themes/optimizing-build-time/" />
+<title>V1 Gem - Siteleaf Documentation</title>
+<meta property="og:title" content="V1 Gem" />
+<meta name="description" content="The v1 gem is not compatible with v2 sites (and vice versa), so we recommend using a Gemfile to allow both versions to be installed." />
+<meta property="og:description" content="The v1 gem is not compatible with v2 sites (and vice versa), so we recommend using a Gemfile to allow both versions to be installed." />
+<link rel="canonical" href="http://learn.siteleaf.com/v1/v1-gem/" />
+<meta property="og:url" content="http://learn.siteleaf.com/v1/v1-gem/" />
 <meta property="og:site_name" content="Siteleaf Documentation" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2016-03-24T16:15:00+00:00" />
-<link rel="next" href="http://learn.siteleaf.com/themes/" title="Theme Development" />
-<link rel="prev" href="http://learn.siteleaf.com/themes/jekyll-plugins/" title="Jekyll Plugins" />
+<meta property="article:published_time" content="2016-06-05T18:54:00+00:00" />
+<link rel="next" href="http://learn.siteleaf.com/v1/" title="Legacy sites" />
+<link rel="prev" href="http://learn.siteleaf.com/v1/development-workflow/" title="The new development workflow" />
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
-    "headline": "Optimizing build time",
-    "datePublished": "2016-03-24T16:15:00+00:00",
-    "description": "As the size and complexity of your site grows, sometimes the amount of time Jekyll needs to build your site grows with it. There are several strategies you can use to keep your build times down.",
-    "url": "http://learn.siteleaf.com/themes/optimizing-build-time/"
+    "headline": "V1 Gem",
+    "datePublished": "2016-06-05T18:54:00+00:00",
+    "description": "The v1 gem is not compatible with v2 sites (and vice versa), so we recommend using a Gemfile to allow both versions to be installed.",
+    "url": "http://learn.siteleaf.com/v1/v1-gem/"
   }
 </script>
 <!-- End Jekyll SEO tag -->
@@ -199,7 +199,7 @@
             
           
             
-              <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/themes/optimizing-build-time/">Optimizing build time</a></li>
+              <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/themes/optimizing-build-time/">Optimizing build time</a></li>
             
           
             
@@ -319,7 +319,7 @@
             
           
             
-              <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/v1/v1-gem/">V1 Gem</a></li>
+              <li class="nav__item nav__item--sidebar nav__item--current"><a class="nav__link nav__link--sidebar" href="/v1/v1-gem/">V1 Gem</a></li>
             
           
         </ul>
@@ -331,40 +331,18 @@
 
 <section class="main__content">
   <div class="document">
-    <h1 class="document__title">Optimizing build time</h1>
+    <h1 class="document__title">V1 Gem</h1>
 
     
 
     <div class="document__content">
-      <p>As the size and complexity of your site grows, sometimes the amount of time Jekyll needs to build your site grows with it. There are several strategies you can use to keep your build times down.</p>
+      <p>The v1 gem is not compatible with v2 sites (and vice versa), so we recommend using a <a href="http://bundler.io/gemfile.html">Gemfile</a> to allow both versions to be installed.</p>
 
-<h2 id="excluding-unnecessary-files-and-folders">Excluding unnecessary files and folders</h2>
-
-<p>A lot of the time there will be files and folders in your site directory that aren’t necessary for building the site. For example, if you’re using Bower, the <code class="highlighter-rouge">bower_components</code> directory stores external packages that are not necessary for Jekyll to build the site.</p>
-
-<p>You can exclude files and folders from the Jekyll build by adding <code class="highlighter-rouge">exclude</code> <a href="/content/metadata/#list">list metadata</a> to your site. It works the similarly to a <code class="highlighter-rouge">.gitignore</code> file.</p>
-
-<p><img src="/uploads/optimization-exclude.png" alt="Exclude files and folders" /></p>
-
-<h2 id="limiting-large-and-nested-for-loops">Limiting large and nested <code class="highlighter-rouge">for</code> loops</h2>
-
-<p><code class="highlighter-rouge">for</code> loops can make building your site very slow, especially if you have a lot of content. For example, if you have 1,000 posts, and on each post page you are showing a full archive of your posts, Jekyll will need to loop through your entire set of posts 1,000,000 times! Nesting multiple <code class="highlighter-rouge">for</code> loops inside each other can also significantly increase your site build times.</p>
-
-<h2 id="using-incremental-builds">Using incremental builds</h2>
-
-<p>When you’re in development, you can have Jekyll only rebuild parts of the site that it needs to by using the <code class="highlighter-rouge">--incremental</code> flag:</p>
-
-<figure class="highlight"><pre><code class="language-plain" data-lang="plain">jekyll serve --incremental</code></pre></figure>
-
-<h2 id="further-reading">Further Reading</h2>
-
-<ul>
-  <li><a href="https://wiredcraft.com/blog/make-jekyll-fast/">13 steps to a faster Jekyll website</a></li>
-</ul>
+<p><strong>Important:</strong> When using <code class="highlighter-rouge">push</code>/<code class="highlighter-rouge">pull</code> in v2, both theme and content files are included. Always make sure to do a <code class="highlighter-rouge">pull</code> first to avoid overwriting your Siteleaf content on <code class="highlighter-rouge">push</code>. Your local directory must have a <code class="highlighter-rouge">_config.yml</code> in order to push.</p>
 
 
       <p class="document__improve">
-        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_themes/optimizing-build-time.markdown">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_v1/v1-gem.markdown">
           Help improve this page &rarr;
         </a>
       </p>

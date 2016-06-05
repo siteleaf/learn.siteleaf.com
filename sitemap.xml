@@ -88,6 +88,9 @@
 <loc>http://learn.siteleaf.com/sites/preview/</loc>
 </url>
 <url>
+<loc>http://learn.siteleaf.com/sites/backups/</loc>
+</url>
+<url>
 <loc>http://learn.siteleaf.com/sites/</loc>
 </url>
 <url>
@@ -128,6 +131,9 @@
 </url>
 <url>
 <loc>http://learn.siteleaf.com/v1/development-workflow/</loc>
+</url>
+<url>
+<loc>http://learn.siteleaf.com/v1/v1-gem/</loc>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/v1/</loc>

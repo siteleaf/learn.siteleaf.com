@@ -237,6 +237,10 @@
               <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/sites/custom-build-servers/">Custom build servers</a></li>
             
           
+            
+              <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/sites/backups/">Backups</a></li>
+            
+          
         </ul>
       </nav>
     
@@ -313,6 +317,10 @@
               <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/v1/export-v1/">Exporting a legacy site</a></li>
             
           
+            
+              <li class="nav__item nav__item--sidebar"><a class="nav__link nav__link--sidebar" href="/v1/v1-gem/">V1 Gem</a></li>
+            
+          
         </ul>
       </nav>
     
@@ -329,15 +337,9 @@
     <div class="document__content">
       <p class="note__info">We recommend using <a href="/themes/github-sync/">GitHub sync</a> for local development, but you can still use the Gem if that’s your preferred workflow.</p>
 
-<h2 id="differences-between-v1-and-v2-gems">Differences between v1 and v2 gems</h2>
-
-<p>The v1 gem is not compatible with v2 sites (and vice versa), so we recommend using a <a href="http://bundler.io/gemfile.html">Gemfile</a> to allow both versions to be installed.</p>
-
-<p><strong>Important:</strong> When using <code class="highlighter-rouge">push</code>/<code class="highlighter-rouge">pull</code> in v2, both theme and content files are included. Always make sure to do a <code class="highlighter-rouge">pull</code> first to avoid overwriting your Siteleaf content on <code class="highlighter-rouge">push</code>. Your local directory must have a <code class="highlighter-rouge">_config.yml</code> in order to push.</p>
-
 <h2 id="local-development-using-the-siteleaf-gem">Local development using the Siteleaf gem</h2>
 
-<p>1) Create a file called <code class="highlighter-rouge">Gemfile</code> in your site’s root folder and add the v2 beta gem and Jekyll to your bundle:</p>
+<p>1) Create a file called <code class="highlighter-rouge">Gemfile</code> in your site’s root folder and add the Siteleaf gem and Jekyll to your bundle:</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">source</span> <span class="s1">'http://rubygems.org'</span>
 
@@ -355,7 +357,7 @@ $ bundle install</code></pre></figure>
 
 <figure class="highlight"><pre><code class="language-plain" data-lang="plain">$ bundle exec siteleaf auth</code></pre></figure>
 
-<p>4) Create or connect to a Siteleaf v2 site:</p>
+<p>4) Create or connect to a Siteleaf site:</p>
 
 <p><strong>To create a new Siteleaf site:</strong></p>
 
@@ -383,7 +385,7 @@ $ bundle install</code></pre></figure>
 
 <h2 id="backing-up-your-site">Backing up your site</h2>
 
-<p>Creating a full backup of your v2 site is simple. Just copy your <code class="highlighter-rouge">Gemfile</code> to an empty directory and do a <code class="highlighter-rouge">pull</code>:</p>
+<p>Creating a full backup of your site is simple. Just copy your <code class="highlighter-rouge">Gemfile</code> to an empty directory and do a <code class="highlighter-rouge">pull</code>:</p>
 
 <figure class="highlight"><pre><code class="language-plain" data-lang="plain">cp Gemfile /path/to/backup/
 cd /path/to/backup/
