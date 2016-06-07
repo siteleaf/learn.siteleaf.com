@@ -34,6 +34,7 @@ defaults:
       path: "projects"
       type: "pages"
     values:
+      colors: ["red", "green", "blue"]
       layout: "project"
 {% endhighlight %}
 
@@ -41,7 +42,7 @@ In this case, we're:
 
 - Setting the default `layout` and `author` for all posts
 - Setting the default `layout` for all pages.
-- Overriding the previous default `layout` for all pages in the `projects/` path.
+- Overriding the previous default `layout` for all pages in the `projects/` path, and setting a default `colors` List field with the values `red`, `green`, `blue`.
 
 Note that `type` can be `posts`, `pages` or any other collection name (e.g. `people`).
 
