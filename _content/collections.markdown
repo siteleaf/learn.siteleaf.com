@@ -17,7 +17,7 @@ For each collection, a new directory will be created in your project called `_[c
 
 By default, a collection's documents are generated into their own pages when they're published. It will generate these pages out into children of the parent collection. For example, if you had a document called `Ethan` in a collection called `People`, it will generate a page located at `/people/ethan`.
 
-If you turn this option off, you'll still be able to access your documents in your layouts through the Collection Liquid attribute. For example, you'd be able to access the documents in the `People` collection by calling `site.people.docs`.
+If you turn this option off, you'll still be able to access your documents in your layouts through the Collection Liquid attribute. For example, you'd be able to access the documents in the `People` collection by calling `site.people`.
 
 ### Path
 
