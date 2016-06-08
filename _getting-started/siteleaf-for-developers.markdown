@@ -5,7 +5,7 @@ position: 1
 layout: page
 ---
 
-Siteleaf aims to be a content management system that bridges the gap between easy to develop for and easy to use for clients. Static site generators are great for developers: they're wicked fast, work easily with version control, and are much easier to set up compared to other content management systems. But when it comes to people that are less tech-saavy, static site generators are difficult to use. They often require knowledge of the command line, and text editors aren’t always the easiest programs to manage content in.
+Siteleaf aims to be a content management system that bridges the gap between easy to develop for and easy to use for clients. Static site generators are great for developers: they're wicked fast, work easily with version control, and are much easier to set up compared to other content management systems. But when it comes to people that are less tech-savvy, static site generators are difficult to use. They often require knowledge of the command line, and text editors aren’t always the easiest programs to manage content in.
 
 Siteleaf gives you the ability to enjoy the benefits of a static site generator, along with an easy to use interface for managing your site's content. 
 
