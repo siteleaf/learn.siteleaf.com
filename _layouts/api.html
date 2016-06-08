@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+{% include sidebar.html %}
+
+<section class="main__content">
+  <div class="document">
+    <h1 class="document__title">{{ page.title }}</h1>
+
+    {% if page.meta.summary %}
+      <blockquote class="document__summary">
+        <h3>Summary</h3>
+        {{ page.meta.summary }}
+      </blockquote>
+    {% endif %}
+
+    <div class="document__content api__content">
+      {{ content }}
+
+      <p class="document__improve">
+        <a href="{{ site.github_url }}/blob/master/{{ page.relative_path }}">
+          Help improve this page &rarr;
+        </a>
+      </p>
+    </div>
+  </div>
+</section>

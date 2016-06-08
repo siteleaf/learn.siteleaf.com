@@ -1,0 +1,42 @@
+url: https://api.siteleaf.com/v2/
+manage_url: https://manage.v2.siteleaf.com/
+
+status_ok: |
+  ~~~
+  Status: 200 OK
+  ~~~
+  {:.api__headers}
+
+status_created: |
+  ~~~
+  Status: 201 Created
+  ~~~
+  {:.api__headers}
+
+status_accepted: |
+  ~~~
+  Status: 202 Accepted
+  ~~~
+  {:.api__headers}
+
+status_paginated: |
+  ~~~
+  Status: 200 OK
+  Link: <https://api.siteleaf.com/v2/:path?page=2>; rel="next",
+        <https://api.siteleaf.com/v2/:path?page=9>; rel="last"
+  ~~~
+  {:.api__headers}
+
+status_sse_gone: |
+  ~~~
+  Status: 410 Gone
+  Content-Type: text/event-stream
+  ~~~
+  {:.api__headers}
+
+status_sse_ok: |
+  ~~~
+  Status: 200 OK
+  Content-Type: text/event-stream
+  ~~~
+  {:.api__headers}

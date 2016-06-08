@@ -1,0 +1,40 @@
+.header {
+  background: $color-blue;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  margin-bottom: 2em;
+}
+
+.status--none,
+.status--minor,
+.status--major,
+.status--critical {
+  position: relative;
+
+  &:after {
+    border-radius: 50%;
+    border: 1px solid $color-white-a1;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    right: -18px;
+    top: 6px;
+  }
+}
+
+.status--none:after {
+  background-color: $color-green;
+}
+
+.status--minor:after {
+  background-color: $color-yellow;
+}
+
+.status--major:after {
+  background-color: $color-orange;
+}
+.status--critical:after {
+  background-color: $color-red;
+}

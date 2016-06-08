@@ -1,0 +1,20 @@
+<aside class="main__sidebar main__sidebar--mobile-hidden nocontent">
+  {% include _search.html %}
+
+  {% assign sections = site.collections | sort:"position" %}
+  {% for section in sections %}
+    {% if section.title and section.meta.in_nav == true %}
+      <nav class="nav nav--mobile">
+        <h3 class="nav__header{% if page.title == section.title %} nav__header--current{% endif %}"><a href="/{{ section.label }}/">{{ section.title }}</a></h3>
+        <ul class="nav__list nav__list--sidebar">
+          {% assign documents = section.docs | sort:"position" %}
+          {% for document in documents %}
+            {% if document.title != section.title %}
+              <li class="nav__item nav__item--sidebar{% if page.url == document.url %} nav__item--current{% endif %}"><a class="nav__link nav__link--sidebar" href="{{ document.url }}">{{ document.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
+  {% endfor %}
+</aside>
