@@ -83,3 +83,7 @@ bundle exec siteleaf pull
 {% endhighlight %}
 
 This will include your entire site, including theme files, assets, content, and site metadata.
+
+---
+
+**Important:** When using `push`/`pull` in v2, both theme and content files are included. Always make sure to do a `pull` first to avoid overwriting your Siteleaf content on `push`. Your local directory must have a `_config.yml` in order to push.
