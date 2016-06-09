@@ -8,6 +8,8 @@ layout: page
 We recommend using [GitHub sync](/themes/github-sync/) for local development, but you can still use the Gem if that's your preferred workflow.
 {: .note__info}
 
+The Siteleaf Ruby gem is open source, to fork and contribute see: <https://github.com/siteleaf/siteleaf-gem>
+
 ## Local development using the Siteleaf gem
 
 1) Create a file called `Gemfile` in your site's root folder and add the Siteleaf gem and Jekyll to your bundle:
@@ -15,7 +17,7 @@ We recommend using [GitHub sync](/themes/github-sync/) for local development, bu
 {% highlight ruby %}
 source 'http://rubygems.org'
 
-gem 'siteleaf'
+gem 'siteleaf', '~>2'
 gem 'github-pages', group: :jekyll_plugins
 {% endhighlight %}
 
@@ -69,6 +71,8 @@ Now visit [localhost:4000](http://localhost:4000) to see your site!
 {% highlight plain %}
 $ bundle exec siteleaf push
 {% endhighlight %}
+
+**Important:** When using `push`/`pull` in v2, both theme and content files are included. Always make sure to do a `pull` first to avoid overwriting your Siteleaf content on `push`. Your local directory must have a `_config.yml` in order to push.
 
 ## Backing up your site
 
