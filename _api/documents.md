@@ -37,7 +37,7 @@ example_response: |-
   }
 ---
 
-## Overview
+### Overview
 
 1. [List documents](#list-documents)
 1. [Create a document](#create-a-document)
@@ -49,15 +49,15 @@ example_response: |-
 
 
 
-## List documents
+### List documents
 
-### Endpoint
+#### Endpoint
 
 ~~~
 GET {{ site.data.api.url | append: 'sites/:site_id/collections/:path/documents' }}
 ~~~
 
-### Query String Params
+#### Query String Params
 
 | Name | Desc |
 |------|------|
@@ -66,7 +66,7 @@ GET {{ site.data.api.url | append: 'sites/:site_id/collections/:path/documents' 
 | `visibility` | Can be one of `visible`, `hidden` or `draft` |
 | `extensions` | A comma separated list of file extensions, or `markdown` which is equivalent to `markdown,md,mkdown,mkdn,mkd` |
 
-### Response
+#### Response
 
 {{ site.data.api.status_paginated }}
 ~~~ json
@@ -78,15 +78,15 @@ GET {{ site.data.api.url | append: 'sites/:site_id/collections/:path/documents' 
 ~~~
 
 
-## Create a document
+### Create a document
 
-### Endpoint
+#### Endpoint
 
 ~~~
 POST {{ site.data.api.url | append: 'sites/:site_id/collections/:path/documents' }}
 ~~~
 
-### Input
+#### Input
 
 | Name | Type | Desc |
 |------|------|------|
@@ -100,14 +100,14 @@ POST {{ site.data.api.url | append: 'sites/:site_id/collections/:path/documents'
 | `tags` | `Array<String>` | Document tags |
 | `categories` | `Array<String>` | Document categories |
 
-### Example
+#### Example
 
 ~~~ json
 {{ page.example_input }}
 ~~~
 
 
-### Response
+#### Response
 
 {{ site.data.api.status_created }}
 ~~~ json
@@ -117,15 +117,15 @@ POST {{ site.data.api.url | append: 'sites/:site_id/collections/:path/documents'
 
 
 
-## Get a document
+### Get a document
 
-### Endpoint
+#### Endpoint
 
 ~~~
 GET {{ site.data.api.url | append: 'documents/:document_id' }}
 ~~~
 
-### Response
+#### Response
 
 {{ site.data.api.status_ok }}
 ~~~ json
@@ -135,15 +135,15 @@ GET {{ site.data.api.url | append: 'documents/:document_id' }}
 
 
 
-## Update a document
+### Update a document
 
-### Endpoint
+#### Endpoint
 
 ~~~
 PUT {{ site.data.api.url | append: 'documents/:document_id' }}
 ~~~
 
-### Input
+#### Input
 
 | Name | Type | Desc |
 |------|------|------|
@@ -157,13 +157,13 @@ PUT {{ site.data.api.url | append: 'documents/:document_id' }}
 | `tags` | `Array<String>` | Document tags |
 | `categories` | `Array<String>` | Document categories |
 
-### Example
+#### Example
 
 ~~~ json
 {{ page.example_input }}
 ~~~
 
-### Response
+#### Response
 
 {{ site.data.api.status_ok }}
 ~~~ json
@@ -174,15 +174,15 @@ PUT {{ site.data.api.url | append: 'documents/:document_id' }}
 
 
 
-## Delete a document
+### Delete a document
 
-### Endpoint
+#### Endpoint
 
 ~~~
 DELETE {{ site.data.api.url | append: 'documents/:document_id' }}
 ~~~
 
-### Response
+#### Response
 
 {{ site.data.api.status_ok }}
 ~~~ json

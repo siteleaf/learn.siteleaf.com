@@ -3,7 +3,6 @@ title: Metadata
 date: 2015-12-17 08:02:00 -05:00
 position: 1
 prep time: blah
-layout: page
 ---
 
 Metadata are additional pieces of data which you can attach to your pages, documents, collections, and even site-wide. Metadata fields give you a ton of power and flexibility to create a system that fits your content.
@@ -16,11 +15,11 @@ Metadata is the equivalent of [Jekyll's YAML frontmatter](https://jekyllrb.com/d
 
 ----
 
-## Field types
+### Field types
 
 There are three types of metadata fields you can create in Siteleaf: Simple, List, and Object. These three types of fields give you a ton of flexibility when setting up your content structure and you're even able to nest different field types within each other. No single person should have all this power! But we're giving it to you&hellip;
 
-### Simple
+#### Simple
 
 A "Simple" metadata field accepts a name and text value. These fields might be simple, but they're also smart. See the "Smart Field Names" section below for more info.
 
@@ -34,7 +33,7 @@ Accessing this page field in your template would look like this:
 {% endraw %}
 {% endhighlight %}
 
-### List
+#### List
 
 A "List" metadata field accepts a name and a list (AKA an array) of other metadata fields, which can be any field type. You can have a list of simple metadata fields, a list of lists, or a list of objects. This makes entering repeatable content very easy.
 
@@ -50,7 +49,7 @@ An example of looping through this page field in your template would look like:
 {% endraw %}
 {% endhighlight %}
 
-### Objects
+#### Objects
 
 An "Object" metadata field is the most descriptive of field types, allowing you to create a field that has many name/value pairs, where the value can be a field of any type (simple, list, or object). For example, you could create an "Author" object field where you could set their name, bio, and list of links.
 
@@ -70,11 +69,11 @@ Accessing this page field in your template would look like this:
 
 ----
 
-## Smart Field Names
+### Smart Field Names
 
 To get the most out of Siteleaf, you should know about the different "Smart Field Names" you can enter for a metadata field to enable additional user-friendly functionality, like file pickers, autocompletion, and visual text editing.
 
-### File fields
+#### File fields
 
 ![meta-file.png](/uploads/meta-file.png)
 
@@ -84,7 +83,7 @@ For example you could take things to the next level by creating a "List" metadat
 
 ----
 
-### Collection fields
+#### Collection fields
 
 ![meta-collection.png](/uploads/meta-collection.png)
 
@@ -92,7 +91,7 @@ To create a field for "associated" documents, create a new field with a name of 
 
 ----
 
-### Text editors
+#### Text editors
 
 ![meta-editor.png](/uploads/meta-editor.png)
 
@@ -108,7 +107,7 @@ To create a field with markdown or visual text editing functionality (like the b
 
 ----
 
-### Boolean/checkbox fields
+#### Boolean/checkbox fields
 
 ![meta-boolean.png](/uploads/meta-boolean.png)
 
@@ -118,7 +117,7 @@ In addition, any metadata field with a value of `true` or `false` will automatic
 
 ----
 
-### Date and time fields
+#### Date and time fields
 
 ![meta-date.png](/uploads/meta-date.png)
 
@@ -126,13 +125,13 @@ Metadata fields with a name ending in `at`, `date`, or `datetime` will have a bu
 
 ----
 
-### Color fields
+#### Color fields
 
 ![meta-color.png](/uploads/meta-color.png)
 
 Metadata fields with a name ending in `color`, `colour`, `colors`, `colours`, `hex`, `rgb`, `rgba`, `hsl`, `hsla`, `hsv`, or `hsva` will have a button within it which opens a color picker ui. The button will have its color set to the value of the field. 
 
-## Further reading
+### Further reading
 
 - [Default fields](/content/defaults)
 - [Jekyll Frontmatter](https://jekyllrb.com/docs/frontmatter/)

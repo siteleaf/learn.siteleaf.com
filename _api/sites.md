@@ -51,7 +51,7 @@ example_response: |-
   }
 ---
 
-## Overview
+### Overview
 
 1. [List your sites](#list-your-sites)
 1. [Create a site](#create-a-site)
@@ -65,21 +65,21 @@ example_response: |-
 
 
 
-## List your sites
+### List your sites
 
-### Endpoint
+#### Endpoint
 
 ~~~
 GET {{ site.data.api.url | append: 'sites' }}
 ~~~
 
-### Query String Params
+#### Query String Params
 
 | Name | Desc |
 |------|------|
 | `sort` | Should be formated as `field-asc` or `field-desc` |
 
-### Response
+#### Response
 
 {{ site.data.api.status_paginated }}
 ~~~ json
@@ -94,15 +94,15 @@ GET {{ site.data.api.url | append: 'sites' }}
 
 
 
-## Create a site
+### Create a site
 
-### Endpoint
+#### Endpoint
 
 ~~~
 POST {{ site.data.api.url | append: 'sites' }}
 ~~~
 
-### Input
+#### Input
 
 | Name | Type | Desc |
 |------|------|------|
@@ -114,13 +114,13 @@ POST {{ site.data.api.url | append: 'sites' }}
 | `empty` | `Boolean` | Defaults to `false`, if `true` doesn't create the Siteleaf default theme |
 
 
-### Example
+#### Example
 
 ~~~ json
 {{  page.example_input }}
 ~~~
 
-### Response
+#### Response
 
 {{ site.data.api.status_created }}
 ~~~ json
@@ -131,15 +131,15 @@ POST {{ site.data.api.url | append: 'sites' }}
 
 
 
-## Get a site
+### Get a site
 
-### Endpoint
+#### Endpoint
 
 ~~~
 GET {{ site.data.api.url | append: 'sites/:site_id' }}
 ~~~
 
-### Response
+#### Response
 
 {{ site.data.api.status_ok }}
 ~~~ json
@@ -150,15 +150,15 @@ GET {{ site.data.api.url | append: 'sites/:site_id' }}
 
 
 
-## Update a site
+### Update a site
 
-### Endpoint
+#### Endpoint
 
 ~~~
 PUT {{ site.data.api.url | append: 'sites/:site_id' }}
 ~~~
 
-### Input
+#### Input
 
 | Name | Type | Desc |
 |------|------|------|
@@ -172,13 +172,13 @@ PUT {{ site.data.api.url | append: 'sites/:site_id' }}
 | `sync` | `String` | Valid options are `disabled` and `github` |
 | `sync_options` | `Hash<String, String>` | See the [Hosting/Sync page](/api/hosting-sync) for more details |
 
-### Example
+#### Example
 
 ~~~ json
 {{  page.example_input }}
 ~~~
 
-### Response
+#### Response
 
 {{ site.data.api.status_ok }}
 ~~~ json
@@ -189,15 +189,15 @@ PUT {{ site.data.api.url | append: 'sites/:site_id' }}
 
 
 
-## Delete a site
+### Delete a site
 
-### Endpoint
+#### Endpoint
 
 ~~~
 DELETE {{ site.data.api.url | append: 'sites/:site_id' }}
 ~~~
 
-### Response
+#### Response
 
 {{ site.data.api.status_ok }}
 ~~~ json
@@ -211,17 +211,17 @@ DELETE {{ site.data.api.url | append: 'sites/:site_id' }}
 
 
 
-## Publish a site
+### Publish a site
 
 Compiles and publishes your site in the background, and immediately returns a job id. Use the [Jobs API](/api/jobs) to retrieve status updates.
 
-### Endpoint
+#### Endpoint
 
 ~~~
 POST {{ site.data.api.url | append: 'sites/:site_id/publish' }}
 ~~~
 
-### Response
+#### Response
 
 {{ site.data.api.status_accepted }}
 ~~~ json
@@ -234,17 +234,17 @@ POST {{ site.data.api.url | append: 'sites/:site_id/publish' }}
 
 
 
-## List post tags
+### List post tags
 
 Returns an array of all unique tags from Documents in the posts Collection.
 
-### Endpoint
+#### Endpoint
 
 ~~~
 GET {{ site.data.api.url | append: 'sites/:site_id/tags' }}
 ~~~
 
-### Response
+#### Response
 
 {{ site.data.api.status_ok }}
 ~~~ json
@@ -255,17 +255,17 @@ GET {{ site.data.api.url | append: 'sites/:site_id/tags' }}
 
 
 
-## List post categories
+### List post categories
 
 Returns an array of all unique categories from Documents in the posts Collection.
 
-### Endpoint
+#### Endpoint
 
 ~~~
 GET {{ site.data.api.url | append: 'sites/:site_id/categories' }}
 ~~~
 
-### Response
+#### Response
 
 {{ site.data.api.status_ok }}
 ~~~ json

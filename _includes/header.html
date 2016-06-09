@@ -1,0 +1,27 @@
+{% if page.layout == 'page' %}
+  {% assign section = site.collections | where: 'label', page.collection | first %}
+  {% assign title = section.title %}
+{% elsif page.header_title %}
+  {% assign title = page.header_title %}
+{% endif %}
+<div class="headerWrap bg--{{ page.color | default: 'dark-gray' }}">
+  <header class="header{% if page.extended_header %} header--extended{% endif %}">
+    <ul class="header__items">
+      <li class="header__item">
+        <a href="{{ site.github_url }}" class="header__link">Contribute</a>
+      </li>
+      <li class="header__item">
+        <a href="{{ site.github_url }}" class="header__link js-status">Status</a>
+      </li>
+      <li class="header__item">
+        <a href="http://www.siteleaf.com/" class="header__link header__link--button">Siteleaf Home</a>
+      </li>
+    </ul>
+    <a href="/" class="header__home"><img src="{{ site.logo }}" class="header__logo" alt="{{ site.title }}" /></a>
+    <h1 class="header__title">{{ title | default: page.title }}</h1>
+    {% if page.subtitle %}<div class="header__subtitle">{{ page.subtitle | markdownify }}</div>{% endif %}
+    {% include search.html %}
+  </header>
+</div>
+<!-- TO DO: add nav toggle -->
+<!-- TO DO: add search -->

@@ -2,13 +2,10 @@
 layout: default
 ---
 
-{% include sidebar.html %}
-
-<section class="main__content">
-  <div class="document">
-    <h1 class="document__title">{{ page.title }}</h1>
-
-    <div class="document__content">
+<div class="articleWrap">
+  {% include sidebar.html %}
+  <article class="article">
+    <section class="article__content">
       <ul class="collection__toc">
         {% assign documents = site[page.collection] | sort:"position" %}
         {% for document in documents %}
@@ -19,6 +16,6 @@ layout: default
           {% endif %}
         {% endfor %}
       </ul>
-    </div>
-  </div>
-</section>
+    </section>
+  </article>
+</div>

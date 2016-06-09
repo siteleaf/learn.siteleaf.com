@@ -4,7 +4,7 @@ date: 2016-01-15 16:22:50.771000000 -05:00
 position: 6
 ---
 
-## Overview
+### Overview
 
 `GET` endpoints that return multiple resources support pagination. You can change the page you are on using a `page` query string, and change the size of the page using the `per_page` query string. By default you start on page 1 and the page size is 30.
 

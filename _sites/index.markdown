@@ -1,5 +1,5 @@
 ---
-title: Deploy and Collaborate
+title: Deploy & Collaborate
 permalink: "/sites/"
 position: 0
 layout: section

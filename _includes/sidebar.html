@@ -1,19 +1,20 @@
-<aside class="main__sidebar main__sidebar--mobile-hidden nocontent">
-  {% include _search.html %}
-
+{% assign page_section = site.collections | where: 'label', page.collection | first %}
+<aside class="sidebar sidebar--mobile-hidden nocontent">
   {% assign sections = site.collections | sort:"position" %}
   {% for section in sections %}
     {% if section.title and section.meta.in_nav == true %}
-      <nav class="nav nav--mobile">
-        <h3 class="nav__header{% if page.title == section.title %} nav__header--current{% endif %}"><a href="/{{ section.label }}/">{{ section.title }}</a></h3>
-        <ul class="nav__list nav__list--sidebar">
-          {% assign documents = section.docs | sort:"position" %}
-          {% for document in documents %}
-            {% if document.title != section.title %}
-              <li class="nav__item nav__item--sidebar{% if page.url == document.url %} nav__item--current{% endif %}"><a class="nav__link nav__link--sidebar" href="{{ document.url }}">{{ document.title }}</a></li>
-            {% endif %}
-          {% endfor %}
-        </ul>
+      <nav class="nav nav--mobile"><!-- TO DO: make naming more semantic -->
+        <h4 class="nav__item{% if page.title == section.title %} nav__item--current{% endif %}{% if page_section.title == section.title %} {{ page.color | default: 'darker-gray' }}{% endif %}"><a href="/{{ section.label }}/">{{ section.title }}</a></h4>
+        {% if page_section.title == section.title %}
+          <ul class="nav__list">
+            {% assign documents = section.docs | sort:"position" %}
+            {% for document in documents %}
+              {% if document.title != section.title %}
+                <li class="nav__item{% if page.url == document.url %} nav__item--current {{ page.color | default: 'darker-gray' }}{% endif %}"><a class="nav__link nav__link--sidebar" href="{{ document.url }}">{{ document.title }}</a></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        {% endif %}
       </nav>
     {% endif %}
   {% endfor %}

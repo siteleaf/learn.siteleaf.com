@@ -2,22 +2,18 @@
 layout: default
 ---
 
-{% include _search.html %}
-
 {% assign sections = site.collections | sort:"position" %}
-<nav class="nav nav--grid">
-  <ul class="nav__list nav__list--grid">
-    {% for section in sections %}
-      {% if section.title and section.meta.in_nav == true %}
-        <li class="nav__item nav__item--grid">
-          {% assign docs = section.docs | sort:"position" %}
-          <a class="nav__link nav__link--grid" href="/{{ section.label }}/">
-            <i class="nav__icon nav__icon--grid ss-icon">{{ section.meta.icon }}</i>
-            <h3 class="nav__header nav__header--grid">{{ section.title }}</h3>
-            <p>{{ section.meta.description }}</p>
-          </a>
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-</nav>
+<ul class="landingItems">
+  {% for section in sections %}
+    {% if section.title and section.meta.in_nav == true %}
+      <li class="landingItem">
+        {% assign docs = section.docs | sort:"position" %}
+        <a href="/{{ section.label }}/">
+          <img src="{{ section.meta.badge }}" />
+          <h5>{{ section.title }}</h5>
+          <p>{{ section.meta.description }}</p>
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
