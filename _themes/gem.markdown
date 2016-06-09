@@ -8,7 +8,7 @@ layout: page
 We recommend using [GitHub sync](/themes/github-sync/) for local development, but you can still use the Gem if that's your preferred workflow.
 {: .note__info}
 
-The Siteleaf gem is open source, to fork and contribute see: <https://github.com/siteleaf/siteleaf-gem>
+The Siteleaf Ruby gem is open source, to fork and contribute see: <https://github.com/siteleaf/siteleaf-gem>
 
 ## Local development using the Siteleaf gem
 
