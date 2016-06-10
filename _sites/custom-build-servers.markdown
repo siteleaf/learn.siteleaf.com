@@ -1,7 +1,7 @@
 ---
 title: Custom build servers
 date: 2016-04-05 22:00:00 -04:00
-position: 5
+position: 6
 ---
 
 If you need to use custom Jekyll plugins or if you'd like to have complete control over the build process for your site, you can use a custom build server or service like [DeployBot](http://deploybot.com/).
