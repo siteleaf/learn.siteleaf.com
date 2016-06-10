@@ -2,46 +2,6 @@
 title: Siteleaf Learn
 timezone: America/New_York
 collections:
-  getting-started:
-    title: Getting Started
-    output: true
-    permalink: "/:collection/:path/"
-    meta:
-      description: Learn more about Siteleaf itself
-      icon: home
-      badge: "/uploads/badge--getting-started.svg"
-      in_nav: true
-    position: 10
-  content:
-    title: Managing Content
-    output: true
-    permalink: "/:collection/:path/"
-    meta:
-      description: Pages, collections, posts, metadata
-      icon: write
-      badge: "/uploads/badge--content.svg"
-      in_nav: true
-    position: 30
-  themes:
-    title: Developing Themes
-    output: true
-    permalink: "/:collection/:path/"
-    meta:
-      description: Liquid, Sass, Jekyll, syncing, local dev
-      icon: bezier
-      badge: "/uploads/badge--themes.svg"
-      in_nav: true
-    position: 40
-  sites:
-    title: Deploy & Collaborate
-    output: true
-    permalink: "/:collection/:path/"
-    meta:
-      description: Publish your site and invite other users
-      icon: globe
-      badge: "/uploads/badge--sites.svg"
-      in_nav: true
-    position: 50
   api:
     title: API
     output: true
@@ -52,6 +12,36 @@ collections:
       badge: "/uploads/badge--api.svg"
       in_nav: true
     position: 60
+  sites:
+    title: Deploy & Collaborate
+    output: true
+    permalink: "/:collection/:path/"
+    meta:
+      description: Publish your site and invite other users
+      icon: globe
+      badge: "/uploads/badge--sites.svg"
+      in_nav: true
+    position: 50
+  themes:
+    title: Developing Themes
+    output: true
+    permalink: "/:collection/:path/"
+    meta:
+      description: Liquid, Sass, Jekyll, syncing, local dev
+      icon: bezier
+      badge: "/uploads/badge--themes.svg"
+      in_nav: true
+    position: 40
+  getting-started:
+    title: Getting Started
+    output: true
+    permalink: "/:collection/:path/"
+    meta:
+      description: Learn more about Siteleaf itself
+      icon: home
+      badge: "/uploads/badge--getting-started.svg"
+      in_nav: true
+    position: 10
   v1:
     title: Legacy Sites
     output: true
@@ -62,6 +52,16 @@ collections:
       badge: "/uploads/badge--v1.svg"
       in_nav: true
     position: 70
+  content:
+    title: Managing Content
+    output: true
+    permalink: "/:collection/:path/"
+    meta:
+      description: Pages, collections, posts, metadata
+      icon: write
+      badge: "/uploads/badge--content.svg"
+      in_nav: true
+    position: 30
   posts:
     title: Posts
     output: true
