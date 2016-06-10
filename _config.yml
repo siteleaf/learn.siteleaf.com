@@ -19,7 +19,7 @@ collections:
     meta:
       description: Pages, collections, posts, metadata
       icon: write
-      badge: "/uploads/badge--getting-started.png"
+      badge: "/uploads/badge--content.svg"
       in_nav: true
     position: 30
   themes:
@@ -29,7 +29,7 @@ collections:
     meta:
       description: Liquid, Sass, Jekyll, syncing, local dev
       icon: bezier
-      badge: "/uploads/badge--getting-started.png"
+      badge: "/uploads/badge--themes.svg"
       in_nav: true
     position: 40
   sites:
@@ -59,7 +59,7 @@ collections:
     meta:
       description: Moving from v1 to v2
       icon: info
-      badge: "/uploads/badge--getting-started.png"
+      badge: "/uploads/badge--v1.svg"
       in_nav: true
     position: 70
   posts:

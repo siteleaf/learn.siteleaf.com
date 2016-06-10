@@ -29,11 +29,16 @@
     width: 50%;
   }
   margin-bottom: $v;
-  img {
-    @include margin-center;
-    margin-bottom: $v*0.5;
-    max-width: 240px;
-    width: 100%;
+}
+.badge {
+  @include margin-center;
+  margin-bottom: $v*0.5;
+  max-width: 240px;
+  width: 100%;
+  transition: all 150ms;
+  @include scale(0.97);
+  &:hover {
+    @include scale(1);
   }
 }
 
@@ -53,13 +58,16 @@
   }
 }
 .nav__list {
-  margin-top: $v*0.3;
-  margin-bottom: $v*0.5;
+  margin-top: $v*0.4;
+  margin-bottom: $v*0.6;
 }
 .nav__item {
-  padding-left: $gutter*0.75;
+  padding-left: $gutter*0.5;
   border-left: 3px solid transparent;
   margin-bottom: $v*0.2;
+  .nav__list & {
+    margin-bottom: $v*0.1;
+  }
   a {
     position: relative;
     top: -1px; // due to text and border y-positioning discrepancy
@@ -126,10 +134,58 @@ h6 {
     }
   }
 }
+// .article {
+//   background: rgba(0,255,0,0.2); // TEMP
+// }
 .article__improve {
   margin-top: $v*1.5;
   color: $color--dark-gray;
 }
+
+// // note.scss
+// // ---------
+
+// .note__info, .note__aside {
+//   border-radius: $border-radius;
+//   padding: 20px;
+//   position: relative;
+
+//   &:before {
+//     @include icon;
+//     font-size: 1.25em;
+//     position: absolute;
+//     top: 2px;
+//     right: 10px;
+//     opacity: 0.3;
+//   }
+// }
+
+// .note__info {
+//   background-color: rgba($color-yellow, 0.2);
+//   color: darken($color-yellow, 20%);
+
+//   code {
+//     background-color: rgba(#000, 0.08);
+//     color: darken($color-yellow, 20%);
+//   }
+
+//   strong {
+//     color: darken($color-yellow, 30%);
+//   }
+
+//   &:before {
+//     content: 'ℹ';
+//   }
+// }
+
+// .note__aside {
+//   background-color: $color-bg-gray;
+//   font-size: $font-size-n2;
+
+//   &:before {
+//     content: '';
+//   }
+// }
 
 // search
 // ------
