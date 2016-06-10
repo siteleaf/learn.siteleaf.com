@@ -6,12 +6,13 @@ layout: default
   {% include sidebar.html %}
   <article class="article">
     <section class="article__content">
+      <h3>In this section</h3>
       <ul class="collection__toc">
         {% assign documents = site[page.collection] | sort:"position" %}
         {% for document in documents %}
           {% if document.title != page.title %}
             <li>
-              <a class="collection__toc__link ss-navigateright right" href="{{ document.url }}">{{ document.title }}</a>
+              <a class="collection__toc__link" href="{{ document.url }}">{{ document.title }}</a>
             </li>
           {% endif %}
         {% endfor %}
