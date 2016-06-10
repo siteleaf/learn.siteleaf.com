@@ -63,4 +63,18 @@ document.addEventListener('DOMContentLoaded', function() {
   if (status) {
     load_status(status)
   }
+
+  // Toggle search focused class
+  var search_input = document.querySelector('.search__input'),
+    search = document.querySelector('.search');
+
+  if (search_input) {
+    search_input.onfocus = function() {
+      search.classList.add('search--focused');
+    };
+    search_input.onblur = function() {
+      search.classList.remove('search--focused');
+    };
+  }
+
 });

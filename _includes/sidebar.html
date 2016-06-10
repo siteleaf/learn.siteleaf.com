@@ -4,7 +4,7 @@
   {% for section in sections %}
     {% if section.title and section.meta.in_nav == true %}
       <nav class="nav nav--mobile"><!-- TO DO: make naming more semantic -->
-        <h4 class="nav__item{% if page.title == section.title %} nav__item--current{% endif %}{% if page_section.title == section.title %} {{ page.color | default: 'darker-gray' }}{% endif %}"><a href="/{{ section.label }}/">{{ section.title }}</a></h4>
+        <h5 class="nav__item{% if page.title == section.title %} nav__item--current{% endif %}{% if page_section.title == section.title %} {{ page.color | default: 'darker-gray' }}{% endif %}"><a href="/{{ section.label }}/">{{ section.title }}</a></h5>
         {% if page_section.title == section.title %}
           <ul class="nav__list">
             {% assign documents = section.docs | sort:"position" %}

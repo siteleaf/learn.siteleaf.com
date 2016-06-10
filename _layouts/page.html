@@ -5,8 +5,8 @@ layout: default
 <div class="articleWrap">
   {% include sidebar.html %}
   <article class="article">
-    <h2>{{ page.title }}</h2>
     <section class="article__content">
+      <h2>{{ page.title }}</h2>
       {{ content }}
       <p class="article__improve">
         <a href="{{ site.github_url }}/blob/master/{{ page.relative_path }}">
