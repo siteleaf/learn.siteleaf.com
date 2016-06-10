@@ -1,6 +1,7 @@
 ---
 title: Libraries and integrations
 date: 2016-06-10 14:29:00 -04:00
+position: 5
 ---
 
 If you'd like to deploy your site or manage content outside of the main Siteleaf admin site, we have a few ways you can do that:
