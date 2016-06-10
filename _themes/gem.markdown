@@ -5,7 +5,7 @@ position: 6
 ---
 
 We recommend using [GitHub sync](/themes/github-sync/) for local development, but you can still use the Gem if that's your preferred workflow.
-{: .note__info}
+{: .warning}
 
 ### Local development using the Siteleaf gem
 

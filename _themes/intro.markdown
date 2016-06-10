@@ -12,6 +12,8 @@ Once you're up and running, [GitHub Sync](/themes/github-sync/) makes it incredi
 
 A great resource for theme creation is [Jekyll's documentation](http://jekyllrb.com/docs): they go into depth with how different content types work and what Liquid tags and objects you have available for making your themes.
 
+---
+
 ### Further Reading
 
 - [Jekyll documentation](http://jekyllrb.com/docs)

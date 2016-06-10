@@ -10,6 +10,8 @@ Jekyll and GitHub Pages have support for a variety of external plugins, from [Co
 
 <ul class="supported-plugins"></ul>
 
+---
+
 ### Further Reading
 
 - [Jekyll: Plugins](https://jekyllrb.com/docs/plugins/)

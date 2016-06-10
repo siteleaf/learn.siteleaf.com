@@ -26,6 +26,8 @@ When you're in development, you can have Jekyll only rebuild parts of the site t
 jekyll serve --incremental
 {% endhighlight %}
 
+---
+
 ### Further Reading
 
 - [13 steps to a faster Jekyll website](https://wiredcraft.com/blog/make-jekyll-fast/)

@@ -45,6 +45,8 @@ In this case, we're:
 
 Note that `type` can be `posts`, `pages` or any other collection name (e.g. `people`).
 
+---
+
 ### Further Reading:
 
 - [Jekyll: Front Matter defaults](http://jekyllrb.com/docs/configuration/#front-matter-defaults)

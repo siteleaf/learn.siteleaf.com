@@ -45,6 +45,8 @@ Filters are used to modify the output of attributes (i.e., strings, numbers, var
 {% endraw %}
 {% endhighlight %}
 
+---
+
 ### Further Reading
 
 - [Shopify: Liquid wiki](https://github.com/Shopify/liquid/wiki)

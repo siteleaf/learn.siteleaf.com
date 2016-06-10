@@ -35,10 +35,12 @@ Enter your main posts path (default "posts"):
 
 Your site will be exported to a folder called `export` within the current directory.
 
-**Tip**: You can also export your site to a directory of your choice by adding an argument to the export command:
+<div class="tip">
+You can also export your site to a directory of your choice by adding an argument to the export command:
 
 {% highlight bash %}
 $ siteleaf export mydir
 {% endhighlight %}
 
-In this case your export will be saved a folder called `mydir`.
+In this case your export will be saved to a folder called `mydir`.
+</div>

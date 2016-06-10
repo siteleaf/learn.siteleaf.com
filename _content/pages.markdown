@@ -7,7 +7,7 @@ position: 0
 A page is the most basic content type in Siteleaf. Pages are free-floating and belong to your site rather than any particular collection.
 
 A page is linked to a Markdown file in your project that contains frontmatter and your body.
-{: .note__aside}
+{: .note}
 
 ### Options
 
@@ -30,6 +30,8 @@ The permalink also changes the path the page is accessible at on your site.
 ##### Layout
 
 Choose which layout you'd like to use. Any layout you have in `_layouts` will be listed here.
+
+---
 
 ### Further Reading
 

@@ -9,7 +9,7 @@ Blogging is built right into Siteleaf. This means that you can just go ahead and
 Posts are a bit like special documents — they belong to the Posts collection, but unlike regular documents, you can set them to be a draft.
 
 Creating a post will create a Markdown file in the `_posts/` directory that will include the timestamp and date (for example, a post titled "New York" that was created on January 6th, 2016 will turn into `2016-01-06-new-york.markdown`).
-{: .note__aside}
+{: .note}
 
 ### Options
 
@@ -40,6 +40,8 @@ The permalink changes the URL this post is accessible at on your site. Unlike a 
 ##### Layout
 
 Choose which layout you'd like to use. Any layout you have in `_layouts` will be listed here.
+
+---
 
 ### Further Reading
 

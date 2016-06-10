@@ -24,6 +24,8 @@ The permalink changes the path the document is accessible at on your site.
 
 Choose which layout you'd like to use. Any layout you have in `_layouts` will be listed here.
 
+---
+
 ### Further Reading
 
 - [Jekyll: Collections](http://jekyllrb.com/docs/collections/)

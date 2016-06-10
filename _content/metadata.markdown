@@ -8,7 +8,7 @@ prep time: blah
 Metadata are additional pieces of data which you can attach to your pages, documents, collections, and even site-wide. Metadata fields give you a ton of power and flexibility to create a system that fits your content.
 
 Metadata is the equivalent of [Jekyll's YAML frontmatter](https://jekyllrb.com/docs/frontmatter/). When syncing, Siteleaf exports metadata as frontmatter for Pages and Documents and edits the config file for Collections and Sites.
-{: .note__aside}
+{: .note}
 
 - [Field types](#field-types)
 - [Smart Field Names (for files, colorpickers, etc)](#smart-field-names)
@@ -130,6 +130,8 @@ Metadata fields with a name ending in `at`, `date`, or `datetime` will have a bu
 ![meta-color.png](/uploads/meta-color.png)
 
 Metadata fields with a name ending in `color`, `colour`, `colors`, `colours`, `hex`, `rgb`, `rgba`, `hsl`, `hsla`, `hsv`, or `hsva` will have a button within it which opens a color picker ui. The button will have its color set to the value of the field. 
+
+---
 
 ### Further Reading
 

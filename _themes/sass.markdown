@@ -20,6 +20,8 @@ Saving this file to `assets/stylesheet.sass` will process it and create `assets/
 
 Any partials that you're importing with `@import` should be placed in the `_sass/` directory. All the files you put into this directory should begin with an underscore (e.g., `_sass/_header.sass`).
 
+---
+
 ### Further Reading
 
 - [Jekyll: Assets](https://jekyllrb.com/docs/assets/)
