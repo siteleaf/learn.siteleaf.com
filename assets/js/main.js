@@ -78,10 +78,10 @@ document.addEventListener('DOMContentLoaded', function() {
   //   };
   // }
 
-  // var status = document.querySelector('.js-status');
-  // if (status) {
-  //   load_status(status)
-  // }
+  var status = document.querySelector('.js-status');
+  if (status) {
+    load_status(status)
+  }
 
   // Toggle search focused class
   var search_input = document.querySelector('.search__input'),
