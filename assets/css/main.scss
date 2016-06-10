@@ -21,14 +21,19 @@
 }
 .landingItem {
   @extend %column;
-  width: 25%;
-  @include max-width($max-width--md) {
-    width: 33.333333%;
-  }
+  width: 33.333333%;
   @include max-width($max-width--sm) {
     width: 50%;
   }
-  margin-bottom: $v;
+  @include max-width($max-width--xs) {
+    width: 100%;
+  }
+  margin-bottom: $v*1.5;
+  h5,
+  p {
+    @include margin-center;
+    max-width: 14rem;
+  }
 }
 .badge {
   @include margin-center;

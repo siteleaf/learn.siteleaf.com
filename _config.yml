@@ -9,7 +9,7 @@ collections:
     meta:
       description: Learn more about Siteleaf itself
       icon: home
-      badge: "/uploads/badge--v1.svg"
+      badge: "/uploads/badge--getting-started.svg"
       in_nav: true
     position: 10
   content:
@@ -39,7 +39,7 @@ collections:
     meta:
       description: Publish your site and invite other users
       icon: globe
-      badge: "/uploads/badge--v1.svg"
+      badge: "/uploads/badge--sites.svg"
       in_nav: true
     position: 50
   api:
@@ -49,7 +49,7 @@ collections:
     meta:
       description: Integrate directly into your site or app
       icon: cloud
-      badge: "/uploads/badge--v1.svg"
+      badge: "/uploads/badge--api.svg"
       in_nav: true
     position: 60
   v1:
