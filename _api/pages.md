@@ -1,7 +1,7 @@
 ---
 title: Pages
 date: 2016-01-14 15:50:46.559000000 -05:00
-position: 2
+position: 4
 example_input: |-
   {
     "title": "Foo Bar",
