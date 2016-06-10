@@ -42,7 +42,9 @@
   width: 100%;
   transition: all 150ms;
   @include scale(0.97);
-  &:hover {
+}
+.landingItem__link:hover {
+  .badge {
     @include scale(1);
   }
 }
