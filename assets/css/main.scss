@@ -235,6 +235,40 @@ h6 {
   margin-bottom: $v*0.75;
 }
 
+// status
+// ------
+
+// .status--none,
+// .status--minor,
+// .status--major,
+// .status--critical {
+//   position: relative;
+
+//   &:after {
+//     border-radius: 50%;
+//     border: 1px solid $color--white;
+//     content: '';
+//     display: block;
+//     position: absolute;
+//     width: 12px;
+//     height: 12px;
+//     right: -18px;
+//     top: 6px;
+//   }
+// }
+// .status--none:after {
+//   background-color: $color--leaf;
+// }
+// .status--minor:after {
+//   background-color: $color--yellow;
+// }
+// .status--major:after {
+//   background-color: $color--red;
+// }
+// .status--critical:after {
+//   background-color: $color--red;
+// }
+
 // google-cse
 // ----------
 
