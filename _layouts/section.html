@@ -6,8 +6,8 @@ layout: default
   {% include sidebar.html %}
   <article class="article">
     <section class="article__content">
-      <h3>In this section</h3>
-      <ul class="collection__toc">
+      <h3>Contents</h3>
+      <ol class="collection__toc">
         {% assign documents = site[page.collection] | sort:"position" %}
         {% for document in documents %}
           {% if document.title != page.title %}
@@ -16,7 +16,7 @@ layout: default
             </li>
           {% endif %}
         {% endfor %}
-      </ul>
+      </ol>
     </section>
   </article>
 </div>

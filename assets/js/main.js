@@ -60,28 +60,28 @@ document.addEventListener('DOMContentLoaded', function() {
     load_plugins(list);
   }
 
-  // Toggle the nav on click on mobile.
-  var toggle = document.querySelector('.nav__toggle');
+  // // Toggle the nav on click on mobile.
+  // var toggle = document.querySelector('.nav__toggle');
 
-  if (toggle) {
-    var toggle_button = toggle.firstElementChild;
-    var sidebar = document.querySelector('.main__sidebar');
+  // if (toggle) {
+  //   var toggle_button = toggle.firstElementChild;
+  //   var sidebar = document.querySelector('.main__sidebar');
 
-    toggle.onclick = function() {
-      sidebar.classList.toggle("main__sidebar--mobile-hidden")
+  //   toggle.onclick = function() {
+  //     sidebar.classList.toggle("main__sidebar--mobile-hidden")
 
-      if (sidebar.classList.contains("main__sidebar--mobile-hidden")) {
-        toggle_button.innerHTML = "&#9776;";
-      } else {
-        toggle_button.innerHTML = "&#10006;"
-      }
-    };
-  }
+  //     if (sidebar.classList.contains("main__sidebar--mobile-hidden")) {
+  //       toggle_button.innerHTML = "&#9776;";
+  //     } else {
+  //       toggle_button.innerHTML = "&#10006;"
+  //     }
+  //   };
+  // }
 
-  var status = document.querySelector('.js-status');
-  if (status) {
-    load_status(status)
-  }
+  // var status = document.querySelector('.js-status');
+  // if (status) {
+  //   load_status(status)
+  // }
 
   // Toggle search focused class
   var search_input = document.querySelector('.search__input'),

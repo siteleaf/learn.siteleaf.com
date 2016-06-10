@@ -49,7 +49,9 @@
   margin-top: $v*1.5;
   padding-left: $gutter;
   padding-right: $gutter;
-  // background: rgba(0,255,0,0.2); // TEMP
+  @include max-width(1036px) {
+    display: none;
+  }
 }
 .nav {
   color: $color--dark-gray;
@@ -102,18 +104,34 @@
   }
 }
 
+// breadcrumbs
+// -----------
+
+.breadcrumbs {
+  margin-bottom: $v*0.125;
+}
+.breadcrumb {
+  color: $color--gray;
+  font-size: $font-size--small;
+  font-weight: $font-weight--medium;
+  display: inline-block;
+  &:not(:first-child):before {
+    content: ' > ';
+    color: $color--light-gray;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+
 // article
 // -------
 
 .articleWrap {
-  // background: rgba(255,0,0,0.2); // TEMP
   @include flexbox;
-  // @include justify-content(space-around);
   margin-left: -$gutter;
   margin-right: -$gutter; // account for padding on sidebar and article
-  // @include max-width($max-width--sm) {
-  //   @include flex-wrap(nowrap);
-  // }
 }
 h1,
 h2,
@@ -134,58 +152,20 @@ h6 {
     }
   }
 }
-// .article {
-//   background: rgba(0,255,0,0.2); // TEMP
-// }
 .article__improve {
   margin-top: $v*1.5;
   color: $color--dark-gray;
 }
 
-// // note.scss
-// // ---------
-
-// .note__info, .note__aside {
-//   border-radius: $border-radius;
-//   padding: 20px;
-//   position: relative;
-
-//   &:before {
-//     @include icon;
-//     font-size: 1.25em;
-//     position: absolute;
-//     top: 2px;
-//     right: 10px;
-//     opacity: 0.3;
-//   }
-// }
-
-// .note__info {
-//   background-color: rgba($color-yellow, 0.2);
-//   color: darken($color-yellow, 20%);
-
-//   code {
-//     background-color: rgba(#000, 0.08);
-//     color: darken($color-yellow, 20%);
-//   }
-
-//   strong {
-//     color: darken($color-yellow, 30%);
-//   }
-
-//   &:before {
-//     content: 'ℹ';
-//   }
-// }
-
-// .note__aside {
-//   background-color: $color-bg-gray;
-//   font-size: $font-size-n2;
-
-//   &:before {
-//     content: '';
-//   }
-// }
+.api__headers {
+  pre,
+  code {
+    background-color: darken($color--lightest-gray, 2%);
+  }
+  pre {
+    margin-bottom: 0;
+  }
+}
 
 // search
 // ------
@@ -195,15 +175,14 @@ h6 {
   max-width: 30rem;
   position: relative;
   @include margin-center;
-  margin-top: $v*0.2;
 }
 .search:before {
   content: '';
   display: block;
   position: absolute;
-  top: 1px;
-  width: 40px;
-  height: 40px;
+  top: 0;
+  width: 42px;
+  height: 42px;
   background-image: url('/assets/images/icon--search--white.svg');
   background-position: left 13px center;
   background-repeat: no-repeat;
@@ -211,7 +190,8 @@ h6 {
   @include max-width($max-width--sm) {
     width: 35px;
     height: 35px;
-    background-size: 17px 17px;
+    background-position: left 11px center;
+    background-size: 16px 16px;
   }
 }
 .search--focused:before {
@@ -228,16 +208,15 @@ h6 {
   display: block;
   width: 100%;
   @extend %mk3;
-  // font-size: $font-size--small;
   font-size: 1em;
   font-family: inherit;
   @include antialias;
   color: $color--darkest-gray;
-  background: rgba(255,255,255,0.2);
+  background: rgba($color--white, 0.2);
   @include placeholder($color--white);
   transition: background 100ms;
   &:hover {
-    background: rgba(255,255,255,0.28);
+    background: rgba($color--white, 0.28);
   }
   &:focus {
     background: $color--white;
@@ -245,7 +224,8 @@ h6 {
   }
   height: 42px; // manually set to prevent page load jump
   @include max-width($max-width--sm) {
-    height: 37px;
+    height: 36px;
+    padding-left: 30px;
   }
   margin-bottom: $v*0.75;
 }
@@ -279,679 +259,3 @@ h6 {
 .gsc-result-info {
   padding-left: 1px !important;
 }
-
-// .nav__header--current {
-//   color: inherit;
-// }
-// .nav__item--current {
-//   color: inherit;
-// }
-
-
-// TO DO: aside styles
-
-// .sidebar,
-// .article {
-//   @extend
-// }
-// .sidebar {
-//   float: left;
-//   width: 20%;
-// }
-
-// header and footer
-// -----------------
-
-// .header__link--siteleaf {
-//   background: $color--leaf;
-//   color: $color--white;
-//   margin-left: 0.5em;
-//   &:hover {
-//     background: darken($color--leaf, $darken--button);
-//   }
-// }
-
-// *,
-// *:before,
-// *:after {
-//   @include box-sizing(inherit);
-// }
-// html,
-// body {
-//   overflow-x: hidden;
-// }
-// html {
-//   @include box-sizing(border-box);
-//   font-size: $font-size--html;
-//   @include max-width($max-width--sm) {
-//     font-size: $font-size--html-sm;
-//   }
-// }
-// body {
-//   color: $color--gray-darkest;
-//   background: $color--white;
-//   font-family: $font-family--sans-serif;
-//   line-height: $line-height--base;
-//   @include antialias;
-// }
-// a {
-//   color: inherit;
-//   text-decoration: none;
-// }
-// h1 {
-//   @extend %mk1;
-// }
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//   font-weight: $font-weight--bold;
-// }
-// h1 {
-//   font-size: 3.333333em;
-//   line-height: $line-height--tight;
-//   letter-spacing: $letter-spacing--tighter;
-//   @include max-width($max-width--md) {
-//     font-size: 3em;
-//     letter-spacing: $letter-spacing--tight;
-//   }
-//   @include max-width($max-width--sm) {
-//     font-size: 2.5em;
-//     letter-spacing: $letter-spacing--tight;
-//   }
-// }
-// h2 {
-//   font-size: 2.5em;
-//   line-height: $line-height--tight;
-//   letter-spacing: $letter-spacing--tight;
-//   @include max-width($max-width--sm) {
-//     font-size: 2em;
-//   }
-//   margin-bottom: $v*0.5;
-// }
-// h3 {
-//   font-size: 1.5em;
-//   line-height: $line-height--tight;
-//   letter-spacing: $letter-spacing--tight;
-//   @include max-width($max-width--sm) {
-//     font-size: 1.333333em;
-//   }
-//   margin-bottom: $v*0.5;
-// }
-// h4 {
-//   font-size: 1.083333em;
-//   margin-bottom: $v*0.25;
-// }
-// p {
-//   @extend %mk3;
-//   margin-bottom: $v*0.75;
-// }
-// hr {
-//   width: 5em;
-//   margin: $v*1.5 auto;
-//   border: 0;
-//   border-top: 0.2em solid $color--gray-lighter;
-// }
-// blockquote {
-//   font-style: italic;
-//   margin-left: 0.3em;
-//   padding-left: 1.2em - 0.3em - 0.2em;
-//   border-left: 0.2em solid $color--gray-lighter;
-//   em {
-//     font-family: $font-family--sans-serif;
-//   }
-// }
-// pre,
-// code {
-//   background: $color--gray-lightest;
-//   color: $color--gray-darker;
-// }
-// pre {
-//   padding: 1em;
-// }
-// code {
-//   font-size: $font-size--small;
-//   padding: 0.1em 0.25em;
-//   a & {
-//     font-weight: normal;
-//   }
-// }
-// pre,
-// code,
-// kbd,
-// samp {
-//   font-family: $font-family--monospace;
-//   overflow: auto;
-//   white-space: pre;
-// }
-// strong {
-//   font-weight: $font-weight--bold;
-// }
-// em {
-//   font-style: italic;
-// }
-// small {
-//   font-size: $font-size--small;
-// }
-// img {
-//   @include responsive-image;
-// }
-// sup {
-//   font-size: $font-size--smaller;
-//   vertical-align: baseline;
-//   position: relative;
-//   top: -0.4em;
-// }
-// mark {
-//   background: #ffa;
-//   color: inherit;
-// }
-
-// table {
-//   font-size: $font-size-html-sm;
-//   margin-bottom: $v;
-//   text-align: left;
-//   width: 100%;
-  
-//   thead {
-//     border-bottom: 1px solid $color-gray-an2;
-//   }
-
-//   th {
-//     font-weight: $font-weight-semibold;
-//   }
-
-//   th, td {
-//     padding-right: $v / 2;
-//   }
-// } // TO DO: fix these
-
-// grid
-// ----
-
-// .wrap, .container {
-//   @extend %container;
-// }
-
-// header and footer
-// -----------------
-
-// .header {
-//   padding-top: $gutter*0.75;
-//   padding-bottom: $gutter*0.75;
-//   position: relative;
-//   @include max-width($max-width--sm) {
-//     text-align: center;
-//   }
-//   p {
-//     @extend %mk2;
-//   }
-//   background: $color--blue; // TEMP
-//   // padding-bottom: 1em;
-//   // padding-top: 1em;
-//   // margin-bottom: 2em; // TO DO: remove
-// }
-
-// .status--none,
-// .status--minor,
-// .status--major,
-// .status--critical {
-//   position: relative;
-
-//   &:after {
-//     border-radius: 50%;
-//     border: 1px solid $color-white-a1;
-//     content: '';
-//     display: block;
-//     position: absolute;
-//     width: 12px;
-//     height: 12px;
-//     right: -18px;
-//     top: 6px;
-//   }
-// }
-
-// .status--none:after {
-//   background-color: $color--leaf;
-// }
-// .status--minor:after {
-//   background-color: $color--yellow;
-// }
-// .status--major:after {
-//   background-color: #EA722F;
-// }
-// .status--critical:after {
-//   background-color: $color--red;
-// }
-
-// // nav.scss
-// // --------
-
-// .nav {
-//   @include clearfix;
-
-//   & + & {
-//     margin-top: $v;
-//   }
-
-//   &--grid {
-//     text-align: center;
-
-//     & + & {
-//       border-top: 1px solid $color-gray-an2;
-//     }
-//   }
-
-//   &--mobile {
-//     margin-top: $v;
-//   }
-// }
-
-// .nav__toggle {
-//   display: none !important;
-
-//   @media (max-width: $max-width-narrow) {
-//     display: inline-block !important;
-//   }
-// }
-
-// .nav__logo {
-//   color: $color-white;
-//   font-size: $font-size-1;
-//   font-weight: $font-weight-semibold;
-//   display: block;
-//   height: $v * 1.5;
-//   float: left;
-
-//   img {
-//     height: $v * 1.5;
-//     max-width: 100%;
-//     padding-right: $v * 0;
-//     display: inline-block;
-//     float: left;
-//   }
-
-//   span {
-//     display: inline-block;
-//     line-height: $v * 1.5;
-//     margin-left: $v / 2;
-//   }
-
-//   &:hover {
-//     color: rgba($color-white, 0.6);
-//     text-decoration: none;
-//   }
-// }
-
-// .nav__header {
-//   // color: $color-text-dark;
-//   margin-bottom: 0;
-//   font-size: $font-size-n1;
-
-//   a {
-//     color: $color-text-dark;
-//   }
-
-//   &--current {
-//     background: $color-gray-an2;
-//     color: $color-gray-a1;
-//     display: inline-block;
-//     border-radius: $border-radius;
-//     padding: 2px 5px;
-//   }
-
-//   &--grid {
-//     font-size: $font-size-1;
-//   }
-// }
-
-// .nav__icon {
-//   &--grid {
-//     font-size: $font-size-4;
-//   }
-// }
-
-// .nav__list {
-//   margin-bottom: 0;
-//   list-style-type: none;
-//   margin-bottom: 0;
-
-//   &--header {
-//     float: right;
-//     display: block;
-//     line-height: $v * 1.5;
-//     text-align: right;
-//     height: $v * 1.5;
-//   }
-
-//   &--grid {
-//     @include clearfix;
-//     display: -webkit-box;
-//     display: -webkit-flex;
-//     display: -ms-flexbox;
-//     display: flex;
-//     -webkit-flex-wrap: wrap;
-//         -ms-flex-wrap: wrap;
-//             flex-wrap: wrap;
-//     width: calc(100% + 9.65px);
-
-//     @media (max-width: 1024px) {
-//       width: 100%;
-//     }
-//   }
-// }
-
-// .nav__item {
-//   font-size: $font-size-n1;
-//   margin-left: 0;
-//   padding-left: 0;
-
-//   &--header {
-//     display: none;
-//     font-size: $font-size-html;
-//     line-height: $line-height-tight;
-
-//     @media (min-width: $max-width-narrow) {
-//       display: inline-block;
-//     }
-
-//     & + & {
-//       margin-left: 1.5em;
-//     }
-//   }
-
-//   &--current {
-//     .nav__link{
-//       background: $color-gray-an2;
-//       color: $color-gray-a1;
-//       display: inline-block;
-//       border-radius: $border-radius;
-//       padding: 2px 5px;
-//     }
-//   }
-
-//   &--grid {
-//     border: 1px solid $color-gray-an2;
-//     display: flex;
-//     display: inline-block;
-//     float: left;
-//     margin-left: 10px;
-//     margin-bottom: $v / 2;
-//     padding: 0 ($v / 2);
-//     width: 24%;
-
-//     @media (min-width: $max-width-narrow) and (max-width: 900px) {
-//       width: 32%;
-
-//       &:nth-child(3n+1) {
-//         margin-left: 0px;
-//       }
-//     }
-
-//     @media (min-width: 900px) {
-//       &:nth-child(4n+1) {
-//         margin-left: 0;
-//       }
-//     }
-
-//     @media (max-width: $max-width-narrow) {
-//       margin-left: 0;
-//       width: 100%;
-//     }
-
-//     &:hover {
-//       border-color: $color-gray-an1;
-//     }
-//   }
-// }
-
-// .nav__link {
-//   &--header {
-//     color: $color-white;
-
-//     &:hover {
-//       color: rgba($color-white, 0.6);
-//       text-decoration: none;
-//     }
-//   }
-
-//   &--grid {
-//     display: block;
-//     color: $color-gray-a2;
-//     padding-bottom: $v;
-//     padding-top: $v;
-
-//     &:hover {
-//       text-decoration: none;
-//       color: $color-gray-a2;
-//     }
-
-//     p {
-//       margin-bottom: 0;
-//     }
-//   }
-// }
-
-// .nav__button {
-//   background: transparent;
-//   border: none;
-//   color: $color-white;
-//   font-size: $font-size-2;
-//   outline: none;
-// }
-
-// // layout.scss
-// // -----------
-
-// .main {
-//   @media (max-width: $max-width-narrow) {
-//     .main__sidebar, .main__content {
-//       width: 100%;
-//     }
-
-//     .main__sidebar {
-//       border-bottom: 5px solid $color-gray-an2;
-//       padding-bottom: $v;
-//       margin-bottom: $v;
-//     }
-//   }
-// }
-
-// .main__sidebar {
-//   float: left;
-//   width: 25%;
-
-//   &--mobile-hidden {
-//     display: block;
-
-//     @media (max-width: $max-width-narrow) {
-//       display: none;
-//     }
-//   }
-// }
-
-// .main__content {
-//   float: right;
-//   width: 70%;
-
-//   img {
-//     border: 5px solid $color-gray-an3;
-//     box-sizing: border-box;
-//   }
-// }
-
-// // search.scss
-// // -----------
-
-// .search {
-//   margin-bottom: $v;
-// }
-
-// .search__input {
-//   box-sizing: border-box;
-//   border: 1px solid $color-gray-an2;
-//   border-radius: 0;
-//   font-family: $font-family-sans-serif;
-//   font-size: $font-size-n2;
-//   display: block;
-//   height: auto;
-//   height: $v * 2;
-//   width: 100%;
-//   padding: $v / 2;
-//   background-position-y: center;
-
-//   &:focus {
-//     border-color: $color-gray-a1;
-//   }
-// }
-
-// // document.scss
-// // -------------
-
-// .document__title {
-//   border-bottom: 3px solid $color-gray-an2;
-//   padding-bottom: $v;
-//   margin-bottom: $v;
-
-//   &--landing {
-//     border: none;
-//     margin-bottom: $v * 1;
-//     text-align: center;
-//   }
-// }
-
-// .document__summary {
-//   border-left: 5px solid $color-gray-an2;
-//   color: $color-gray-a1;
-//   margin-bottom: $v / 2;
-//   padding-left: $v / 2;
-
-//   h3 {
-//     margin-bottom: 0;
-//   }
-// }
-
-// .document__improve {
-//   font-size: $font-size-html-sm;
-//   margin-top: $v * 2;
-// }
-
-// .document #further-reading {
-//   border-top: 1px solid $color-gray-an2;
-//   padding-top: $v;
-//   margin-top: $v;
-// }
-
-// .collection__toc {
-//   list-style: none;
-//   padding: 0;
-
-//   li {
-//     margin: 0 0 15px;
-//   }
-// }
-
-// .collection__toc__link {
-//   display: block;
-//   border: 1px solid $color-gray-an2;
-//   padding: 15px 40px 15px 15px;
-//   border-radius: $border-radius;
-//   position: relative;
-
-//   &:after {
-//     position: absolute;
-//     right: 15px;
-//     top: 50%;
-//     transform: translateY(-50%);
-//     font-size: 20px;
-//   }
-
-//   &:hover {
-//     border-color: $color-blue;
-//     background: $color-blue;
-//     color: #fff;
-//     text-decoration: none;
-//   }
-// }
-
-// // footer.scss
-// // -----------
-
-// .footer .wrap {
-//   border-top: 1px solid $color-gray-an2;
-//   padding-top: $v;
-//   font-size: $font-size-html-sm;
-//   margin-bottom: $v;
-//   margin-top: $v;
-// }
-
-// // note.scss
-// // ---------
-
-// .note__info, .note__aside {
-//   border-radius: $border-radius;
-//   padding: 20px;
-//   position: relative;
-
-//   &:before {
-//     @include icon;
-//     font-size: 1.25em;
-//     position: absolute;
-//     top: 2px;
-//     right: 10px;
-//     opacity: 0.3;
-//   }
-// }
-
-// .note__info {
-//   background-color: rgba($color-yellow, 0.2);
-//   color: darken($color-yellow, 20%);
-
-//   code {
-//     background-color: rgba(#000, 0.08);
-//     color: darken($color-yellow, 20%);
-//   }
-
-//   strong {
-//     color: darken($color-yellow, 30%);
-//   }
-
-//   &:before {
-//     content: 'ℹ';
-//   }
-// }
-
-// .note__aside {
-//   background-color: $color-bg-gray;
-//   font-size: $font-size-n2;
-
-//   &:before {
-//     content: '';
-//   }
-// }
-
-// // api.scss
-// // --------
-
-// .api__content {
-//   font-size: 16px;
-
-//   table {
-//     font-size: 100%;
-//   }
-
-//   pre, code {
-//     font-size: $font-size-n1;
-//   }
-// }
-
-// .api__headers pre {
-//   background-color: #eee;
-//   margin-bottom: 0;
-// }
-
-// .api__toc {
-//   margin-bottom: $v;
-// }
