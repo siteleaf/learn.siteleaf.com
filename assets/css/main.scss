@@ -107,6 +107,25 @@
   //   @include flex-wrap(nowrap);
   // }
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  .article__anchor {
+    text-decoration: none;
+    color: $color--gray;
+    margin-left: 0.2em;
+    opacity: 0;
+    transition: opacity 100ms;
+  }
+  &:hover {
+    .article__anchor {
+      opacity: 1;
+    }
+  }
+}
 .article__improve {
   margin-top: $v*1.5;
   color: $color--dark-gray;
@@ -160,7 +179,7 @@
   color: $color--darkest-gray;
   background: rgba(255,255,255,0.2);
   @include placeholder($color--white);
-  transition: background 200ms;
+  transition: background 100ms;
   &:hover {
     background: rgba(255,255,255,0.28);
   }
