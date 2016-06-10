@@ -36,7 +36,7 @@ example_response: |-
   }
 ---
 
-## Overview
+### Overview
 
 1. [List pages](#list-pages)
 1. [Create a page](#create-a-page)
@@ -47,15 +47,15 @@ example_response: |-
 
 
 
-## List pages
+### List pages
 
-### Endpoint
+#### Endpoint
 
 ~~~
 GET {{ site.data.api.url | append: 'sites/:site_id/pages' }}
 ~~~
 
-### Query String Params
+#### Query String Params
 
 | Name | Desc |
 |------|------|
@@ -64,7 +64,7 @@ GET {{ site.data.api.url | append: 'sites/:site_id/pages' }}
 | `visibility` | Can be either `visible` or `hidden` |
 | `extensions` | A comma separated list of file extensions, or `markdown` which is equivalent to `markdown,md,mkdown,mkdn,mkd` |
 
-### Response
+#### Response
 
 {{ site.data.api.status_paginated }}
 ~~~ json
@@ -79,15 +79,15 @@ GET {{ site.data.api.url | append: 'sites/:site_id/pages' }}
 
 
 
-## Create a page
+### Create a page
 
-### Endpoint
+#### Endpoint
 
 ~~~
 POST {{ site.data.api.url | append: 'sites/:site_id/pages' }}
 ~~~
 
-### Input
+#### Input
 
 | Name | Type | Desc |
 |------|------|------|
@@ -99,13 +99,13 @@ POST {{ site.data.api.url | append: 'sites/:site_id/pages' }}
 | `visibility` | `String` | Valid options are `visible` and `hidden`, defaults to `visible` |
 | `metadata` | `Hash<String, *>` | Arbitrary key/value pairs |
 
-### Example
+#### Example
 
 ~~~ json
 {{ page.example_input }}
 ~~~
 
-### Response
+#### Response
 
 {{ site.data.api.status_created }}
 ~~~ json
@@ -116,15 +116,15 @@ POST {{ site.data.api.url | append: 'sites/:site_id/pages' }}
 
 
 
-## Get a page
+### Get a page
 
-### Endpoint
+#### Endpoint
 
 ~~~
 GET {{ site.data.api.url | append: 'pages/:page_id' }}
 ~~~
 
-### Response
+#### Response
 
 {{ site.data.api.status_ok }}
 ~~~ json
@@ -135,15 +135,15 @@ GET {{ site.data.api.url | append: 'pages/:page_id' }}
 
 
 
-## Update a page
+### Update a page
 
-### Endpoint
+#### Endpoint
 
 ~~~
 PUT {{ site.data.api.url | append: 'pages/:page_id' }}
 ~~~
 
-### Input
+#### Input
 
 | Name | Type | Desc |
 |------|------|------|
@@ -155,13 +155,13 @@ PUT {{ site.data.api.url | append: 'pages/:page_id' }}
 | `visibility` | `String` | Valid options are `visible` and `hidden`, defaults to `visible` |
 | `metadata` | `Hash<String, *>` | Arbitrary key/value pairs |
 
-### Example
+#### Example
 
 ~~~ json
 {{ page.example_input }}
 ~~~
 
-### Response
+#### Response
 
 {{ site.data.api.status_ok }}
 ~~~ json
@@ -171,15 +171,15 @@ PUT {{ site.data.api.url | append: 'pages/:page_id' }}
 
 
 
-## Delete a page
+### Delete a page
 
-### Endpoint
+#### Endpoint
 
 ~~~
 DELETE {{ site.data.api.url | append: 'pages/:page_id' }}
 ~~~
 
-### Response
+#### Response
 
 {{ site.data.api.status_ok }}
 ~~~ json

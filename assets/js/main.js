@@ -34,6 +34,25 @@ var load_status = function (element) {
   });
 }
 
+var anchorForId = function(id) {
+  var anchor = document.createElement("a");
+  anchor.className = "article__anchor";
+  anchor.href      = "#" + id;
+  anchor.innerHTML = "#";
+  return anchor;
+};
+
+var linkifyAnchors = function(level, containingElement) {
+  var headers = containingElement.getElementsByTagName("h" + level);
+  for (var h = 0; h < headers.length; h++) {
+    var header = headers[h];
+
+    if (typeof header.id !== "undefined" && header.id !== "") {
+      header.appendChild(anchorForId(header.id));
+    }
+  }
+};
+
 document.addEventListener('DOMContentLoaded', function() {
   // Load the actual plugins.
   var list = document.querySelector('.supported-plugins');
@@ -41,26 +60,49 @@ document.addEventListener('DOMContentLoaded', function() {
     load_plugins(list);
   }
 
-  // Toggle the nav on click on mobile.
-  var toggle = document.querySelector('.nav__toggle');
+  // // Toggle the nav on click on mobile.
+  // var toggle = document.querySelector('.nav__toggle');
 
-  if (toggle) {
-    var toggle_button = toggle.firstElementChild;
-    var sidebar = document.querySelector('.main__sidebar');
+  // if (toggle) {
+  //   var toggle_button = toggle.firstElementChild;
+  //   var sidebar = document.querySelector('.main__sidebar');
 
-    toggle.onclick = function() {
-      sidebar.classList.toggle("main__sidebar--mobile-hidden")
+  //   toggle.onclick = function() {
+  //     sidebar.classList.toggle("main__sidebar--mobile-hidden")
 
-      if (sidebar.classList.contains("main__sidebar--mobile-hidden")) {
-        toggle_button.innerHTML = "&#9776;";
-      } else {
-        toggle_button.innerHTML = "&#10006;"
-      }
+  //     if (sidebar.classList.contains("main__sidebar--mobile-hidden")) {
+  //       toggle_button.innerHTML = "&#9776;";
+  //     } else {
+  //       toggle_button.innerHTML = "&#10006;"
+  //     }
+  //   };
+  // }
+
+  // var status = document.querySelector('.js-status');
+  // if (status) {
+  //   load_status(status)
+  // }
+
+  // Toggle search focused class
+  var search_input = document.querySelector('.search__input'),
+    search = document.querySelector('.search');
+
+  if (search_input) {
+    search_input.onfocus = function() {
+      search.classList.add('search--focused');
+    };
+    search_input.onblur = function() {
+      search.classList.remove('search--focused');
     };
   }
 
-  var status = document.querySelector('.js-status');
-  if (status) {
-    load_status(status)
+  // Add header anchor links
+  var contentBlock = document.getElementsByClassName("article__content")[0];
+  if (!contentBlock) {
+    return;
   }
+  for (var level = 1; level <= 6; level++) {
+    linkifyAnchors(level, contentBlock);
+  }
+
 });

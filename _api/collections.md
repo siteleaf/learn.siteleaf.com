@@ -25,7 +25,7 @@ example_response: |-
   }
 ---
 
-## Overview
+### Overview
 
 1. [List collections](#list-collections)
 1. [Create a collection](#create-a-collection)
@@ -40,15 +40,15 @@ For interacting with a Collection's documents refer to the [Documents page](/api
 
 
 
-## List collections
+### List collections
 
-### Endpoint
+#### Endpoint
 
 ~~~
 GET {{ site.data.api.url | append: 'sites/:site_id/collections' }}
 ~~~
 
-### Response
+#### Response
 
 {{ site.data.api.status_paginated }}
 ~~~ json
@@ -60,15 +60,15 @@ GET {{ site.data.api.url | append: 'sites/:site_id/collections' }}
 ~~~
 
 
-## Create a collection
+### Create a collection
 
-### Endpoint
+#### Endpoint
 
 ~~~
 POST {{ site.data.api.url | append: 'sites/:site_id/collections' }}
 ~~~
 
-### Input
+#### Input
 
 | Name | Type | Desc |
 |------|------|------|
@@ -78,14 +78,14 @@ POST {{ site.data.api.url | append: 'sites/:site_id/collections' }}
 | `output` | `Boolean` | Whether the collection's documents will be rendered, defaults to `true` |
 | `metadata` | `Hash<String, *>` | Arbitrary key/value pairs |
 
-### Example
+#### Example
 
 ~~~ json
 {{ page.example_input }}
 ~~~
 
 
-### Response
+#### Response
 
 {{ site.data.api.status_created }}
 ~~~ json
@@ -95,15 +95,15 @@ POST {{ site.data.api.url | append: 'sites/:site_id/collections' }}
 
 
 
-## Get a collection
+### Get a collection
 
-### Endpoint
+#### Endpoint
 
 ~~~
 GET {{ site.data.api.url | append: 'sites/:site_id/collections/:path' }}
 ~~~
 
-### Response
+#### Response
 
 {{ site.data.api.status_ok }}
 ~~~ json
@@ -113,15 +113,15 @@ GET {{ site.data.api.url | append: 'sites/:site_id/collections/:path' }}
 
 
 
-## Update a collection
+### Update a collection
 
-### Endpoint
+#### Endpoint
 
 ~~~
 PUT {{ site.data.api.url | append: 'sites/:site_id/collections/:path' }}
 ~~~
 
-### Input
+#### Input
 
 | Name | Type | Desc |
 |------|------|------|
@@ -132,13 +132,13 @@ PUT {{ site.data.api.url | append: 'sites/:site_id/collections/:path' }}
 | `metadata` | `Hash<String, *>` | Arbitrary key/value pairs |
 
 
-### Example
+#### Example
 
 ~~~ json
 {{ page.example_input }}
 ~~~
 
-### Response
+#### Response
 
 {{ site.data.api.status_ok }}
 ~~~ json
@@ -149,15 +149,15 @@ PUT {{ site.data.api.url | append: 'sites/:site_id/collections/:path' }}
 
 
 
-## Delete a collection
+### Delete a collection
 
-### Endpoint
+#### Endpoint
 
 ~~~
 DELETE {{ site.data.api.url | append: 'sites/:site_id/collections/:path' }}
 ~~~
 
-### Response
+#### Response
 
 {{ site.data.api.status_ok }}
 ~~~ json
@@ -171,22 +171,22 @@ DELETE {{ site.data.api.url | append: 'sites/:site_id/collections/:path' }}
 
 
 
-## List collection files
+### List collection files
 
-### Endpoint
+#### Endpoint
 
 ~~~
 GET {{ site.data.api.url | append: 'sites/:site_id/collections/:path/files' }}
 ~~~
 
-### Query String Params
+#### Query String Params
 
 | Name | Desc |
 |------|------|
 | `q`  | Searches by `filename` |
 | `sort` | Should be formated as `field-asc` or `field-desc` |
 
-### Response
+#### Response
 
 {{ site.data.api.status_paginated }}
 ~~~ json
@@ -214,19 +214,19 @@ GET {{ site.data.api.url | append: 'sites/:site_id/collections/:path/files' }}
 
 Collection files only support static files, that is any file *without* YAML frontmatter. This endpoint will return an error if it detects frontmatter. If you need to upload arbitrary text files use the [Files API](/api/files) which parses file uploads and will create either a Document or File.
 
-### Endpoint
+#### Endpoint
 
 ~~~
 POST {{ site.data.api.url | append: 'sites/:site_id/collections/:path/files' }}
 ~~~
 
-### Input
+#### Input
 
 | Name | Type | Desc |
 |------|------|------|
 | `file` | `File` | A `multipart/form-data` file attachment |
 
-### Response
+#### Response
 
 {{ site.data.api.status_created }}
 ~~~ json

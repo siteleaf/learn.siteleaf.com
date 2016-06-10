@@ -14,7 +14,7 @@ example_response: |-
   }
 ---
 
-## Overview
+### Overview
 
 1. [List users](#list-users)
 1. [Get the currently authenticated user](#current-user)
@@ -23,15 +23,15 @@ example_response: |-
 
 
 
-## List users
+### List users
 
-### Endpoint
+#### Endpoint
 
 ~~~
 GET {{ site.data.api.url | append: 'sites/:site_id/users' }}
 ~~~
 
-### Response
+#### Response
 
 {{ site.data.api.status_paginated }}
 ~~~json
@@ -46,15 +46,15 @@ GET {{ site.data.api.url | append: 'sites/:site_id/users' }}
 
 
 
-## Get the currently authenticated user {#current-user}
+### Get the currently authenticated user {#current-user}
 
-### Endpoint
+#### Endpoint
 
 ~~~
 GET {{ site.data.api.url | append: 'users/me' }}
 ~~~
 
-### Response
+#### Response
 
 {{ site.data.api.status_ok }}
 ~~~

@@ -4,7 +4,7 @@ date: 2016-01-15 13:43:00 -05:00
 position: 7
 ---
 
-## Overview
+### Overview
 
 The Source API can be thought of as a filesystem view, as if you were looking at your Jekyll source code locally. It functions a little differently than the rest of the API and isn't as structured.
 
@@ -16,17 +16,17 @@ The Source API can be thought of as a filesystem view, as if you were looking at
 
 
 
-## Get files
+### Get files
 
 Returns information about a single file or the contents of a directory. The `:name` is optional, and without it lists the contents of the root directory.
 
-### Endpoint
+#### Endpoint
 
 ~~~
 GET {{ site.data.api.url | append: 'sites/:site_id/source/:name' }}
 ~~~
 
-### Response if name is a file
+#### Response if name is a file
 
 {{ site.data.api.status_ok }}
 ~~~ json
@@ -42,7 +42,7 @@ GET {{ site.data.api.url | append: 'sites/:site_id/source/:name' }}
 }
 ~~~
 
-### Response if name is a directory
+#### Response if name is a directory
 
 {{ site.data.api.status_ok }}
 ~~~ json
@@ -79,7 +79,7 @@ GET {{ site.data.api.url | append: 'sites/:site_id/source/:name' }}
 
 
 
-## Create or replace a file
+### Create or replace a file
 
 This endpoint has a couple functions:
 
@@ -88,20 +88,20 @@ This endpoint has a couple functions:
 
 It's useful for uploading raw Jekyll source files and creating the correct type of Siteleaf resource.
 
-### Endpoint
+#### Endpoint
 
 ~~~
 PUT {{ site.data.api.url | append: 'sites/:site_id/source/:name' }}
 ~~~
 
-### Input
+#### Input
 
 | Name | Type | Desc |
 |------|------|------|
 | `file` | `File` | A `multipart/form-data` file attachment |
 
 
-### Response
+#### Response
 
 {{ site.data.api.status_ok }}
 ~~~ json
@@ -121,17 +121,17 @@ PUT {{ site.data.api.url | append: 'sites/:site_id/source/:name' }}
 
 
 
-## Delete a file
+### Delete a file
 
 Will not delete directories or the `_config.yml` file.
 
-### Endpoint
+#### Endpoint
 
 ~~~
 DELETE {{ site.data.api.url | append: 'sites/:site_id/source/:name' }}
 ~~~
 
-### Response
+#### Response
 
 {{ site.data.api.status_ok }}
 ~~~ json

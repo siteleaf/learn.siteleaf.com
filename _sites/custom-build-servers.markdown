@@ -2,7 +2,6 @@
 title: Custom build servers
 date: 2016-04-05 22:00:00 -04:00
 position: 6
-layout: page
 ---
 
 If you need to use custom Jekyll plugins or if you'd like to have complete control over the build process for your site, you can use a custom build server or service like [DeployBot](http://deploybot.com/).
@@ -13,4 +12,5 @@ If you need to use custom Jekyll plugins or if you'd like to have complete contr
 
 After your server receives the webhook, you'll need to pull the new content and then you can compile it with Jekyll however you'd wish.
 
-_**Note**: Siteleaf's preview excludes unsupported plugins, so you may see slightly different output when using it._
+Siteleaf's preview excludes unsupported plugins, so you may see slightly different output when using it.
+{: .note}

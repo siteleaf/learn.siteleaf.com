@@ -2,7 +2,6 @@
 title: Intro to themes
 date: 2015-10-31 20:03:00 -04:00
 position: 1
-layout: page
 ---
 
 If you haven't yet, give [Siteleaf for Developers](/getting-started/siteleaf-for-developers/) a quick read.
@@ -13,7 +12,9 @@ Once you're up and running, [GitHub Sync](/themes/github-sync/) makes it incredi
 
 A great resource for theme creation is [Jekyll's documentation](http://jekyllrb.com/docs): they go into depth with how different content types work and what Liquid tags and objects you have available for making your themes.
 
-## Further Reading
+---
+
+### Further Reading
 
 - [Jekyll documentation](http://jekyllrb.com/docs)
 - [Jekyll: Quick-Start Guide](http://jekyllrb.com/docs/quickstart/)

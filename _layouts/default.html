@@ -5,13 +5,14 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
-    {% seo %}
+    {% seo title=false %}
+    <title>{{ page.title }}{% if page.url != '/' %} - {{ site.title }}{% endif %}</title>
 
+    <link href="http://www.siteleaf.com/styles/all.css" rel="stylesheet">
     <link href="/assets/css/main.css" rel="stylesheet">
-    <link href="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.css" rel="stylesheet">
     <link rel="SHORTCUT ICON" href="/assets/images/favicon.ico">
   </head>
-  <body class="page">
+  <body>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -20,7 +21,8 @@
       ga('create', 'UA-1666437-41', 'auto');
       ga('send', 'pageview');
     </script>
-    <header class="header nocontent">
+
+<!--     <header class="header nocontent">
       <nav class="nav">
         <div class="wrap">
           <a class="nav__logo" href="/">
@@ -42,19 +44,16 @@
           </ul>
         </div>
       </nav>
-    </header>
+    </header> -->
 
-    <main class="main">
-      <div class="wrap">
+    <div class="wrap">
+      {% include header.html %}
+      <main class="main">
         {{ content }}
-      </div>
-    </main>
-    <footer class="footer nocontent">
-      <div class="wrap">
-        <p class="footer__copyright">&copy; {{ site.time | date: '%Y' }}. Siteleaf&trade; is made by <a href="http://oak.is">Oak</a>.</p>
-      </div>
-    </footer>
-    <script src="//cdn.symbolset.com/5cf45762d90ee3c577c26afa495cccb24ad1f28d/symbolset.js"></script>
+      </main>
+    </div>
+    {% include footer.html %}
+
     <script src="/assets/js/main.js"></script>
   </body>
 </html>

@@ -1,5 +1,5 @@
 ---
-title: The new development workflow
+title: New development workflow
 date: 2016-01-15 19:38:00 -05:00
 position: 1
 ---
