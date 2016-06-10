@@ -2,7 +2,6 @@
 title: Default fields
 date: 2016-05-25 22:00:00 -04:00
 position: 10
-layout: page
 ---
 
 Instead of defining fields each time you create a page, post, or document, you can set defaults in your `_config.yml` theme file. In most cases, it'll be handy to set at least the default layout.
@@ -46,6 +45,8 @@ In this case, we're:
 
 Note that `type` can be `posts`, `pages` or any other collection name (e.g. `people`).
 
-## Further Reading:
+---
+
+### Further Reading:
 
 - [Jekyll: Front Matter defaults](http://jekyllrb.com/docs/configuration/#front-matter-defaults)

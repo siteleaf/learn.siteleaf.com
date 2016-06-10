@@ -1,25 +1,7 @@
 ---
-title: Siteleaf Documentation
+title: Siteleaf Learn
 timezone: America/New_York
 collections:
-  api:
-    title: API
-    output: true
-    permalink: "/:collection/:path/"
-    meta:
-      description: Integrate directly into your site or app
-      icon: cloud
-      in_nav: true
-    position: 60
-  sites:
-    title: Deploy and Collaborate
-    output: true
-    permalink: "/:collection/:path/"
-    meta:
-      description: Publish your site and invite other users
-      icon: globe
-      in_nav: true
-    position: 50
   getting-started:
     title: Getting Started
     output: true
@@ -27,17 +9,9 @@ collections:
     meta:
       description: Learn more about Siteleaf itself
       icon: home
+      badge: "/uploads/badge--getting-started.svg"
       in_nav: true
     position: 10
-  v1:
-    title: Legacy sites
-    output: true
-    permalink: "/:collection/:path/"
-    position: 70
-    meta:
-      description: Moving from v1 to v2
-      icon: info
-      in_nav: true
   content:
     title: Managing Content
     output: true
@@ -45,20 +19,52 @@ collections:
     meta:
       description: Pages, collections, posts, metadata
       icon: write
+      badge: "/uploads/badge--content.svg"
       in_nav: true
     position: 30
-  posts:
-    title: Posts
-    output: true
   themes:
-    title: Theme Development
+    title: Developing Themes
     output: true
     permalink: "/:collection/:path/"
     meta:
       description: Liquid, Sass, Jekyll, syncing, local dev
       icon: bezier
+      badge: "/uploads/badge--themes.svg"
       in_nav: true
     position: 40
+  sites:
+    title: Deploy & Collaborate
+    output: true
+    permalink: "/:collection/:path/"
+    meta:
+      description: Publish your site and invite other users
+      icon: globe
+      badge: "/uploads/badge--sites.svg"
+      in_nav: true
+    position: 50
+  api:
+    title: API
+    output: true
+    permalink: "/:collection/:path/"
+    meta:
+      description: Integrate directly into your site or app
+      icon: cloud
+      badge: "/uploads/badge--api.svg"
+      in_nav: true
+    position: 60
+  v1:
+    title: Legacy Sites
+    output: true
+    permalink: "/:collection/:path/"
+    meta:
+      description: Moving from v1 to v2
+      icon: info
+      badge: "/uploads/badge--v1.svg"
+      in_nav: true
+    position: 70
+  posts:
+    title: Posts
+    output: true
   uploads:
     title: Uploads
     output: true
@@ -69,9 +75,39 @@ defaults:
     layout: page
 - scope:
     path: ''
+    type: getting-started
+  values:
+    layout: page
+    color: blue
+- scope:
+    path: ''
+    type: content
+  values:
+    layout: page
+    color: green
+- scope:
+    path: ''
+    type: themes
+  values:
+    layout: page
+    color: yellow
+- scope:
+    path: ''
+    type: sites
+  values:
+    layout: page
+    color: red
+- scope:
+    path: ''
     type: api
   values:
-    layout: api
+    layout: page
+    color: purple
+- scope:
+    path: ''
+    type: v1
+  values:
+    layout: page
 url: http://learn.siteleaf.com
 permalink: pretty
 github_url: https://github.com/siteleaf/learn.siteleaf.com
@@ -80,3 +116,4 @@ sass:
 gems:
 - jekyll-sitemap
 - jekyll-seo-tag
+logo: "/assets/images/logo.svg"

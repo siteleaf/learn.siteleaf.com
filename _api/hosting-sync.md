@@ -4,16 +4,16 @@ date: 2016-03-03 15:51:00 -05:00
 position: 12
 ---
 
-## Overview
+### Overview
 
 1. [Hosting options](#hosting-options)
 1. [Sync options](#sync-options)
 
-## Hosting options
+### Hosting options
 
 Depending on your sites `hosting` value, the `hosting_options` fields are:
 
-### Hosting: `github`
+#### Hosting: `github`
 
 | Key | Value |
 |------|------|
@@ -22,7 +22,7 @@ Depending on your sites `hosting` value, the `hosting_options` fields are:
 | `branch` | Branch name, `gh-pages` by default |
 | `format` | `raw` or `compiled` (Github Pages or Siteleaf compile) **(required)** |
 
-### Hosting: `s3`
+#### Hosting: `s3`
 
 | Key | Value |
 |------|------|
@@ -31,7 +31,7 @@ Depending on your sites `hosting` value, the `hosting_options` fields are:
 | `path` | S3 bucket name **(required)** |
 | `region` | Region of S3 bucket **(required)** |
 
-### Hosting: `ftp`
+#### Hosting: `ftp`
 
 | Key | Value |
 |------|------|
@@ -42,7 +42,7 @@ Depending on your sites `hosting` value, the `hosting_options` fields are:
 | `password` | FTP password **(required)** |
 | `path` | Path where site will be published **(required)** |
 
-### Hosting: `cloudfiles`
+#### Hosting: `cloudfiles`
 
 | Key | Value |
 |------|------|
@@ -52,11 +52,11 @@ Depending on your sites `hosting` value, the `hosting_options` fields are:
 | `region` | Region of container **(required)** |
 
 
-## Sync options
+### Sync options
 
 Github is currently the only `sync` provider, the `sync_options` are:
 
-### Sync: `github`
+#### Sync: `github`
 
 | Key | Value |
 |------|------|

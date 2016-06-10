@@ -2,11 +2,10 @@
 title: Siteleaf Gem
 date: 2015-10-31 20:03:00 -04:00
 position: 6
-layout: page
 ---
 
 We recommend using [GitHub sync](/themes/github-sync/) for local development, but you can still use the Gem if that's your preferred workflow.
-{: .note__info}
+{: .warning}
 
 The Siteleaf Ruby gem is open source, to fork and contribute see: <https://github.com/siteleaf/siteleaf-gem>
 
@@ -25,14 +24,14 @@ gem 'github-pages', group: :jekyll_plugins
 
 2) Install the bundle:
 
-{% highlight plain %}
+{% highlight bash %}
 $ gem install bundler
 $ bundle install
 {% endhighlight %}
 
 3) Authorize your Siteleaf account:
 
-{% highlight plain %}
+{% highlight bash %}
 $ bundle exec siteleaf auth
 {% endhighlight %}
 
@@ -40,7 +39,7 @@ $ bundle exec siteleaf auth
 
 **To create a new Siteleaf site:**
 
-{% highlight plain %}
+{% highlight bash %}
 $ bundle exec siteleaf new yoursite.com
 {% endhighlight %}
 
@@ -48,19 +47,19 @@ This will create a new theme folder called `yoursite.com` in the directory where
 
 **To use an existing Siteleaf site:**
 
-{% highlight plain %}
+{% highlight bash %}
 $ bundle exec siteleaf config yoursite.com
 {% endhighlight %}
 
 You can then pull the Jekyll configuration, content, and current theme:
 
-{% highlight plain %}
+{% highlight bash %}
 $ bundle exec siteleaf pull
 {% endhighlight %}
 
 5) Start the Jekyll server:
 
-{% highlight plain %}
+{% highlight bash %}
 $ bundle exec jekyll serve
 {% endhighlight %}
 
@@ -68,7 +67,7 @@ Now visit [localhost:4000](http://localhost:4000) to see your site!
 
 5) Push your content and theme to Siteleaf:
 
-{% highlight plain %}
+{% highlight bash %}
 $ bundle exec siteleaf push
 {% endhighlight %}
 
@@ -78,7 +77,7 @@ $ bundle exec siteleaf push
 
 Creating a full backup of your site is simple. Just copy your `Gemfile` to an empty directory and do a `pull`:
 
-{% highlight plain %}
+{% highlight bash %}
 cp Gemfile /path/to/backup/
 cd /path/to/backup/
 bundle install

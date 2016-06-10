@@ -2,10 +2,9 @@
 title: Sitemaps and Feeds
 date: 2015-10-31 20:03:00 -04:00
 position: 8
-layout: page
 ---
 
-## Sitemaps
+### Sitemaps
 
 If you have a large site, you may want to have a sitemap.
 
@@ -15,7 +14,7 @@ To enable sitemaps, head into your Site Settings and add a new [list metadata](/
 
 For more info, view the [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap) docs.
 
-## Feeds
+### Feeds
 
 Adding an Atom or RSS feed is similar to adding a sitemap.
 
