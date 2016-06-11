@@ -87,7 +87,7 @@
     }
   }
 }
-.nav__item:not(.nav__item--current):hover {
+.nav__item:not(.nav__item--current) a:hover {
   opacity: $opacity--hover;
 }
 .nav__item--current {
@@ -115,7 +115,7 @@
 // -----------
 
 .breadcrumbs {
-  margin-bottom: $v*0.125;
+  margin-bottom: $v*0.25;
 }
 .breadcrumb {
   color: $color--gray;
@@ -149,9 +149,12 @@ h6 {
   .article__anchor {
     text-decoration: none;
     color: $color--gray;
-    margin-left: 0.2em;
+    margin-left: 0.3em;
     opacity: 0;
     transition: opacity 100ms;
+    &:hover {
+      color: $color--dark-gray;
+    }
   }
   &:hover {
     .article__anchor {
@@ -211,14 +214,17 @@ h6 {
   -moz-appearance: none;
   -webkit-appearance: none;
   border-radius: $border-radius--base;
-  padding: 6px 12px 6px 36px;
+  padding: 6px 6px 6px 42px;
   display: block;
   width: 100%;
   @extend %mk3;
   font-size: 1em;
   font-family: inherit;
   @include antialias;
-  color: $color--darkest-gray;
+  color: $color--white;
+  .search--focused & {
+    color: $color--darkest-gray;
+  }
   background: rgba($color--white, 0.2);
   @include placeholder($color--white);
   transition: background 100ms;
@@ -235,6 +241,12 @@ h6 {
     padding-left: 30px;
   }
   margin-bottom: $v*0.75;
+}
+input[type=search] {
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
 }
 
 // status
