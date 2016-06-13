@@ -56,6 +56,9 @@ collections:
       badge: "/uploads/badge--content.svg"
       in_nav: true
     position: 30
+  posts:
+    title: Posts
+    output: true
   style:
     title: Style Guide
     output: true
@@ -63,9 +66,6 @@ collections:
     meta:
       description: A guide to Siteleaf style
       in_nav: false
-  posts:
-    title: Posts
-    output: true
   uploads:
     title: Uploads
     output: true
