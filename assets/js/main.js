@@ -36,7 +36,7 @@ var load_status = function (element) {
 
 var anchorForId = function(id) {
   var anchor = document.createElement("a");
-  anchor.className = "article__anchor";
+  anchor.className = "anchor";
   anchor.href      = "#" + id;
   anchor.innerHTML = "#";
   return anchor;
