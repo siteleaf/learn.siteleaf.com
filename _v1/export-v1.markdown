@@ -11,8 +11,17 @@ Included in the export will be all your pages, posts, site metadata, and uploade
 1) First, make sure to update to the latest Siteleaf Gem (1.0.7 or higher). If you need to update your Gem, run:
 
 {% highlight bash %}
-$ gem update siteleaf '~>1'
+$ gem install siteleaf -v '~>1'
 {% endhighlight %}
+
+To confirm, make sure you have the latest v1 Gem installed:
+
+{% highlight bash %}
+$ siteleaf -v
+1.0.7
+{% endhighlight %}
+
+If you have v2 installed, you may want to use a [Gemfile](/themes/gem/) to support multiple versions.
 
 2) If you do not already have your v1 site configured, change your site's directory and run config (skip if already configured):
 
