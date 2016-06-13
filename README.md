@@ -31,3 +31,5 @@ To help us improve the site:
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
 5. Create new Pull Request
+
+For tips on formatting, check out the [Style Guide](http://learn.siteleaf.com/style/).
