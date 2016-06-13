@@ -25,7 +25,7 @@ index.markdown
 
 ### `_layouts/`
 
-The `_layouts/` directory contains the layouts that Jekyll will use to render content. The default template (`default.html`) is what Jekyll will use if it isn't told to use another layout. Generally, the layout is defined in the frontmatter of the content by giving the file name without an extension:
+The `_layouts/` directory contains the layouts that Jekyll will use to render content. The default template (`default.html`) is what Jekyll will use if it isn't told to use another layout. Generally, the layout is defined in the front matter of the content by giving the file name without an extension:
 
 {% highlight bash %}
 ---

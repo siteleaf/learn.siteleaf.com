@@ -65,7 +65,7 @@ $ git pull
 
 ##### Why is Siteleaf changing my YAML formatting after I make a commit?
 
-In some cases, you might notice a commit from Siteleaf directly after you commit a change to GitHub. This typically arises when your YAML formatting is inconsistent with the output of our YAML parser. Jekyll uses [SafeYAML](https://github.com/dtao/safe_yaml) to parse frontmatter and we use the same. These changes shouldn't affect your final output when your frontmatter is rendered.
+In some cases, you might notice a commit from Siteleaf directly after you commit a change to GitHub. This typically arises when your YAML formatting is inconsistent with the output of our YAML parser. Jekyll uses [SafeYAML](https://github.com/dtao/safe_yaml) to parse front matter and we use the same. These changes shouldn't affect your final output when your front matter is rendered.
 
 ##### What happens when I setup syncing on an existing Siteleaf site?
 

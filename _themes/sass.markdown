@@ -4,7 +4,7 @@ date: 2015-10-31 20:03:00 -04:00
 position: 7
 ---
 
-Siteleaf comes with support for [Sass and SCSS](http://sass-lang.com/) preprocessing right out of the box! It's pretty easy to get going, too: just put a `.scss` or `.sass` anywhere in your theme with added frontmatter to have Jekyll compile the Sass/SCSS to CSS. For example:
+Siteleaf comes with support for [Sass and SCSS](http://sass-lang.com/) preprocessing right out of the box! It's pretty easy to get going, too: just put a `.scss` or `.sass` anywhere in your theme with added front matter to have Jekyll compile the Sass/SCSS to CSS. For example:
 
 {% highlight sass %}
 ---

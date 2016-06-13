@@ -7,7 +7,7 @@ prep time: blah
 
 Metadata are additional pieces of data which you can attach to your pages, documents, collections, and even site-wide. Metadata fields give you a ton of power and flexibility to create a system that fits your content.
 
-Metadata is the equivalent of [Jekyll's YAML frontmatter](https://jekyllrb.com/docs/frontmatter/). When syncing, Siteleaf exports metadata as frontmatter for Pages and Documents and edits the config file for Collections and Sites.
+Metadata is the equivalent of [Jekyll's YAML front matter](https://jekyllrb.com/docs/frontmatter/). When syncing, Siteleaf exports metadata as front matter for Pages and Documents and edits the config file for Collections and Sites.
 {: .note}
 
 - [Field types](#field-types)
@@ -136,4 +136,4 @@ Metadata fields with a name ending in `color`, `colour`, `colors`, `colours`, `h
 ### Further Reading
 
 - [Default fields](/content/defaults)
-- [Jekyll Frontmatter](https://jekyllrb.com/docs/frontmatter/)
+- [Jekyll front matter](https://jekyllrb.com/docs/frontmatter/)

@@ -212,7 +212,7 @@ GET {{ site.data.api.url | append: 'sites/:site_id/collections/:path/files' }}
 
 ##Create a collection file
 
-Collection files only support static files, that is any file *without* YAML frontmatter. This endpoint will return an error if it detects frontmatter. If you need to upload arbitrary text files use the [Files API](/api/files) which parses file uploads and will create either a Document or File.
+Collection files only support static files, that is any file *without* YAML front matter. This endpoint will return an error if it detects front matter. If you need to upload arbitrary text files use the [Files API](/api/files) which parses file uploads and will create either a Document or File.
 
 #### Endpoint
 
