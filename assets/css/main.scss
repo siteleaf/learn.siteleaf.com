@@ -140,28 +140,6 @@
   margin-left: -$gutter;
   margin-right: -$gutter; // account for padding on sidebar and article
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  .article__anchor {
-    text-decoration: none;
-    color: $color--gray;
-    margin-left: 0.3em;
-    opacity: 0;
-    transition: opacity 100ms;
-    &:hover {
-      color: $color--dark-gray;
-    }
-  }
-  &:hover {
-    .article__anchor {
-      opacity: 1;
-    }
-  }
-}
 .article__improve {
   margin-top: $v*1.5;
   color: $color--dark-gray;
