@@ -238,7 +238,7 @@ h6 {
   height: 42px; // manually set to prevent page load jump
   @include max-width($max-width--sm) {
     height: 36px;
-    padding-left: 30px;
+    padding-left: 34px;
   }
   margin-bottom: $v*0.75;
 }
