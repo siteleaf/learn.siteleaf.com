@@ -56,9 +56,6 @@
   margin-top: $v*1.5;
   padding-left: $gutter;
   padding-right: $gutter;
-  @include max-width(1036px) {
-    display: none;
-  }
 }
 .nav {
   color: $color--dark-gray;
@@ -151,6 +148,23 @@
   }
   pre {
     margin-bottom: 0;
+  }
+}
+
+// responsivene sidebar
+// --------------------
+
+@include max-width(1036px) {
+  .sidebar {
+    display: none;
+  }
+  .articleWrap {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .article {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

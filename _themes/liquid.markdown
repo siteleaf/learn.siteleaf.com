@@ -49,5 +49,5 @@ Filters are used to modify the output of attributes (i.e., strings, numbers, var
 
 ### Further Reading
 
-- [Shopify: Liquid wiki](https://github.com/Shopify/liquid/wiki)
+- [Shopify: Liquid documentation](https://shopify.github.io/liquid/)
 - [Jekyll: Variables](http://jekyllrb.com/docs/variables/)
