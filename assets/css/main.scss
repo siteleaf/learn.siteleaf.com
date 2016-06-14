@@ -141,6 +141,22 @@
   font-weight: $font-weight--bold;
   color: $color--dark-gray;
 }
+.article__prevNext {
+  margin-top: $v*1.5;
+}
+.article__prev,
+.article__next {
+  color: $color--dark-gray;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.article__prev {
+  float: left;
+}
+.article__next {
+  float: right;
+}
 
 .api__headers {
   pre,

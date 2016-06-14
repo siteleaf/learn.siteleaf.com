@@ -3,6 +3,24 @@ layout: default
 ---
 
 {% assign page_section = site.collections | where: 'label', page.collection | first %}
+{% assign sections = site.collections | sort:"position" %}
+{% for section in sections %}
+  {% if page_section.title == section.title %}
+    {% assign documents = section.docs | sort:"position" %}
+    {% for document in documents %}
+      {% if document.url == page.url %}
+        {% if forloop.index0 > 1 %}
+          {% assign prev_index = forloop.index0 | minus: 1 %}
+          {% assign prev_document = documents[prev_index] %}
+        {% endif %}
+        {% unless forloop.last %}
+          {% assign next_index = forloop.index0 | plus: 1 %}
+          {% assign next_document = documents[next_index] %}
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
 <div class="articleWrap">
   {% include sidebar.html %}
   <article class="article">
@@ -15,9 +33,17 @@ layout: default
       {{ content }}
       <p class="article__improve">
         <a href="{{ site.github_url }}/blob/master/{{ page.relative_path }}">
-          Help improve this page &rarr;
+          Help improve this page
         </a>
       </p>
     </section>
+    <div class="article__prevNext">
+      {% if prev_document %}
+        <a href="{{ prev_document.url }}" class="article__prev">&larr; Prev</a>
+      {% endif %}
+      {% if next_document %}
+        <a href="{{ next_document.url }}" class="article__next">Next &rarr;</a>
+      {% endif %}
+    </div>
   </article>
 </div>
