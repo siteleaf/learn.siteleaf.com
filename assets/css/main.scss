@@ -15,8 +15,8 @@
 // -------
 
 .landingItems {
-  margin-top: $v*2;
-  margin-bottom: $v*4;
+  margin-top: $v*3;
+  margin-bottom: $v*3;
   @extend %row;
   text-align: center;
 }
@@ -55,6 +55,7 @@
 
 .sidebar {
   margin-top: $v*1.5;
+  margin-bottom: $v*3;
   padding-left: $gutter;
   padding-right: $gutter;
 }
