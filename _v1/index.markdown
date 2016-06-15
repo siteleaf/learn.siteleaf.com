@@ -1,7 +1,7 @@
 ---
 title: Legacy Sites
 permalink: "/v1/"
-position: 2
+position: 3
 layout: section
 ---
 
