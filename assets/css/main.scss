@@ -16,6 +16,7 @@
 
 .landingItems {
   margin-top: $v*2;
+  margin-bottom: $v*4;
   @extend %row;
   text-align: center;
 }
