@@ -15,7 +15,7 @@
 // -------
 
 .landingItems {
-  margin-top: $v*3;
+  margin-top: $v*2.5;
   margin-bottom: $v*3;
   @extend %row;
   text-align: center;
@@ -38,15 +38,18 @@
 }
 .badge {
   @include margin-center;
-  margin-bottom: $v*0.5;
+  margin-bottom: $v*0.75;
+  width: 80%;
   max-width: 240px;
-  width: 100%;
+  @include max-width($max-width--sm) {
+    max-width: 210px;
+  }
   transition: all 150ms;
-  @include scale(0.97);
+  @include scale(1);
 }
 .landingItem__link:hover {
   .badge {
-    @include scale(1);
+    @include scale(1.025);
   }
 }
 
