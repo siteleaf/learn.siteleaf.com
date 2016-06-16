@@ -1,7 +1,7 @@
 ---
 title: Exporting a legacy site
 date: 2015-10-31 20:03:00 -04:00
-position: 0
+position: 1
 ---
 
 You can export your v1 site to Jekyll-ready format using the [Siteleaf Gem](https://github.com/siteleaf/siteleaf-gem).
