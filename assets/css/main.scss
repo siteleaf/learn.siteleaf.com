@@ -11,6 +11,13 @@
   @extend %container--wide;
 }
 
+// header
+// ------
+
+.header__title {
+  margin-bottom: $v*1;
+}
+
 // landing
 // -------
 
@@ -173,8 +180,8 @@
   }
 }
 
-// responsivene sidebar
-// --------------------
+// responsive sidebar
+// ------------------
 
 @include max-width(1036px) {
   .sidebar {
