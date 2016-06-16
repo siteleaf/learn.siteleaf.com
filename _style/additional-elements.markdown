@@ -1,10 +1,10 @@
 ---
-title: Writing
-date: 2016-06-13 00:00:00 -04:00
-position: 1
+title: Additional elements
+date: 2016-06-15 00:00:00 -04:00
+position: 2
 ---
 
-In addition to the standard components of [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/), you can use the following elements:
+In addition to the [basic elements](../basic-elements), you also have available the following:
 
 This is a note.
 {: .note}
@@ -22,7 +22,7 @@ Here's an image caption.
 
 ### How to use
 
-```
+``` markdown
 This is a note.
 {: .note}
 
