@@ -1,7 +1,7 @@
 ---
 title: Collections
 date: 2015-12-17 08:02:00 -05:00
-position: 2
+position: 4
 ---
 
 There will be times where you don't need a page or a post, but still need to group bits of content together. This is exactly what collections are: they are groups of [documents](/content/documents/) that aren't in any particular order.

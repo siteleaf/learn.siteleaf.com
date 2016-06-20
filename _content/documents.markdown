@@ -1,7 +1,7 @@
 ---
 title: Documents
 date: 2015-12-17 08:02:00 -05:00
-position: 3
+position: 5
 ---
 
 Documents are pieces of related content in a [Collection](/content/collections/). They're similar to [Pages](/content/pages/), except they belong to a collection rather than the site itself.
