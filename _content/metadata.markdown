@@ -1,7 +1,7 @@
 ---
 title: Metadata
 date: 2015-12-17 08:02:00 -05:00
-position: 3
+position: 2
 prep time: blah
 ---
 
