@@ -6,7 +6,7 @@ position: 1
 
 A page is the most basic content type in Siteleaf. Pages are free-floating and belong to your site rather than any particular collection.
 
-A page is linked to a Markdown file in your project that contains front matter and your body.
+Any page with a markdown extension (e.g. about.markdown) and front matter will show up under the Pages section in Siteleaf.
 {: .note}
 
 ### Options
