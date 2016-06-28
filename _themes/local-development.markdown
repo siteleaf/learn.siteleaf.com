@@ -29,3 +29,4 @@ This is our suggested workflow for local development and eliminates the need for
 ### Further Reading
 
 - [GitHub: Using Jekyll with Pages](https://help.github.com/articles/using-jekyll-with-pages/)
+- [Connecting GitHub and Siteleaf](http://www.siteleaf.com/blog/connecting-github/)

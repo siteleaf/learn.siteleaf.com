@@ -17,5 +17,6 @@ A great resource for theme creation is [Jekyll's documentation](http://jekyllrb.
 ### Further Reading
 
 - [Jekyll documentation](http://jekyllrb.com/docs)
+- [Siteleaf: Jekyll from scratch](http://www.siteleaf.com/blog/jekyll-from-scratch/)
 - [Jekyll: Quick-Start Guide](http://jekyllrb.com/docs/quickstart/)
 - [GitHub: Using Jekyll with Pages](https://help.github.com/articles/using-jekyll-with-pages/)

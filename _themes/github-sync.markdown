@@ -74,3 +74,9 @@ During initial sync, all current files in Siteleaf will be saved into your repo.
 ##### What happens when I change my sync settings repo or branch?
 
 Any files edited in Siteleaf since your site was last synced will be saved into the new repo or branch. All files already synced with the _old_ repo or branch will be replaced or removed from Siteleaf with the contents of the _new_ repo or branch. If you do not wish to merge or replace your content, you can import your repo as a new site. If you are unsure, be safe and back up your content.
+
+---
+
+### Further Reading
+
+- [Connecting GitHub and Siteleaf](http://www.siteleaf.com/blog/connecting-github/)

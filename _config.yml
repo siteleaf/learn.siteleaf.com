@@ -34,7 +34,7 @@ collections:
     output: true
     permalink: "/:collection/:path/"
     meta:
-      description: Learn more about Siteleaf itself
+      description: Introduce yourself to Siteleaf and Jekyll
       badge: "/uploads/badge--getting-started.svg"
       in_nav: true
     position: 10
