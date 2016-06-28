@@ -1,6 +1,7 @@
 ---
 title: Tutorials
 date: 2016-06-28 10:07:00 -04:00
+position: 1
 ---
 
 We're working on a series of tutorials to help you get started using Jekyll and Siteleaf. We'll be updating the list below as more tutorials are added to our [Blog](http://www.siteleaf.com/blog/).
