@@ -60,3 +60,4 @@ This is your Jekyll configuration file. The [Jekyll documentation](http://jekyll
 ### Further Reading
 
 - [Jekyll: Directory Structure](http://jekyllrb.com/docs/structure/)
+- [Siteleaf: Jekyll from scratch](http://www.siteleaf.com/blog/jekyll-from-scratch/)
