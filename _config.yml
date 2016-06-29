@@ -121,6 +121,7 @@ exclude:
 - Gemfile
 - Gemfile.lock
 - README*
+- ".gitignore"
 github_url: https://github.com/siteleaf/learn.siteleaf.com
 sass:
   style: compressed
