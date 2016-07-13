@@ -117,6 +117,11 @@ defaults:
     color: darkest-gray
 url: http://learn.siteleaf.com
 permalink: pretty
+exclude:
+- Gemfile
+- Gemfile.lock
+- README*
+- ".gitignore"
 github_url: https://github.com/siteleaf/learn.siteleaf.com
 sass:
   style: compressed

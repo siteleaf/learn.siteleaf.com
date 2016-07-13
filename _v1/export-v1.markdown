@@ -8,7 +8,7 @@ You can export your v1 site to Jekyll-ready format using the [Siteleaf Gem](http
 
 Included in the export will be all your pages, posts, site metadata, and uploaded assets. It will not include theme files.
 
-1) First, make sure to update to the latest Siteleaf Gem (1.0.7 or higher). If you need to update your Gem, run:
+1) First, make sure to update to the latest Siteleaf v1 Gem (1.0.7 or higher, but below 2.0.0). If you need to update your Gem, run:
 
 {% highlight bash %}
 $ gem install siteleaf -v '~>1'
