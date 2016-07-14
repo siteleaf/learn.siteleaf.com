@@ -9,7 +9,7 @@ Metadata are additional pieces of data which you can attach to your pages, docum
 
 Metadata is the equivalent of [Jekyll's YAML front matter](https://jekyllrb.com/docs/frontmatter/). When syncing, Siteleaf exports metadata as front matter for Pages and Documents and edits the config file for Collections and Sites.
 
-You can define [default metadata fields](/content/defaults/) across your entire site, or scoped to groups of pages or collections. Defaults help create consistency and make it easy for editors to add new content in Siteleaf.
+You can define [default metadata fields](/content/defaults/) across your entire site, or scoped to particular pages or collections. Defaults help create consistency and make it easy for editors to add new content in Siteleaf.
 {: .tip}
 
 - [Field types](#field-types)
