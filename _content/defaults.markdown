@@ -9,7 +9,7 @@ Instead of defining fields each time you create a page, post, or document, you c
 The `defaults` key in your `_config.yml` file is a list of different defaults. Each list item has two objects: `scope` and `values`.
 
 - `scope` is how you choose which collection and files you're defining defaults on.
-- `values` is where you define your default fields.
+- `values` is where you define your default fields as key/value pairs. Keys can be nested and values are optional.
 
 For example:
 
@@ -35,6 +35,9 @@ defaults:
     values:
       colors: ["red", "green", "blue"]
       layout: "project"
+      location:
+        latitude: # blank values are okay
+        longitude: 
 {% endhighlight %}
 
 In this case, we're:
@@ -42,6 +45,7 @@ In this case, we're:
 - Setting the default `layout` and `author` for all posts
 - Setting the default `layout` for all pages.
 - Overriding the previous default `layout` for all pages in the `projects/` path, and setting a default `colors` List field with the values `red`, `green`, `blue`.
+- Defining nested fields for `location.latitude` and `location.longitude` but leaving these blank. This will create fields in the Siteleaf admin without a fallback value.
 
 Note that `type` can be `posts`, `pages` or any other collection name (e.g. `people`).
 
