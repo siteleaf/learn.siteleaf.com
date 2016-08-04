@@ -59,4 +59,21 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   }
 
+  // Keyboard shortcuts for prev and next articles
+  var prev = document.querySelector('#prev'),
+    next = document.querySelector('#next');
+  document.onkeydown = function (e) {
+    e = e || window.event;
+    if (e.keyCode == 37) { // left
+      console.log(e.keyCode)
+      if (prev !== null) {
+        window.location.href = prev.getAttribute('href');
+      }
+    } else if (e.keyCode == 39) { // right
+      if (next !== null) {
+        window.location.href = next.getAttribute('href');
+      }
+    }
+  };
+
 });

@@ -155,6 +155,7 @@
 }
 .article__prevNext {
   margin-top: $v*1.5;
+  @extend %row;
 }
 .article__prev,
 .article__next {
@@ -162,12 +163,14 @@
   &:hover {
     text-decoration: underline;
   }
-}
-.article__prev {
-  float: left;
+  @extend %column;
+  width: 50%;
+  &:only-child {
+    width: 100%;
+  }
 }
 .article__next {
-  float: right;
+  text-align: right;
 }
 
 .api__headers {

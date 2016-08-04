@@ -39,10 +39,10 @@ layout: default
     </section>
     <div class="article__prevNext">
       {% if prev_document %}
-        <a href="{{ prev_document.url }}" class="article__prev">&larr; Prev</a>
+        <a href="{{ prev_document.url }}" id="prev" class="article__prev">&larr; {{ prev_document.title }}</a>
       {% endif %}
       {% if next_document %}
-        <a href="{{ next_document.url }}" class="article__next">Next &rarr;</a>
+        <a href="{{ next_document.url }}" id="next" class="article__next">{{ next_document.title }} &rarr;</a>
       {% endif %}
     </div>
   </article>
