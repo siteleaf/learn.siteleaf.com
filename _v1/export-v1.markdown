@@ -23,7 +23,7 @@ $ siteleaf -v
 
 If you have v2 installed, you may want to use a [Gemfile](/themes/gem/) to support multiple versions.
 
-2) If you do not already have your v1 site configured, change your site's directory and run config (skip if already configured):
+2) If you do not already have your v1 site configured, change your site's directory and run config, where `yoursite.com` is the domain name as it appears under your site's Settings (skip if already configured):
 
 {% highlight bash %}
 $ cd /path/to/yoursite
