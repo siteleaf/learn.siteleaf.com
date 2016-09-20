@@ -61,11 +61,11 @@ Accessing this page field in your template would look like this:
 
 {% highlight liquid %}
 {% raw %}
-{{ author.name }}
+{{ page.author.name }}
 
-<img src="{{ author.image }}" />
+<img src="{{ page.author.image }}" />
 
-{{ author.bio }}
+{{ page.author.bio }}
 {% endraw %}
 {% endhighlight %}
 
