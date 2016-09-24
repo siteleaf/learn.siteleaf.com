@@ -128,4 +128,4 @@ sass:
 gems:
 - jekyll-sitemap
 - jekyll-seo-tag
-logo: "/assets/images/logo.svg"
+logo: "/assets/images/logo.png"
