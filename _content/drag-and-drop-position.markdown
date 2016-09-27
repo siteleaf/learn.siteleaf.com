@@ -16,3 +16,11 @@ For example, here's how you'd sort your "Artists" documents by their position in
 {% endfor %}
 ```
 {% endraw %}
+
+By default, any documents without an explicit `position` set (i.e. `null`) will be sorted first. You can sort these documents last by adding an optional parameter to Jekyll's [sort filter](https://jekyllrb.com/docs/templates/):
+
+{% raw %}
+```
+{% assign sorted_artists = site.artists | sort:"position", "last" %}
+```
+{% endraw %}
