@@ -19,7 +19,7 @@ For example, here's how you'd sort your "Artists" documents by their position in
 
 ### Handling new or unsorted documents
 
-Documents added outside of Siteleaf may not have an explicit `position` set (i.e. `null`). By default, these documents will be positioned first when using Jekyll's [sort filter](https://jekyllrb.com/docs/templates/). If you prefer to position these documents last, you can add an optional parameter to your sort:
+Documents added outside of Siteleaf may not have an explicit `position` set (i.e. `null`). By default, these documents will be positioned first when using Jekyll's [sort filter](https://jekyllrb.com/docs/templates/). If you prefer to position these documents last, you can add an optional `"last"` parameter to your sort:
 
 {% raw %}
 ```
