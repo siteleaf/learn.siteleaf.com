@@ -7,9 +7,11 @@ In the Siteleaf UI, you can drag and drop pages and documents to change their so
 
 For example, here's how you'd sort your "Artists" documents by their position in the Siteleaf UI:
 
+{% raw %}
 ```
 {% assign sorted_artists = site.artists | sort:"position" %}
 {% for artist in sorted_artists %}
   <li>{{ artist.title }}</li>
 {% endfor %}
 ```
+{% endraw %}
