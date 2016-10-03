@@ -20,11 +20,11 @@ Third-party application access needs to be turned **on** in order for Siteleaf t
 
 1) Initialize or clone your GitHub repo locally to your machine
 
-2) Create a file called `Gemfile` in your site's root folder on your machine and add the `github-pages` gem to your bundle. This will install Jekyll and the same [plugins](/themes/jekyll-plugins/) that Siteleaf supports:
+2) Create a file called `Gemfile` in your site's root folder on your machine and add the `jekyll` gem to your bundle. This will install Jekyll:
 
 {% highlight ruby %}
 source 'http://rubygems.org'
-gem 'github-pages', group: :jekyll_plugins
+gem 'jekyll'
 {% endhighlight %}
 
 3) Install the bundle:
