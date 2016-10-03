@@ -17,7 +17,7 @@ The Siteleaf Ruby gem is open source, to fork and contribute see: <https://githu
 source 'http://rubygems.org'
 
 gem 'siteleaf', '~>2'
-gem 'github-pages', group: :jekyll_plugins
+gem 'jekyll'
 {% endhighlight %}
 
 <small>For help with Bundler or Gemfiles, please see: <http://bundler.io/gemfile.html></small>

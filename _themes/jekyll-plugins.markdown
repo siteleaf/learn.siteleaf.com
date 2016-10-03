@@ -12,6 +12,19 @@ Third-party or custom plugins are supported for sites our new [Team, Business, a
 
 <ul class="supported-plugins"></ul>
 
+#### Using the GitHub Pages gem
+
+You can install Jekyll and all whitelisted plugins by using the [`github-pages`](https://github.com/github/pages-gem) gem:
+
+{% highlight ruby %}
+source 'http://rubygems.org'
+gem 'github-pages', group: :jekyll_plugins
+{% endhighlight %}
+
+If you run into the following error, you will need to add a `repository: username/repo-name` key to your `_config.yml` file:
+
+> Liquid Exception: No repo name found. Specify using PAGES_REPO_NWO environment variables, 'repository' in your configuration, or set up an 'origin' git remote pointing to your github.com repository.
+
 ### Third-party plugins
 
 Siteleaf will look for an optional `Gemfile` and install any custom plugins prior to building.
@@ -37,7 +50,7 @@ end
 
 ```yaml
 gems:
-  - jekyll-feed
+- jekyll-feed
 ```
 
 You may need to follow additional instructions, so make sure to review the plugin's documentation.
