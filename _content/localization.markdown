@@ -1,6 +1,7 @@
 ---
 title: Localization
 date: 2016-10-04 10:21:00 -04:00
+position: 8
 ---
 
 If your site needs to support multiple languages, you have several solutions available:
