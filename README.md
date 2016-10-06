@@ -1,6 +1,6 @@
 # Learn Siteleaf
 
-Siteleaf Learn is a documentation and learning resource for [Siteleaf](http://siteleaf.com).
+Learn Siteleaf is a documentation and learning resource for [Siteleaf](http://siteleaf.com).
 
 _Please note that this is only for [version 2](http://v2.siteleaf.com) of Siteleaf. For v1 documentation, please see the [v1 help site](http://www.siteleaf.com/help/)._
 
