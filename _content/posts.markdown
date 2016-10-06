@@ -22,7 +22,7 @@ The path changes the URL this post is accessible at on your site within the `/po
 By default, posts are visible. You can change them to hidden or draft. Hidden posts set `published: false` in the metadata, while draft posts are moved to the `_drafts/` directory.
 
 Hidden posts and drafts are shown in preview, but don't worry—they're not shown when you publish.
-{: .note}
+{: .tip}
 
 ##### Tags
 
