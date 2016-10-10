@@ -12,15 +12,17 @@ When working with Jekyll and Siteleaf, you typically have 3 distinct environment
 
 3. `production` - where your final website is generated and hosted. This could be GitHub Pages, Amazon S3, Rackspace Cloud Files, or any host that supports (S)FTP (DigitalOcean, MediaTemple, etc).
 
-Siteleaf will now set the {% raw %}`{{ jekyll.environment }}`{% endraw %} variable to one of the environments above.
+Siteleaf will set the {% raw %}`{{ jekyll.environment }}`{% endraw %} variable to one of the environments above.
 
 This allows you to set up conditional code in your theme to render content or add functionality based on the current environment. For example:
 
+{% raw %}
 ```html
 {% if jekyll.environment == 'production' %}
    <!-- your code here -->
 {% endif %}
 ```
+{% endraw %}
 
 You can use this to alter image processing, insert a message, disable analytics, or even conduct user testing in one of your environments.
 
