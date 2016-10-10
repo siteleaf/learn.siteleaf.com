@@ -1,7 +1,7 @@
 ---
 title: Gem-based Themes
 date: 2016-09-20 00:00:00 -04:00
-position: 11
+position: 12
 ---
 
 Beginning with version 3.2, Jekyll introduced a [Gem-based theme system](https://jekyllrb.com/docs/themes/), which allows you to leverage community-maintained templates and styles to customize your site’s presentation. Jekyll themes package layouts, includes, and stylesheets in a way that can be overridden by your site’s content. It's a great way to maintain a separation of content and code, and makes it possible to share themes across multiple sites.

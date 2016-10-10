@@ -1,7 +1,7 @@
 ---
 title: Siteleaf Gem
 date: 2015-10-31 20:03:00 -04:00
-position: 6
+position: 7
 ---
 
 We recommend using [GitHub sync](/themes/github-sync/) for local development, but you can still use the Gem if that's your preferred workflow.
