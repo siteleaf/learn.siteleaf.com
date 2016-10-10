@@ -1,6 +1,7 @@
 ---
 title: Environments
 date: 2016-10-10 11:30:00 -04:00
+position: 5
 ---
 
 When working with Jekyll and Siteleaf, you typically have 3 distinct environments to help you code, preview, and publish your site:

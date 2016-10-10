@@ -1,7 +1,7 @@
 ---
 title: Jekyll Plugins
 date: 2016-09-20 00:00:00 -04:00
-position: 10
+position: 11
 ---
 
 Jekyll and Siteleaf support a variety of [plugins](https://jekyllrb.com/docs/plugins/) to extend core functionality, from [CoffeeScript conversion](https://github.com/jekyll/jekyll-coffeescript) to [embeddable GitHub Gists](https://github.com/jekyll/jekyll-gist). Depending on your site's plan, you can take advantage of [whitelisted](#whitelisted-plugins) or [third-party plugins](#third-party-plugins).
