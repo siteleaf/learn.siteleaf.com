@@ -16,11 +16,13 @@ Siteleaf will set the {% raw %}`{{ jekyll.environment }}`{% endraw %} variable t
 
 This allows you to set up conditional code in your theme to render content or add functionality based on the current environment. For example:
 
+{% raw %}
 ```html
 {% if jekyll.environment == 'production' %}
    <!-- your code here -->
 {% endif %}
 ```
+{% endraw %}
 
 You can use this to alter image processing, insert a message, disable analytics, or even conduct user testing in one of your environments.
 
