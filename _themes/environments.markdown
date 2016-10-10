@@ -26,7 +26,7 @@ This allows you to set up conditional code in your theme to render content or ad
 
 You can use this to alter image processing, insert a message, disable analytics, or even conduct user testing in one of your environments.
 
-For more examples [see our blog post](https://www.siteleaf.com/blog/jekyll-environments/).
+For more examples [see our blog post](https://www.siteleaf.com/blog/jekyll-environments/#example-1-client-feedback-on-staging).
 
 ### Testing environments
 
