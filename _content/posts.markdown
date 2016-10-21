@@ -44,9 +44,32 @@ The permalink changes the URL this post is accessible at on your site. Unlike a 
 
 Choose which layout you'd like to use. Any layout you have in `_layouts` will be listed here.
 
+### Using a custom permalink for posts
+
+By default, posts are published with the permalink template `/posts/:title/`, however you can customize this using [defaults](/content/defaults/). For example, we could use `/articles/:title/` instead:
+
+```yaml
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    permalink: "/articles/:title/" # replace "articles" with name of your choice
+```
+
+You can also rename the Posts collection to a name of your choice, this is what content editors will see in the Siteleaf interface. For example, instead of "Posts" we could call it "Articles":
+
+```yaml
+collections:
+  posts:
+    title: "Articles" # replace "Articles" with name of your choice
+    output: true
+```
+
 ---
 
 ### Further Reading
 
 - [Jekyll: Writing posts](http://jekyllrb.com/docs/posts/)
 - [Jekyll: Working with drafts](http://jekyllrb.com/docs/drafts/)
+- [Jekyll: Permalinks](https://jekyllrb.com/docs/permalinks/)
