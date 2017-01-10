@@ -14,8 +14,11 @@ V2 themes use the same Liquid templating language as v1, with some minor differe
 | `{{ current }}` | `{{ page }}` |
 | `{{ title }}` | `{{ page.title }}` |
 | `{{ url }}` | `{{ page.url }}` |
+| `{{ taxonomy.categories }}` | `{{ page.categories }}` |
+| `{{ taxonomy.tags }}` | `{{ page.tags }}` |
 | `{{ meta.key }}` or `{{ meta["key"] }}` | `{{ page.key }}` or `{{ page["key"] }}` |
 | `{{ site.meta.key }}` | `{{ site.key }}` |
+| `{{ site.pages }}` | `{{ site.html_pages }}` |
 | `{{ thing | fallback: "foobar" }}` | `{{ thing | default: "foobar" }}` |
 | `{{ thing | markdown }}` | `{{ thing | markdownify }}` |
 | `{{ thing | slug }}` | `{{ thing | slugify }}` |
