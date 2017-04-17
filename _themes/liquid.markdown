@@ -30,7 +30,7 @@ An object is a piece of data that has attributes with content. An object can be 
 
 {% highlight liquid %}
 {% raw %}
-{{ post.title }}
+{{ page.title }}
 {% endraw %}
 {% endhighlight %}
 
