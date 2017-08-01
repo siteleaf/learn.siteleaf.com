@@ -1,8 +1,8 @@
 # Learn Siteleaf
 
-Learn Siteleaf is a documentation and learning resource for [Siteleaf](http://siteleaf.com).
+Learn Siteleaf is a documentation and learning resource for [Siteleaf](https://www.siteleaf.com).
 
-_Please note that this is only for [version 2](http://v2.siteleaf.com) of Siteleaf. For v1 documentation, please see the [v1 help site](http://www.siteleaf.com/help/)._
+_Please note that this is only for [version 2](https://www.siteleaf.com) of Siteleaf. For v1 documentation, please see the [v1 help site](http://v1.siteleaf.com)._
 
 ## Installation
 
@@ -32,4 +32,4 @@ To help us improve the site:
 4. Push to the branch (git push origin my-new-feature)
 5. Create new Pull Request
 
-For tips on formatting, check out the [Style Guide](http://learn.siteleaf.com/style/).
+For tips on formatting, check out the [Style Guide](https://learn.siteleaf.com/style/).
