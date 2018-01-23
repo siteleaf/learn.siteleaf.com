@@ -129,3 +129,5 @@ gems:
 - jekyll-sitemap
 - jekyll-seo-tag
 logo: "/assets/images/logo.svg"
+description: Documentation and learning resource for Siteleaf, a content management
+  system designed for a better web.
