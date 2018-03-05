@@ -5,7 +5,7 @@ position: 12
 redirect_from: "/themes/gem/"
 ---
 
-We recommend using [GitHub Sync](/themes/github-sync/) for local development, but you cam use the Siteleaf command line interface (CLI) if that's your preferred workflow.
+We recommend using [GitHub Sync](/themes/github-sync/) for local development, but you can use the Siteleaf command line interface (CLI) if that's your preferred workflow.
 {: .warning}
 
 The Siteleaf CLI ships as an open source Ruby gem. To fork and contribute see: <https://github.com/siteleaf/siteleaf-gem>
