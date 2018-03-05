@@ -1,7 +1,7 @@
 ---
 title: GitHub Sync
 date: 2015-10-31 20:03:00 -04:00
-position: 6
+position: 11
 ---
 
 When working on your site, you'll want to keep your theme and content in sync. This is exactly what GitHub Sync was made for. Once GitHub Sync is enabled, every time you update your Siteleaf site or your [GitHub](https://github.com) repo, the changes will be synced between the two.
