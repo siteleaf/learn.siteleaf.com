@@ -1,7 +1,7 @@
 ---
 title: Optimizing build time
 date: 2016-03-24 12:15:00 -04:00
-position: 10
+position: 8
 ---
 
 As the size and complexity of your site grows, sometimes the amount of time Jekyll needs to build your site grows with it. There are several strategies you can use to keep your build times down.

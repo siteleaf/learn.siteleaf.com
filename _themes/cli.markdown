@@ -1,15 +1,16 @@
 ---
-title: Siteleaf Gem
+title: Siteleaf CLI
 date: 2015-10-31 20:03:00 -04:00
-position: 7
+position: 12
+redirect_from: "/themes/gem/"
 ---
 
-We recommend using [GitHub sync](/themes/github-sync/) for local development, but you can still use the Gem if that's your preferred workflow.
+We recommend using [GitHub Sync](/themes/github-sync/) for local development, but you can use the Siteleaf command line interface (CLI) if that's your preferred workflow.
 {: .warning}
 
-The Siteleaf Ruby gem is open source, to fork and contribute see: <https://github.com/siteleaf/siteleaf-gem>
+The Siteleaf CLI ships as an open source Ruby gem. To fork and contribute see: <https://github.com/siteleaf/siteleaf-gem>
 
-## Local development using the Siteleaf gem
+## Local development using the Siteleaf CLI
 
 1) Create a file called `Gemfile` in your site's root folder and add the Siteleaf gem and Jekyll to your bundle:
 
