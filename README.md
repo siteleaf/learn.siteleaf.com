@@ -1,4 +1,4 @@
-# Learn Siteleaf
+# Learn Siteleaf <img src="https://learn.siteleaf.com/assets/images/logo.svg" width="10%">
 
 Learn Siteleaf is a documentation and learning resource for [Siteleaf](https://www.siteleaf.com).
 
