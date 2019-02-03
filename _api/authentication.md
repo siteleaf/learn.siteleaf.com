@@ -34,7 +34,7 @@ $ curl --user "email:password" \
 }
 ~~~
 
-### Using your API keys
+### Using your API credentials
 
 Once you have your API Key and Secret, you can use these to authenticate on all other endpoints with Basic Auth. Use your API Key in place of username, and API Secret in place of password, combined with a single colon (`:`) as shown in the example below.
 
