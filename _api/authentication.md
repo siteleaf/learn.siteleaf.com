@@ -1,6 +1,6 @@
 ---
 title: Authentication
-date: 2016-01-15 16:22:50.771000000 -05:00
+date: 2016-01-15 16:22:00 -05:00
 position: 2
 ---
 
@@ -16,6 +16,13 @@ The authentication endpoint requires Basic Auth with a users email and password,
 
 ~~~
 POST {{ site.data.api.url | append: 'auth' }}
+~~~
+
+#### Example
+
+~~~
+$ curl --user "email:password" \
+       --request POST {{ site.data.api.url | append: 'auth' }}
 ~~~
 
 #### Response
