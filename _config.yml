@@ -125,7 +125,7 @@ exclude:
 github_url: https://github.com/siteleaf/learn.siteleaf.com
 sass:
   style: compressed
-gems:
+plugins:
 - jekyll-sitemap
 - jekyll-seo-tag
 - jekyll-redirect-from
