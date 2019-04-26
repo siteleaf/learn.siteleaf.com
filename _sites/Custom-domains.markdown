@@ -1,5 +1,5 @@
 ---
-title: Using custom domains
+title: Custom domains
 date: 2019-04-26 11:30:00 -04:00
 position: 2
 ---
