@@ -1,7 +1,7 @@
 ---
 title: Users
 date: 2015-12-17 08:02:00 -05:00
-position: 4
+position: 5
 ---
 
 From the Users page, you can invite collaborators to your site. These collaborators will receive an email notifying them of the invitation along with a link to access your site in Siteleaf.

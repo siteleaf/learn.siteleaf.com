@@ -1,6 +1,7 @@
 ---
 title: Using custom domains
 date: 2019-04-26 11:30:00 -04:00
+position: 2
 ---
 
 To use your own domain with Siteleaf (e.g. \`www.example.com\`), check the “Use custom domain” option under your site’s settings.

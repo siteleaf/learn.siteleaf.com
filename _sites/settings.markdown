@@ -1,7 +1,7 @@
 ---
 title: Settings
 date: 2015-12-17 08:02:00 -05:00
-position: 3
+position: 4
 ---
 
 Under the "General" tab in your site settings, you can change several aspects of the site.
