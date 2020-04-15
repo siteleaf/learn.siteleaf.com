@@ -18,11 +18,11 @@ The gems you include in the `Gemfile` and the method for sycning your site's con
 
 This is our suggested workflow for local development and eliminates the need for the Siteleaf Gem.
 
-**[Learn how to develop your site locally using Jekyll and GitHub Sync](/themes/github-sync/)** &rarr;
+**[Develop your site locally using Jekyll and GitHub Sync](/themes/github-sync/)** &rarr;
 
 ### Option 2: Siteleaf Gem
 
-**[Learn how to develop your site locally using Jekyll and the Siteleaf Gem](/themes/gem/)** &rarr;
+**[Develop your site locally using Jekyll and the Siteleaf Gem](/themes/gem/)** &rarr;
 
 ---
 
