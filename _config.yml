@@ -118,17 +118,25 @@ defaults:
 url: http://learn.siteleaf.com
 permalink: pretty
 exclude:
-- Gemfile
 - Gemfile.lock
 - README*
 - ".gitignore"
 github_url: https://github.com/siteleaf/learn.siteleaf.com
 sass:
   style: compressed
-gems:
+plugins:
 - jekyll-sitemap
 - jekyll-seo-tag
 - jekyll-redirect-from
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: true
+highlighter: rouge
+excerpt_separator: |2+
+
+
+
 logo: "/assets/images/logo.svg"
 description: Documentation and learning resource for Siteleaf, a content management
   system designed for a better web.

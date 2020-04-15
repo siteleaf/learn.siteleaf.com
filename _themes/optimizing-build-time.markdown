@@ -6,6 +6,10 @@ position: 8
 
 As the size and complexity of your site grows, sometimes the amount of time Jekyll needs to build your site grows with it. There are several strategies you can use to keep your build times down.
 
+### Upgrade to Jekyll 4.x
+
+Jekyll 4.x renders websites _much_ faster now thanks to super-powered caching and content transformations. See our guide [Upgrading from Jekyll 3.x to 4.x](/themes/upgrading-from-jekyll-3-to-4/) if you haven't already upgraded.
+
 ### Excluding unnecessary files and folders
 
 A lot of the time there will be files and folders in your site directory that aren't necessary for building the site. For example, if you're using Bower, the `bower_components` directory stores external packages that are not necessary for Jekyll to build the site.
