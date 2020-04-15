@@ -8,7 +8,7 @@ Jekyll 4.x brings upon many improvements — most notably, faster build time. Yo
 
 While GitHub Pages is still pinned to [Jekyll 3.8.x](https://pages.github.com/versions/), it’s possible to start using Jekyll 4 today with a little help from Siteleaf.
 
-This upgrade requires any [paid plan](https://www.siteleaf.com/plans) (i.e. Personal or higher).
+This upgrade requires a [paid plan](https://www.siteleaf.com/plans) (i.e. Personal or higher).
 {: .note}
 
 ### Updating your theme
