@@ -79,6 +79,6 @@ You can exclude additional files as needed, just ensure `Gemfile` is not being e
 
 ### Updating your Hosting settings
 
-If using GitHub Pages for hosting, you'll also need to update your Siteleaf [Hosting settings](/sites/hosting/) to use the `Compile by Siteleaf` option. This option is available on all paid plans, and will ensure your site is built by Siteleaf instead of GitHub Pages. When compiling with Siteleaf on our Team and higher plans, you can also use [custom plugins](/themes/jekyll-plugins/) or gems not supported by GitHub Pages.
+If using GitHub Pages for hosting, you'll also need to update your Siteleaf [Hosting settings](/sites/hosting/) to use the `Compiled by Siteleaf` option. This option is available on all paid plans, and will ensure your site is built by Siteleaf instead of GitHub Pages. When compiling with Siteleaf on our Team and higher plans, you can also use [custom plugins](/themes/jekyll-plugins/) or gems not supported by GitHub Pages.
 
 No changes are required if using other hosting options like S3 or SFTP.
