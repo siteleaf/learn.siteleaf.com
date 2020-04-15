@@ -1,6 +1,7 @@
 ---
 title: Upgrading from Jekyll 3.x to 4.x
 date: 2020-04-15 11:24:00 -04:00
+position: 11
 ---
 
 Jekyll 4.x brings upon many improvements — most notably, faster build time. You can see a [full list of changes here](https://jekyllrb.com/news/2019/08/20/jekyll-4-0-0-released/).
