@@ -15,10 +15,12 @@ First of all, make sure to review Jekyll’s guide on [Upgrading from 3.x to 4.x
 
 If you are using `post_url`, you no longer need to prepend `site.baseurl`:
 
+{% raw %}
 ```diff
 - {{ site.baseurl }}/{% post_url 2018-03-20-hello-world.markdown %}
 + {% post_url 2018-03-20-hello-world.markdown %}
 ```
+{% endraw %}
 
 ### Updating your `Gemfile`
 
