@@ -67,7 +67,7 @@ $ bundle update
 $ bundle exec jekyll serve
 ```
 
-### Updating your _config.yml
+### Updating your config
 
 Jekyll excludes `Gemfile` [by default](https://jekyllrb.com/docs/configuration/default/), so to ensure Siteleaf picks up these changes, we recommend updating your `_config.yml` to something like this:
 
