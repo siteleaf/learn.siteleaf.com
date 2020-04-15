@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="generator" content="Siteleaf, http://siteleaf.com">
+
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Gem-based Themes" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Beginning with version 3.2, Jekyll introduced a Gem-based theme system, which allows you to leverage community-maintained templates and styles to customize your site’s presentation. Jekyll themes package layouts, includes, and stylesheets in a way that can be overridden by your site’s content. It’s a great way to maintain a separation of content and code, and makes it possible to share themes across multiple sites. Sites on the free developer plan can make use of the new GitHub Pages-approved Minima theme, while all paid plans (including legacy and Personal plans) can take full advantage of custom themes. Installing themes Installation may vary depending on the theme, but typically involves two steps. 1) Add to or create a Gemfile for your site, and reference your theme. For example, we’ve added the Minima theme here: source &#39;https://rubygems.org&#39; gem &#39;jekyll&#39; gem &#39;minima&#39; 2) Next, enable theme theme in your site’s _config.yml file:" />
+<meta property="og:description" content="Beginning with version 3.2, Jekyll introduced a Gem-based theme system, which allows you to leverage community-maintained templates and styles to customize your site’s presentation. Jekyll themes package layouts, includes, and stylesheets in a way that can be overridden by your site’s content. It’s a great way to maintain a separation of content and code, and makes it possible to share themes across multiple sites. Sites on the free developer plan can make use of the new GitHub Pages-approved Minima theme, while all paid plans (including legacy and Personal plans) can take full advantage of custom themes. Installing themes Installation may vary depending on the theme, but typically involves two steps. 1) Add to or create a Gemfile for your site, and reference your theme. For example, we’ve added the Minima theme here: source &#39;https://rubygems.org&#39; gem &#39;jekyll&#39; gem &#39;minima&#39; 2) Next, enable theme theme in your site’s _config.yml file:" />
+<link rel="canonical" href="http://learn.siteleaf.com/themes/gem-based-themes/" />
+<meta property="og:url" content="http://learn.siteleaf.com/themes/gem-based-themes/" />
+<meta property="og:site_name" content="Learn Siteleaf" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-09-20T00:00:00-04:00" />
+<script type="application/ld+json">
+{"description":"Beginning with version 3.2, Jekyll introduced a Gem-based theme system, which allows you to leverage community-maintained templates and styles to customize your site’s presentation. Jekyll themes package layouts, includes, and stylesheets in a way that can be overridden by your site’s content. It’s a great way to maintain a separation of content and code, and makes it possible to share themes across multiple sites. Sites on the free developer plan can make use of the new GitHub Pages-approved Minima theme, while all paid plans (including legacy and Personal plans) can take full advantage of custom themes. Installing themes Installation may vary depending on the theme, but typically involves two steps. 1) Add to or create a Gemfile for your site, and reference your theme. For example, we’ve added the Minima theme here: source &#39;https://rubygems.org&#39; gem &#39;jekyll&#39; gem &#39;minima&#39; 2) Next, enable theme theme in your site’s _config.yml file:","@type":"BlogPosting","url":"http://learn.siteleaf.com/themes/gem-based-themes/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"headline":"Gem-based Themes","dateModified":"2016-09-20T00:00:00-04:00","datePublished":"2016-09-20T00:00:00-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/themes/gem-based-themes/"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <title>Gem-based Themes - Learn Siteleaf</title>
+
+    <link href="//www.siteleaf.com/styles/all.css" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link rel="SHORTCUT ICON" href="/assets/images/favicon.ico">
+  </head>
+  <body>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-1666437-41', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <div class="wrap">
+      
+<div class="headerWrap bg--yellow">
+  <header class="header">
+    <ul class="header__items">
+      <li class="header__item">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com" class="header__link">Contribute</a>
+      </li>
+      <li class="header__item">
+        <a href="http://status.siteleaf.com/" class="header__link js-status">Status</a>
+      </li>
+      <li class="header__item">
+        <a href="http://www.siteleaf.com/" class="header__link header__link--button">Siteleaf Home</a>
+      </li>
+      <li class="header__item header__item--mobile">
+        <a id="mobileNavOpen" class="header__link">Menu</a>
+      </li>
+    </ul>
+    <a href="/" class="header__home"><img src="/assets/images/logo.svg" class="header__logo" alt="Learn Siteleaf" /></a>
+    <h1 class="header__title">Developing Themes</h1>
+    
+    <script>
+  (function() {
+    var cx = '004611147431180351508:4g8g1ea_gqi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+<div style="width: 0px; overflow: hidden; height: 0;">
+  <gcse:search></gcse:search>
+</div>
+
+<form class="search" id="searchbox_004611147431180351508:4g8g1ea_gqi" action="">
+  <input value="004611147431180351508:4g8g1ea_gqi" name="cx" type="hidden">
+  <input value="FORID:11" name="cof" type="hidden">
+  <input id="q" style="" name="q" class="search__input" type="search" placeholder="Search the docs">
+</form>
+
+  </header>
+  <nav class="mobileNav">
+    <header class="header">
+      <ul class="header__items">
+        <li class="header__item header__item--mobile">
+          <a id="mobileNavClose" class="header__link">Close</a>
+        </li>
+      </ul>
+      <ul class="mobileNav__items">
+        <li class="mobileNav__item">
+          <a href="https://github.com/siteleaf/learn.siteleaf.com" class="mobileNav__link">Contribute</a>
+        </li>
+        <li class="mobileNav__item">
+          <a href="http://status.siteleaf.com/" class="mobileNav__link">Status</a>
+        </li>
+        <li class="mobileNav__item">
+          <a href="http://www.siteleaf.com/" class="mobileNav__link">Siteleaf Home</a>
+        </li>
+      </ul>
+    </header>
+  </nav>
+</div>
+
+      <main class="main">
+        
+
+
+<div class="articleWrap">
+  
+<aside class="sidebar sidebar--mobile-hidden nocontent">
+  
+  
+    
+  
+    
+  
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/getting-started/">Getting Started</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/content/">Managing Content</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item yellow"><a href="/themes/">Developing Themes</a></h5>
+        
+          <ul class="nav__list">
+            
+            
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/intro/">Intro to themes</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/liquid/">Liquid</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/structure/">Theme structure</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/local-development/">Local development</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/environments/">Environments</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/sass/">Sass and SCSS</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/sitemaps-and-feeds/">Sitemaps and Feeds</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/optimizing-build-time/">Optimizing build time</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/jekyll-plugins/">Jekyll Plugins</a></li>
+              
+            
+              
+                <li class="nav__item nav__item--current yellow"><a class="nav__link nav__link--sidebar" href="/themes/gem-based-themes/">Gem-based Themes</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/upgrading-from-jekyll-3-to-4/">Upgrading from Jekyll 3.x to 4.x</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/github-sync/">GitHub Sync</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/cli/">Siteleaf CLI</a></li>
+              
+            
+          </ul>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/sites/">Deploy & Collaborate</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/api/">API</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/v1/">Legacy Sites</a></h5>
+        
+      </nav>
+    
+  
+</aside>
+
+  <article class="article">
+    <ol class="breadcrumbs">
+      <li class="breadcrumb"><a href="/">Learn Siteleaf</a></li>
+      <li class="breadcrumb"><a href="/themes/">Developing Themes</a></li>
+    </ol>
+    <section class="article__content">
+      <h2>Gem-based Themes</h2>
+      <p>Beginning with version 3.2, Jekyll introduced a <a href="https://jekyllrb.com/docs/themes/">Gem-based theme system</a>, which allows you to leverage community-maintained templates and styles to customize your site’s presentation. Jekyll themes package layouts, includes, and stylesheets in a way that can be overridden by your site’s content. It’s a great way to maintain a separation of content and code, and makes it possible to share themes across multiple sites.</p>
+
+<p>Sites on the free developer plan can make use of the new GitHub Pages-approved <a href="https://github.com/jekyll/minima">Minima theme</a>, while <a href="https://www.siteleaf.com/plans">all paid plans</a> (including legacy and Personal plans) can take full advantage of custom themes.</p>
+
+<h3 id="installing-themes">Installing themes</h3>
+
+<p>Installation may vary depending on the theme, but typically involves two steps.</p>
+
+<p>1) Add to or create a <code class="highlighter-rouge">Gemfile</code> for your site, and reference your theme. For example, we’ve added the <a href="https://github.com/jekyll/minima">Minima</a> theme here:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">source</span> <span class="s1">'https://rubygems.org'</span>
+<span class="n">gem</span> <span class="s1">'jekyll'</span>
+<span class="n">gem</span> <span class="s1">'minima'</span>
+</code></pre></div></div>
+
+<p>2) Next, enable theme theme in your site’s <code class="highlighter-rouge">_config.yml</code> file:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">theme</span><span class="pi">:</span> <span class="s">minima</span>
+</code></pre></div></div>
+
+<p>You may need to follow additional instructions, so make sure to review the theme’s documentation.</p>
+
+<p>To test your site locally, install and build your site using <code class="highlighter-rouge">bundle exec</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bundle install
+$ bundle exec jekyll serve
+</code></pre></div></div>
+
+<p>When previewing or publishing your site within Siteleaf, themes defined in your <code class="highlighter-rouge">Gemfile</code> will be automatically installed.</p>
+
+<h4 id="installing-themes-from-git-repositories">Installing themes from Git repositories</h4>
+
+<p>Themes are installed from <a href="https://rubygems.org">RubyGems</a> by default, but can also be installed from any public Git repository.</p>
+
+<p>Here’s how to install Minima from GitHub:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'minima'</span><span class="p">,</span> <span class="ss">git: </span><span class="s1">'https://github.com/jekyll/minima.git'</span>
+</code></pre></div></div>
+
+<p>You can use shortcuts for <code class="highlighter-rouge">:github</code>, <code class="highlighter-rouge">:gist</code>, and <code class="highlighter-rouge">:bitbucket</code>:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'minima'</span><span class="p">,</span> <span class="ss">github: </span><span class="s1">'jekyll/minima'</span>
+</code></pre></div></div>
+
+<p>You can also specify a particular <code class="highlighter-rouge">:ref</code>, <code class="highlighter-rouge">:branch</code>, or <code class="highlighter-rouge">:tag</code>:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'minima'</span><span class="p">,</span> <span class="ss">github: </span><span class="s1">'jekyll/minima'</span><span class="p">,</span> <span class="ss">tag: </span><span class="s1">'v1.2.0'</span>
+</code></pre></div></div>
+
+<p class="warning">The Git repository must be publicly accessible for Siteleaf to access install your theme.</p>
+
+<h4 id="using-third-party-themes-with-github-pages">Using third-party themes with GitHub Pages</h4>
+
+<p>To use a theme other than Minima with GitHub Pages, make sure to choose the “Compiled by Siteleaf” format in your hosting settings. With this option, Siteleaf will pre-compile your site before pushing it to GitHub.</p>
+
+<hr />
+
+<h3 id="further-reading">Further Reading</h3>
+
+<ul>
+  <li><a href="https://jekyllrb.com/docs/themes/">Jekyll: Themes</a></li>
+  <li><a href="https://pages.github.com/themes/">GitHub: Supported themes</a></li>
+  <li><a href="http://bundler.io/v1.13/gemfile.html">Bundler: Gemfile Guide</a></li>
+  <li><a href="http://bundler.io/git.html">Bundler: Gems from Git repositories</a></li>
+</ul>
+
+      <p class="article__improve">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_themes/gem-based-themes.markdown">
+          Help improve this page
+        </a>
+      </p>
+    </section>
+    <div class="article__prevNext">
+      
+        <a href="/themes/jekyll-plugins/" id="prev" class="article__prev">&larr; Jekyll Plugins</a>
+      
+      
+        <a href="/themes/upgrading-from-jekyll-3-to-4/" id="next" class="article__next">Upgrading from Jekyll 3.x to 4.x &rarr;</a>
+      
+    </div>
+  </article>
+</div>
+
+      </main>
+    </div>
+    <div class="footerWrap">
+  <footer class="footer">
+    <span class="footer__madeBy"><a href="https://github.com/siteleaf/learn.siteleaf.com">Made in Siteleaf</a> by <a href="http://oak.is/">Oak</a></span>
+  </footer>
+</div>
+
+
+    <script src="//www.siteleaf.com/scripts/all.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

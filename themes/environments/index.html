@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="generator" content="Siteleaf, http://siteleaf.com">
+
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Environments" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="When working with Jekyll and Siteleaf, you typically have 3 distinct environments to help you code, preview, and publish your site: development - this is your local machine where theme development takes place. Run jekyll serve and your site will be accessible at http://localhost:4000. staging - sites on paid plans come with preview functionality. Hit the “Generate preview” button in Siteleaf, and your site will be built with a unique URL without affecting your live site. This URL is shareable, so you can send it to colleagues outside of Siteleaf for feedback or proofreading. production - where your final website is generated and hosted. This could be GitHub Pages, Amazon S3, Rackspace Cloud Files, or any host that supports (S)FTP (DigitalOcean, MediaTemple, etc). Siteleaf will set the {{ jekyll.environment }} variable to one of the environments above. This allows you to set up conditional code in your theme to render content or add functionality based on the current environment. For example: {% if jekyll.environment == &#39;production&#39; %} &lt;!-- your code here --&gt; {% endif %} You can use this to alter image processing, insert a message, disable analytics, or even conduct user testing in one of your environments. For more examples see our blog post. Testing environments To test this functionality locally and ensure your conditionals work as intended, set JEKYLL_ENV when running jekyll serve. For example we could see how production would render: $ JEKYLL_ENV=production bundle exec jekyll serve" />
+<meta property="og:description" content="When working with Jekyll and Siteleaf, you typically have 3 distinct environments to help you code, preview, and publish your site: development - this is your local machine where theme development takes place. Run jekyll serve and your site will be accessible at http://localhost:4000. staging - sites on paid plans come with preview functionality. Hit the “Generate preview” button in Siteleaf, and your site will be built with a unique URL without affecting your live site. This URL is shareable, so you can send it to colleagues outside of Siteleaf for feedback or proofreading. production - where your final website is generated and hosted. This could be GitHub Pages, Amazon S3, Rackspace Cloud Files, or any host that supports (S)FTP (DigitalOcean, MediaTemple, etc). Siteleaf will set the {{ jekyll.environment }} variable to one of the environments above. This allows you to set up conditional code in your theme to render content or add functionality based on the current environment. For example: {% if jekyll.environment == &#39;production&#39; %} &lt;!-- your code here --&gt; {% endif %} You can use this to alter image processing, insert a message, disable analytics, or even conduct user testing in one of your environments. For more examples see our blog post. Testing environments To test this functionality locally and ensure your conditionals work as intended, set JEKYLL_ENV when running jekyll serve. For example we could see how production would render: $ JEKYLL_ENV=production bundle exec jekyll serve" />
+<link rel="canonical" href="http://learn.siteleaf.com/themes/environments/" />
+<meta property="og:url" content="http://learn.siteleaf.com/themes/environments/" />
+<meta property="og:site_name" content="Learn Siteleaf" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-10-10T11:30:00-04:00" />
+<script type="application/ld+json">
+{"description":"When working with Jekyll and Siteleaf, you typically have 3 distinct environments to help you code, preview, and publish your site: development - this is your local machine where theme development takes place. Run jekyll serve and your site will be accessible at http://localhost:4000. staging - sites on paid plans come with preview functionality. Hit the “Generate preview” button in Siteleaf, and your site will be built with a unique URL without affecting your live site. This URL is shareable, so you can send it to colleagues outside of Siteleaf for feedback or proofreading. production - where your final website is generated and hosted. This could be GitHub Pages, Amazon S3, Rackspace Cloud Files, or any host that supports (S)FTP (DigitalOcean, MediaTemple, etc). Siteleaf will set the {{ jekyll.environment }} variable to one of the environments above. This allows you to set up conditional code in your theme to render content or add functionality based on the current environment. For example: {% if jekyll.environment == &#39;production&#39; %} &lt;!-- your code here --&gt; {% endif %} You can use this to alter image processing, insert a message, disable analytics, or even conduct user testing in one of your environments. For more examples see our blog post. Testing environments To test this functionality locally and ensure your conditionals work as intended, set JEKYLL_ENV when running jekyll serve. For example we could see how production would render: $ JEKYLL_ENV=production bundle exec jekyll serve","@type":"BlogPosting","url":"http://learn.siteleaf.com/themes/environments/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"headline":"Environments","dateModified":"2016-10-10T11:30:00-04:00","datePublished":"2016-10-10T11:30:00-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/themes/environments/"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <title>Environments - Learn Siteleaf</title>
+
+    <link href="//www.siteleaf.com/styles/all.css" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link rel="SHORTCUT ICON" href="/assets/images/favicon.ico">
+  </head>
+  <body>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-1666437-41', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <div class="wrap">
+      
+<div class="headerWrap bg--yellow">
+  <header class="header">
+    <ul class="header__items">
+      <li class="header__item">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com" class="header__link">Contribute</a>
+      </li>
+      <li class="header__item">
+        <a href="http://status.siteleaf.com/" class="header__link js-status">Status</a>
+      </li>
+      <li class="header__item">
+        <a href="http://www.siteleaf.com/" class="header__link header__link--button">Siteleaf Home</a>
+      </li>
+      <li class="header__item header__item--mobile">
+        <a id="mobileNavOpen" class="header__link">Menu</a>
+      </li>
+    </ul>
+    <a href="/" class="header__home"><img src="/assets/images/logo.svg" class="header__logo" alt="Learn Siteleaf" /></a>
+    <h1 class="header__title">Developing Themes</h1>
+    
+    <script>
+  (function() {
+    var cx = '004611147431180351508:4g8g1ea_gqi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+<div style="width: 0px; overflow: hidden; height: 0;">
+  <gcse:search></gcse:search>
+</div>
+
+<form class="search" id="searchbox_004611147431180351508:4g8g1ea_gqi" action="">
+  <input value="004611147431180351508:4g8g1ea_gqi" name="cx" type="hidden">
+  <input value="FORID:11" name="cof" type="hidden">
+  <input id="q" style="" name="q" class="search__input" type="search" placeholder="Search the docs">
+</form>
+
+  </header>
+  <nav class="mobileNav">
+    <header class="header">
+      <ul class="header__items">
+        <li class="header__item header__item--mobile">
+          <a id="mobileNavClose" class="header__link">Close</a>
+        </li>
+      </ul>
+      <ul class="mobileNav__items">
+        <li class="mobileNav__item">
+          <a href="https://github.com/siteleaf/learn.siteleaf.com" class="mobileNav__link">Contribute</a>
+        </li>
+        <li class="mobileNav__item">
+          <a href="http://status.siteleaf.com/" class="mobileNav__link">Status</a>
+        </li>
+        <li class="mobileNav__item">
+          <a href="http://www.siteleaf.com/" class="mobileNav__link">Siteleaf Home</a>
+        </li>
+      </ul>
+    </header>
+  </nav>
+</div>
+
+      <main class="main">
+        
+
+
+<div class="articleWrap">
+  
+<aside class="sidebar sidebar--mobile-hidden nocontent">
+  
+  
+    
+  
+    
+  
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/getting-started/">Getting Started</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/content/">Managing Content</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item yellow"><a href="/themes/">Developing Themes</a></h5>
+        
+          <ul class="nav__list">
+            
+            
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/intro/">Intro to themes</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/liquid/">Liquid</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/structure/">Theme structure</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/local-development/">Local development</a></li>
+              
+            
+              
+                <li class="nav__item nav__item--current yellow"><a class="nav__link nav__link--sidebar" href="/themes/environments/">Environments</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/sass/">Sass and SCSS</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/sitemaps-and-feeds/">Sitemaps and Feeds</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/optimizing-build-time/">Optimizing build time</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/jekyll-plugins/">Jekyll Plugins</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/gem-based-themes/">Gem-based Themes</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/upgrading-from-jekyll-3-to-4/">Upgrading from Jekyll 3.x to 4.x</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/github-sync/">GitHub Sync</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/cli/">Siteleaf CLI</a></li>
+              
+            
+          </ul>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/sites/">Deploy & Collaborate</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/api/">API</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/v1/">Legacy Sites</a></h5>
+        
+      </nav>
+    
+  
+</aside>
+
+  <article class="article">
+    <ol class="breadcrumbs">
+      <li class="breadcrumb"><a href="/">Learn Siteleaf</a></li>
+      <li class="breadcrumb"><a href="/themes/">Developing Themes</a></li>
+    </ol>
+    <section class="article__content">
+      <h2>Environments</h2>
+      <p>When working with Jekyll and Siteleaf, you typically have 3 distinct environments to help you code, preview, and publish your site:</p>
+
+<ol>
+  <li>
+    <p><code class="highlighter-rouge">development</code> - this is your local machine where theme development takes place. Run <code class="highlighter-rouge">jekyll serve</code> and your site will be accessible at <code class="highlighter-rouge">http://localhost:4000</code>.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">staging</code> - sites on paid plans come with <a href="/sites/preview/">preview functionality</a>. Hit the “Generate preview” button in Siteleaf, and your site will be built with a unique URL without affecting your live site. This URL is shareable, so you can send it to colleagues outside of Siteleaf for feedback or proofreading.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">production</code> - where your final website is generated and hosted. This could be GitHub Pages, Amazon S3, Rackspace Cloud Files, or any host that supports (S)FTP (DigitalOcean, MediaTemple, etc).</p>
+  </li>
+</ol>
+
+<p>Siteleaf will set the <code class="highlighter-rouge">{{ jekyll.environment }}</code> variable to one of the environments above.</p>
+
+<p>This allows you to set up conditional code in your theme to render content or add functionality based on the current environment. For example:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% if jekyll.environment == 'production' %}
+   <span class="c">&lt;!-- your code here --&gt;</span>
+{% endif %}
+</code></pre></div></div>
+
+<p>You can use this to alter image processing, insert a message, disable analytics, or even conduct user testing in one of your environments.</p>
+
+<p>For more examples <a href="https://www.siteleaf.com/blog/jekyll-environments/#example-1-client-feedback-on-staging">see our blog post</a>.</p>
+
+<h3 id="testing-environments">Testing environments</h3>
+
+<p>To test this functionality locally and ensure your conditionals work as intended, set <code class="highlighter-rouge">JEKYLL_ENV</code> when running <code class="highlighter-rouge">jekyll serve</code>. For example we could see how <code class="highlighter-rouge">production</code> would render:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ JEKYLL_ENV</span><span class="o">=</span>production bundle <span class="nb">exec </span>jekyll serve
+</code></pre></div></div>
+
+      <p class="article__improve">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_themes/environments.markdown">
+          Help improve this page
+        </a>
+      </p>
+    </section>
+    <div class="article__prevNext">
+      
+        <a href="/themes/local-development/" id="prev" class="article__prev">&larr; Local development</a>
+      
+      
+        <a href="/themes/sass/" id="next" class="article__next">Sass and SCSS &rarr;</a>
+      
+    </div>
+  </article>
+</div>
+
+      </main>
+    </div>
+    <div class="footerWrap">
+  <footer class="footer">
+    <span class="footer__madeBy"><a href="https://github.com/siteleaf/learn.siteleaf.com">Made in Siteleaf</a> by <a href="http://oak.is/">Oak</a></span>
+  </footer>
+</div>
+
+
+    <script src="//www.siteleaf.com/scripts/all.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

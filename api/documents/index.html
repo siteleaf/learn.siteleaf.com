@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="generator" content="Siteleaf, http://siteleaf.com">
+
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Documents" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Overview List documents Create a document Get a document Update a document Delete a document" />
+<meta property="og:description" content="Overview List documents Create a document Get a document Update a document Delete a document" />
+<link rel="canonical" href="http://learn.siteleaf.com/api/documents/" />
+<meta property="og:url" content="http://learn.siteleaf.com/api/documents/" />
+<meta property="og:site_name" content="Learn Siteleaf" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-01-14T17:29:29-05:00" />
+<script type="application/ld+json">
+{"description":"Overview List documents Create a document Get a document Update a document Delete a document","@type":"BlogPosting","url":"http://learn.siteleaf.com/api/documents/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"headline":"Documents","dateModified":"2016-01-14T17:29:29-05:00","datePublished":"2016-01-14T17:29:29-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/api/documents/"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <title>Documents - Learn Siteleaf</title>
+
+    <link href="//www.siteleaf.com/styles/all.css" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link rel="SHORTCUT ICON" href="/assets/images/favicon.ico">
+  </head>
+  <body>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-1666437-41', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <div class="wrap">
+      
+<div class="headerWrap bg--purple">
+  <header class="header">
+    <ul class="header__items">
+      <li class="header__item">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com" class="header__link">Contribute</a>
+      </li>
+      <li class="header__item">
+        <a href="http://status.siteleaf.com/" class="header__link js-status">Status</a>
+      </li>
+      <li class="header__item">
+        <a href="http://www.siteleaf.com/" class="header__link header__link--button">Siteleaf Home</a>
+      </li>
+      <li class="header__item header__item--mobile">
+        <a id="mobileNavOpen" class="header__link">Menu</a>
+      </li>
+    </ul>
+    <a href="/" class="header__home"><img src="/assets/images/logo.svg" class="header__logo" alt="Learn Siteleaf" /></a>
+    <h1 class="header__title">API</h1>
+    
+    <script>
+  (function() {
+    var cx = '004611147431180351508:4g8g1ea_gqi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+<div style="width: 0px; overflow: hidden; height: 0;">
+  <gcse:search></gcse:search>
+</div>
+
+<form class="search" id="searchbox_004611147431180351508:4g8g1ea_gqi" action="">
+  <input value="004611147431180351508:4g8g1ea_gqi" name="cx" type="hidden">
+  <input value="FORID:11" name="cof" type="hidden">
+  <input id="q" style="" name="q" class="search__input" type="search" placeholder="Search the docs">
+</form>
+
+  </header>
+  <nav class="mobileNav">
+    <header class="header">
+      <ul class="header__items">
+        <li class="header__item header__item--mobile">
+          <a id="mobileNavClose" class="header__link">Close</a>
+        </li>
+      </ul>
+      <ul class="mobileNav__items">
+        <li class="mobileNav__item">
+          <a href="https://github.com/siteleaf/learn.siteleaf.com" class="mobileNav__link">Contribute</a>
+        </li>
+        <li class="mobileNav__item">
+          <a href="http://status.siteleaf.com/" class="mobileNav__link">Status</a>
+        </li>
+        <li class="mobileNav__item">
+          <a href="http://www.siteleaf.com/" class="mobileNav__link">Siteleaf Home</a>
+        </li>
+      </ul>
+    </header>
+  </nav>
+</div>
+
+      <main class="main">
+        
+
+
+<div class="articleWrap">
+  
+<aside class="sidebar sidebar--mobile-hidden nocontent">
+  
+  
+    
+  
+    
+  
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/getting-started/">Getting Started</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/content/">Managing Content</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/themes/">Developing Themes</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/sites/">Deploy & Collaborate</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item purple"><a href="/api/">API</a></h5>
+        
+          <ul class="nav__list">
+            
+            
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/api/libraries-and-integrations/">Libraries and integrations</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/api/authentication/">Authentication</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/api/sites/">Sites</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/api/pages/">Pages</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/api/collections/">Collections</a></li>
+              
+            
+              
+                <li class="nav__item nav__item--current purple"><a class="nav__link nav__link--sidebar" href="/api/documents/">Documents</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/api/source/">Source</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/api/pagination/">Pagination</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/api/defaults/">Defaults</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/api/jobs/">Jobs</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/api/users/">Users</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/api/hosting-sync/">Hosting and Sync</a></li>
+              
+            
+          </ul>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/v1/">Legacy Sites</a></h5>
+        
+      </nav>
+    
+  
+</aside>
+
+  <article class="article">
+    <ol class="breadcrumbs">
+      <li class="breadcrumb"><a href="/">Learn Siteleaf</a></li>
+      <li class="breadcrumb"><a href="/api/">API</a></li>
+    </ol>
+    <section class="article__content">
+      <h2>Documents</h2>
+      <h3 id="overview">Overview</h3>
+
+<ol class="api__toc">
+  <li><a href="#list-documents">List documents</a></li>
+  <li><a href="#create-a-document">Create a document</a></li>
+  <li><a href="#get-a-document">Get a document</a></li>
+  <li><a href="#update-a-document">Update a document</a></li>
+  <li><a href="#delete-a-document">Delete a document</a></li>
+</ol>
+
+<h3 id="list-documents">List documents</h3>
+
+<h4 id="endpoint">Endpoint</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/sites/:site_id/collections/:path/documents
+</code></pre></div></div>
+
+<h4 id="query-string-params">Query String Params</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Desc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">q</code></td>
+      <td>Searches by <code class="highlighter-rouge">title</code> and <code class="highlighter-rouge">path</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">sort</code></td>
+      <td>Should be formated as <code class="highlighter-rouge">field-asc</code> or <code class="highlighter-rouge">field-desc</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">visibility</code></td>
+      <td>Can be one of <code class="highlighter-rouge">visible</code>, <code class="highlighter-rouge">hidden</code> or <code class="highlighter-rouge">draft</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">extensions</code></td>
+      <td>A comma separated list of file extensions, or <code class="highlighter-rouge">markdown</code> which is equivalent to <code class="highlighter-rouge">markdown,md,mkdown,mkdn,mkd</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="response">Response</h4>
+
+<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
+      &lt;https://api.siteleaf.com/v2/:path?page=9&gt;; rel="last"
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000005"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The Great Gatsby"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lorem ipsum…"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"filename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_books/the-great-gatsby.md"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"the-great-gatsby.md"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"basename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"the-great-gatsby.md"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"directory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_books"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"fiction"</span><span class="p">],</span><span class="w">
+    </span><span class="nl">"defaults"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"layout"</span><span class="p">:</span><span class="w"> </span><span class="s2">"books"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"document"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"sha"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4d481d526f0010ed96e43260f0e776acf6da315d"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"visibility"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visible"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"permalink"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/books/the-great-gatsby.html"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000002"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000000"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-14 20:50:46 +0000"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-14 20:56:40 +0000"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="create-a-document">Create a document</h3>
+
+<h4 id="endpoint-1">Endpoint</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST https://api.siteleaf.com/v2/sites/:site_id/collections/:path/documents
+</code></pre></div></div>
+
+<h4 id="input">Input</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Desc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">title</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Document title <strong>(required)</strong></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">body</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Document body</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">path</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Path of the document relative to its collection</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">permalink</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Custom permalink, overrides the generated <code class="highlighter-rouge">url</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">date</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>ISO8601 formated date</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">visibility</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Valid options are <code class="highlighter-rouge">visible</code> and <code class="highlighter-rouge">hidden</code>, defaults to <code class="highlighter-rouge">visible</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">metadata</code></td>
+      <td><code class="highlighter-rouge">Hash&lt;String, *&gt;</code></td>
+      <td>Arbitrary key/value pairs</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">tags</code></td>
+      <td><code class="highlighter-rouge">Array&lt;String&gt;</code></td>
+      <td>Document tags</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">categories</code></td>
+      <td><code class="highlighter-rouge">Array&lt;String&gt;</code></td>
+      <td>Document categories</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="example">Example</h4>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"required reading"</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"F. Scott Fitzgerald"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="response-1">Response</h4>
+
+<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 201 Created
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000005"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The Great Gatsby"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lorem ipsum…"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"filename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_books/the-great-gatsby.md"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"the-great-gatsby.md"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"basename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"the-great-gatsby.md"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"directory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_books"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+  </span><span class="nl">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"fiction"</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"defaults"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"layout"</span><span class="p">:</span><span class="w"> </span><span class="s2">"books"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"document"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"sha"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4d481d526f0010ed96e43260f0e776acf6da315d"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"visibility"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visible"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"permalink"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/books/the-great-gatsby.html"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000002"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000000"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-14 20:50:46 +0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-14 20:56:40 +0000"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="get-a-document">Get a document</h3>
+
+<h4 id="endpoint-2">Endpoint</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/documents/:document_id
+</code></pre></div></div>
+
+<h4 id="response-2">Response</h4>
+
+<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000005"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The Great Gatsby"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lorem ipsum…"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"filename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_books/the-great-gatsby.md"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"the-great-gatsby.md"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"basename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"the-great-gatsby.md"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"directory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_books"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+  </span><span class="nl">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"fiction"</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"defaults"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"layout"</span><span class="p">:</span><span class="w"> </span><span class="s2">"books"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"document"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"sha"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4d481d526f0010ed96e43260f0e776acf6da315d"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"visibility"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visible"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"permalink"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/books/the-great-gatsby.html"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000002"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000000"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-14 20:50:46 +0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-14 20:56:40 +0000"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="update-a-document">Update a document</h3>
+
+<h4 id="endpoint-3">Endpoint</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PUT https://api.siteleaf.com/v2/documents/:document_id
+</code></pre></div></div>
+
+<h4 id="input-1">Input</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Desc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">title</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Document title</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">body</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Document body</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">path</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Path of the document relative to its collection</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">permalink</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Custom permalink, overrides the generated <code class="highlighter-rouge">url</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">date</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>ISO8601 formated date</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">visibility</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Valid options are <code class="highlighter-rouge">visible</code> and <code class="highlighter-rouge">hidden</code>, defaults to <code class="highlighter-rouge">visible</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">metadata</code></td>
+      <td><code class="highlighter-rouge">Hash&lt;String, *&gt;</code></td>
+      <td>Arbitrary key/value pairs</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">tags</code></td>
+      <td><code class="highlighter-rouge">Array&lt;String&gt;</code></td>
+      <td>Document tags</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">categories</code></td>
+      <td><code class="highlighter-rouge">Array&lt;String&gt;</code></td>
+      <td>Document categories</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="example-1">Example</h4>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"required reading"</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"F. Scott Fitzgerald"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="response-3">Response</h4>
+
+<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000005"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The Great Gatsby"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lorem ipsum…"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"filename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_books/the-great-gatsby.md"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"the-great-gatsby.md"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"basename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"the-great-gatsby.md"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"directory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_books"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+  </span><span class="nl">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"fiction"</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"defaults"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"layout"</span><span class="p">:</span><span class="w"> </span><span class="s2">"books"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"document"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"sha"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4d481d526f0010ed96e43260f0e776acf6da315d"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"visibility"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visible"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"permalink"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/books/the-great-gatsby.html"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000002"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000000"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-14 20:50:46 +0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-01-14 20:56:40 +0000"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="delete-a-document">Delete a document</h3>
+
+<h4 id="endpoint-4">Endpoint</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DELETE https://api.siteleaf.com/v2/documents/:document_id
+</code></pre></div></div>
+
+<h4 id="response-4">Response</h4>
+
+<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000005"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+      <p class="article__improve">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_api/documents.md">
+          Help improve this page
+        </a>
+      </p>
+    </section>
+    <div class="article__prevNext">
+      
+        <a href="/api/collections/" id="prev" class="article__prev">&larr; Collections</a>
+      
+      
+        <a href="/api/source/" id="next" class="article__next">Source &rarr;</a>
+      
+    </div>
+  </article>
+</div>
+
+      </main>
+    </div>
+    <div class="footerWrap">
+  <footer class="footer">
+    <span class="footer__madeBy"><a href="https://github.com/siteleaf/learn.siteleaf.com">Made in Siteleaf</a> by <a href="http://oak.is/">Oak</a></span>
+  </footer>
+</div>
+
+
+    <script src="//www.siteleaf.com/scripts/all.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

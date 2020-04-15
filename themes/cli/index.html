@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="generator" content="Siteleaf, http://siteleaf.com">
+
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Siteleaf CLI" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We recommend using GitHub Sync for local development, but you can use the Siteleaf command line interface (CLI) if that’s your preferred workflow. The Siteleaf CLI ships as an open source Ruby gem. To fork and contribute see: https://github.com/siteleaf/siteleaf-gem Local development using the Siteleaf CLI 1) Create a file called Gemfile in your site’s root folder and add the Siteleaf gem and Jekyll to your bundle: source &#39;http://rubygems.org&#39; gem &#39;jekyll&#39; group :development do gem &#39;siteleaf&#39;, &#39;~&gt;2&#39; end For help with Bundler or Gemfiles, please see: http://bundler.io/gemfile.html 2) Install the bundle: $ gem install bundler $ bundle install 3) Authorize your Siteleaf account: $ bundle exec siteleaf auth 4) Create or connect to a Siteleaf site: To create a new Siteleaf site: $ bundle exec siteleaf new yoursite.com This will create a new theme folder called yoursite.com in the directory where you ran this command. It will also create the site for you in your Siteleaf account. If you prefer not to create a new directory, run bundle exec siteleaf new yoursite.com . instead. To use an existing Siteleaf site: $ bundle exec siteleaf config yoursite.com You can then pull the Jekyll configuration, content, and current theme: $ bundle exec siteleaf pull 5) Start the Jekyll server: $ bundle exec jekyll serve Now visit localhost:4000 to see your site! 5) Push your content and theme to Siteleaf: $ bundle exec siteleaf push Important: When using push/pull in v2, both theme and content files are included. Always make sure to do a pull first to avoid overwriting your Siteleaf content on push. Your local directory must have a _config.yml in order to push. Backing up your site Creating a full backup of your site is simple. Just copy your Gemfile to an empty directory and do a pull: cp Gemfile /path/to/backup/ cd /path/to/backup/ bundle install bundle exec siteleaf config yoursite.com bundle exec siteleaf pull This will include your entire site, including theme files, assets, content, and site metadata." />
+<meta property="og:description" content="We recommend using GitHub Sync for local development, but you can use the Siteleaf command line interface (CLI) if that’s your preferred workflow. The Siteleaf CLI ships as an open source Ruby gem. To fork and contribute see: https://github.com/siteleaf/siteleaf-gem Local development using the Siteleaf CLI 1) Create a file called Gemfile in your site’s root folder and add the Siteleaf gem and Jekyll to your bundle: source &#39;http://rubygems.org&#39; gem &#39;jekyll&#39; group :development do gem &#39;siteleaf&#39;, &#39;~&gt;2&#39; end For help with Bundler or Gemfiles, please see: http://bundler.io/gemfile.html 2) Install the bundle: $ gem install bundler $ bundle install 3) Authorize your Siteleaf account: $ bundle exec siteleaf auth 4) Create or connect to a Siteleaf site: To create a new Siteleaf site: $ bundle exec siteleaf new yoursite.com This will create a new theme folder called yoursite.com in the directory where you ran this command. It will also create the site for you in your Siteleaf account. If you prefer not to create a new directory, run bundle exec siteleaf new yoursite.com . instead. To use an existing Siteleaf site: $ bundle exec siteleaf config yoursite.com You can then pull the Jekyll configuration, content, and current theme: $ bundle exec siteleaf pull 5) Start the Jekyll server: $ bundle exec jekyll serve Now visit localhost:4000 to see your site! 5) Push your content and theme to Siteleaf: $ bundle exec siteleaf push Important: When using push/pull in v2, both theme and content files are included. Always make sure to do a pull first to avoid overwriting your Siteleaf content on push. Your local directory must have a _config.yml in order to push. Backing up your site Creating a full backup of your site is simple. Just copy your Gemfile to an empty directory and do a pull: cp Gemfile /path/to/backup/ cd /path/to/backup/ bundle install bundle exec siteleaf config yoursite.com bundle exec siteleaf pull This will include your entire site, including theme files, assets, content, and site metadata." />
+<link rel="canonical" href="http://learn.siteleaf.com/themes/cli/" />
+<meta property="og:url" content="http://learn.siteleaf.com/themes/cli/" />
+<meta property="og:site_name" content="Learn Siteleaf" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-10-31T20:03:00-04:00" />
+<script type="application/ld+json">
+{"description":"We recommend using GitHub Sync for local development, but you can use the Siteleaf command line interface (CLI) if that’s your preferred workflow. The Siteleaf CLI ships as an open source Ruby gem. To fork and contribute see: https://github.com/siteleaf/siteleaf-gem Local development using the Siteleaf CLI 1) Create a file called Gemfile in your site’s root folder and add the Siteleaf gem and Jekyll to your bundle: source &#39;http://rubygems.org&#39; gem &#39;jekyll&#39; group :development do gem &#39;siteleaf&#39;, &#39;~&gt;2&#39; end For help with Bundler or Gemfiles, please see: http://bundler.io/gemfile.html 2) Install the bundle: $ gem install bundler $ bundle install 3) Authorize your Siteleaf account: $ bundle exec siteleaf auth 4) Create or connect to a Siteleaf site: To create a new Siteleaf site: $ bundle exec siteleaf new yoursite.com This will create a new theme folder called yoursite.com in the directory where you ran this command. It will also create the site for you in your Siteleaf account. If you prefer not to create a new directory, run bundle exec siteleaf new yoursite.com . instead. To use an existing Siteleaf site: $ bundle exec siteleaf config yoursite.com You can then pull the Jekyll configuration, content, and current theme: $ bundle exec siteleaf pull 5) Start the Jekyll server: $ bundle exec jekyll serve Now visit localhost:4000 to see your site! 5) Push your content and theme to Siteleaf: $ bundle exec siteleaf push Important: When using push/pull in v2, both theme and content files are included. Always make sure to do a pull first to avoid overwriting your Siteleaf content on push. Your local directory must have a _config.yml in order to push. Backing up your site Creating a full backup of your site is simple. Just copy your Gemfile to an empty directory and do a pull: cp Gemfile /path/to/backup/ cd /path/to/backup/ bundle install bundle exec siteleaf config yoursite.com bundle exec siteleaf pull This will include your entire site, including theme files, assets, content, and site metadata.","@type":"BlogPosting","url":"http://learn.siteleaf.com/themes/cli/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"headline":"Siteleaf CLI","dateModified":"2015-10-31T20:03:00-04:00","datePublished":"2015-10-31T20:03:00-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/themes/cli/"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <title>Siteleaf CLI - Learn Siteleaf</title>
+
+    <link href="//www.siteleaf.com/styles/all.css" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link rel="SHORTCUT ICON" href="/assets/images/favicon.ico">
+  </head>
+  <body>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-1666437-41', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <div class="wrap">
+      
+<div class="headerWrap bg--yellow">
+  <header class="header">
+    <ul class="header__items">
+      <li class="header__item">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com" class="header__link">Contribute</a>
+      </li>
+      <li class="header__item">
+        <a href="http://status.siteleaf.com/" class="header__link js-status">Status</a>
+      </li>
+      <li class="header__item">
+        <a href="http://www.siteleaf.com/" class="header__link header__link--button">Siteleaf Home</a>
+      </li>
+      <li class="header__item header__item--mobile">
+        <a id="mobileNavOpen" class="header__link">Menu</a>
+      </li>
+    </ul>
+    <a href="/" class="header__home"><img src="/assets/images/logo.svg" class="header__logo" alt="Learn Siteleaf" /></a>
+    <h1 class="header__title">Developing Themes</h1>
+    
+    <script>
+  (function() {
+    var cx = '004611147431180351508:4g8g1ea_gqi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+<div style="width: 0px; overflow: hidden; height: 0;">
+  <gcse:search></gcse:search>
+</div>
+
+<form class="search" id="searchbox_004611147431180351508:4g8g1ea_gqi" action="">
+  <input value="004611147431180351508:4g8g1ea_gqi" name="cx" type="hidden">
+  <input value="FORID:11" name="cof" type="hidden">
+  <input id="q" style="" name="q" class="search__input" type="search" placeholder="Search the docs">
+</form>
+
+  </header>
+  <nav class="mobileNav">
+    <header class="header">
+      <ul class="header__items">
+        <li class="header__item header__item--mobile">
+          <a id="mobileNavClose" class="header__link">Close</a>
+        </li>
+      </ul>
+      <ul class="mobileNav__items">
+        <li class="mobileNav__item">
+          <a href="https://github.com/siteleaf/learn.siteleaf.com" class="mobileNav__link">Contribute</a>
+        </li>
+        <li class="mobileNav__item">
+          <a href="http://status.siteleaf.com/" class="mobileNav__link">Status</a>
+        </li>
+        <li class="mobileNav__item">
+          <a href="http://www.siteleaf.com/" class="mobileNav__link">Siteleaf Home</a>
+        </li>
+      </ul>
+    </header>
+  </nav>
+</div>
+
+      <main class="main">
+        
+
+
+<div class="articleWrap">
+  
+<aside class="sidebar sidebar--mobile-hidden nocontent">
+  
+  
+    
+  
+    
+  
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/getting-started/">Getting Started</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/content/">Managing Content</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item yellow"><a href="/themes/">Developing Themes</a></h5>
+        
+          <ul class="nav__list">
+            
+            
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/intro/">Intro to themes</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/liquid/">Liquid</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/structure/">Theme structure</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/local-development/">Local development</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/environments/">Environments</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/sass/">Sass and SCSS</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/sitemaps-and-feeds/">Sitemaps and Feeds</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/optimizing-build-time/">Optimizing build time</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/jekyll-plugins/">Jekyll Plugins</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/gem-based-themes/">Gem-based Themes</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/upgrading-from-jekyll-3-to-4/">Upgrading from Jekyll 3.x to 4.x</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/github-sync/">GitHub Sync</a></li>
+              
+            
+              
+                <li class="nav__item nav__item--current yellow"><a class="nav__link nav__link--sidebar" href="/themes/cli/">Siteleaf CLI</a></li>
+              
+            
+          </ul>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/sites/">Deploy & Collaborate</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/api/">API</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/v1/">Legacy Sites</a></h5>
+        
+      </nav>
+    
+  
+</aside>
+
+  <article class="article">
+    <ol class="breadcrumbs">
+      <li class="breadcrumb"><a href="/">Learn Siteleaf</a></li>
+      <li class="breadcrumb"><a href="/themes/">Developing Themes</a></li>
+    </ol>
+    <section class="article__content">
+      <h2>Siteleaf CLI</h2>
+      <p class="warning">We recommend using <a href="/themes/github-sync/">GitHub Sync</a> for local development, but you can use the Siteleaf command line interface (CLI) if that’s your preferred workflow.</p>
+
+<p>The Siteleaf CLI ships as an open source Ruby gem. To fork and contribute see: <a href="https://github.com/siteleaf/siteleaf-gem">https://github.com/siteleaf/siteleaf-gem</a></p>
+
+<h2 id="local-development-using-the-siteleaf-cli">Local development using the Siteleaf CLI</h2>
+
+<p>1) Create a file called <code class="highlighter-rouge">Gemfile</code> in your site’s root folder and add the Siteleaf gem and Jekyll to your bundle:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">source</span> <span class="s1">'http://rubygems.org'</span>
+
+<span class="n">gem</span> <span class="s1">'jekyll'</span>
+
+<span class="n">group</span> <span class="ss">:development</span> <span class="k">do</span>
+  <span class="n">gem</span> <span class="s1">'siteleaf'</span><span class="p">,</span> <span class="s1">'~&gt;2'</span>
+<span class="k">end</span></code></pre></figure>
+
+<p><small>For help with Bundler or Gemfiles, please see: <a href="http://bundler.io/gemfile.html">http://bundler.io/gemfile.html</a></small></p>
+
+<p>2) Install the bundle:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>gem <span class="nb">install </span>bundler
+<span class="nv">$ </span>bundle <span class="nb">install</span></code></pre></figure>
+
+<p>3) Authorize your Siteleaf account:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bundle <span class="nb">exec </span>siteleaf auth</code></pre></figure>
+
+<p>4) Create or connect to a Siteleaf site:</p>
+
+<p><strong>To create a new Siteleaf site:</strong></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bundle <span class="nb">exec </span>siteleaf new yoursite.com</code></pre></figure>
+
+<p>This will create a new theme folder called <code class="highlighter-rouge">yoursite.com</code> in the directory where you ran this command. It will also create the site for you in your Siteleaf account. If you prefer not to create a new directory, run <code class="highlighter-rouge">bundle exec siteleaf new yoursite.com .</code> instead.</p>
+
+<p><strong>To use an existing Siteleaf site:</strong></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bundle <span class="nb">exec </span>siteleaf config yoursite.com</code></pre></figure>
+
+<p>You can then pull the Jekyll configuration, content, and current theme:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bundle <span class="nb">exec </span>siteleaf pull</code></pre></figure>
+
+<p>5) Start the Jekyll server:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bundle <span class="nb">exec </span>jekyll serve</code></pre></figure>
+
+<p>Now visit <a href="http://localhost:4000">localhost:4000</a> to see your site!</p>
+
+<p>5) Push your content and theme to Siteleaf:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bundle <span class="nb">exec </span>siteleaf push</code></pre></figure>
+
+<p><strong>Important:</strong> When using <code class="highlighter-rouge">push</code>/<code class="highlighter-rouge">pull</code> in v2, both theme and content files are included. Always make sure to do a <code class="highlighter-rouge">pull</code> first to avoid overwriting your Siteleaf content on <code class="highlighter-rouge">push</code>. Your local directory must have a <code class="highlighter-rouge">_config.yml</code> in order to push.</p>
+
+<h2 id="backing-up-your-site">Backing up your site</h2>
+
+<p>Creating a full backup of your site is simple. Just copy your <code class="highlighter-rouge">Gemfile</code> to an empty directory and do a <code class="highlighter-rouge">pull</code>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cp </span>Gemfile /path/to/backup/
+<span class="nb">cd</span> /path/to/backup/
+bundle <span class="nb">install
+</span>bundle <span class="nb">exec </span>siteleaf config yoursite.com
+bundle <span class="nb">exec </span>siteleaf pull</code></pre></figure>
+
+<p>This will include your entire site, including theme files, assets, content, and site metadata.</p>
+
+      <p class="article__improve">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_themes/cli.markdown">
+          Help improve this page
+        </a>
+      </p>
+    </section>
+    <div class="article__prevNext">
+      
+        <a href="/themes/github-sync/" id="prev" class="article__prev">&larr; GitHub Sync</a>
+      
+      
+        <a href="/sites/preview/" id="next" class="article__next">Preview &rarr;</a>
+      
+    </div>
+  </article>
+</div>
+
+      </main>
+    </div>
+    <div class="footerWrap">
+  <footer class="footer">
+    <span class="footer__madeBy"><a href="https://github.com/siteleaf/learn.siteleaf.com">Made in Siteleaf</a> by <a href="http://oak.is/">Oak</a></span>
+  </footer>
+</div>
+
+
+    <script src="//www.siteleaf.com/scripts/all.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

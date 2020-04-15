@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="generator" content="Siteleaf, http://siteleaf.com">
+
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Sites" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Overview List your sites Create a site Get a site Update a site Delete a site Publish a site List post tags List post categories" />
+<meta property="og:description" content="Overview List your sites Create a site Get a site Update a site Delete a site Publish a site List post tags List post categories" />
+<link rel="canonical" href="http://learn.siteleaf.com/api/sites/" />
+<meta property="og:url" content="http://learn.siteleaf.com/api/sites/" />
+<meta property="og:site_name" content="Learn Siteleaf" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-01-14T15:50:00-05:00" />
+<script type="application/ld+json">
+{"description":"Overview List your sites Create a site Get a site Update a site Delete a site Publish a site List post tags List post categories","@type":"BlogPosting","url":"http://learn.siteleaf.com/api/sites/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"headline":"Sites","dateModified":"2016-01-14T15:50:00-05:00","datePublished":"2016-01-14T15:50:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/api/sites/"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <title>Sites - Learn Siteleaf</title>
+
+    <link href="//www.siteleaf.com/styles/all.css" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link rel="SHORTCUT ICON" href="/assets/images/favicon.ico">
+  </head>
+  <body>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-1666437-41', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <div class="wrap">
+      
+<div class="headerWrap bg--purple">
+  <header class="header">
+    <ul class="header__items">
+      <li class="header__item">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com" class="header__link">Contribute</a>
+      </li>
+      <li class="header__item">
+        <a href="http://status.siteleaf.com/" class="header__link js-status">Status</a>
+      </li>
+      <li class="header__item">
+        <a href="http://www.siteleaf.com/" class="header__link header__link--button">Siteleaf Home</a>
+      </li>
+      <li class="header__item header__item--mobile">
+        <a id="mobileNavOpen" class="header__link">Menu</a>
+      </li>
+    </ul>
+    <a href="/" class="header__home"><img src="/assets/images/logo.svg" class="header__logo" alt="Learn Siteleaf" /></a>
+    <h1 class="header__title">API</h1>
+    
+    <script>
+  (function() {
+    var cx = '004611147431180351508:4g8g1ea_gqi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+<div style="width: 0px; overflow: hidden; height: 0;">
+  <gcse:search></gcse:search>
+</div>
+
+<form class="search" id="searchbox_004611147431180351508:4g8g1ea_gqi" action="">
+  <input value="004611147431180351508:4g8g1ea_gqi" name="cx" type="hidden">
+  <input value="FORID:11" name="cof" type="hidden">
+  <input id="q" style="" name="q" class="search__input" type="search" placeholder="Search the docs">
+</form>
+
+  </header>
+  <nav class="mobileNav">
+    <header class="header">
+      <ul class="header__items">
+        <li class="header__item header__item--mobile">
+          <a id="mobileNavClose" class="header__link">Close</a>
+        </li>
+      </ul>
+      <ul class="mobileNav__items">
+        <li class="mobileNav__item">
+          <a href="https://github.com/siteleaf/learn.siteleaf.com" class="mobileNav__link">Contribute</a>
+        </li>
+        <li class="mobileNav__item">
+          <a href="http://status.siteleaf.com/" class="mobileNav__link">Status</a>
+        </li>
+        <li class="mobileNav__item">
+          <a href="http://www.siteleaf.com/" class="mobileNav__link">Siteleaf Home</a>
+        </li>
+      </ul>
+    </header>
+  </nav>
+</div>
+
+      <main class="main">
+        
+
+
+<div class="articleWrap">
+  
+<aside class="sidebar sidebar--mobile-hidden nocontent">
+  
+  
+    
+  
+    
+  
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/getting-started/">Getting Started</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/content/">Managing Content</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/themes/">Developing Themes</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/sites/">Deploy & Collaborate</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item purple"><a href="/api/">API</a></h5>
+        
+          <ul class="nav__list">
+            
+            
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/api/libraries-and-integrations/">Libraries and integrations</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/api/authentication/">Authentication</a></li>
+              
+            
+              
+                <li class="nav__item nav__item--current purple"><a class="nav__link nav__link--sidebar" href="/api/sites/">Sites</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/api/pages/">Pages</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/api/collections/">Collections</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/api/documents/">Documents</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/api/source/">Source</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/api/pagination/">Pagination</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/api/defaults/">Defaults</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/api/jobs/">Jobs</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/api/users/">Users</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/api/hosting-sync/">Hosting and Sync</a></li>
+              
+            
+          </ul>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/v1/">Legacy Sites</a></h5>
+        
+      </nav>
+    
+  
+</aside>
+
+  <article class="article">
+    <ol class="breadcrumbs">
+      <li class="breadcrumb"><a href="/">Learn Siteleaf</a></li>
+      <li class="breadcrumb"><a href="/api/">API</a></li>
+    </ol>
+    <section class="article__content">
+      <h2>Sites</h2>
+      <h3 id="overview">Overview</h3>
+
+<ol class="api__toc">
+  <li><a href="#list-your-sites">List your sites</a></li>
+  <li><a href="#create-a-site">Create a site</a></li>
+  <li><a href="#get-a-site">Get a site</a></li>
+  <li><a href="#update-a-site">Update a site</a></li>
+  <li><a href="#delete-a-site">Delete a site</a></li>
+  <li><a href="#publish-a-site">Publish a site</a></li>
+  <li><a href="#list-post-tags">List post tags</a></li>
+  <li><a href="#list-post-categories">List post categories</a></li>
+</ol>
+
+<h3 id="list-your-sites">List your sites</h3>
+
+<h4 id="endpoint">Endpoint</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/sites
+</code></pre></div></div>
+
+<h4 id="query-string-params">Query String Params</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Desc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">sort</code></td>
+      <td>Should be formated as <code class="highlighter-rouge">field-asc</code> or <code class="highlighter-rouge">field-desc</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="response">Response</h4>
+
+<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
+      &lt;https://api.siteleaf.com/v2/:path?page=9&gt;; rel="last"
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"cname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"username.github.io"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-11-04 15:28:42 -0500"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"defaults"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+      </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testsitev2.siteleaf.net"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"563a6a7a1829c7081b000000"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"jobs"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"preview"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"last_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-04-12T15:49:28-04:00"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"last_error"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"last_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"68f6bc647ab61e01efd4ae27"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"publish"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"last_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-04-12T15:41:12-04:00"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"last_error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Liquid syntax error (line 6): Variable '{{ fail %}' was not properly terminated with regexp: /</span><span class="se">\\</span><span class="s2">}</span><span class="se">\\</span><span class="s2">}/"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"last_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"06184063895bb4c819165bee"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"sync"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"last_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-04-12T15:57:09-04:00"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"last_error"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"last_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32e0dc8dcebf26a6f1148ef4"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"gems"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="s2">"jekyll-sitemap"</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UTC"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test site"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-04-12 15:57:09 -0400"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"533d750e1829c7785c000001"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"v2"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="create-a-site">Create a site</h3>
+
+<h4 id="endpoint-1">Endpoint</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST https://api.siteleaf.com/v2/sites
+</code></pre></div></div>
+
+<h4 id="input">Input</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Desc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">title</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Sites title <strong>(required)</strong></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">domain</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Sites domain <strong>(required)</strong></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">timezone</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Sites timezone, defaults to <code class="highlighter-rouge">UTC</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">metadata</code></td>
+      <td><code class="highlighter-rouge">Hash&lt;String, *&gt;</code></td>
+      <td>Arbitrary key/value pairs</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">defaults</code></td>
+      <td><code class="highlighter-rouge">Array&lt;Hash&gt;</code></td>
+      <td>Jekyll defaults, see the <a href="/api/defaults">Defaults page</a> for more details</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">empty</code></td>
+      <td><code class="highlighter-rouge">Boolean</code></td>
+      <td>Defaults to <code class="highlighter-rouge">false</code>, if <code class="highlighter-rouge">true</code> doesn’t create the Siteleaf default theme</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="example">Example</h4>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hello World"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"America/New_York"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"foo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bar"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="response-1">Response</h4>
+
+<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 201 Created
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"cname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"username.github.io"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-11-04 15:28:42 -0500"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"defaults"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testsitev2.siteleaf.net"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"563a6a7a1829c7081b000000"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"jobs"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"preview"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-04-12T15:49:28-04:00"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_error"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"68f6bc647ab61e01efd4ae27"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"publish"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-04-12T15:41:12-04:00"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Liquid syntax error (line 6): Variable '{{ fail %}' was not properly terminated with regexp: /</span><span class="se">\\</span><span class="s2">}</span><span class="se">\\</span><span class="s2">}/"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"06184063895bb4c819165bee"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"sync"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-04-12T15:57:09-04:00"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_error"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32e0dc8dcebf26a6f1148ef4"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"gems"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"jekyll-sitemap"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UTC"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test site"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-04-12 15:57:09 -0400"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"533d750e1829c7785c000001"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"v2"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="get-a-site">Get a site</h3>
+
+<h4 id="endpoint-2">Endpoint</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/sites/:site_id
+</code></pre></div></div>
+
+<h4 id="response-2">Response</h4>
+
+<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"cname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"username.github.io"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-11-04 15:28:42 -0500"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"defaults"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testsitev2.siteleaf.net"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"563a6a7a1829c7081b000000"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"jobs"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"preview"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-04-12T15:49:28-04:00"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_error"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"68f6bc647ab61e01efd4ae27"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"publish"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-04-12T15:41:12-04:00"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Liquid syntax error (line 6): Variable '{{ fail %}' was not properly terminated with regexp: /</span><span class="se">\\</span><span class="s2">}</span><span class="se">\\</span><span class="s2">}/"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"06184063895bb4c819165bee"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"sync"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-04-12T15:57:09-04:00"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_error"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32e0dc8dcebf26a6f1148ef4"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"gems"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"jekyll-sitemap"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UTC"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test site"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-04-12 15:57:09 -0400"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"533d750e1829c7785c000001"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"v2"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="update-a-site">Update a site</h3>
+
+<h4 id="endpoint-3">Endpoint</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PUT https://api.siteleaf.com/v2/sites/:site_id
+</code></pre></div></div>
+
+<h4 id="input-1">Input</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Desc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">title</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Sites title</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">domain</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Sites domain</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">timezone</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Sites timezone, defaults to <code class="highlighter-rouge">UTC</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">metadata</code></td>
+      <td><code class="highlighter-rouge">Hash&lt;String, *&gt;</code></td>
+      <td>Arbitrary key/value pairs</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">defaults</code></td>
+      <td><code class="highlighter-rouge">Array&lt;Hash&gt;</code></td>
+      <td>Jekyll defaults, see the <a href="/api/defaults">Defaults page</a> for more details</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">hosting</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Valid options are <code class="highlighter-rouge">disabled</code>, <code class="highlighter-rouge">ftp</code>, <code class="highlighter-rouge">s3</code>, <code class="highlighter-rouge">cloudfiles</code> and <code class="highlighter-rouge">github</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">hosting_options</code></td>
+      <td><code class="highlighter-rouge">Hash&lt;String, String&gt;</code></td>
+      <td>See the <a href="/api/hosting-sync">Hosting/Sync page</a> for more details</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">sync</code></td>
+      <td><code class="highlighter-rouge">String</code></td>
+      <td>Valid options are <code class="highlighter-rouge">disabled</code> and <code class="highlighter-rouge">github</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">sync_options</code></td>
+      <td><code class="highlighter-rouge">Hash&lt;String, String&gt;</code></td>
+      <td>See the <a href="/api/hosting-sync">Hosting/Sync page</a> for more details</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="example-1">Example</h4>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hello World"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"America/New_York"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"foo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bar"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="response-3">Response</h4>
+
+<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"cname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"username.github.io"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-11-04 15:28:42 -0500"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"defaults"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testsitev2.siteleaf.net"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"563a6a7a1829c7081b000000"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"jobs"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"preview"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-04-12T15:49:28-04:00"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_error"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"68f6bc647ab61e01efd4ae27"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"publish"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-04-12T15:41:12-04:00"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Liquid syntax error (line 6): Variable '{{ fail %}' was not properly terminated with regexp: /</span><span class="se">\\</span><span class="s2">}</span><span class="se">\\</span><span class="s2">}/"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"06184063895bb4c819165bee"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"sync"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-04-12T15:57:09-04:00"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_error"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"last_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32e0dc8dcebf26a6f1148ef4"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"gems"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"jekyll-sitemap"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UTC"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test site"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-04-12 15:57:09 -0400"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"533d750e1829c7785c000001"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"v2"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="delete-a-site">Delete a site</h3>
+
+<h4 id="endpoint-4">Endpoint</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DELETE https://api.siteleaf.com/v2/sites/:site_id
+</code></pre></div></div>
+
+<h4 id="response-4">Response</h4>
+
+<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5697cc7b16d5640c40000002"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="publish-a-site">Publish a site</h3>
+
+<p>Compiles and publishes your site in the background, and immediately returns a job id. Use the <a href="/api/jobs">Jobs API</a> to retrieve status updates.</p>
+
+<h4 id="endpoint-5">Endpoint</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST https://api.siteleaf.com/v2/sites/:site_id/publish
+</code></pre></div></div>
+
+<h4 id="response-5">Response</h4>
+
+<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 202 Accepted
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"job_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b9982d904c02307bafadd2a6"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="list-post-tags">List post tags</h3>
+
+<p>Returns an array of all unique tags from Documents in the posts Collection.</p>
+
+<h4 id="endpoint-6">Endpoint</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/sites/:site_id/tags
+</code></pre></div></div>
+
+<h4 id="response-6">Response</h4>
+
+<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="s2">"cookies"</span><span class="p">,</span><span class="w"> </span><span class="s2">"milk"</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="list-post-categories">List post categories</h3>
+
+<p>Returns an array of all unique categories from Documents in the posts Collection.</p>
+
+<h4 id="endpoint-7">Endpoint</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/sites/:site_id/categories
+</code></pre></div></div>
+
+<h4 id="response-7">Response</h4>
+
+<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="s2">"apple"</span><span class="p">,</span><span class="w"> </span><span class="s2">"linux"</span><span class="p">,</span><span class="w"> </span><span class="s2">"windows"</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+      <p class="article__improve">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_api/sites.md">
+          Help improve this page
+        </a>
+      </p>
+    </section>
+    <div class="article__prevNext">
+      
+        <a href="/api/authentication/" id="prev" class="article__prev">&larr; Authentication</a>
+      
+      
+        <a href="/api/pages/" id="next" class="article__next">Pages &rarr;</a>
+      
+    </div>
+  </article>
+</div>
+
+      </main>
+    </div>
+    <div class="footerWrap">
+  <footer class="footer">
+    <span class="footer__madeBy"><a href="https://github.com/siteleaf/learn.siteleaf.com">Made in Siteleaf</a> by <a href="http://oak.is/">Oak</a></span>
+  </footer>
+</div>
+
+
+    <script src="//www.siteleaf.com/scripts/all.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

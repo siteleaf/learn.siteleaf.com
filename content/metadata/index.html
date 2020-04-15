@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="generator" content="Siteleaf, http://siteleaf.com">
+
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Metadata" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Metadata are additional pieces of data which you can attach to your pages, documents, collections, and even site-wide. Metadata fields give you a ton of power and flexibility to create a system that fits your content. Metadata is the equivalent of Jekyll’s YAML front matter. When syncing, Siteleaf exports metadata as front matter for pages and documents and edits the config file for collections and sites. You can define default metadata fields across your entire site, or scoped to particular pages or collections. Defaults help create consistency and make it easy for editors to add new content in Siteleaf. Field types Smart Field Names (for files, colorpickers, etc) Field types There are three types of metadata fields you can create in Siteleaf: Simple, List, and Object. These three types of fields give you a ton of flexibility when setting up your content structure and you’re even able to nest different field types within each other. No single person should have all this power! But we’re giving it to you… Simple A “Simple” metadata field accepts a name and text value. These fields might be simple, but they’re also smart. See the “Smart Field Names” section below for more info. Accessing this page field in your template would look like this: {{ page[&#39;prep time&#39;] }} List A “List” metadata field accepts a name and a list (AKA an array) of other metadata fields, which can be any field type. You can have a list of simple metadata fields, a list of lists, or a list of objects. This makes entering repeatable content very easy. An example of looping through this page field in your template would look like: {% for ingredient in page.ingredients %} {{ ingredient }} {% endfor %} Objects An “Object” metadata field is the most descriptive of field types, allowing you to create a field that has many name/value pairs, where the value can be a field of any type (simple, list, or object). For example, you could create an “Author” object field where you could set their name, bio, and list of links. Accessing this page field in your template would look like this: {{ page.author.name }} &lt;img src=&quot;{{ page.author.image }}&quot; /&gt; {{ page.author.bio }} Smart Field Names To get the most out of Siteleaf, you should know about the different “Smart Field Names” you can enter for a metadata field to enable additional user-friendly functionality, like file pickers, autocompletion, and visual text editing. File fields If you have metadata field with a name ending in asset, assets, file, files, image, or images Siteleaf will place a file picker button within the field, making it easy to quickly upload or select an existing upload. For example you could take things to the next level by creating a “List” metadata field and give it a name of assets or portfolio_images. If you want to add assets with additional metadata (like maybe a caption), you could create a “List” metadata field and add “Object” fields to the list. Your object field could have names like file and caption. When you add a new item to the list, a new object with those same names will be added for you, making it easy to add multiple assets with the same structure. Collection fields To create a field for “associated” documents, create a new field with a name of the singular or plural collection name. For example, if you have a post and want to have an autocomplete field for documents in your “People” collection, create a field with a name of person or people. Text editors To create a field with markdown or visual text editing functionality (like the body text field), create a new field with a name ending in body, description, excerpt, md, or text. Note: When you reference this field in your template, it won’t automatically output in HTML. You can achieve this though using the markdownify Liquid filter. For example: {{ page.caption_text | markdownify }} Boolean/checkbox fields Metadata fields with a name beginning with is, has, or was will have a checkbox show within the field that toggles the value between true and false. Some example keys that would enable this: is featured, has_registration, was-open, etc. In addition, any metadata field with a value of true or false will automatically have a checkbox shown within the field. Date and time fields Metadata fields with a name ending in at, date, or datetime will have a button within your metadata field which opens a date/time picker ui. Some example keys that would enable this: event_date, starts at, datetime, etc. Color fields Metadata fields with a name ending in color, colour, colors, colours, hex, rgb, rgba, hsl, hsla, hsv, or hsva will have a button within it which opens a color picker ui. The button will have its color set to the value of the field. Further Reading Default fields Jekyll front matter" />
+<meta property="og:description" content="Metadata are additional pieces of data which you can attach to your pages, documents, collections, and even site-wide. Metadata fields give you a ton of power and flexibility to create a system that fits your content. Metadata is the equivalent of Jekyll’s YAML front matter. When syncing, Siteleaf exports metadata as front matter for pages and documents and edits the config file for collections and sites. You can define default metadata fields across your entire site, or scoped to particular pages or collections. Defaults help create consistency and make it easy for editors to add new content in Siteleaf. Field types Smart Field Names (for files, colorpickers, etc) Field types There are three types of metadata fields you can create in Siteleaf: Simple, List, and Object. These three types of fields give you a ton of flexibility when setting up your content structure and you’re even able to nest different field types within each other. No single person should have all this power! But we’re giving it to you… Simple A “Simple” metadata field accepts a name and text value. These fields might be simple, but they’re also smart. See the “Smart Field Names” section below for more info. Accessing this page field in your template would look like this: {{ page[&#39;prep time&#39;] }} List A “List” metadata field accepts a name and a list (AKA an array) of other metadata fields, which can be any field type. You can have a list of simple metadata fields, a list of lists, or a list of objects. This makes entering repeatable content very easy. An example of looping through this page field in your template would look like: {% for ingredient in page.ingredients %} {{ ingredient }} {% endfor %} Objects An “Object” metadata field is the most descriptive of field types, allowing you to create a field that has many name/value pairs, where the value can be a field of any type (simple, list, or object). For example, you could create an “Author” object field where you could set their name, bio, and list of links. Accessing this page field in your template would look like this: {{ page.author.name }} &lt;img src=&quot;{{ page.author.image }}&quot; /&gt; {{ page.author.bio }} Smart Field Names To get the most out of Siteleaf, you should know about the different “Smart Field Names” you can enter for a metadata field to enable additional user-friendly functionality, like file pickers, autocompletion, and visual text editing. File fields If you have metadata field with a name ending in asset, assets, file, files, image, or images Siteleaf will place a file picker button within the field, making it easy to quickly upload or select an existing upload. For example you could take things to the next level by creating a “List” metadata field and give it a name of assets or portfolio_images. If you want to add assets with additional metadata (like maybe a caption), you could create a “List” metadata field and add “Object” fields to the list. Your object field could have names like file and caption. When you add a new item to the list, a new object with those same names will be added for you, making it easy to add multiple assets with the same structure. Collection fields To create a field for “associated” documents, create a new field with a name of the singular or plural collection name. For example, if you have a post and want to have an autocomplete field for documents in your “People” collection, create a field with a name of person or people. Text editors To create a field with markdown or visual text editing functionality (like the body text field), create a new field with a name ending in body, description, excerpt, md, or text. Note: When you reference this field in your template, it won’t automatically output in HTML. You can achieve this though using the markdownify Liquid filter. For example: {{ page.caption_text | markdownify }} Boolean/checkbox fields Metadata fields with a name beginning with is, has, or was will have a checkbox show within the field that toggles the value between true and false. Some example keys that would enable this: is featured, has_registration, was-open, etc. In addition, any metadata field with a value of true or false will automatically have a checkbox shown within the field. Date and time fields Metadata fields with a name ending in at, date, or datetime will have a button within your metadata field which opens a date/time picker ui. Some example keys that would enable this: event_date, starts at, datetime, etc. Color fields Metadata fields with a name ending in color, colour, colors, colours, hex, rgb, rgba, hsl, hsla, hsv, or hsva will have a button within it which opens a color picker ui. The button will have its color set to the value of the field. Further Reading Default fields Jekyll front matter" />
+<link rel="canonical" href="http://learn.siteleaf.com/content/metadata/" />
+<meta property="og:url" content="http://learn.siteleaf.com/content/metadata/" />
+<meta property="og:site_name" content="Learn Siteleaf" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-12-17T08:02:00-05:00" />
+<script type="application/ld+json">
+{"description":"Metadata are additional pieces of data which you can attach to your pages, documents, collections, and even site-wide. Metadata fields give you a ton of power and flexibility to create a system that fits your content. Metadata is the equivalent of Jekyll’s YAML front matter. When syncing, Siteleaf exports metadata as front matter for pages and documents and edits the config file for collections and sites. You can define default metadata fields across your entire site, or scoped to particular pages or collections. Defaults help create consistency and make it easy for editors to add new content in Siteleaf. Field types Smart Field Names (for files, colorpickers, etc) Field types There are three types of metadata fields you can create in Siteleaf: Simple, List, and Object. These three types of fields give you a ton of flexibility when setting up your content structure and you’re even able to nest different field types within each other. No single person should have all this power! But we’re giving it to you… Simple A “Simple” metadata field accepts a name and text value. These fields might be simple, but they’re also smart. See the “Smart Field Names” section below for more info. Accessing this page field in your template would look like this: {{ page[&#39;prep time&#39;] }} List A “List” metadata field accepts a name and a list (AKA an array) of other metadata fields, which can be any field type. You can have a list of simple metadata fields, a list of lists, or a list of objects. This makes entering repeatable content very easy. An example of looping through this page field in your template would look like: {% for ingredient in page.ingredients %} {{ ingredient }} {% endfor %} Objects An “Object” metadata field is the most descriptive of field types, allowing you to create a field that has many name/value pairs, where the value can be a field of any type (simple, list, or object). For example, you could create an “Author” object field where you could set their name, bio, and list of links. Accessing this page field in your template would look like this: {{ page.author.name }} &lt;img src=&quot;{{ page.author.image }}&quot; /&gt; {{ page.author.bio }} Smart Field Names To get the most out of Siteleaf, you should know about the different “Smart Field Names” you can enter for a metadata field to enable additional user-friendly functionality, like file pickers, autocompletion, and visual text editing. File fields If you have metadata field with a name ending in asset, assets, file, files, image, or images Siteleaf will place a file picker button within the field, making it easy to quickly upload or select an existing upload. For example you could take things to the next level by creating a “List” metadata field and give it a name of assets or portfolio_images. If you want to add assets with additional metadata (like maybe a caption), you could create a “List” metadata field and add “Object” fields to the list. Your object field could have names like file and caption. When you add a new item to the list, a new object with those same names will be added for you, making it easy to add multiple assets with the same structure. Collection fields To create a field for “associated” documents, create a new field with a name of the singular or plural collection name. For example, if you have a post and want to have an autocomplete field for documents in your “People” collection, create a field with a name of person or people. Text editors To create a field with markdown or visual text editing functionality (like the body text field), create a new field with a name ending in body, description, excerpt, md, or text. Note: When you reference this field in your template, it won’t automatically output in HTML. You can achieve this though using the markdownify Liquid filter. For example: {{ page.caption_text | markdownify }} Boolean/checkbox fields Metadata fields with a name beginning with is, has, or was will have a checkbox show within the field that toggles the value between true and false. Some example keys that would enable this: is featured, has_registration, was-open, etc. In addition, any metadata field with a value of true or false will automatically have a checkbox shown within the field. Date and time fields Metadata fields with a name ending in at, date, or datetime will have a button within your metadata field which opens a date/time picker ui. Some example keys that would enable this: event_date, starts at, datetime, etc. Color fields Metadata fields with a name ending in color, colour, colors, colours, hex, rgb, rgba, hsl, hsla, hsv, or hsva will have a button within it which opens a color picker ui. The button will have its color set to the value of the field. Further Reading Default fields Jekyll front matter","@type":"BlogPosting","url":"http://learn.siteleaf.com/content/metadata/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"headline":"Metadata","dateModified":"2015-12-17T08:02:00-05:00","datePublished":"2015-12-17T08:02:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/content/metadata/"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <title>Metadata - Learn Siteleaf</title>
+
+    <link href="//www.siteleaf.com/styles/all.css" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link rel="SHORTCUT ICON" href="/assets/images/favicon.ico">
+  </head>
+  <body>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-1666437-41', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <div class="wrap">
+      
+<div class="headerWrap bg--green">
+  <header class="header">
+    <ul class="header__items">
+      <li class="header__item">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com" class="header__link">Contribute</a>
+      </li>
+      <li class="header__item">
+        <a href="http://status.siteleaf.com/" class="header__link js-status">Status</a>
+      </li>
+      <li class="header__item">
+        <a href="http://www.siteleaf.com/" class="header__link header__link--button">Siteleaf Home</a>
+      </li>
+      <li class="header__item header__item--mobile">
+        <a id="mobileNavOpen" class="header__link">Menu</a>
+      </li>
+    </ul>
+    <a href="/" class="header__home"><img src="/assets/images/logo.svg" class="header__logo" alt="Learn Siteleaf" /></a>
+    <h1 class="header__title">Managing Content</h1>
+    
+    <script>
+  (function() {
+    var cx = '004611147431180351508:4g8g1ea_gqi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+<div style="width: 0px; overflow: hidden; height: 0;">
+  <gcse:search></gcse:search>
+</div>
+
+<form class="search" id="searchbox_004611147431180351508:4g8g1ea_gqi" action="">
+  <input value="004611147431180351508:4g8g1ea_gqi" name="cx" type="hidden">
+  <input value="FORID:11" name="cof" type="hidden">
+  <input id="q" style="" name="q" class="search__input" type="search" placeholder="Search the docs">
+</form>
+
+  </header>
+  <nav class="mobileNav">
+    <header class="header">
+      <ul class="header__items">
+        <li class="header__item header__item--mobile">
+          <a id="mobileNavClose" class="header__link">Close</a>
+        </li>
+      </ul>
+      <ul class="mobileNav__items">
+        <li class="mobileNav__item">
+          <a href="https://github.com/siteleaf/learn.siteleaf.com" class="mobileNav__link">Contribute</a>
+        </li>
+        <li class="mobileNav__item">
+          <a href="http://status.siteleaf.com/" class="mobileNav__link">Status</a>
+        </li>
+        <li class="mobileNav__item">
+          <a href="http://www.siteleaf.com/" class="mobileNav__link">Siteleaf Home</a>
+        </li>
+      </ul>
+    </header>
+  </nav>
+</div>
+
+      <main class="main">
+        
+
+
+<div class="articleWrap">
+  
+<aside class="sidebar sidebar--mobile-hidden nocontent">
+  
+  
+    
+  
+    
+  
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/getting-started/">Getting Started</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item green"><a href="/content/">Managing Content</a></h5>
+        
+          <ul class="nav__list">
+            
+            
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/pages/">Pages</a></li>
+              
+            
+              
+                <li class="nav__item nav__item--current green"><a class="nav__link nav__link--sidebar" href="/content/metadata/">Metadata</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/collections/">Collections</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/documents/">Documents</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/posts/">Posts</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/defaults/">Default fields</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/drag-and-drop-position/">Drag and drop position</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/localization/">Localization</a></li>
+              
+            
+          </ul>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/themes/">Developing Themes</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/sites/">Deploy & Collaborate</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/api/">API</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/v1/">Legacy Sites</a></h5>
+        
+      </nav>
+    
+  
+</aside>
+
+  <article class="article">
+    <ol class="breadcrumbs">
+      <li class="breadcrumb"><a href="/">Learn Siteleaf</a></li>
+      <li class="breadcrumb"><a href="/content/">Managing Content</a></li>
+    </ol>
+    <section class="article__content">
+      <h2>Metadata</h2>
+      <p>Metadata are additional pieces of data which you can attach to your pages, documents, collections, and even site-wide. Metadata fields give you a ton of power and flexibility to create a system that fits your content.</p>
+
+<p>Metadata is the equivalent of <a href="https://jekyllrb.com/docs/frontmatter/">Jekyll’s YAML front matter</a>. When syncing, Siteleaf exports metadata as front matter for pages and documents and edits the config file for collections and sites.</p>
+
+<p class="tip">You can define <a href="/content/defaults/">default metadata fields</a> across your entire site, or scoped to particular pages or collections. Defaults help create consistency and make it easy for editors to add new content in Siteleaf.</p>
+
+<ul>
+  <li><a href="#field-types">Field types</a></li>
+  <li><a href="#smart-field-names">Smart Field Names (for files, colorpickers, etc)</a></li>
+</ul>
+
+<hr />
+
+<h3 id="field-types">Field types</h3>
+
+<p>There are three types of metadata fields you can create in Siteleaf: Simple, List, and Object. These three types of fields give you a ton of flexibility when setting up your content structure and you’re even able to nest different field types within each other. No single person should have all this power! But we’re giving it to you…</p>
+
+<h4 id="simple">Simple</h4>
+
+<p>A “Simple” metadata field accepts a name and text value. These fields might be simple, but they’re also smart. See the “Smart Field Names” section below for more info.</p>
+
+<p><img src="/uploads/metadata/simple.png" alt="Simple metadata" /></p>
+
+<p>Accessing this page field in your template would look like this:</p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="nv">page</span><span class="p">[</span><span class="s1">'prep time'</span><span class="p">]</span><span class="w"> </span><span class="p">}}</span></code></pre></figure>
+
+<h4 id="list">List</h4>
+
+<p>A “List” metadata field accepts a name and a list (AKA an array) of other metadata fields, which can be any field type. You can have a list of simple metadata fields, a list of lists, or a list of objects. This makes entering repeatable content very easy.</p>
+
+<p><img src="/uploads/metadata/list.png" alt="List metadata" /></p>
+
+<p>An example of looping through this page field in your template would look like:</p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">ingredient</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">page.ingredients</span><span class="w"> </span><span class="p">%}</span>
+  <span class="p">{{</span><span class="w"> </span><span class="nv">ingredient</span><span class="w"> </span><span class="p">}}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span></code></pre></figure>
+
+<h4 id="objects">Objects</h4>
+
+<p>An “Object” metadata field is the most descriptive of field types, allowing you to create a field that has many name/value pairs, where the value can be a field of any type (simple, list, or object). For example, you could create an “Author” object field where you could set their name, bio, and list of links.</p>
+
+<p><img src="/uploads/metadata/object.png" alt="Object metadata" /></p>
+
+<p>Accessing this page field in your template would look like this:</p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">author</span><span class="p">.</span><span class="nv">name</span><span class="w"> </span><span class="p">}}</span>
+
+&lt;img src="<span class="p">{{</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">author</span><span class="p">.</span><span class="nv">image</span><span class="w"> </span><span class="p">}}</span>" /&gt;
+
+<span class="p">{{</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">author</span><span class="p">.</span><span class="nv">bio</span><span class="w"> </span><span class="p">}}</span></code></pre></figure>
+
+<hr />
+
+<h3 id="smart-field-names">Smart Field Names</h3>
+
+<p>To get the most out of Siteleaf, you should know about the different “Smart Field Names” you can enter for a metadata field to enable additional user-friendly functionality, like file pickers, autocompletion, and visual text editing.</p>
+
+<h4 id="file-fields">File fields</h4>
+
+<p><img src="/uploads/meta-file.png" alt="meta-file.png" /></p>
+
+<p>If you have metadata field with a name ending in <code class="highlighter-rouge">asset</code>, <code class="highlighter-rouge">assets</code>, <code class="highlighter-rouge">file</code>, <code class="highlighter-rouge">files</code>, <code class="highlighter-rouge">image</code>, or <code class="highlighter-rouge">images</code> Siteleaf will place a file picker button within the field, making it easy to quickly upload or select an existing upload.</p>
+
+<p>For example you could take things to the next level by creating a “List” metadata field and give it a name of <code class="highlighter-rouge">assets</code> or <code class="highlighter-rouge">portfolio_images</code>. If you want to add assets with additional metadata (like maybe a caption), you could create a “List” metadata field and add “Object” fields to the list. Your object field could have names like <code class="highlighter-rouge">file</code> and <code class="highlighter-rouge">caption</code>. When you add a new item to the list, a new object with those same names will be added for you, making it easy to add multiple assets with the same structure.</p>
+
+<hr />
+
+<h4 id="collection-fields">Collection fields</h4>
+
+<p><img src="/uploads/meta-collection.png" alt="meta-collection.png" /></p>
+
+<p>To create a field for “associated” documents, create a new field with a name of the singular or plural collection name. For example, if you have a post and want to have an autocomplete field for documents in your “People” collection, create a field with a name of <code class="highlighter-rouge">person</code> or <code class="highlighter-rouge">people</code>.</p>
+
+<hr />
+
+<h4 id="text-editors">Text editors</h4>
+
+<p><img src="/uploads/meta-editor.png" alt="meta-editor.png" /></p>
+
+<p>To create a field with markdown or visual text editing functionality (like the body text field), create a new field with a name ending in <code class="highlighter-rouge">body</code>, <code class="highlighter-rouge">description</code>, <code class="highlighter-rouge">excerpt</code>, <code class="highlighter-rouge">md</code>, or <code class="highlighter-rouge">text</code>.</p>
+
+<p><strong>Note</strong>: When you reference this field in your template, it won’t automatically output in HTML. You can achieve this though using the <a href="http://jekyllrb.com/docs/templates/"><code class="highlighter-rouge">markdownify</code> Liquid filter</a>. For example:</p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">caption_text</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">markdownify</span><span class="w"> </span><span class="p">}}</span></code></pre></figure>
+
+<hr />
+
+<h4 id="booleancheckbox-fields">Boolean/checkbox fields</h4>
+
+<p><img src="/uploads/meta-boolean.png" alt="meta-boolean.png" /></p>
+
+<p>Metadata fields with a name beginning with <code class="highlighter-rouge">is</code>, <code class="highlighter-rouge">has</code>, or <code class="highlighter-rouge">was</code> will have a checkbox show within the field that toggles the value between <code class="highlighter-rouge">true</code> and <code class="highlighter-rouge">false</code>. Some example keys that would enable this: <code class="highlighter-rouge">is featured</code>, <code class="highlighter-rouge">has_registration</code>, <code class="highlighter-rouge">was-open</code>, etc.</p>
+
+<p>In addition, any metadata field with a value of <code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code> will automatically have a checkbox shown within the field.</p>
+
+<hr />
+
+<h4 id="date-and-time-fields">Date and time fields</h4>
+
+<p><img src="/uploads/meta-date.png" alt="meta-date.png" /></p>
+
+<p>Metadata fields with a name ending in <code class="highlighter-rouge">at</code>, <code class="highlighter-rouge">date</code>, or <code class="highlighter-rouge">datetime</code> will have a button within your metadata field which opens a date/time picker ui. Some example keys that would enable this: <code class="highlighter-rouge">event_date</code>, <code class="highlighter-rouge">starts at</code>, <code class="highlighter-rouge">datetime</code>, etc.</p>
+
+<hr />
+
+<h4 id="color-fields">Color fields</h4>
+
+<p><img src="/uploads/meta-color.png" alt="meta-color.png" /></p>
+
+<p>Metadata fields with a name ending in <code class="highlighter-rouge">color</code>, <code class="highlighter-rouge">colour</code>, <code class="highlighter-rouge">colors</code>, <code class="highlighter-rouge">colours</code>, <code class="highlighter-rouge">hex</code>, <code class="highlighter-rouge">rgb</code>, <code class="highlighter-rouge">rgba</code>, <code class="highlighter-rouge">hsl</code>, <code class="highlighter-rouge">hsla</code>, <code class="highlighter-rouge">hsv</code>, or <code class="highlighter-rouge">hsva</code> will have a button within it which opens a color picker ui. The button will have its color set to the value of the field.</p>
+
+<hr />
+
+<h3 id="further-reading">Further Reading</h3>
+
+<ul>
+  <li><a href="/content/defaults">Default fields</a></li>
+  <li><a href="https://jekyllrb.com/docs/frontmatter/">Jekyll front matter</a></li>
+</ul>
+
+      <p class="article__improve">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_content/metadata.markdown">
+          Help improve this page
+        </a>
+      </p>
+    </section>
+    <div class="article__prevNext">
+      
+        <a href="/content/pages/" id="prev" class="article__prev">&larr; Pages</a>
+      
+      
+        <a href="/content/collections/" id="next" class="article__next">Collections &rarr;</a>
+      
+    </div>
+  </article>
+</div>
+
+      </main>
+    </div>
+    <div class="footerWrap">
+  <footer class="footer">
+    <span class="footer__madeBy"><a href="https://github.com/siteleaf/learn.siteleaf.com">Made in Siteleaf</a> by <a href="http://oak.is/">Oak</a></span>
+  </footer>
+</div>
+
+
+    <script src="//www.siteleaf.com/scripts/all.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

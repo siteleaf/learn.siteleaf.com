@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="generator" content="Siteleaf, http://siteleaf.com">
+
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Localization" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="If your site needs to support multiple languages, you have several solutions available: 1) Create multiple versions of your pages (in each language). For example: /en/about.markdown -&gt; /en/about/ /fr/about.markdown -&gt; /fr/about/ 2) Use JavaScript and perform translations client-side (as pointed out here). 3) Use a Jekyll plugin like jekyll-multiple-languages-plugin. Note: Custom Jekyll plugins are only supported on Team, Business, and Enterprise Siteleaf plans." />
+<meta property="og:description" content="If your site needs to support multiple languages, you have several solutions available: 1) Create multiple versions of your pages (in each language). For example: /en/about.markdown -&gt; /en/about/ /fr/about.markdown -&gt; /fr/about/ 2) Use JavaScript and perform translations client-side (as pointed out here). 3) Use a Jekyll plugin like jekyll-multiple-languages-plugin. Note: Custom Jekyll plugins are only supported on Team, Business, and Enterprise Siteleaf plans." />
+<link rel="canonical" href="http://learn.siteleaf.com/content/localization/" />
+<meta property="og:url" content="http://learn.siteleaf.com/content/localization/" />
+<meta property="og:site_name" content="Learn Siteleaf" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-10-04T10:21:00-04:00" />
+<script type="application/ld+json">
+{"description":"If your site needs to support multiple languages, you have several solutions available: 1) Create multiple versions of your pages (in each language). For example: /en/about.markdown -&gt; /en/about/ /fr/about.markdown -&gt; /fr/about/ 2) Use JavaScript and perform translations client-side (as pointed out here). 3) Use a Jekyll plugin like jekyll-multiple-languages-plugin. Note: Custom Jekyll plugins are only supported on Team, Business, and Enterprise Siteleaf plans.","@type":"BlogPosting","url":"http://learn.siteleaf.com/content/localization/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"headline":"Localization","dateModified":"2016-10-04T10:21:00-04:00","datePublished":"2016-10-04T10:21:00-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/content/localization/"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <title>Localization - Learn Siteleaf</title>
+
+    <link href="//www.siteleaf.com/styles/all.css" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link rel="SHORTCUT ICON" href="/assets/images/favicon.ico">
+  </head>
+  <body>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-1666437-41', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <div class="wrap">
+      
+<div class="headerWrap bg--green">
+  <header class="header">
+    <ul class="header__items">
+      <li class="header__item">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com" class="header__link">Contribute</a>
+      </li>
+      <li class="header__item">
+        <a href="http://status.siteleaf.com/" class="header__link js-status">Status</a>
+      </li>
+      <li class="header__item">
+        <a href="http://www.siteleaf.com/" class="header__link header__link--button">Siteleaf Home</a>
+      </li>
+      <li class="header__item header__item--mobile">
+        <a id="mobileNavOpen" class="header__link">Menu</a>
+      </li>
+    </ul>
+    <a href="/" class="header__home"><img src="/assets/images/logo.svg" class="header__logo" alt="Learn Siteleaf" /></a>
+    <h1 class="header__title">Managing Content</h1>
+    
+    <script>
+  (function() {
+    var cx = '004611147431180351508:4g8g1ea_gqi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+<div style="width: 0px; overflow: hidden; height: 0;">
+  <gcse:search></gcse:search>
+</div>
+
+<form class="search" id="searchbox_004611147431180351508:4g8g1ea_gqi" action="">
+  <input value="004611147431180351508:4g8g1ea_gqi" name="cx" type="hidden">
+  <input value="FORID:11" name="cof" type="hidden">
+  <input id="q" style="" name="q" class="search__input" type="search" placeholder="Search the docs">
+</form>
+
+  </header>
+  <nav class="mobileNav">
+    <header class="header">
+      <ul class="header__items">
+        <li class="header__item header__item--mobile">
+          <a id="mobileNavClose" class="header__link">Close</a>
+        </li>
+      </ul>
+      <ul class="mobileNav__items">
+        <li class="mobileNav__item">
+          <a href="https://github.com/siteleaf/learn.siteleaf.com" class="mobileNav__link">Contribute</a>
+        </li>
+        <li class="mobileNav__item">
+          <a href="http://status.siteleaf.com/" class="mobileNav__link">Status</a>
+        </li>
+        <li class="mobileNav__item">
+          <a href="http://www.siteleaf.com/" class="mobileNav__link">Siteleaf Home</a>
+        </li>
+      </ul>
+    </header>
+  </nav>
+</div>
+
+      <main class="main">
+        
+
+
+<div class="articleWrap">
+  
+<aside class="sidebar sidebar--mobile-hidden nocontent">
+  
+  
+    
+  
+    
+  
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/getting-started/">Getting Started</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item green"><a href="/content/">Managing Content</a></h5>
+        
+          <ul class="nav__list">
+            
+            
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/pages/">Pages</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/metadata/">Metadata</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/collections/">Collections</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/documents/">Documents</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/posts/">Posts</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/defaults/">Default fields</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/drag-and-drop-position/">Drag and drop position</a></li>
+              
+            
+              
+                <li class="nav__item nav__item--current green"><a class="nav__link nav__link--sidebar" href="/content/localization/">Localization</a></li>
+              
+            
+          </ul>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/themes/">Developing Themes</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/sites/">Deploy & Collaborate</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/api/">API</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/v1/">Legacy Sites</a></h5>
+        
+      </nav>
+    
+  
+</aside>
+
+  <article class="article">
+    <ol class="breadcrumbs">
+      <li class="breadcrumb"><a href="/">Learn Siteleaf</a></li>
+      <li class="breadcrumb"><a href="/content/">Managing Content</a></li>
+    </ol>
+    <section class="article__content">
+      <h2>Localization</h2>
+      <p>If your site needs to support multiple languages, you have several solutions available:</p>
+
+<p><strong>1)</strong> Create multiple versions of your pages (in each language). For example:</p>
+
+<p><code class="highlighter-rouge">/en/about.markdown -&gt; /en/about/</code><br />
+<code class="highlighter-rouge">/fr/about.markdown -&gt; /fr/about/</code></p>
+
+<p><strong>2)</strong> Use JavaScript and perform translations client-side (<a href="https://gist.github.com/sskylar/8524524">as pointed out here</a>).</p>
+
+<p><strong>3)</strong> Use a <a href="/themes/jekyll-plugins/">Jekyll plugin</a> like <a href="https://github.com/Anthony-Gaudino/jekyll-multiple-languages-plugin">jekyll-multiple-languages-plugin</a>. Note: Custom Jekyll plugins are only supported on Team, Business, and Enterprise Siteleaf plans.</p>
+
+      <p class="article__improve">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_content/localization.markdown">
+          Help improve this page
+        </a>
+      </p>
+    </section>
+    <div class="article__prevNext">
+      
+        <a href="/content/drag-and-drop-position/" id="prev" class="article__prev">&larr; Drag and drop position</a>
+      
+      
+        <a href="/content/collections/" id="next" class="article__next">Collections &rarr;</a>
+      
+    </div>
+  </article>
+</div>
+
+      </main>
+    </div>
+    <div class="footerWrap">
+  <footer class="footer">
+    <span class="footer__madeBy"><a href="https://github.com/siteleaf/learn.siteleaf.com">Made in Siteleaf</a> by <a href="http://oak.is/">Oak</a></span>
+  </footer>
+</div>
+
+
+    <script src="//www.siteleaf.com/scripts/all.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

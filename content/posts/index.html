@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="generator" content="Siteleaf, http://siteleaf.com">
+
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Posts" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Blogging is built right into Siteleaf. This means that you can just go ahead and start writing your posts and we’ll handle it for you! Posts are a bit like special documents — they belong to the Posts collection, but unlike regular documents, you can set them to be a draft. Creating a post will create a Markdown file in the _posts/ directory that will include the timestamp and date (for example, a post titled “New York” that was created on January 6th, 2016 will turn into 2016-01-06-new-york.markdown). Options Path The path changes the URL this post is accessible at on your site within the /posts/ path. Visibility By default, posts are visible. You can change them to hidden or draft. Hidden posts set published: false in the metadata, while draft posts are moved to the _drafts/ directory. Hidden posts and drafts are shown when previewing the site, but are safely hidden when you publish. Tags Tags are a way to link common posts with each other. Separate multiple tags with a comma. Categories A category is an overarching theme that a post has. Separate multiple categories with a comma. Date This changes the timestamp associated with the post. Permalink The permalink changes the URL this post is accessible at on your site. Unlike a path, this can change the URL to be anywhere on the site, not just under /posts/. Layout Choose which layout you’d like to use. Any layout you have in _layouts will be listed here. Using a custom permalink for posts By default, posts are published with the permalink template /posts/:title/, however you can customize this using defaults. For example, we could use /articles/:title/ instead: defaults: - scope: path: &#39;&#39; type: posts values: permalink: &quot;/articles/:title/&quot; # replace &quot;articles&quot; with name of your choice You can also rename the Posts collection to a name of your choice, this is what content editors will see in the Siteleaf interface. For example, instead of “Posts” we could call it “Articles”: collections: posts: title: &quot;Articles&quot; # replace &quot;Articles&quot; with name of your choice output: true Further Reading Jekyll: Writing posts Jekyll: Working with drafts Jekyll: Permalinks" />
+<meta property="og:description" content="Blogging is built right into Siteleaf. This means that you can just go ahead and start writing your posts and we’ll handle it for you! Posts are a bit like special documents — they belong to the Posts collection, but unlike regular documents, you can set them to be a draft. Creating a post will create a Markdown file in the _posts/ directory that will include the timestamp and date (for example, a post titled “New York” that was created on January 6th, 2016 will turn into 2016-01-06-new-york.markdown). Options Path The path changes the URL this post is accessible at on your site within the /posts/ path. Visibility By default, posts are visible. You can change them to hidden or draft. Hidden posts set published: false in the metadata, while draft posts are moved to the _drafts/ directory. Hidden posts and drafts are shown when previewing the site, but are safely hidden when you publish. Tags Tags are a way to link common posts with each other. Separate multiple tags with a comma. Categories A category is an overarching theme that a post has. Separate multiple categories with a comma. Date This changes the timestamp associated with the post. Permalink The permalink changes the URL this post is accessible at on your site. Unlike a path, this can change the URL to be anywhere on the site, not just under /posts/. Layout Choose which layout you’d like to use. Any layout you have in _layouts will be listed here. Using a custom permalink for posts By default, posts are published with the permalink template /posts/:title/, however you can customize this using defaults. For example, we could use /articles/:title/ instead: defaults: - scope: path: &#39;&#39; type: posts values: permalink: &quot;/articles/:title/&quot; # replace &quot;articles&quot; with name of your choice You can also rename the Posts collection to a name of your choice, this is what content editors will see in the Siteleaf interface. For example, instead of “Posts” we could call it “Articles”: collections: posts: title: &quot;Articles&quot; # replace &quot;Articles&quot; with name of your choice output: true Further Reading Jekyll: Writing posts Jekyll: Working with drafts Jekyll: Permalinks" />
+<link rel="canonical" href="http://learn.siteleaf.com/content/posts/" />
+<meta property="og:url" content="http://learn.siteleaf.com/content/posts/" />
+<meta property="og:site_name" content="Learn Siteleaf" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-11-03T08:01:00-05:00" />
+<script type="application/ld+json">
+{"description":"Blogging is built right into Siteleaf. This means that you can just go ahead and start writing your posts and we’ll handle it for you! Posts are a bit like special documents — they belong to the Posts collection, but unlike regular documents, you can set them to be a draft. Creating a post will create a Markdown file in the _posts/ directory that will include the timestamp and date (for example, a post titled “New York” that was created on January 6th, 2016 will turn into 2016-01-06-new-york.markdown). Options Path The path changes the URL this post is accessible at on your site within the /posts/ path. Visibility By default, posts are visible. You can change them to hidden or draft. Hidden posts set published: false in the metadata, while draft posts are moved to the _drafts/ directory. Hidden posts and drafts are shown when previewing the site, but are safely hidden when you publish. Tags Tags are a way to link common posts with each other. Separate multiple tags with a comma. Categories A category is an overarching theme that a post has. Separate multiple categories with a comma. Date This changes the timestamp associated with the post. Permalink The permalink changes the URL this post is accessible at on your site. Unlike a path, this can change the URL to be anywhere on the site, not just under /posts/. Layout Choose which layout you’d like to use. Any layout you have in _layouts will be listed here. Using a custom permalink for posts By default, posts are published with the permalink template /posts/:title/, however you can customize this using defaults. For example, we could use /articles/:title/ instead: defaults: - scope: path: &#39;&#39; type: posts values: permalink: &quot;/articles/:title/&quot; # replace &quot;articles&quot; with name of your choice You can also rename the Posts collection to a name of your choice, this is what content editors will see in the Siteleaf interface. For example, instead of “Posts” we could call it “Articles”: collections: posts: title: &quot;Articles&quot; # replace &quot;Articles&quot; with name of your choice output: true Further Reading Jekyll: Writing posts Jekyll: Working with drafts Jekyll: Permalinks","@type":"BlogPosting","url":"http://learn.siteleaf.com/content/posts/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"headline":"Posts","dateModified":"2015-11-03T08:01:00-05:00","datePublished":"2015-11-03T08:01:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/content/posts/"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <title>Posts - Learn Siteleaf</title>
+
+    <link href="//www.siteleaf.com/styles/all.css" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link rel="SHORTCUT ICON" href="/assets/images/favicon.ico">
+  </head>
+  <body>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-1666437-41', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <div class="wrap">
+      
+<div class="headerWrap bg--green">
+  <header class="header">
+    <ul class="header__items">
+      <li class="header__item">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com" class="header__link">Contribute</a>
+      </li>
+      <li class="header__item">
+        <a href="http://status.siteleaf.com/" class="header__link js-status">Status</a>
+      </li>
+      <li class="header__item">
+        <a href="http://www.siteleaf.com/" class="header__link header__link--button">Siteleaf Home</a>
+      </li>
+      <li class="header__item header__item--mobile">
+        <a id="mobileNavOpen" class="header__link">Menu</a>
+      </li>
+    </ul>
+    <a href="/" class="header__home"><img src="/assets/images/logo.svg" class="header__logo" alt="Learn Siteleaf" /></a>
+    <h1 class="header__title">Managing Content</h1>
+    
+    <script>
+  (function() {
+    var cx = '004611147431180351508:4g8g1ea_gqi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+<div style="width: 0px; overflow: hidden; height: 0;">
+  <gcse:search></gcse:search>
+</div>
+
+<form class="search" id="searchbox_004611147431180351508:4g8g1ea_gqi" action="">
+  <input value="004611147431180351508:4g8g1ea_gqi" name="cx" type="hidden">
+  <input value="FORID:11" name="cof" type="hidden">
+  <input id="q" style="" name="q" class="search__input" type="search" placeholder="Search the docs">
+</form>
+
+  </header>
+  <nav class="mobileNav">
+    <header class="header">
+      <ul class="header__items">
+        <li class="header__item header__item--mobile">
+          <a id="mobileNavClose" class="header__link">Close</a>
+        </li>
+      </ul>
+      <ul class="mobileNav__items">
+        <li class="mobileNav__item">
+          <a href="https://github.com/siteleaf/learn.siteleaf.com" class="mobileNav__link">Contribute</a>
+        </li>
+        <li class="mobileNav__item">
+          <a href="http://status.siteleaf.com/" class="mobileNav__link">Status</a>
+        </li>
+        <li class="mobileNav__item">
+          <a href="http://www.siteleaf.com/" class="mobileNav__link">Siteleaf Home</a>
+        </li>
+      </ul>
+    </header>
+  </nav>
+</div>
+
+      <main class="main">
+        
+
+
+<div class="articleWrap">
+  
+<aside class="sidebar sidebar--mobile-hidden nocontent">
+  
+  
+    
+  
+    
+  
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/getting-started/">Getting Started</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item green"><a href="/content/">Managing Content</a></h5>
+        
+          <ul class="nav__list">
+            
+            
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/pages/">Pages</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/metadata/">Metadata</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/collections/">Collections</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/documents/">Documents</a></li>
+              
+            
+              
+                <li class="nav__item nav__item--current green"><a class="nav__link nav__link--sidebar" href="/content/posts/">Posts</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/defaults/">Default fields</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/drag-and-drop-position/">Drag and drop position</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/localization/">Localization</a></li>
+              
+            
+          </ul>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/themes/">Developing Themes</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/sites/">Deploy & Collaborate</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/api/">API</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/v1/">Legacy Sites</a></h5>
+        
+      </nav>
+    
+  
+</aside>
+
+  <article class="article">
+    <ol class="breadcrumbs">
+      <li class="breadcrumb"><a href="/">Learn Siteleaf</a></li>
+      <li class="breadcrumb"><a href="/content/">Managing Content</a></li>
+    </ol>
+    <section class="article__content">
+      <h2>Posts</h2>
+      <p>Blogging is built right into Siteleaf. This means that you can just go ahead and start writing your posts and we’ll handle it for you!</p>
+
+<p>Posts are a bit like special documents — they belong to the Posts collection, but unlike regular documents, you can set them to be a draft.</p>
+
+<p class="note">Creating a post will create a Markdown file in the <code class="highlighter-rouge">_posts/</code> directory that will include the timestamp and date (for example, a post titled “New York” that was created on January 6th, 2016 will turn into <code class="highlighter-rouge">2016-01-06-new-york.markdown</code>).</p>
+
+<h3 id="options">Options</h3>
+
+<h5 id="path">Path</h5>
+
+<p>The path changes the URL this post is accessible at on your site within the <code class="highlighter-rouge">/posts/</code> path.</p>
+
+<h5 id="visibility">Visibility</h5>
+
+<p>By default, posts are visible. You can change them to hidden or draft. Hidden posts set <code class="highlighter-rouge">published: false</code> in the metadata, while draft posts are moved to the <code class="highlighter-rouge">_drafts/</code> directory.</p>
+
+<p class="tip">Hidden posts and drafts are shown when previewing the site, but are safely hidden when you publish.</p>
+
+<h5 id="tags">Tags</h5>
+
+<p>Tags are a way to link common posts with each other. Separate multiple tags with a comma.</p>
+
+<h5 id="categories">Categories</h5>
+
+<p>A category is an overarching theme that a post has. Separate multiple categories with a comma.</p>
+
+<h5 id="date">Date</h5>
+
+<p>This changes the timestamp associated with the post.</p>
+
+<h5 id="permalink">Permalink</h5>
+
+<p>The permalink changes the URL this post is accessible at on your site. Unlike a path, this can change the URL to be anywhere on the site, not just under <code class="highlighter-rouge">/posts/</code>.</p>
+
+<h5 id="layout">Layout</h5>
+
+<p>Choose which layout you’d like to use. Any layout you have in <code class="highlighter-rouge">_layouts</code> will be listed here.</p>
+
+<h3 id="using-a-custom-permalink-for-posts">Using a custom permalink for posts</h3>
+
+<p>By default, posts are published with the permalink template <code class="highlighter-rouge">/posts/:title/</code>, however you can customize this using <a href="/content/defaults/">defaults</a>. For example, we could use <code class="highlighter-rouge">/articles/:title/</code> instead:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">defaults</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">scope</span><span class="pi">:</span>
+    <span class="na">path</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">posts</span>
+  <span class="na">values</span><span class="pi">:</span>
+    <span class="na">permalink</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/articles/:title/"</span> <span class="c1"># replace "articles" with name of your choice</span>
+</code></pre></div></div>
+
+<p>You can also rename the Posts collection to a name of your choice, this is what content editors will see in the Siteleaf interface. For example, instead of “Posts” we could call it “Articles”:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">collections</span><span class="pi">:</span>
+  <span class="na">posts</span><span class="pi">:</span>
+    <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Articles"</span> <span class="c1"># replace "Articles" with name of your choice</span>
+    <span class="na">output</span><span class="pi">:</span> <span class="no">true</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="further-reading">Further Reading</h3>
+
+<ul>
+  <li><a href="http://jekyllrb.com/docs/posts/">Jekyll: Writing posts</a></li>
+  <li><a href="http://jekyllrb.com/docs/drafts/">Jekyll: Working with drafts</a></li>
+  <li><a href="https://jekyllrb.com/docs/permalinks/">Jekyll: Permalinks</a></li>
+</ul>
+
+      <p class="article__improve">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_content/posts.markdown">
+          Help improve this page
+        </a>
+      </p>
+    </section>
+    <div class="article__prevNext">
+      
+        <a href="/content/documents/" id="prev" class="article__prev">&larr; Documents</a>
+      
+      
+        <a href="/content/defaults/" id="next" class="article__next">Default fields &rarr;</a>
+      
+    </div>
+  </article>
+</div>
+
+      </main>
+    </div>
+    <div class="footerWrap">
+  <footer class="footer">
+    <span class="footer__madeBy"><a href="https://github.com/siteleaf/learn.siteleaf.com">Made in Siteleaf</a> by <a href="http://oak.is/">Oak</a></span>
+  </footer>
+</div>
+
+
+    <script src="//www.siteleaf.com/scripts/all.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

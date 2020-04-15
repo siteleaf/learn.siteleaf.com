@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="generator" content="Siteleaf, http://siteleaf.com">
+
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="GitHub Sync" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="When working on your site, you’ll want to keep your theme and content in sync. This is exactly what GitHub Sync was made for. Once GitHub Sync is enabled, every time you update your Siteleaf site or your GitHub repo, the changes will be synced between the two. Enable GitHub Sync After creating a site, go to the Sync tab under Settings Connect to GitHub Choose a repo, and optionally a branch name. We generally recommend using the master branch for syncing source files, and if using GitHub Pages for hosting, the gh-pages branch in the same repo for published sites. However you may use two separate repos, or any configuration you wish." />
+<meta property="og:description" content="When working on your site, you’ll want to keep your theme and content in sync. This is exactly what GitHub Sync was made for. Once GitHub Sync is enabled, every time you update your Siteleaf site or your GitHub repo, the changes will be synced between the two. Enable GitHub Sync After creating a site, go to the Sync tab under Settings Connect to GitHub Choose a repo, and optionally a branch name. We generally recommend using the master branch for syncing source files, and if using GitHub Pages for hosting, the gh-pages branch in the same repo for published sites. However you may use two separate repos, or any configuration you wish." />
+<link rel="canonical" href="http://learn.siteleaf.com/themes/github-sync/" />
+<meta property="og:url" content="http://learn.siteleaf.com/themes/github-sync/" />
+<meta property="og:site_name" content="Learn Siteleaf" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-10-31T20:03:00-04:00" />
+<script type="application/ld+json">
+{"description":"When working on your site, you’ll want to keep your theme and content in sync. This is exactly what GitHub Sync was made for. Once GitHub Sync is enabled, every time you update your Siteleaf site or your GitHub repo, the changes will be synced between the two. Enable GitHub Sync After creating a site, go to the Sync tab under Settings Connect to GitHub Choose a repo, and optionally a branch name. We generally recommend using the master branch for syncing source files, and if using GitHub Pages for hosting, the gh-pages branch in the same repo for published sites. However you may use two separate repos, or any configuration you wish.","@type":"BlogPosting","url":"http://learn.siteleaf.com/themes/github-sync/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"headline":"GitHub Sync","dateModified":"2015-10-31T20:03:00-04:00","datePublished":"2015-10-31T20:03:00-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/themes/github-sync/"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <title>GitHub Sync - Learn Siteleaf</title>
+
+    <link href="//www.siteleaf.com/styles/all.css" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link rel="SHORTCUT ICON" href="/assets/images/favicon.ico">
+  </head>
+  <body>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-1666437-41', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <div class="wrap">
+      
+<div class="headerWrap bg--yellow">
+  <header class="header">
+    <ul class="header__items">
+      <li class="header__item">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com" class="header__link">Contribute</a>
+      </li>
+      <li class="header__item">
+        <a href="http://status.siteleaf.com/" class="header__link js-status">Status</a>
+      </li>
+      <li class="header__item">
+        <a href="http://www.siteleaf.com/" class="header__link header__link--button">Siteleaf Home</a>
+      </li>
+      <li class="header__item header__item--mobile">
+        <a id="mobileNavOpen" class="header__link">Menu</a>
+      </li>
+    </ul>
+    <a href="/" class="header__home"><img src="/assets/images/logo.svg" class="header__logo" alt="Learn Siteleaf" /></a>
+    <h1 class="header__title">Developing Themes</h1>
+    
+    <script>
+  (function() {
+    var cx = '004611147431180351508:4g8g1ea_gqi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+<div style="width: 0px; overflow: hidden; height: 0;">
+  <gcse:search></gcse:search>
+</div>
+
+<form class="search" id="searchbox_004611147431180351508:4g8g1ea_gqi" action="">
+  <input value="004611147431180351508:4g8g1ea_gqi" name="cx" type="hidden">
+  <input value="FORID:11" name="cof" type="hidden">
+  <input id="q" style="" name="q" class="search__input" type="search" placeholder="Search the docs">
+</form>
+
+  </header>
+  <nav class="mobileNav">
+    <header class="header">
+      <ul class="header__items">
+        <li class="header__item header__item--mobile">
+          <a id="mobileNavClose" class="header__link">Close</a>
+        </li>
+      </ul>
+      <ul class="mobileNav__items">
+        <li class="mobileNav__item">
+          <a href="https://github.com/siteleaf/learn.siteleaf.com" class="mobileNav__link">Contribute</a>
+        </li>
+        <li class="mobileNav__item">
+          <a href="http://status.siteleaf.com/" class="mobileNav__link">Status</a>
+        </li>
+        <li class="mobileNav__item">
+          <a href="http://www.siteleaf.com/" class="mobileNav__link">Siteleaf Home</a>
+        </li>
+      </ul>
+    </header>
+  </nav>
+</div>
+
+      <main class="main">
+        
+
+
+<div class="articleWrap">
+  
+<aside class="sidebar sidebar--mobile-hidden nocontent">
+  
+  
+    
+  
+    
+  
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/getting-started/">Getting Started</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/content/">Managing Content</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item yellow"><a href="/themes/">Developing Themes</a></h5>
+        
+          <ul class="nav__list">
+            
+            
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/intro/">Intro to themes</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/liquid/">Liquid</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/structure/">Theme structure</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/local-development/">Local development</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/environments/">Environments</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/sass/">Sass and SCSS</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/sitemaps-and-feeds/">Sitemaps and Feeds</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/optimizing-build-time/">Optimizing build time</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/jekyll-plugins/">Jekyll Plugins</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/gem-based-themes/">Gem-based Themes</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/upgrading-from-jekyll-3-to-4/">Upgrading from Jekyll 3.x to 4.x</a></li>
+              
+            
+              
+                <li class="nav__item nav__item--current yellow"><a class="nav__link nav__link--sidebar" href="/themes/github-sync/">GitHub Sync</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/themes/cli/">Siteleaf CLI</a></li>
+              
+            
+          </ul>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/sites/">Deploy & Collaborate</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/api/">API</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/v1/">Legacy Sites</a></h5>
+        
+      </nav>
+    
+  
+</aside>
+
+  <article class="article">
+    <ol class="breadcrumbs">
+      <li class="breadcrumb"><a href="/">Learn Siteleaf</a></li>
+      <li class="breadcrumb"><a href="/themes/">Developing Themes</a></li>
+    </ol>
+    <section class="article__content">
+      <h2>GitHub Sync</h2>
+      <p>When working on your site, you’ll want to keep your theme and content in sync. This is exactly what GitHub Sync was made for. Once GitHub Sync is enabled, every time you update your Siteleaf site or your <a href="https://github.com">GitHub</a> repo, the changes will be synced between the two.</p>
+
+<h3 id="enable-github-sync">Enable GitHub Sync</h3>
+
+<ol>
+  <li>After creating a site, go to the <strong>Sync</strong> tab under <strong>Settings</strong></li>
+  <li>Connect to GitHub</li>
+  <li>Choose a repo, and optionally a branch name. We generally recommend using the <code class="highlighter-rouge">master</code> branch for syncing source files, and if using GitHub Pages for hosting, the <code class="highlighter-rouge">gh-pages</code> branch in the same repo for published sites. However you may use two separate repos, or any configuration you wish.</li>
+</ol>
+
+<p class="warning">Third-party application access needs to be turned <strong>on</strong> in order for Siteleaf to see your repositories. If you don’t see a repository when you connect your GitHub account, go to the organization’s settings and <a href="https://help.github.com/articles/approving-third-party-applications-for-your-organization/">enable third-party application access</a>.</p>
+
+<h3 id="local-development-with-github-sync">Local development with GitHub Sync</h3>
+
+<p>1) Initialize or clone your GitHub repo locally to your machine</p>
+
+<p>2) Create a file called <code class="highlighter-rouge">Gemfile</code> in your site’s root folder on your machine and add the <code class="highlighter-rouge">jekyll</code> gem to your bundle. This will install Jekyll:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">source</span> <span class="s1">'http://rubygems.org'</span>
+<span class="n">gem</span> <span class="s1">'jekyll'</span></code></pre></figure>
+
+<p>3) Install the bundle:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>gem <span class="nb">install </span>bundler
+<span class="nv">$ </span>bundle <span class="nb">install</span></code></pre></figure>
+
+<p>4) Start the Jekyll server:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bundle <span class="nb">exec </span>jekyll serve</code></pre></figure>
+
+<p>Now visit <a href="http://localhost:4000">localhost:4000</a> to see your site!</p>
+
+<p>5) Make some changes then sync them</p>
+
+<p class="tip">If pushing and pulling changes from the command line isn’t your thing, you can download <a href="https://desktop.github.com/">GitHub Desktop</a> to do it through a user-friendly interface.</p>
+
+<p>Push local changes to GitHub and Siteleaf:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git add <span class="nb">.</span>
+<span class="nv">$ </span>git commit <span class="nt">-m</span> <span class="s2">"Describe your changes here"</span>
+<span class="nv">$ </span>git push</code></pre></figure>
+
+<p>Or pull the latest changes from GitHub and Siteleaf:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git pull</code></pre></figure>
+
+<h3 id="faq">FAQ</h3>
+
+<h5 id="why-is-siteleaf-changing-my-yaml-formatting-after-i-make-a-commit">Why is Siteleaf changing my YAML formatting after I make a commit?</h5>
+
+<p>In some cases, you might notice a commit from Siteleaf directly after you commit a change to GitHub. This typically arises when your YAML formatting is inconsistent with the output of our YAML parser. Jekyll uses <a href="https://github.com/dtao/safe_yaml">SafeYAML</a> to parse front matter and we use the same. These changes shouldn’t affect your final output when your front matter is rendered.</p>
+
+<h5 id="what-happens-when-i-setup-syncing-on-an-existing-siteleaf-site">What happens when I setup syncing on an existing Siteleaf site?</h5>
+
+<p>During initial sync, all current files in Siteleaf will be saved into your repo. If you do not wish to merge or overwrite your GitHub content, you can import your repo as a new site. If you are unsure, be safe and back up your content.</p>
+
+<h5 id="what-happens-when-i-change-my-sync-settings-repo-or-branch">What happens when I change my sync settings repo or branch?</h5>
+
+<p>Any files edited in Siteleaf since your site was last synced will be saved into the new repo or branch. All files already synced with the <em>old</em> repo or branch will be replaced or removed from Siteleaf with the contents of the <em>new</em> repo or branch. If you do not wish to merge or replace your content, you can import your repo as a new site. If you are unsure, be safe and back up your content.</p>
+
+<hr />
+
+<h3 id="further-reading">Further Reading</h3>
+
+<ul>
+  <li><a href="http://www.siteleaf.com/blog/connecting-github/">Connecting GitHub and Siteleaf</a></li>
+</ul>
+
+      <p class="article__improve">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_themes/github-sync.markdown">
+          Help improve this page
+        </a>
+      </p>
+    </section>
+    <div class="article__prevNext">
+      
+        <a href="/themes/upgrading-from-jekyll-3-to-4/" id="prev" class="article__prev">&larr; Upgrading from Jekyll 3.x to 4.x</a>
+      
+      
+        <a href="/themes/cli/" id="next" class="article__next">Siteleaf CLI &rarr;</a>
+      
+    </div>
+  </article>
+</div>
+
+      </main>
+    </div>
+    <div class="footerWrap">
+  <footer class="footer">
+    <span class="footer__madeBy"><a href="https://github.com/siteleaf/learn.siteleaf.com">Made in Siteleaf</a> by <a href="http://oak.is/">Oak</a></span>
+  </footer>
+</div>
+
+
+    <script src="//www.siteleaf.com/scripts/all.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

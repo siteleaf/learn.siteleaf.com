@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="generator" content="Siteleaf, http://siteleaf.com">
+
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Drag and drop position" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In the Siteleaf UI, you can drag and drop pages and documents to change their sort position. Siteleaf will then save a numeric position field to each page/document’s front matter for you, so you can then sort the items in your template. For example, here’s how you’d sort your “Artists” documents by their position in the Siteleaf UI: {% assign sorted_artists = site.artists | sort:&quot;position&quot; %} {% for artist in sorted_artists %} &lt;li&gt;{{ artist.title }}&lt;/li&gt; {% endfor %} Handling new or unsorted documents Documents added outside of Siteleaf may not have an explicit position set (i.e. null). By default, these documents will be positioned first when using Jekyll’s sort filter. If you prefer to position these documents last, you can add an optional &quot;last&quot; parameter to your sort: {% assign sorted_artists = site.artists | sort:&quot;position&quot;, &quot;last&quot; %}" />
+<meta property="og:description" content="In the Siteleaf UI, you can drag and drop pages and documents to change their sort position. Siteleaf will then save a numeric position field to each page/document’s front matter for you, so you can then sort the items in your template. For example, here’s how you’d sort your “Artists” documents by their position in the Siteleaf UI: {% assign sorted_artists = site.artists | sort:&quot;position&quot; %} {% for artist in sorted_artists %} &lt;li&gt;{{ artist.title }}&lt;/li&gt; {% endfor %} Handling new or unsorted documents Documents added outside of Siteleaf may not have an explicit position set (i.e. null). By default, these documents will be positioned first when using Jekyll’s sort filter. If you prefer to position these documents last, you can add an optional &quot;last&quot; parameter to your sort: {% assign sorted_artists = site.artists | sort:&quot;position&quot;, &quot;last&quot; %}" />
+<link rel="canonical" href="http://learn.siteleaf.com/content/drag-and-drop-position/" />
+<meta property="og:url" content="http://learn.siteleaf.com/content/drag-and-drop-position/" />
+<meta property="og:site_name" content="Learn Siteleaf" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-09-27T13:30:00-04:00" />
+<script type="application/ld+json">
+{"description":"In the Siteleaf UI, you can drag and drop pages and documents to change their sort position. Siteleaf will then save a numeric position field to each page/document’s front matter for you, so you can then sort the items in your template. For example, here’s how you’d sort your “Artists” documents by their position in the Siteleaf UI: {% assign sorted_artists = site.artists | sort:&quot;position&quot; %} {% for artist in sorted_artists %} &lt;li&gt;{{ artist.title }}&lt;/li&gt; {% endfor %} Handling new or unsorted documents Documents added outside of Siteleaf may not have an explicit position set (i.e. null). By default, these documents will be positioned first when using Jekyll’s sort filter. If you prefer to position these documents last, you can add an optional &quot;last&quot; parameter to your sort: {% assign sorted_artists = site.artists | sort:&quot;position&quot;, &quot;last&quot; %}","@type":"BlogPosting","url":"http://learn.siteleaf.com/content/drag-and-drop-position/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"headline":"Drag and drop position","dateModified":"2016-09-27T13:30:00-04:00","datePublished":"2016-09-27T13:30:00-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/content/drag-and-drop-position/"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <title>Drag and drop position - Learn Siteleaf</title>
+
+    <link href="//www.siteleaf.com/styles/all.css" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link rel="SHORTCUT ICON" href="/assets/images/favicon.ico">
+  </head>
+  <body>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-1666437-41', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <div class="wrap">
+      
+<div class="headerWrap bg--green">
+  <header class="header">
+    <ul class="header__items">
+      <li class="header__item">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com" class="header__link">Contribute</a>
+      </li>
+      <li class="header__item">
+        <a href="http://status.siteleaf.com/" class="header__link js-status">Status</a>
+      </li>
+      <li class="header__item">
+        <a href="http://www.siteleaf.com/" class="header__link header__link--button">Siteleaf Home</a>
+      </li>
+      <li class="header__item header__item--mobile">
+        <a id="mobileNavOpen" class="header__link">Menu</a>
+      </li>
+    </ul>
+    <a href="/" class="header__home"><img src="/assets/images/logo.svg" class="header__logo" alt="Learn Siteleaf" /></a>
+    <h1 class="header__title">Managing Content</h1>
+    
+    <script>
+  (function() {
+    var cx = '004611147431180351508:4g8g1ea_gqi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+<div style="width: 0px; overflow: hidden; height: 0;">
+  <gcse:search></gcse:search>
+</div>
+
+<form class="search" id="searchbox_004611147431180351508:4g8g1ea_gqi" action="">
+  <input value="004611147431180351508:4g8g1ea_gqi" name="cx" type="hidden">
+  <input value="FORID:11" name="cof" type="hidden">
+  <input id="q" style="" name="q" class="search__input" type="search" placeholder="Search the docs">
+</form>
+
+  </header>
+  <nav class="mobileNav">
+    <header class="header">
+      <ul class="header__items">
+        <li class="header__item header__item--mobile">
+          <a id="mobileNavClose" class="header__link">Close</a>
+        </li>
+      </ul>
+      <ul class="mobileNav__items">
+        <li class="mobileNav__item">
+          <a href="https://github.com/siteleaf/learn.siteleaf.com" class="mobileNav__link">Contribute</a>
+        </li>
+        <li class="mobileNav__item">
+          <a href="http://status.siteleaf.com/" class="mobileNav__link">Status</a>
+        </li>
+        <li class="mobileNav__item">
+          <a href="http://www.siteleaf.com/" class="mobileNav__link">Siteleaf Home</a>
+        </li>
+      </ul>
+    </header>
+  </nav>
+</div>
+
+      <main class="main">
+        
+
+
+<div class="articleWrap">
+  
+<aside class="sidebar sidebar--mobile-hidden nocontent">
+  
+  
+    
+  
+    
+  
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/getting-started/">Getting Started</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item green"><a href="/content/">Managing Content</a></h5>
+        
+          <ul class="nav__list">
+            
+            
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/pages/">Pages</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/metadata/">Metadata</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/collections/">Collections</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/documents/">Documents</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/posts/">Posts</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/defaults/">Default fields</a></li>
+              
+            
+              
+                <li class="nav__item nav__item--current green"><a class="nav__link nav__link--sidebar" href="/content/drag-and-drop-position/">Drag and drop position</a></li>
+              
+            
+              
+                <li class="nav__item"><a class="nav__link nav__link--sidebar" href="/content/localization/">Localization</a></li>
+              
+            
+          </ul>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/themes/">Developing Themes</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/sites/">Deploy & Collaborate</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/api/">API</a></h5>
+        
+      </nav>
+    
+  
+    
+      <nav class="nav">
+        <h5 class="nav__item"><a href="/v1/">Legacy Sites</a></h5>
+        
+      </nav>
+    
+  
+</aside>
+
+  <article class="article">
+    <ol class="breadcrumbs">
+      <li class="breadcrumb"><a href="/">Learn Siteleaf</a></li>
+      <li class="breadcrumb"><a href="/content/">Managing Content</a></li>
+    </ol>
+    <section class="article__content">
+      <h2>Drag and drop position</h2>
+      <p>In the Siteleaf UI, you can drag and drop pages and documents to change their sort position. Siteleaf will then save a numeric <code class="highlighter-rouge">position</code> field to each page/document’s front matter for you, so you can then sort the items in your template.</p>
+
+<p>For example, here’s how you’d sort your “Artists” documents by their position in the Siteleaf UI:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% assign sorted_artists = site.artists | sort:"position" %}
+{% for artist in sorted_artists %}
+  &lt;li&gt;{{ artist.title }}&lt;/li&gt;
+{% endfor %}
+</code></pre></div></div>
+
+<h3 id="handling-new-or-unsorted-documents">Handling new or unsorted documents</h3>
+
+<p>Documents added outside of Siteleaf may not have an explicit <code class="highlighter-rouge">position</code> set (i.e. <code class="highlighter-rouge">null</code>). By default, these documents will be positioned first when using Jekyll’s <a href="https://jekyllrb.com/docs/templates/">sort filter</a>. If you prefer to position these documents last, you can add an optional <code class="highlighter-rouge">"last"</code> parameter to your sort:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% assign sorted_artists = site.artists | sort:"position", "last" %}
+</code></pre></div></div>
+
+      <p class="article__improve">
+        <a href="https://github.com/siteleaf/learn.siteleaf.com/blob/master/_content/drag-and-drop-position.markdown">
+          Help improve this page
+        </a>
+      </p>
+    </section>
+    <div class="article__prevNext">
+      
+        <a href="/content/defaults/" id="prev" class="article__prev">&larr; Default fields</a>
+      
+      
+        <a href="/content/localization/" id="next" class="article__next">Localization &rarr;</a>
+      
+    </div>
+  </article>
+</div>
+
+      </main>
+    </div>
+    <div class="footerWrap">
+  <footer class="footer">
+    <span class="footer__madeBy"><a href="https://github.com/siteleaf/learn.siteleaf.com">Made in Siteleaf</a> by <a href="http://oak.is/">Oak</a></span>
+  </footer>
+</div>
+
+
+    <script src="//www.siteleaf.com/scripts/all.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
