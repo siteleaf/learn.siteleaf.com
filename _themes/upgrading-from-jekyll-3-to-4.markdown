@@ -40,7 +40,7 @@ source 'https://rubygems.org'
 gem 'jekyll', '~>4'
 ```
 
-If you are using any of the plugins that came included with `github-pages` — like the popular [SEO](https://github.com/jekyll/jekyll-seo-tag) or [Sitemap](https://github.com/jekyll/jekyll-sitemap) plugin — you’ll need to reference those as well:
+If you are using any of the plugins that come included with `github-pages` (like the popular [SEO](https://github.com/jekyll/jekyll-seo-tag) or [Sitemap](https://github.com/jekyll/jekyll-sitemap) plugin), you’ll need to reference those as well:
 
 ```rb
 source 'https://rubygems.org'
@@ -67,7 +67,7 @@ $ bundle exec jekyll serve
 
 ### Updating your `_config.yml`
 
-Jekyll excludes `Gemfile` by default, so to ensure Siteleaf picks up these changes, we recommend updating your `_config.yml` to include:
+Jekyll excludes `Gemfile` [by default](https://jekyllrb.com/docs/configuration/default/), so to ensure Siteleaf picks up these changes, we recommend updating your `_config.yml` to something like this:
 
 ```yml
 exclude: ["Gemfile.lock", "node_modules"]
@@ -77,6 +77,6 @@ You can exclude additional files as needed, just ensure `Gemfile` is not being e
 
 ### Updating your Hosting settings
 
-If using GitHub Pages for hosting, you'll also need to update your Siteleaf Hosting settings to use the `Compile by Siteleaf` option. This option is available on all paid plans, and will ensure your site is built by Siteleaf instead of GitHub Pages. When compiling with Siteleaf on our Team and higher plans, you can also use custom plugins or gems not supported by GitHub Pages.
+If using GitHub Pages for hosting, you'll also need to update your Siteleaf [Hosting settings](/sites/hosting/) to use the `Compile by Siteleaf` option. This option is available on all paid plans, and will ensure your site is built by Siteleaf instead of GitHub Pages. When compiling with Siteleaf on our Team and higher plans, you can also use [custom plugins](/themes/jekyll-plugins/) or gems not supported by GitHub Pages.
 
 No changes are required if using other hosting options like S3 or SFTP.
