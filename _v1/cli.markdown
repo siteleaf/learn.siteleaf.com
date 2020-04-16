@@ -10,4 +10,5 @@ The Siteleaf v1 CLI and Ruby Gem is not compatible with v2 sites (and vice versa
 For documentation on the v1 CLI, see: 
 **<https://github.com/siteleaf/siteleaf-gem/tree/v1>** &rarr;
 
-For information on the v2 CLI, see: **<http://learn.siteleaf.com/themes/cli/>** &rarr;
+For information on the v2 CLI, see: 
+**<http://learn.siteleaf.com/themes/cli/>** &rarr;
