@@ -1,6 +1,7 @@
 ---
 title: Additional elements
 date: 2016-06-15 00:00:00 -04:00
+published: false
 position: 2
 ---
 
