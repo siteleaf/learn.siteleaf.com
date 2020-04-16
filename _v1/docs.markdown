@@ -1,5 +1,5 @@
 ---
-title: Documentation for v1 sites
+title: v1 Documentation
 date: 2020-04-16 15:30:00 -04:00
 position: 1
 ---
