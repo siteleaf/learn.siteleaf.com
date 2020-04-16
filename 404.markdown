@@ -1,0 +1,12 @@
+---
+title: 404
+permalink: "/404.html"
+---
+
+Sorry, this page could not be found. Maybe one of these links can help:
+
+* [Help and documentation](https://learn.siteleaf.com/)
+* [Log in to your account](https://manage.siteleaf.com/login)
+* [Server status](https://status.siteleaf.com/)
+* [Legacy v1 docs](https://v1.siteleaf.com/help/)
+* [Go to back siteleaf.com](https://www.siteleaf.com/)
