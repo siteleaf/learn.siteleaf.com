@@ -2,25 +2,29 @@
 layout: default
 ---
 
-{% assign page_section = site.collections | where: 'label', page.collection | first %}
-{% assign sections = site.collections | sort:"position" %}
-{% for section in sections %}
-  {% if page_section.title == section.title %}
-    {% assign documents = section.docs | sort:"position" %}
-    {% for document in documents %}
-      {% if document.url == page.url %}
-        {% if forloop.index0 > 1 %}
-          {% assign prev_index = forloop.index0 | minus: 1 %}
-          {% assign prev_document = documents[prev_index] %}
+{% assign prev_document = nil %}
+{% assign next_document = nil %}
+{% if page.collection %}
+  {% assign page_section = site.collections | where: 'label', page.collection | first %}
+  {% assign sections = site.collections | sort:"position" %}
+  {% for section in sections %}
+    {% if page_section.title == section.title %}
+      {% assign documents = section.docs | sort:"position" %}
+      {% for document in documents %}
+        {% if document.url == page.url %}
+          {% if forloop.index0 > 1 %}
+            {% assign prev_index = forloop.index0 | minus: 1 %}
+            {% assign prev_document = documents[prev_index] %}
+          {% endif %}
+          {% unless forloop.last %}
+            {% assign next_index = forloop.index0 | plus: 1 %}
+            {% assign next_document = documents[next_index] %}
+          {% endunless %}
         {% endif %}
-        {% unless forloop.last %}
-          {% assign next_index = forloop.index0 | plus: 1 %}
-          {% assign next_document = documents[next_index] %}
-        {% endunless %}
-      {% endif %}
-    {% endfor %}
-  {% endif %}
-{% endfor %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <div class="articleWrap">
   {% include sidebar.html %}
   <article class="article">
