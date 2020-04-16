@@ -46,7 +46,7 @@
 </url>
 <url>
 <loc>http://learn.siteleaf.com/api/</loc>
-<lastmod>2020-04-16T16:20:10-04:00</lastmod>
+<lastmod>2020-04-16T16:26:56-04:00</lastmod>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/api/libraries-and-integrations/</loc>
@@ -74,7 +74,7 @@
 </url>
 <url>
 <loc>http://learn.siteleaf.com/content/</loc>
-<lastmod>2020-04-16T16:20:10-04:00</lastmod>
+<lastmod>2020-04-16T16:26:56-04:00</lastmod>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/content/posts/</loc>
@@ -94,7 +94,7 @@
 </url>
 <url>
 <loc>http://learn.siteleaf.com/getting-started/</loc>
-<lastmod>2020-04-16T16:20:10-04:00</lastmod>
+<lastmod>2020-04-16T16:26:56-04:00</lastmod>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/getting-started/siteleaf-for-clients/</loc>
@@ -114,7 +114,7 @@
 </url>
 <url>
 <loc>http://learn.siteleaf.com/sites/</loc>
-<lastmod>2020-04-16T16:20:10-04:00</lastmod>
+<lastmod>2020-04-16T16:26:56-04:00</lastmod>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/sites/settings/</loc>
@@ -141,18 +141,6 @@
 <lastmod>2019-04-26T11:30:00-04:00</lastmod>
 </url>
 <url>
-<loc>http://learn.siteleaf.com/style/basic-elements/</loc>
-<lastmod>2016-06-13T00:00:00-04:00</lastmod>
-</url>
-<url>
-<loc>http://learn.siteleaf.com/style/additional-elements/</loc>
-<lastmod>2016-06-15T00:00:00-04:00</lastmod>
-</url>
-<url>
-<loc>http://learn.siteleaf.com/style/</loc>
-<lastmod>2020-04-16T16:20:10-04:00</lastmod>
-</url>
-<url>
 <loc>http://learn.siteleaf.com/themes/cli/</loc>
 <lastmod>2015-10-31T20:03:00-04:00</lastmod>
 </url>
@@ -162,7 +150,7 @@
 </url>
 <url>
 <loc>http://learn.siteleaf.com/themes/</loc>
-<lastmod>2020-04-16T16:20:10-04:00</lastmod>
+<lastmod>2020-04-16T16:26:56-04:00</lastmod>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/themes/intro/</loc>
@@ -230,7 +218,7 @@
 </url>
 <url>
 <loc>http://learn.siteleaf.com/v1/</loc>
-<lastmod>2020-04-16T16:20:10-04:00</lastmod>
+<lastmod>2020-04-16T16:26:56-04:00</lastmod>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/</loc>
