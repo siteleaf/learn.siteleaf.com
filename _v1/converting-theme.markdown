@@ -2,6 +2,7 @@
 title: Converting a legacy theme
 date: 2016-06-15 18:28:00 -04:00
 position: 4
+redirect_from: "/v1/converting-a-v1-theme/"
 ---
 
 Siteleaf v2 themes use similar Liquid-based templates as v1, with some minor differences that you should be aware of.
