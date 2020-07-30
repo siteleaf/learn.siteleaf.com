@@ -62,4 +62,10 @@ For more help with Rackspace Cloud Files, see [their documentation](https://www.
 
 ### FTP or SFTP
 
-If you'd like to use your own server, you can use FTP/SFTP. Make sure you know the host, port, username, and password, as well as the path you'd like to compile to.
+If you'd like to use your own server, you can use FTP or SFTP. Make sure you know the host, port, username, and password (or SSH key), as well as the path you'd like to compile to.
+
+Common hosts that support FTP and SFTP are:
+- [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server)
+- [Media Temple](https://mediatemple.net/community/products/dv/204643370/what-is-ftp-sftp)
+- [DreamHost](https://help.dreamhost.com/hc/en-us/articles/115000675027-FTP-overview-and-credentials)
+- [GoDaddy](https://ph.godaddy.com/help/what-is-ftp-19304)
