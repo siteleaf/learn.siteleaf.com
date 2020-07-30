@@ -48,6 +48,10 @@ To publish to [Amazon S3](https://aws.amazon.com/s3/), you'll first need your ac
 
 You can use an existing bucket, or create a new one. Make sure you take note of the region!
 
+#### Configuring IAM permissions
+
+{% gist f364872b395f2bf94303 %}
+
 For more information on Amazon S3, take a look at [their documentation](https://aws.amazon.com/documentation/s3/).
 
 ### Rackspace Cloud Files
