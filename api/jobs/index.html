@@ -6,7 +6,7 @@
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<meta name="generator" content="Jekyll v4.0.0" />
+<meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Jobs" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Overview The Jobs endpoint can be used to monitor long running tasks, such as publishing a site. It uses Server Sent Events (SSE) to comunicate with the client. Listen to a job Events are streamed to the client in real time, with event data encoded as JSON. When the job completes or fails the server will close the connection. The last event is available for 30 minutes, after which the job id expires. Endpoint GET https://api.siteleaf.com/v2/jobs/:job_id Response Status: 200 OK Content-Type: text/event-stream event:status data:{&quot;status&quot;:&quot;working&quot;,&quot;message&quot;:&quot;Working...&quot;,&quot;updated_at&quot;:&quot;1452890740&quot;} event:status data:{&quot;status&quot;:&quot;working&quot;,&quot;message&quot;:&quot;Working...&quot;,&quot;updated_at&quot;:&quot;1452890744&quot;} event:status data:{&quot;status&quot;:&quot;complete&quot;,&quot;message&quot;:&quot;Done!&quot;,&quot;updated_at&quot;:&quot;1452890745&quot;} Response after job expires Status: 410 Gone Content-Type: text/event-stream event:status data:{&quot;status&quot;:&quot;error&quot;,&quot;message&quot;:&quot;Job not found&quot;}" />
@@ -17,7 +17,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2016-01-15T16:22:50-05:00" />
 <script type="application/ld+json">
-{"description":"Overview The Jobs endpoint can be used to monitor long running tasks, such as publishing a site. It uses Server Sent Events (SSE) to comunicate with the client. Listen to a job Events are streamed to the client in real time, with event data encoded as JSON. When the job completes or fails the server will close the connection. The last event is available for 30 minutes, after which the job id expires. Endpoint GET https://api.siteleaf.com/v2/jobs/:job_id Response Status: 200 OK Content-Type: text/event-stream event:status data:{&quot;status&quot;:&quot;working&quot;,&quot;message&quot;:&quot;Working...&quot;,&quot;updated_at&quot;:&quot;1452890740&quot;} event:status data:{&quot;status&quot;:&quot;working&quot;,&quot;message&quot;:&quot;Working...&quot;,&quot;updated_at&quot;:&quot;1452890744&quot;} event:status data:{&quot;status&quot;:&quot;complete&quot;,&quot;message&quot;:&quot;Done!&quot;,&quot;updated_at&quot;:&quot;1452890745&quot;} Response after job expires Status: 410 Gone Content-Type: text/event-stream event:status data:{&quot;status&quot;:&quot;error&quot;,&quot;message&quot;:&quot;Job not found&quot;}","@type":"BlogPosting","url":"http://learn.siteleaf.com/api/jobs/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"headline":"Jobs","dateModified":"2016-01-15T16:22:50-05:00","datePublished":"2016-01-15T16:22:50-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/api/jobs/"},"@context":"https://schema.org"}</script>
+{"description":"Overview The Jobs endpoint can be used to monitor long running tasks, such as publishing a site. It uses Server Sent Events (SSE) to comunicate with the client. Listen to a job Events are streamed to the client in real time, with event data encoded as JSON. When the job completes or fails the server will close the connection. The last event is available for 30 minutes, after which the job id expires. Endpoint GET https://api.siteleaf.com/v2/jobs/:job_id Response Status: 200 OK Content-Type: text/event-stream event:status data:{&quot;status&quot;:&quot;working&quot;,&quot;message&quot;:&quot;Working...&quot;,&quot;updated_at&quot;:&quot;1452890740&quot;} event:status data:{&quot;status&quot;:&quot;working&quot;,&quot;message&quot;:&quot;Working...&quot;,&quot;updated_at&quot;:&quot;1452890744&quot;} event:status data:{&quot;status&quot;:&quot;complete&quot;,&quot;message&quot;:&quot;Done!&quot;,&quot;updated_at&quot;:&quot;1452890745&quot;} Response after job expires Status: 410 Gone Content-Type: text/event-stream event:status data:{&quot;status&quot;:&quot;error&quot;,&quot;message&quot;:&quot;Job not found&quot;}","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"@type":"BlogPosting","url":"http://learn.siteleaf.com/api/jobs/","dateModified":"2016-01-15T16:22:50-05:00","headline":"Jobs","datePublished":"2016-01-15T16:22:50-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/api/jobs/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <title>Jobs - Learn Siteleaf</title>
@@ -234,15 +234,15 @@ It uses <a href="https://html.spec.whatwg.org/multipage/comms.html#server-sent-e
 
 <h4 id="endpoint">Endpoint</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/jobs/:job_id
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/jobs/:job_id
 </code></pre></div></div>
 
 <h4 id="response">Response</h4>
 
-<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+<div class="language-plaintext api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
 Content-Type: text/event-stream
 </code></pre></div></div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>event:status
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>event:status
 data:{"status":"working","message":"Working...","updated_at":"1452890740"}
 
 event:status
@@ -254,11 +254,11 @@ data:{"status":"complete","message":"Done!","updated_at":"1452890745"}
 
 <h4 id="response-after-job-expires">Response after job expires</h4>
 
-<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 410 Gone
+<div class="language-plaintext api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 410 Gone
 Content-Type: text/event-stream
 </code></pre></div></div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>event:status
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>event:status
 data:{"status":"error","message":"Job not found"}
 </code></pre></div></div>
 

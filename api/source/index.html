@@ -6,7 +6,7 @@
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<meta name="generator" content="Jekyll v4.0.0" />
+<meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Source" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Overview The Source API can be thought of as a filesystem view, as if you were looking at your Jekyll source code locally. It functions a little differently than the rest of the API and isn’t as structured. Get files Create or replace a file Delete a file" />
@@ -17,7 +17,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2016-01-15T13:43:00-05:00" />
 <script type="application/ld+json">
-{"description":"Overview The Source API can be thought of as a filesystem view, as if you were looking at your Jekyll source code locally. It functions a little differently than the rest of the API and isn’t as structured. Get files Create or replace a file Delete a file","@type":"BlogPosting","url":"http://learn.siteleaf.com/api/source/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"headline":"Source","dateModified":"2016-01-15T13:43:00-05:00","datePublished":"2016-01-15T13:43:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/api/source/"},"@context":"https://schema.org"}</script>
+{"description":"Overview The Source API can be thought of as a filesystem view, as if you were looking at your Jekyll source code locally. It functions a little differently than the rest of the API and isn’t as structured. Get files Create or replace a file Delete a file","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"@type":"BlogPosting","url":"http://learn.siteleaf.com/api/source/","dateModified":"2016-01-15T13:43:00-05:00","headline":"Source","datePublished":"2016-01-15T13:43:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/api/source/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <title>Source - Learn Siteleaf</title>
@@ -235,16 +235,16 @@
 
 <h3 id="get-files">Get files</h3>
 
-<p>Returns information about a single file or the contents of a directory. The <code class="highlighter-rouge">:name</code> is optional, and without it lists the contents of the root directory.</p>
+<p>Returns information about a single file or the contents of a directory. The <code class="language-plaintext highlighter-rouge">:name</code> is optional, and without it lists the contents of the root directory.</p>
 
 <h4 id="endpoint">Endpoint</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/sites/:site_id/source/:name
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/sites/:site_id/source/:name
 </code></pre></div></div>
 
 <h4 id="response-if-name-is-a-file">Response if name is a file</h4>
 
-<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+<div class="language-plaintext api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
 </code></pre></div></div>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
@@ -261,7 +261,7 @@
 
 <h4 id="response-if-name-is-a-directory">Response if name is a directory</h4>
 
-<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+<div class="language-plaintext api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
 </code></pre></div></div>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
@@ -299,14 +299,14 @@
 
 <ul>
   <li>If a file with the specified name already existed the file will be replaced.</li>
-  <li>Otherwise a new file will be created with that name and the returned <code class="highlighter-rouge">type</code> will be one of <code class="highlighter-rouge">page</code>, <code class="highlighter-rouge">document</code>, or <code class="highlighter-rouge">file</code>.</li>
+  <li>Otherwise a new file will be created with that name and the returned <code class="language-plaintext highlighter-rouge">type</code> will be one of <code class="language-plaintext highlighter-rouge">page</code>, <code class="language-plaintext highlighter-rouge">document</code>, or <code class="language-plaintext highlighter-rouge">file</code>.</li>
 </ul>
 
 <p>It’s useful for uploading raw Jekyll source files and creating the correct type of Siteleaf resource.</p>
 
 <h4 id="endpoint-1">Endpoint</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PUT https://api.siteleaf.com/v2/sites/:site_id/source/:name
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PUT https://api.siteleaf.com/v2/sites/:site_id/source/:name
 </code></pre></div></div>
 
 <h4 id="input">Input</h4>
@@ -321,16 +321,16 @@
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">file</code></td>
-      <td><code class="highlighter-rouge">File</code></td>
-      <td>A <code class="highlighter-rouge">multipart/form-data</code> file attachment</td>
+      <td><code class="language-plaintext highlighter-rouge">file</code></td>
+      <td><code class="language-plaintext highlighter-rouge">File</code></td>
+      <td>A <code class="language-plaintext highlighter-rouge">multipart/form-data</code> file attachment</td>
     </tr>
   </tbody>
 </table>
 
 <h4 id="response">Response</h4>
 
-<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+<div class="language-plaintext api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
 </code></pre></div></div>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
@@ -347,16 +347,16 @@
 
 <h3 id="delete-a-file">Delete a file</h3>
 
-<p>Will not delete directories or the <code class="highlighter-rouge">_config.yml</code> file.</p>
+<p>Will not delete directories or the <code class="language-plaintext highlighter-rouge">_config.yml</code> file.</p>
 
 <h4 id="endpoint-2">Endpoint</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DELETE https://api.siteleaf.com/v2/sites/:site_id/source/:name
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DELETE https://api.siteleaf.com/v2/sites/:site_id/source/:name
 </code></pre></div></div>
 
 <h4 id="response-1">Response</h4>
 
-<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+<div class="language-plaintext api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
 </code></pre></div></div>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">

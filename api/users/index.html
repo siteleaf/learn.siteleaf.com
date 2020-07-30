@@ -6,7 +6,7 @@
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<meta name="generator" content="Jekyll v4.0.0" />
+<meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Users" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Overview List users Get the currently authenticated user" />
@@ -17,7 +17,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2016-01-14T15:50:46-05:00" />
 <script type="application/ld+json">
-{"description":"Overview List users Get the currently authenticated user","@type":"BlogPosting","url":"http://learn.siteleaf.com/api/users/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"headline":"Users","dateModified":"2016-01-14T15:50:46-05:00","datePublished":"2016-01-14T15:50:46-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/api/users/"},"@context":"https://schema.org"}</script>
+{"description":"Overview List users Get the currently authenticated user","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"@type":"BlogPosting","url":"http://learn.siteleaf.com/api/users/","dateModified":"2016-01-14T15:50:46-05:00","headline":"Users","datePublished":"2016-01-14T15:50:46-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/api/users/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <title>Users - Learn Siteleaf</title>
@@ -234,12 +234,12 @@
 
 <h4 id="endpoint">Endpoint</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/sites/:site_id/users
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/sites/:site_id/users
 </code></pre></div></div>
 
 <h4 id="response">Response</h4>
 
-<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+<div class="language-plaintext api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
 Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
       &lt;https://api.siteleaf.com/v2/:path?page=9&gt;; rel="last"
 </code></pre></div></div>
@@ -261,15 +261,15 @@ Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
 
 <h4 id="endpoint-1">Endpoint</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/users/me
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/users/me
 </code></pre></div></div>
 
 <h4 id="response-1">Response</h4>
 
-<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+<div class="language-plaintext api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
 </code></pre></div></div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
   "id": "5697cc7b16d5640c40000000",
   "email": "jill@example.com",
   "firstname": "Jill",

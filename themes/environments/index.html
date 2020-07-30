@@ -6,7 +6,7 @@
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<meta name="generator" content="Jekyll v4.0.0" />
+<meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Environments" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="When working with Jekyll and Siteleaf, you typically have 3 distinct environments to help you code, preview, and publish your site: development - this is your local machine where theme development takes place. Run jekyll serve and your site will be accessible at http://localhost:4000. staging - sites on paid plans come with preview functionality. Hit the “Generate preview” button in Siteleaf, and your site will be built with a unique URL without affecting your live site. This URL is shareable, so you can send it to colleagues outside of Siteleaf for feedback or proofreading. production - where your final website is generated and hosted. This could be GitHub Pages, Amazon S3, Rackspace Cloud Files, or any host that supports (S)FTP (DigitalOcean, MediaTemple, etc). Siteleaf will set the {{ jekyll.environment }} variable to one of the environments above. This allows you to set up conditional code in your theme to render content or add functionality based on the current environment. For example: {% if jekyll.environment == &#39;production&#39; %} &lt;!-- your code here --&gt; {% endif %} You can use this to alter image processing, insert a message, disable analytics, or even conduct user testing in one of your environments. For more examples see our blog post. Testing environments To test this functionality locally and ensure your conditionals work as intended, set JEKYLL_ENV when running jekyll serve. For example we could see how production would render: $ JEKYLL_ENV=production bundle exec jekyll serve" />
@@ -17,7 +17,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2016-10-10T11:30:00-04:00" />
 <script type="application/ld+json">
-{"description":"When working with Jekyll and Siteleaf, you typically have 3 distinct environments to help you code, preview, and publish your site: development - this is your local machine where theme development takes place. Run jekyll serve and your site will be accessible at http://localhost:4000. staging - sites on paid plans come with preview functionality. Hit the “Generate preview” button in Siteleaf, and your site will be built with a unique URL without affecting your live site. This URL is shareable, so you can send it to colleagues outside of Siteleaf for feedback or proofreading. production - where your final website is generated and hosted. This could be GitHub Pages, Amazon S3, Rackspace Cloud Files, or any host that supports (S)FTP (DigitalOcean, MediaTemple, etc). Siteleaf will set the {{ jekyll.environment }} variable to one of the environments above. This allows you to set up conditional code in your theme to render content or add functionality based on the current environment. For example: {% if jekyll.environment == &#39;production&#39; %} &lt;!-- your code here --&gt; {% endif %} You can use this to alter image processing, insert a message, disable analytics, or even conduct user testing in one of your environments. For more examples see our blog post. Testing environments To test this functionality locally and ensure your conditionals work as intended, set JEKYLL_ENV when running jekyll serve. For example we could see how production would render: $ JEKYLL_ENV=production bundle exec jekyll serve","@type":"BlogPosting","url":"http://learn.siteleaf.com/themes/environments/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"headline":"Environments","dateModified":"2016-10-10T11:30:00-04:00","datePublished":"2016-10-10T11:30:00-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/themes/environments/"},"@context":"https://schema.org"}</script>
+{"description":"When working with Jekyll and Siteleaf, you typically have 3 distinct environments to help you code, preview, and publish your site: development - this is your local machine where theme development takes place. Run jekyll serve and your site will be accessible at http://localhost:4000. staging - sites on paid plans come with preview functionality. Hit the “Generate preview” button in Siteleaf, and your site will be built with a unique URL without affecting your live site. This URL is shareable, so you can send it to colleagues outside of Siteleaf for feedback or proofreading. production - where your final website is generated and hosted. This could be GitHub Pages, Amazon S3, Rackspace Cloud Files, or any host that supports (S)FTP (DigitalOcean, MediaTemple, etc). Siteleaf will set the {{ jekyll.environment }} variable to one of the environments above. This allows you to set up conditional code in your theme to render content or add functionality based on the current environment. For example: {% if jekyll.environment == &#39;production&#39; %} &lt;!-- your code here --&gt; {% endif %} You can use this to alter image processing, insert a message, disable analytics, or even conduct user testing in one of your environments. For more examples see our blog post. Testing environments To test this functionality locally and ensure your conditionals work as intended, set JEKYLL_ENV when running jekyll serve. For example we could see how production would render: $ JEKYLL_ENV=production bundle exec jekyll serve","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"@type":"BlogPosting","url":"http://learn.siteleaf.com/themes/environments/","dateModified":"2016-10-10T11:30:00-04:00","headline":"Environments","datePublished":"2016-10-10T11:30:00-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/themes/environments/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <title>Environments - Learn Siteleaf</title>
@@ -231,17 +231,17 @@
 
 <ol>
   <li>
-    <p><code class="highlighter-rouge">development</code> - this is your local machine where theme development takes place. Run <code class="highlighter-rouge">jekyll serve</code> and your site will be accessible at <code class="highlighter-rouge">http://localhost:4000</code>.</p>
+    <p><code class="language-plaintext highlighter-rouge">development</code> - this is your local machine where theme development takes place. Run <code class="language-plaintext highlighter-rouge">jekyll serve</code> and your site will be accessible at <code class="language-plaintext highlighter-rouge">http://localhost:4000</code>.</p>
   </li>
   <li>
-    <p><code class="highlighter-rouge">staging</code> - sites on paid plans come with <a href="/sites/preview/">preview functionality</a>. Hit the “Generate preview” button in Siteleaf, and your site will be built with a unique URL without affecting your live site. This URL is shareable, so you can send it to colleagues outside of Siteleaf for feedback or proofreading.</p>
+    <p><code class="language-plaintext highlighter-rouge">staging</code> - sites on paid plans come with <a href="/sites/preview/">preview functionality</a>. Hit the “Generate preview” button in Siteleaf, and your site will be built with a unique URL without affecting your live site. This URL is shareable, so you can send it to colleagues outside of Siteleaf for feedback or proofreading.</p>
   </li>
   <li>
-    <p><code class="highlighter-rouge">production</code> - where your final website is generated and hosted. This could be GitHub Pages, Amazon S3, Rackspace Cloud Files, or any host that supports (S)FTP (DigitalOcean, MediaTemple, etc).</p>
+    <p><code class="language-plaintext highlighter-rouge">production</code> - where your final website is generated and hosted. This could be GitHub Pages, Amazon S3, Rackspace Cloud Files, or any host that supports (S)FTP (DigitalOcean, MediaTemple, etc).</p>
   </li>
 </ol>
 
-<p>Siteleaf will set the <code class="highlighter-rouge">{{ jekyll.environment }}</code> variable to one of the environments above.</p>
+<p>Siteleaf will set the <code class="language-plaintext highlighter-rouge">{{ jekyll.environment }}</code> variable to one of the environments above.</p>
 
 <p>This allows you to set up conditional code in your theme to render content or add functionality based on the current environment. For example:</p>
 
@@ -256,7 +256,7 @@
 
 <h3 id="testing-environments">Testing environments</h3>
 
-<p>To test this functionality locally and ensure your conditionals work as intended, set <code class="highlighter-rouge">JEKYLL_ENV</code> when running <code class="highlighter-rouge">jekyll serve</code>. For example we could see how <code class="highlighter-rouge">production</code> would render:</p>
+<p>To test this functionality locally and ensure your conditionals work as intended, set <code class="language-plaintext highlighter-rouge">JEKYLL_ENV</code> when running <code class="language-plaintext highlighter-rouge">jekyll serve</code>. For example we could see how <code class="language-plaintext highlighter-rouge">production</code> would render:</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ JEKYLL_ENV</span><span class="o">=</span>production bundle <span class="nb">exec </span>jekyll serve
 </code></pre></div></div>

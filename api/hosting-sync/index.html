@@ -6,7 +6,7 @@
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<meta name="generator" content="Jekyll v4.0.0" />
+<meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Hosting and Sync" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Overview Hosting options Sync options Hosting options Depending on your sites hosting value, the hosting_options fields are: Hosting: github Key Value access_token Github Access Token (required) path Full repository name &lt;user name&gt;/&lt;repo name&gt; (required) branch Branch name, gh-pages by default format raw or compiled (Github Pages or Siteleaf compile) (required) Hosting: s3 Key Value access_key AWS Access Key (required) secret_key AWS Secret Key (required) path S3 bucket name (required) region Region of S3 bucket (required) Hosting: ftp Key Value protocol ftp or sftp (required) host Host name (required) port Port number, 21 if ftp or 22 if sftp by default username FTP username (required) password FTP password (required) path Path where site will be published (required) Hosting: cloudfiles Key Value username Rackspace username (required) api_key Rackspace API key (required) path Container name (required) region Region of container (required)" />
@@ -17,7 +17,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2016-03-03T15:51:00-05:00" />
 <script type="application/ld+json">
-{"description":"Overview Hosting options Sync options Hosting options Depending on your sites hosting value, the hosting_options fields are: Hosting: github Key Value access_token Github Access Token (required) path Full repository name &lt;user name&gt;/&lt;repo name&gt; (required) branch Branch name, gh-pages by default format raw or compiled (Github Pages or Siteleaf compile) (required) Hosting: s3 Key Value access_key AWS Access Key (required) secret_key AWS Secret Key (required) path S3 bucket name (required) region Region of S3 bucket (required) Hosting: ftp Key Value protocol ftp or sftp (required) host Host name (required) port Port number, 21 if ftp or 22 if sftp by default username FTP username (required) password FTP password (required) path Path where site will be published (required) Hosting: cloudfiles Key Value username Rackspace username (required) api_key Rackspace API key (required) path Container name (required) region Region of container (required)","@type":"BlogPosting","url":"http://learn.siteleaf.com/api/hosting-sync/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"headline":"Hosting and Sync","dateModified":"2016-03-03T15:51:00-05:00","datePublished":"2016-03-03T15:51:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/api/hosting-sync/"},"@context":"https://schema.org"}</script>
+{"description":"Overview Hosting options Sync options Hosting options Depending on your sites hosting value, the hosting_options fields are: Hosting: github Key Value access_token Github Access Token (required) path Full repository name &lt;user name&gt;/&lt;repo name&gt; (required) branch Branch name, gh-pages by default format raw or compiled (Github Pages or Siteleaf compile) (required) Hosting: s3 Key Value access_key AWS Access Key (required) secret_key AWS Secret Key (required) path S3 bucket name (required) region Region of S3 bucket (required) Hosting: ftp Key Value protocol ftp or sftp (required) host Host name (required) port Port number, 21 if ftp or 22 if sftp by default username FTP username (required) password FTP password (required) path Path where site will be published (required) Hosting: cloudfiles Key Value username Rackspace username (required) api_key Rackspace API key (required) path Container name (required) region Region of container (required)","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"@type":"BlogPosting","url":"http://learn.siteleaf.com/api/hosting-sync/","dateModified":"2016-03-03T15:51:00-05:00","headline":"Hosting and Sync","datePublished":"2016-03-03T15:51:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/api/hosting-sync/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <title>Hosting and Sync - Learn Siteleaf</title>
@@ -232,9 +232,9 @@
 
 <h3 id="hosting-options">Hosting options</h3>
 
-<p>Depending on your sites <code class="highlighter-rouge">hosting</code> value, the <code class="highlighter-rouge">hosting_options</code> fields are:</p>
+<p>Depending on your sites <code class="language-plaintext highlighter-rouge">hosting</code> value, the <code class="language-plaintext highlighter-rouge">hosting_options</code> fields are:</p>
 
-<h4 id="hosting-github">Hosting: <code class="highlighter-rouge">github</code></h4>
+<h4 id="hosting-github">Hosting: <code class="language-plaintext highlighter-rouge">github</code></h4>
 
 <table>
   <thead>
@@ -245,25 +245,25 @@
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">access_token</code></td>
+      <td><code class="language-plaintext highlighter-rouge">access_token</code></td>
       <td>Github Access Token <strong>(required)</strong></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">path</code></td>
-      <td>Full repository name <code class="highlighter-rouge">&lt;user name&gt;/&lt;repo name&gt;</code> <strong>(required)</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">path</code></td>
+      <td>Full repository name <code class="language-plaintext highlighter-rouge">&lt;user name&gt;/&lt;repo name&gt;</code> <strong>(required)</strong></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">branch</code></td>
-      <td>Branch name, <code class="highlighter-rouge">gh-pages</code> by default</td>
+      <td><code class="language-plaintext highlighter-rouge">branch</code></td>
+      <td>Branch name, <code class="language-plaintext highlighter-rouge">gh-pages</code> by default</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">format</code></td>
-      <td><code class="highlighter-rouge">raw</code> or <code class="highlighter-rouge">compiled</code> (Github Pages or Siteleaf compile) <strong>(required)</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">format</code></td>
+      <td><code class="language-plaintext highlighter-rouge">raw</code> or <code class="language-plaintext highlighter-rouge">compiled</code> (Github Pages or Siteleaf compile) <strong>(required)</strong></td>
     </tr>
   </tbody>
 </table>
 
-<h4 id="hosting-s3">Hosting: <code class="highlighter-rouge">s3</code></h4>
+<h4 id="hosting-s3">Hosting: <code class="language-plaintext highlighter-rouge">s3</code></h4>
 
 <table>
   <thead>
@@ -274,25 +274,25 @@
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">access_key</code></td>
+      <td><code class="language-plaintext highlighter-rouge">access_key</code></td>
       <td>AWS Access Key <strong>(required)</strong></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">secret_key</code></td>
+      <td><code class="language-plaintext highlighter-rouge">secret_key</code></td>
       <td>AWS Secret Key <strong>(required)</strong></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">path</code></td>
+      <td><code class="language-plaintext highlighter-rouge">path</code></td>
       <td>S3 bucket name <strong>(required)</strong></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">region</code></td>
+      <td><code class="language-plaintext highlighter-rouge">region</code></td>
       <td>Region of S3 bucket <strong>(required)</strong></td>
     </tr>
   </tbody>
 </table>
 
-<h4 id="hosting-ftp">Hosting: <code class="highlighter-rouge">ftp</code></h4>
+<h4 id="hosting-ftp">Hosting: <code class="language-plaintext highlighter-rouge">ftp</code></h4>
 
 <table>
   <thead>
@@ -303,33 +303,33 @@
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">protocol</code></td>
-      <td><code class="highlighter-rouge">ftp</code> or <code class="highlighter-rouge">sftp</code> <strong>(required)</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">protocol</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ftp</code> or <code class="language-plaintext highlighter-rouge">sftp</code> <strong>(required)</strong></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">host</code></td>
+      <td><code class="language-plaintext highlighter-rouge">host</code></td>
       <td>Host name <strong>(required)</strong></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">port</code></td>
+      <td><code class="language-plaintext highlighter-rouge">port</code></td>
       <td>Port number, 21 if ftp or 22 if sftp by default</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">username</code></td>
+      <td><code class="language-plaintext highlighter-rouge">username</code></td>
       <td>FTP username <strong>(required)</strong></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">password</code></td>
+      <td><code class="language-plaintext highlighter-rouge">password</code></td>
       <td>FTP password <strong>(required)</strong></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">path</code></td>
+      <td><code class="language-plaintext highlighter-rouge">path</code></td>
       <td>Path where site will be published <strong>(required)</strong></td>
     </tr>
   </tbody>
 </table>
 
-<h4 id="hosting-cloudfiles">Hosting: <code class="highlighter-rouge">cloudfiles</code></h4>
+<h4 id="hosting-cloudfiles">Hosting: <code class="language-plaintext highlighter-rouge">cloudfiles</code></h4>
 
 <table>
   <thead>
@@ -340,19 +340,19 @@
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">username</code></td>
+      <td><code class="language-plaintext highlighter-rouge">username</code></td>
       <td>Rackspace username <strong>(required)</strong></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">api_key</code></td>
+      <td><code class="language-plaintext highlighter-rouge">api_key</code></td>
       <td>Rackspace API key <strong>(required)</strong></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">path</code></td>
+      <td><code class="language-plaintext highlighter-rouge">path</code></td>
       <td>Container name <strong>(required)</strong></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">region</code></td>
+      <td><code class="language-plaintext highlighter-rouge">region</code></td>
       <td>Region of container <strong>(required)</strong></td>
     </tr>
   </tbody>
@@ -360,9 +360,9 @@
 
 <h3 id="sync-options">Sync options</h3>
 
-<p>Github is currently the only <code class="highlighter-rouge">sync</code> provider, the <code class="highlighter-rouge">sync_options</code> are:</p>
+<p>Github is currently the only <code class="language-plaintext highlighter-rouge">sync</code> provider, the <code class="language-plaintext highlighter-rouge">sync_options</code> are:</p>
 
-<h4 id="sync-github">Sync: <code class="highlighter-rouge">github</code></h4>
+<h4 id="sync-github">Sync: <code class="language-plaintext highlighter-rouge">github</code></h4>
 
 <table>
   <thead>
@@ -373,16 +373,16 @@
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">access_token</code></td>
+      <td><code class="language-plaintext highlighter-rouge">access_token</code></td>
       <td>Github Access Token <strong>(required)</strong></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">path</code></td>
-      <td>Full repository name <code class="highlighter-rouge">&lt;user name&gt;/&lt;repo name&gt;</code> <strong>(required)</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">path</code></td>
+      <td>Full repository name <code class="language-plaintext highlighter-rouge">&lt;user name&gt;/&lt;repo name&gt;</code> <strong>(required)</strong></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">branch</code></td>
-      <td>Branch name, <code class="highlighter-rouge">master</code> by default</td>
+      <td><code class="language-plaintext highlighter-rouge">branch</code></td>
+      <td>Branch name, <code class="language-plaintext highlighter-rouge">master</code> by default</td>
     </tr>
   </tbody>
 </table>

@@ -6,7 +6,7 @@
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<meta name="generator" content="Jekyll v4.0.0" />
+<meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Pages" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Overview List pages Create a page Get a page Update a page Delete a page" />
@@ -17,7 +17,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2016-01-14T15:50:46-05:00" />
 <script type="application/ld+json">
-{"description":"Overview List pages Create a page Get a page Update a page Delete a page","@type":"BlogPosting","url":"http://learn.siteleaf.com/api/pages/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"headline":"Pages","dateModified":"2016-01-14T15:50:46-05:00","datePublished":"2016-01-14T15:50:46-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/api/pages/"},"@context":"https://schema.org"}</script>
+{"description":"Overview List pages Create a page Get a page Update a page Delete a page","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"@type":"BlogPosting","url":"http://learn.siteleaf.com/api/pages/","dateModified":"2016-01-14T15:50:46-05:00","headline":"Pages","datePublished":"2016-01-14T15:50:46-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/api/pages/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <title>Pages - Learn Siteleaf</title>
@@ -237,7 +237,7 @@
 
 <h4 id="endpoint">Endpoint</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/sites/:site_id/pages
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/sites/:site_id/pages
 </code></pre></div></div>
 
 <h4 id="query-string-params">Query String Params</h4>
@@ -251,27 +251,27 @@
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">q</code></td>
-      <td>Searches by <code class="highlighter-rouge">title</code> and <code class="highlighter-rouge">path</code></td>
+      <td><code class="language-plaintext highlighter-rouge">q</code></td>
+      <td>Searches by <code class="language-plaintext highlighter-rouge">title</code> and <code class="language-plaintext highlighter-rouge">path</code></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">sort</code></td>
-      <td>Should be formated as <code class="highlighter-rouge">field-asc</code> or <code class="highlighter-rouge">field-desc</code></td>
+      <td><code class="language-plaintext highlighter-rouge">sort</code></td>
+      <td>Should be formated as <code class="language-plaintext highlighter-rouge">field-asc</code> or <code class="language-plaintext highlighter-rouge">field-desc</code></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">visibility</code></td>
-      <td>Can be either <code class="highlighter-rouge">visible</code> or <code class="highlighter-rouge">hidden</code></td>
+      <td><code class="language-plaintext highlighter-rouge">visibility</code></td>
+      <td>Can be either <code class="language-plaintext highlighter-rouge">visible</code> or <code class="language-plaintext highlighter-rouge">hidden</code></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">extensions</code></td>
-      <td>A comma separated list of file extensions, or <code class="highlighter-rouge">markdown</code> which is equivalent to <code class="highlighter-rouge">markdown,md,mkdown,mkdn,mkd</code></td>
+      <td><code class="language-plaintext highlighter-rouge">extensions</code></td>
+      <td>A comma separated list of file extensions, or <code class="language-plaintext highlighter-rouge">markdown</code> which is equivalent to <code class="language-plaintext highlighter-rouge">markdown,md,mkdown,mkdn,mkd</code></td>
     </tr>
   </tbody>
 </table>
 
 <h4 id="response">Response</h4>
 
-<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+<div class="language-plaintext api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
 Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
       &lt;https://api.siteleaf.com/v2/:path?page=9&gt;; rel="last"
 </code></pre></div></div>
@@ -307,7 +307,7 @@ Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
 
 <h4 id="endpoint-1">Endpoint</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST https://api.siteleaf.com/v2/sites/:site_id/pages
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST https://api.siteleaf.com/v2/sites/:site_id/pages
 </code></pre></div></div>
 
 <h4 id="input">Input</h4>
@@ -322,38 +322,38 @@ Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">title</code></td>
-      <td><code class="highlighter-rouge">String</code></td>
+      <td><code class="language-plaintext highlighter-rouge">title</code></td>
+      <td><code class="language-plaintext highlighter-rouge">String</code></td>
       <td>Page title <strong>(required)</strong></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">body</code></td>
-      <td><code class="highlighter-rouge">String</code></td>
+      <td><code class="language-plaintext highlighter-rouge">body</code></td>
+      <td><code class="language-plaintext highlighter-rouge">String</code></td>
       <td>Page body</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">path</code></td>
-      <td><code class="highlighter-rouge">String</code></td>
-      <td>Path of the page, essentially the <code class="highlighter-rouge">filename</code></td>
+      <td><code class="language-plaintext highlighter-rouge">path</code></td>
+      <td><code class="language-plaintext highlighter-rouge">String</code></td>
+      <td>Path of the page, essentially the <code class="language-plaintext highlighter-rouge">filename</code></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">permalink</code></td>
-      <td><code class="highlighter-rouge">String</code></td>
-      <td>Custom permalink, overrides the generated <code class="highlighter-rouge">url</code></td>
+      <td><code class="language-plaintext highlighter-rouge">permalink</code></td>
+      <td><code class="language-plaintext highlighter-rouge">String</code></td>
+      <td>Custom permalink, overrides the generated <code class="language-plaintext highlighter-rouge">url</code></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date</code></td>
-      <td><code class="highlighter-rouge">String</code></td>
+      <td><code class="language-plaintext highlighter-rouge">date</code></td>
+      <td><code class="language-plaintext highlighter-rouge">String</code></td>
       <td>ISO8601 formated date</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">visibility</code></td>
-      <td><code class="highlighter-rouge">String</code></td>
-      <td>Valid options are <code class="highlighter-rouge">visible</code> and <code class="highlighter-rouge">hidden</code>, defaults to <code class="highlighter-rouge">visible</code></td>
+      <td><code class="language-plaintext highlighter-rouge">visibility</code></td>
+      <td><code class="language-plaintext highlighter-rouge">String</code></td>
+      <td>Valid options are <code class="language-plaintext highlighter-rouge">visible</code> and <code class="language-plaintext highlighter-rouge">hidden</code>, defaults to <code class="language-plaintext highlighter-rouge">visible</code></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">metadata</code></td>
-      <td><code class="highlighter-rouge">Hash&lt;String, *&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">metadata</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Hash&lt;String, *&gt;</code></td>
       <td>Arbitrary key/value pairs</td>
     </tr>
   </tbody>
@@ -372,7 +372,7 @@ Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
 
 <h4 id="response-1">Response</h4>
 
-<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 201 Created
+<div class="language-plaintext api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 201 Created
 </code></pre></div></div>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
@@ -404,12 +404,12 @@ Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
 
 <h4 id="endpoint-2">Endpoint</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/pages/:page_id
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/pages/:page_id
 </code></pre></div></div>
 
 <h4 id="response-2">Response</h4>
 
-<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+<div class="language-plaintext api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
 </code></pre></div></div>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
@@ -441,7 +441,7 @@ Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
 
 <h4 id="endpoint-3">Endpoint</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PUT https://api.siteleaf.com/v2/pages/:page_id
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PUT https://api.siteleaf.com/v2/pages/:page_id
 </code></pre></div></div>
 
 <h4 id="input-1">Input</h4>
@@ -456,38 +456,38 @@ Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">title</code></td>
-      <td><code class="highlighter-rouge">String</code></td>
+      <td><code class="language-plaintext highlighter-rouge">title</code></td>
+      <td><code class="language-plaintext highlighter-rouge">String</code></td>
       <td>Page title</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">body</code></td>
-      <td><code class="highlighter-rouge">String</code></td>
+      <td><code class="language-plaintext highlighter-rouge">body</code></td>
+      <td><code class="language-plaintext highlighter-rouge">String</code></td>
       <td>Page body</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">path</code></td>
-      <td><code class="highlighter-rouge">String</code></td>
-      <td>Path of the page, essentially the <code class="highlighter-rouge">filename</code></td>
+      <td><code class="language-plaintext highlighter-rouge">path</code></td>
+      <td><code class="language-plaintext highlighter-rouge">String</code></td>
+      <td>Path of the page, essentially the <code class="language-plaintext highlighter-rouge">filename</code></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">permalink</code></td>
-      <td><code class="highlighter-rouge">String</code></td>
-      <td>Custom permalink, overrides the generated <code class="highlighter-rouge">url</code></td>
+      <td><code class="language-plaintext highlighter-rouge">permalink</code></td>
+      <td><code class="language-plaintext highlighter-rouge">String</code></td>
+      <td>Custom permalink, overrides the generated <code class="language-plaintext highlighter-rouge">url</code></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">date</code></td>
-      <td><code class="highlighter-rouge">String</code></td>
+      <td><code class="language-plaintext highlighter-rouge">date</code></td>
+      <td><code class="language-plaintext highlighter-rouge">String</code></td>
       <td>ISO8601 formated date</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">visibility</code></td>
-      <td><code class="highlighter-rouge">String</code></td>
-      <td>Valid options are <code class="highlighter-rouge">visible</code> and <code class="highlighter-rouge">hidden</code>, defaults to <code class="highlighter-rouge">visible</code></td>
+      <td><code class="language-plaintext highlighter-rouge">visibility</code></td>
+      <td><code class="language-plaintext highlighter-rouge">String</code></td>
+      <td>Valid options are <code class="language-plaintext highlighter-rouge">visible</code> and <code class="language-plaintext highlighter-rouge">hidden</code>, defaults to <code class="language-plaintext highlighter-rouge">visible</code></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">metadata</code></td>
-      <td><code class="highlighter-rouge">Hash&lt;String, *&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">metadata</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Hash&lt;String, *&gt;</code></td>
       <td>Arbitrary key/value pairs</td>
     </tr>
   </tbody>
@@ -506,7 +506,7 @@ Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
 
 <h4 id="response-3">Response</h4>
 
-<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+<div class="language-plaintext api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
 </code></pre></div></div>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
@@ -538,12 +538,12 @@ Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
 
 <h4 id="endpoint-4">Endpoint</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DELETE https://api.siteleaf.com/v2/pages/:page_id
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DELETE https://api.siteleaf.com/v2/pages/:page_id
 </code></pre></div></div>
 
 <h4 id="response-4">Response</h4>
 
-<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+<div class="language-plaintext api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
 </code></pre></div></div>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">

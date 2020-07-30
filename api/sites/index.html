@@ -6,7 +6,7 @@
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<meta name="generator" content="Jekyll v4.0.0" />
+<meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Sites" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Overview List your sites Create a site Get a site Update a site Delete a site Publish a site List post tags List post categories" />
@@ -17,7 +17,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2016-01-14T15:50:00-05:00" />
 <script type="application/ld+json">
-{"description":"Overview List your sites Create a site Get a site Update a site Delete a site Publish a site List post tags List post categories","@type":"BlogPosting","url":"http://learn.siteleaf.com/api/sites/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"headline":"Sites","dateModified":"2016-01-14T15:50:00-05:00","datePublished":"2016-01-14T15:50:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/api/sites/"},"@context":"https://schema.org"}</script>
+{"description":"Overview List your sites Create a site Get a site Update a site Delete a site Publish a site List post tags List post categories","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"@type":"BlogPosting","url":"http://learn.siteleaf.com/api/sites/","dateModified":"2016-01-14T15:50:00-05:00","headline":"Sites","datePublished":"2016-01-14T15:50:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/api/sites/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <title>Sites - Learn Siteleaf</title>
@@ -240,7 +240,7 @@
 
 <h4 id="endpoint">Endpoint</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/sites
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/sites
 </code></pre></div></div>
 
 <h4 id="query-string-params">Query String Params</h4>
@@ -254,15 +254,15 @@
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">sort</code></td>
-      <td>Should be formated as <code class="highlighter-rouge">field-asc</code> or <code class="highlighter-rouge">field-desc</code></td>
+      <td><code class="language-plaintext highlighter-rouge">sort</code></td>
+      <td>Should be formated as <code class="language-plaintext highlighter-rouge">field-asc</code> or <code class="language-plaintext highlighter-rouge">field-desc</code></td>
     </tr>
   </tbody>
 </table>
 
 <h4 id="response">Response</h4>
 
-<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+<div class="language-plaintext api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
 Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
       &lt;https://api.siteleaf.com/v2/:path?page=9&gt;; rel="last"
 </code></pre></div></div>
@@ -312,7 +312,7 @@ Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
 
 <h4 id="endpoint-1">Endpoint</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST https://api.siteleaf.com/v2/sites
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST https://api.siteleaf.com/v2/sites
 </code></pre></div></div>
 
 <h4 id="input">Input</h4>
@@ -327,34 +327,34 @@ Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">title</code></td>
-      <td><code class="highlighter-rouge">String</code></td>
+      <td><code class="language-plaintext highlighter-rouge">title</code></td>
+      <td><code class="language-plaintext highlighter-rouge">String</code></td>
       <td>Sites title <strong>(required)</strong></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">domain</code></td>
-      <td><code class="highlighter-rouge">String</code></td>
+      <td><code class="language-plaintext highlighter-rouge">domain</code></td>
+      <td><code class="language-plaintext highlighter-rouge">String</code></td>
       <td>Sites domain <strong>(required)</strong></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">timezone</code></td>
-      <td><code class="highlighter-rouge">String</code></td>
-      <td>Sites timezone, defaults to <code class="highlighter-rouge">UTC</code></td>
+      <td><code class="language-plaintext highlighter-rouge">timezone</code></td>
+      <td><code class="language-plaintext highlighter-rouge">String</code></td>
+      <td>Sites timezone, defaults to <code class="language-plaintext highlighter-rouge">UTC</code></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">metadata</code></td>
-      <td><code class="highlighter-rouge">Hash&lt;String, *&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">metadata</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Hash&lt;String, *&gt;</code></td>
       <td>Arbitrary key/value pairs</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">defaults</code></td>
-      <td><code class="highlighter-rouge">Array&lt;Hash&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">defaults</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Array&lt;Hash&gt;</code></td>
       <td>Jekyll defaults, see the <a href="/api/defaults">Defaults page</a> for more details</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">empty</code></td>
-      <td><code class="highlighter-rouge">Boolean</code></td>
-      <td>Defaults to <code class="highlighter-rouge">false</code>, if <code class="highlighter-rouge">true</code> doesn’t create the Siteleaf default theme</td>
+      <td><code class="language-plaintext highlighter-rouge">empty</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Boolean</code></td>
+      <td>Defaults to <code class="language-plaintext highlighter-rouge">false</code>, if <code class="language-plaintext highlighter-rouge">true</code> doesn’t create the Siteleaf default theme</td>
     </tr>
   </tbody>
 </table>
@@ -373,7 +373,7 @@ Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
 
 <h4 id="response-1">Response</h4>
 
-<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 201 Created
+<div class="language-plaintext api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 201 Created
 </code></pre></div></div>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
@@ -419,12 +419,12 @@ Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
 
 <h4 id="endpoint-2">Endpoint</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/sites/:site_id
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/sites/:site_id
 </code></pre></div></div>
 
 <h4 id="response-2">Response</h4>
 
-<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+<div class="language-plaintext api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
 </code></pre></div></div>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
@@ -470,7 +470,7 @@ Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
 
 <h4 id="endpoint-3">Endpoint</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PUT https://api.siteleaf.com/v2/sites/:site_id
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PUT https://api.siteleaf.com/v2/sites/:site_id
 </code></pre></div></div>
 
 <h4 id="input-1">Input</h4>
@@ -485,48 +485,48 @@ Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">title</code></td>
-      <td><code class="highlighter-rouge">String</code></td>
+      <td><code class="language-plaintext highlighter-rouge">title</code></td>
+      <td><code class="language-plaintext highlighter-rouge">String</code></td>
       <td>Sites title</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">domain</code></td>
-      <td><code class="highlighter-rouge">String</code></td>
+      <td><code class="language-plaintext highlighter-rouge">domain</code></td>
+      <td><code class="language-plaintext highlighter-rouge">String</code></td>
       <td>Sites domain</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">timezone</code></td>
-      <td><code class="highlighter-rouge">String</code></td>
-      <td>Sites timezone, defaults to <code class="highlighter-rouge">UTC</code></td>
+      <td><code class="language-plaintext highlighter-rouge">timezone</code></td>
+      <td><code class="language-plaintext highlighter-rouge">String</code></td>
+      <td>Sites timezone, defaults to <code class="language-plaintext highlighter-rouge">UTC</code></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">metadata</code></td>
-      <td><code class="highlighter-rouge">Hash&lt;String, *&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">metadata</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Hash&lt;String, *&gt;</code></td>
       <td>Arbitrary key/value pairs</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">defaults</code></td>
-      <td><code class="highlighter-rouge">Array&lt;Hash&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">defaults</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Array&lt;Hash&gt;</code></td>
       <td>Jekyll defaults, see the <a href="/api/defaults">Defaults page</a> for more details</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">hosting</code></td>
-      <td><code class="highlighter-rouge">String</code></td>
-      <td>Valid options are <code class="highlighter-rouge">disabled</code>, <code class="highlighter-rouge">ftp</code>, <code class="highlighter-rouge">s3</code>, <code class="highlighter-rouge">cloudfiles</code> and <code class="highlighter-rouge">github</code></td>
+      <td><code class="language-plaintext highlighter-rouge">hosting</code></td>
+      <td><code class="language-plaintext highlighter-rouge">String</code></td>
+      <td>Valid options are <code class="language-plaintext highlighter-rouge">disabled</code>, <code class="language-plaintext highlighter-rouge">ftp</code>, <code class="language-plaintext highlighter-rouge">s3</code>, <code class="language-plaintext highlighter-rouge">cloudfiles</code> and <code class="language-plaintext highlighter-rouge">github</code></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">hosting_options</code></td>
-      <td><code class="highlighter-rouge">Hash&lt;String, String&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">hosting_options</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Hash&lt;String, String&gt;</code></td>
       <td>See the <a href="/api/hosting-sync">Hosting/Sync page</a> for more details</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">sync</code></td>
-      <td><code class="highlighter-rouge">String</code></td>
-      <td>Valid options are <code class="highlighter-rouge">disabled</code> and <code class="highlighter-rouge">github</code></td>
+      <td><code class="language-plaintext highlighter-rouge">sync</code></td>
+      <td><code class="language-plaintext highlighter-rouge">String</code></td>
+      <td>Valid options are <code class="language-plaintext highlighter-rouge">disabled</code> and <code class="language-plaintext highlighter-rouge">github</code></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">sync_options</code></td>
-      <td><code class="highlighter-rouge">Hash&lt;String, String&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">sync_options</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Hash&lt;String, String&gt;</code></td>
       <td>See the <a href="/api/hosting-sync">Hosting/Sync page</a> for more details</td>
     </tr>
   </tbody>
@@ -546,7 +546,7 @@ Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
 
 <h4 id="response-3">Response</h4>
 
-<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+<div class="language-plaintext api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
 </code></pre></div></div>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
@@ -592,12 +592,12 @@ Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
 
 <h4 id="endpoint-4">Endpoint</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DELETE https://api.siteleaf.com/v2/sites/:site_id
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DELETE https://api.siteleaf.com/v2/sites/:site_id
 </code></pre></div></div>
 
 <h4 id="response-4">Response</h4>
 
-<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+<div class="language-plaintext api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
 </code></pre></div></div>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
@@ -612,12 +612,12 @@ Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
 
 <h4 id="endpoint-5">Endpoint</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST https://api.siteleaf.com/v2/sites/:site_id/publish
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST https://api.siteleaf.com/v2/sites/:site_id/publish
 </code></pre></div></div>
 
 <h4 id="response-5">Response</h4>
 
-<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 202 Accepted
+<div class="language-plaintext api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 202 Accepted
 </code></pre></div></div>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
@@ -631,12 +631,12 @@ Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
 
 <h4 id="endpoint-6">Endpoint</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/sites/:site_id/tags
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/sites/:site_id/tags
 </code></pre></div></div>
 
 <h4 id="response-6">Response</h4>
 
-<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+<div class="language-plaintext api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
 </code></pre></div></div>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="s2">"cookies"</span><span class="p">,</span><span class="w"> </span><span class="s2">"milk"</span><span class="p">]</span><span class="w">
@@ -648,12 +648,12 @@ Link: &lt;https://api.siteleaf.com/v2/:path?page=2&gt;; rel="next",
 
 <h4 id="endpoint-7">Endpoint</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/sites/:site_id/categories
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://api.siteleaf.com/v2/sites/:site_id/categories
 </code></pre></div></div>
 
 <h4 id="response-7">Response</h4>
 
-<div class="api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
+<div class="language-plaintext api__headers highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Status: 200 OK
 </code></pre></div></div>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="s2">"apple"</span><span class="p">,</span><span class="w"> </span><span class="s2">"linux"</span><span class="p">,</span><span class="w"> </span><span class="s2">"windows"</span><span class="p">]</span><span class="w">

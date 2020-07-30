@@ -6,7 +6,7 @@
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<meta name="generator" content="Jekyll v4.0.0" />
+<meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Gem-based Themes" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Beginning with version 3.2, Jekyll introduced a Gem-based theme system, which allows you to leverage community-maintained templates and styles to customize your site’s presentation. Jekyll themes package layouts, includes, and stylesheets in a way that can be overridden by your site’s content. It’s a great way to maintain a separation of content and code, and makes it possible to share themes across multiple sites. Sites on the free developer plan can make use of the new GitHub Pages-approved Minima theme, while all paid plans (including legacy and Personal plans) can take full advantage of custom themes. Installing themes Installation may vary depending on the theme, but typically involves two steps. 1) Add to or create a Gemfile for your site, and reference your theme. For example, we’ve added the Minima theme here: source &#39;https://rubygems.org&#39; gem &#39;jekyll&#39; gem &#39;minima&#39; 2) Next, enable theme theme in your site’s _config.yml file:" />
@@ -17,7 +17,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2016-09-20T00:00:00-04:00" />
 <script type="application/ld+json">
-{"description":"Beginning with version 3.2, Jekyll introduced a Gem-based theme system, which allows you to leverage community-maintained templates and styles to customize your site’s presentation. Jekyll themes package layouts, includes, and stylesheets in a way that can be overridden by your site’s content. It’s a great way to maintain a separation of content and code, and makes it possible to share themes across multiple sites. Sites on the free developer plan can make use of the new GitHub Pages-approved Minima theme, while all paid plans (including legacy and Personal plans) can take full advantage of custom themes. Installing themes Installation may vary depending on the theme, but typically involves two steps. 1) Add to or create a Gemfile for your site, and reference your theme. For example, we’ve added the Minima theme here: source &#39;https://rubygems.org&#39; gem &#39;jekyll&#39; gem &#39;minima&#39; 2) Next, enable theme theme in your site’s _config.yml file:","@type":"BlogPosting","url":"http://learn.siteleaf.com/themes/gem-based-themes/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"headline":"Gem-based Themes","dateModified":"2016-09-20T00:00:00-04:00","datePublished":"2016-09-20T00:00:00-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/themes/gem-based-themes/"},"@context":"https://schema.org"}</script>
+{"description":"Beginning with version 3.2, Jekyll introduced a Gem-based theme system, which allows you to leverage community-maintained templates and styles to customize your site’s presentation. Jekyll themes package layouts, includes, and stylesheets in a way that can be overridden by your site’s content. It’s a great way to maintain a separation of content and code, and makes it possible to share themes across multiple sites. Sites on the free developer plan can make use of the new GitHub Pages-approved Minima theme, while all paid plans (including legacy and Personal plans) can take full advantage of custom themes. Installing themes Installation may vary depending on the theme, but typically involves two steps. 1) Add to or create a Gemfile for your site, and reference your theme. For example, we’ve added the Minima theme here: source &#39;https://rubygems.org&#39; gem &#39;jekyll&#39; gem &#39;minima&#39; 2) Next, enable theme theme in your site’s _config.yml file:","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://learn.siteleaf.com/assets/images/logo.svg"}},"@type":"BlogPosting","url":"http://learn.siteleaf.com/themes/gem-based-themes/","dateModified":"2016-09-20T00:00:00-04:00","headline":"Gem-based Themes","datePublished":"2016-09-20T00:00:00-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://learn.siteleaf.com/themes/gem-based-themes/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <title>Gem-based Themes - Learn Siteleaf</title>
@@ -235,27 +235,27 @@
 
 <p>Installation may vary depending on the theme, but typically involves two steps.</p>
 
-<p>1) Add to or create a <code class="highlighter-rouge">Gemfile</code> for your site, and reference your theme. For example, we’ve added the <a href="https://github.com/jekyll/minima">Minima</a> theme here:</p>
+<p>1) Add to or create a <code class="language-plaintext highlighter-rouge">Gemfile</code> for your site, and reference your theme. For example, we’ve added the <a href="https://github.com/jekyll/minima">Minima</a> theme here:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">source</span> <span class="s1">'https://rubygems.org'</span>
 <span class="n">gem</span> <span class="s1">'jekyll'</span>
 <span class="n">gem</span> <span class="s1">'minima'</span>
 </code></pre></div></div>
 
-<p>2) Next, enable theme theme in your site’s <code class="highlighter-rouge">_config.yml</code> file:</p>
+<p>2) Next, enable theme theme in your site’s <code class="language-plaintext highlighter-rouge">_config.yml</code> file:</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">theme</span><span class="pi">:</span> <span class="s">minima</span>
 </code></pre></div></div>
 
 <p>You may need to follow additional instructions, so make sure to review the theme’s documentation.</p>
 
-<p>To test your site locally, install and build your site using <code class="highlighter-rouge">bundle exec</code>:</p>
+<p>To test your site locally, install and build your site using <code class="language-plaintext highlighter-rouge">bundle exec</code>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bundle install
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bundle install
 $ bundle exec jekyll serve
 </code></pre></div></div>
 
-<p>When previewing or publishing your site within Siteleaf, themes defined in your <code class="highlighter-rouge">Gemfile</code> will be automatically installed.</p>
+<p>When previewing or publishing your site within Siteleaf, themes defined in your <code class="language-plaintext highlighter-rouge">Gemfile</code> will be automatically installed.</p>
 
 <h4 id="installing-themes-from-git-repositories">Installing themes from Git repositories</h4>
 
@@ -266,12 +266,12 @@ $ bundle exec jekyll serve
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'minima'</span><span class="p">,</span> <span class="ss">git: </span><span class="s1">'https://github.com/jekyll/minima.git'</span>
 </code></pre></div></div>
 
-<p>You can use shortcuts for <code class="highlighter-rouge">:github</code>, <code class="highlighter-rouge">:gist</code>, and <code class="highlighter-rouge">:bitbucket</code>:</p>
+<p>You can use shortcuts for <code class="language-plaintext highlighter-rouge">:github</code>, <code class="language-plaintext highlighter-rouge">:gist</code>, and <code class="language-plaintext highlighter-rouge">:bitbucket</code>:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'minima'</span><span class="p">,</span> <span class="ss">github: </span><span class="s1">'jekyll/minima'</span>
 </code></pre></div></div>
 
-<p>You can also specify a particular <code class="highlighter-rouge">:ref</code>, <code class="highlighter-rouge">:branch</code>, or <code class="highlighter-rouge">:tag</code>:</p>
+<p>You can also specify a particular <code class="language-plaintext highlighter-rouge">:ref</code>, <code class="language-plaintext highlighter-rouge">:branch</code>, or <code class="language-plaintext highlighter-rouge">:tag</code>:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'minima'</span><span class="p">,</span> <span class="ss">github: </span><span class="s1">'jekyll/minima'</span><span class="p">,</span> <span class="ss">tag: </span><span class="s1">'v1.2.0'</span>
 </code></pre></div></div>
