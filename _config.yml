@@ -128,6 +128,7 @@ plugins:
 - jekyll-sitemap
 - jekyll-seo-tag
 - jekyll-redirect-from
+- jekyll-gist
 markdown: kramdown
 kramdown:
   input: GFM
