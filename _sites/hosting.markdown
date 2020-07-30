@@ -50,6 +50,8 @@ You can use an existing bucket, or create a new one. Make sure you take note of 
 
 #### Configuring IAM permissions
 
+To secure your Amazon S3 connection to a single bucket, here is the most restrictive IAM permissions required to publish your site:
+
 {% gist f364872b395f2bf94303 %}
 
 For more information on Amazon S3, take a look at [their documentation](https://aws.amazon.com/documentation/s3/).
