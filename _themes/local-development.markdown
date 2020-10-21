@@ -12,7 +12,7 @@ $ gem install bundler
 
 Once you have everything installed, we’ll go ahead and create a new project. Create a new directory on your machine (eg. `my-site`), and then create a new `Gemfile` within that directory.
 
-The gems you include in the `Gemfile` and the method for sycning your site's content depends on your preferred development workflow. 
+The gems you include in the `Gemfile` and the method for syncing your site's content depends on your preferred development workflow. 
 
 Below are the two options available:
 
