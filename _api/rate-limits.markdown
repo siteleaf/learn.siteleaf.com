@@ -11,7 +11,7 @@ Higher rate limits are available on our [Enterprise plan](https://www.siteleaf.c
 
 If the API rate limit is reached, the Siteleaf API will return a `403 Forbidden` error. After the 5 minute period has passed you may resume making API requests.
 
-When running a large number of API requests, we recommend using a timeout or delay to avoid hitting the limit.
+When planning to make a large number of API requests, we recommend using a timeout or delay between requests to avoid hitting the limit.
 
 #### Response
 
