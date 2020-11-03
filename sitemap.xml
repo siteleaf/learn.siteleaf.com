@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://learn.siteleaf.com/api/</loc>
-<lastmod>2020-11-03T13:49:42-05:00</lastmod>
+<lastmod>2020-11-03T14:04:51-05:00</lastmod>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/api/sites/</loc>
@@ -62,7 +62,7 @@
 </url>
 <url>
 <loc>http://learn.siteleaf.com/content/</loc>
-<lastmod>2020-11-03T13:49:42-05:00</lastmod>
+<lastmod>2020-11-03T14:04:51-05:00</lastmod>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/content/posts/</loc>
@@ -98,7 +98,7 @@
 </url>
 <url>
 <loc>http://learn.siteleaf.com/getting-started/</loc>
-<lastmod>2020-11-03T13:49:42-05:00</lastmod>
+<lastmod>2020-11-03T14:04:51-05:00</lastmod>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/getting-started/siteleaf-for-clients/</loc>
@@ -122,7 +122,7 @@
 </url>
 <url>
 <loc>http://learn.siteleaf.com/sites/</loc>
-<lastmod>2020-11-03T13:49:42-05:00</lastmod>
+<lastmod>2020-11-03T14:04:51-05:00</lastmod>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/sites/settings/</loc>
@@ -154,7 +154,7 @@
 </url>
 <url>
 <loc>http://learn.siteleaf.com/themes/</loc>
-<lastmod>2020-11-03T13:49:42-05:00</lastmod>
+<lastmod>2020-11-03T14:04:51-05:00</lastmod>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/themes/intro/</loc>
@@ -222,7 +222,7 @@
 </url>
 <url>
 <loc>http://learn.siteleaf.com/v1/</loc>
-<lastmod>2020-11-03T13:49:42-05:00</lastmod>
+<lastmod>2020-11-03T14:04:51-05:00</lastmod>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/</loc>
