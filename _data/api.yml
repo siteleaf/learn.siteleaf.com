@@ -18,6 +18,12 @@ status_accepted: |
   Status: 202 Accepted
   ~~~
   {:.api__headers}
+  
+status_forbidden: |
+  ~~~
+  Status: 403 Forbidden
+  ~~~
+  {:.api__headers}
 
 status_paginated: |
   ~~~
