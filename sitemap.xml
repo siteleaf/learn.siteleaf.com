@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://learn.siteleaf.com/api/</loc>
-<lastmod>2020-11-03T14:06:03-05:00</lastmod>
-</url>
-<url>
 <loc>http://learn.siteleaf.com/api/sites/</loc>
 <lastmod>2016-01-14T15:50:00-05:00</lastmod>
 </url>
@@ -49,20 +45,16 @@
 <lastmod>2016-03-03T16:57:04-05:00</lastmod>
 </url>
 <url>
+<loc>http://learn.siteleaf.com/api/</loc>
+<lastmod>2021-03-09T15:50:46-05:00</lastmod>
+</url>
+<url>
 <loc>http://learn.siteleaf.com/api/libraries-and-integrations/</loc>
 <lastmod>2016-06-10T14:29:00-04:00</lastmod>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/api/rate-limits/</loc>
 <lastmod>2020-11-03T13:26:00-05:00</lastmod>
-</url>
-<url>
-<loc>http://learn.siteleaf.com/content/documents/</loc>
-<lastmod>2015-12-17T08:02:00-05:00</lastmod>
-</url>
-<url>
-<loc>http://learn.siteleaf.com/content/</loc>
-<lastmod>2020-11-03T14:06:03-05:00</lastmod>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/content/posts/</loc>
@@ -75,6 +67,14 @@
 <url>
 <loc>http://learn.siteleaf.com/content/collections/</loc>
 <lastmod>2015-12-17T08:02:00-05:00</lastmod>
+</url>
+<url>
+<loc>http://learn.siteleaf.com/content/documents/</loc>
+<lastmod>2015-12-17T08:02:00-05:00</lastmod>
+</url>
+<url>
+<loc>http://learn.siteleaf.com/content/</loc>
+<lastmod>2021-03-09T15:50:46-05:00</lastmod>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/content/metadata/</loc>
@@ -98,7 +98,7 @@
 </url>
 <url>
 <loc>http://learn.siteleaf.com/getting-started/</loc>
-<lastmod>2020-11-03T14:06:03-05:00</lastmod>
+<lastmod>2021-03-09T15:50:46-05:00</lastmod>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/getting-started/siteleaf-for-clients/</loc>
@@ -117,12 +117,8 @@
 <lastmod>2015-12-17T08:02:00-05:00</lastmod>
 </url>
 <url>
-<loc>http://learn.siteleaf.com/sites/custom-build-servers/</loc>
-<lastmod>2016-04-05T22:00:00-04:00</lastmod>
-</url>
-<url>
 <loc>http://learn.siteleaf.com/sites/</loc>
-<lastmod>2020-11-03T14:06:03-05:00</lastmod>
+<lastmod>2021-03-09T15:50:46-05:00</lastmod>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/sites/settings/</loc>
@@ -131,6 +127,10 @@
 <url>
 <loc>http://learn.siteleaf.com/sites/users/</loc>
 <lastmod>2015-12-17T08:02:00-05:00</lastmod>
+</url>
+<url>
+<loc>http://learn.siteleaf.com/sites/custom-build-servers/</loc>
+<lastmod>2016-04-05T22:00:00-04:00</lastmod>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/sites/preview/</loc>
@@ -154,7 +154,7 @@
 </url>
 <url>
 <loc>http://learn.siteleaf.com/themes/</loc>
-<lastmod>2020-11-03T14:06:03-05:00</lastmod>
+<lastmod>2021-03-09T15:50:46-05:00</lastmod>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/themes/intro/</loc>
@@ -222,7 +222,7 @@
 </url>
 <url>
 <loc>http://learn.siteleaf.com/v1/</loc>
-<lastmod>2020-11-03T14:06:03-05:00</lastmod>
+<lastmod>2021-03-09T15:50:46-05:00</lastmod>
 </url>
 <url>
 <loc>http://learn.siteleaf.com/</loc>
