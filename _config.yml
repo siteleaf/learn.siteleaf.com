@@ -115,7 +115,7 @@ defaults:
   values:
     layout: page
     color: darkest-gray
-url: http://learn.siteleaf.com
+url: https://learn.siteleaf.com
 permalink: pretty
 exclude:
 - Gemfile.lock
