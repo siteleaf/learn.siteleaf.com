@@ -4,11 +4,11 @@ date: 2016-09-20 00:00:00 -04:00
 position: 9
 ---
 
-Jekyll and Siteleaf support a variety of [plugins](https://jekyllrb.com/docs/plugins/) to extend core functionality, from [CoffeeScript conversion](https://github.com/jekyll/jekyll-coffeescript) to [embeddable GitHub Gists](https://github.com/jekyll/jekyll-gist). Depending on your site's plan, you can take advantage of [whitelisted](#whitelisted-plugins) or [third-party plugins](#third-party-plugins).
+Jekyll and Siteleaf support a variety of [plugins](https://jekyllrb.com/docs/plugins/) to extend core functionality, from [CoffeeScript conversion](https://github.com/jekyll/jekyll-coffeescript) to [embeddable GitHub Gists](https://github.com/jekyll/jekyll-gist). Depending on your site's plan, you can take advantage of [GitHub Pages-approved plugins](#github-pages-approved-plugins) or [third-party plugins](#third-party-plugins).
 
 Third-party or custom plugins are supported for sites our new [Team, Business, and Enterprise plans](https://www.siteleaf.com/plans). For all other plans, including legacy or the free developer plan, your site can use whitelisted plugins. These whitelisted plugins are also supported by GitHub Pages, so your site will render as expected whether compiled by Siteleaf or GitHub.
 
-### Whitelisted plugins
+### GitHub Pages-approved plugins
 
 <ul class="supported-plugins"></ul>
 
