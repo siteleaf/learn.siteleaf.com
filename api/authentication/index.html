@@ -5,8 +5,8 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
-    <!-- Begin Jekyll SEO tag v2.7.1 -->
-<meta name="generator" content="Jekyll v4.2.1" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Authentication" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Overview The Siteleaf API requires all requests to be authenticated via Basic Auth with an API Key and Secret. These can be found on your account page in the web app, or programmatically via the API as described below. Get an API Key and Secret The authentication endpoint requires Basic Auth with a users email and password, and is the only endpoint that accepts this method of authentication. It returns the unique Key and Secret that can be used to authenticate with the rest of the Siteleaf API. Endpoint POST https://api.siteleaf.com/v2/auth Example $ curl --user &quot;email:password&quot; \ --request POST https://api.siteleaf.com/v2/auth Response Status: 200 OK { &quot;api_key&quot;: &quot;pgYWJZyGvCY60Eys...&quot;, &quot;api_secret&quot;: &quot;m8IibnCkXISebc9b...&quot; } Using your API credentials Once you have your API Key and Secret, you can use these to authenticate on all other endpoints with Basic Auth. Use your API Key in place of username, and API Secret in place of password, combined with a single colon (:) as shown in the example below. Example $ curl --user &quot;api_key:api_secret&quot; \ --request GET https://api.siteleaf.com/v2/sites" />
@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Authentication" />
 <script type="application/ld+json">
-{"headline":"Authentication","dateModified":"2016-01-15T16:22:00-05:00","datePublished":"2016-01-15T16:22:00-05:00","description":"Overview The Siteleaf API requires all requests to be authenticated via Basic Auth with an API Key and Secret. These can be found on your account page in the web app, or programmatically via the API as described below. Get an API Key and Secret The authentication endpoint requires Basic Auth with a users email and password, and is the only endpoint that accepts this method of authentication. It returns the unique Key and Secret that can be used to authenticate with the rest of the Siteleaf API. Endpoint POST https://api.siteleaf.com/v2/auth Example $ curl --user &quot;email:password&quot; \\ --request POST https://api.siteleaf.com/v2/auth Response Status: 200 OK { &quot;api_key&quot;: &quot;pgYWJZyGvCY60Eys...&quot;, &quot;api_secret&quot;: &quot;m8IibnCkXISebc9b...&quot; } Using your API credentials Once you have your API Key and Secret, you can use these to authenticate on all other endpoints with Basic Auth. Use your API Key in place of username, and API Secret in place of password, combined with a single colon (:) as shown in the example below. Example $ curl --user &quot;api_key:api_secret&quot; \\ --request GET https://api.siteleaf.com/v2/sites","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://learn.siteleaf.com/api/authentication/"},"url":"https://learn.siteleaf.com/api/authentication/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://learn.siteleaf.com/assets/images/logo.svg"}},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2016-01-15T16:22:00-05:00","datePublished":"2016-01-15T16:22:00-05:00","description":"Overview The Siteleaf API requires all requests to be authenticated via Basic Auth with an API Key and Secret. These can be found on your account page in the web app, or programmatically via the API as described below. Get an API Key and Secret The authentication endpoint requires Basic Auth with a users email and password, and is the only endpoint that accepts this method of authentication. It returns the unique Key and Secret that can be used to authenticate with the rest of the Siteleaf API. Endpoint POST https://api.siteleaf.com/v2/auth Example $ curl --user &quot;email:password&quot; \\ --request POST https://api.siteleaf.com/v2/auth Response Status: 200 OK { &quot;api_key&quot;: &quot;pgYWJZyGvCY60Eys...&quot;, &quot;api_secret&quot;: &quot;m8IibnCkXISebc9b...&quot; } Using your API credentials Once you have your API Key and Secret, you can use these to authenticate on all other endpoints with Basic Auth. Use your API Key in place of username, and API Secret in place of password, combined with a single colon (:) as shown in the example below. Example $ curl --user &quot;api_key:api_secret&quot; \\ --request GET https://api.siteleaf.com/v2/sites","headline":"Authentication","mainEntityOfPage":{"@type":"WebPage","@id":"https://learn.siteleaf.com/api/authentication/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://learn.siteleaf.com/assets/images/logo.svg"}},"url":"https://learn.siteleaf.com/api/authentication/"}</script>
 <!-- End Jekyll SEO tag -->
 
     <title>Authentication - Learn Siteleaf</title>
@@ -53,26 +53,15 @@
     <a href="/" class="header__home"><img src="/assets/images/logo.svg" class="header__logo" alt="Learn Siteleaf" /></a>
     <h1 class="header__title">API</h1>
     
-    <script>
-  (function() {
-    var cx = '004611147431180351508:4g8g1ea_gqi';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
+    <script async src="https://cse.google.com/cse.js?cx=44e987c15485b4a25">
 </script>
 
 <div style="width: 0px; overflow: hidden; height: 0;">
-  <gcse:search></gcse:search>
+  <div class="gcse-search"></div>
 </div>
 
-<form class="search" id="searchbox_004611147431180351508:4g8g1ea_gqi" action="">
-  <input value="004611147431180351508:4g8g1ea_gqi" name="cx" type="hidden">
-  <input value="FORID:11" name="cof" type="hidden">
-  <input id="q" style="" name="q" class="search__input" type="search" placeholder="Search the docs">
+<form class="search">
+  <input name="search" aria-label="search" class="search__input" type="search" placeholder="Search the docs">
 </form>
 
   </header>

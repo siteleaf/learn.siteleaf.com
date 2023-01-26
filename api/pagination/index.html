@@ -5,8 +5,8 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
-    <!-- Begin Jekyll SEO tag v2.7.1 -->
-<meta name="generator" content="Jekyll v4.2.1" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Pagination" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Overview GET endpoints that return multiple resources support pagination. You can change the page you are on using a page query string, and change the size of the page using the per_page query string. By default you start on page 1 and the page size is 30. The presence of a Link header signifies that a response has been paginated, and includes full urls to the surrounding pages. It is recommended to follow the provided urls and not assemble your own. An example: Listing the first page of my sites. $ curl -I &#39;https://api.siteleaf.com/v2/sites&#39; HTTP/1.1 200 OK Link: &lt;https://api.siteleaf.com/v2/sites?page=2&gt;; rel=&quot;next&quot;, &lt;https://api.siteleaf.com/v2/sites?page=3&gt;; rel=&quot;last&quot; Listing my sites and specifying the per_page attribute (note the last page is now 18). $ curl -I &#39;https://api.siteleaf.com/v2/sites?per_page=2&#39; HTTP/1.1 200 OK Link: &lt;https://api.siteleaf.com/v2/sites?page=2&amp;per_page=2&gt;; rel=&quot;next&quot;, &lt;https://api.siteleaf.com/v2/sites?page=18&amp;per_page=2&gt;; rel=&quot;last&quot; And following the next link from above to get to page 2. $ curl -I -n &#39;https://api.siteleaf.com/v2/sites?page=2&amp;per_page=2&#39; HTTP/1.1 200 OK Link: &lt;https://api.siteleaf.com/v2/sites?page=3&amp;per_page=2&gt;; rel=&quot;next&quot;, &lt;https://api.siteleaf.com/v2/sites?page=18&amp;per_page=2&gt;; rel=&quot;last&quot;, &lt;https://api.siteleaf.com/v2/sites?page=1&amp;per_page=2&gt;; rel=&quot;first&quot;, &lt;https://api.siteleaf.com/v2/sites?page=1&amp;per_page=2&gt;; rel=&quot;prev&quot;" />
@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Pagination" />
 <script type="application/ld+json">
-{"headline":"Pagination","dateModified":"2016-01-15T16:22:50-05:00","datePublished":"2016-01-15T16:22:50-05:00","description":"Overview GET endpoints that return multiple resources support pagination. You can change the page you are on using a page query string, and change the size of the page using the per_page query string. By default you start on page 1 and the page size is 30. The presence of a Link header signifies that a response has been paginated, and includes full urls to the surrounding pages. It is recommended to follow the provided urls and not assemble your own. An example: Listing the first page of my sites. $ curl -I &#39;https://api.siteleaf.com/v2/sites&#39; HTTP/1.1 200 OK Link: &lt;https://api.siteleaf.com/v2/sites?page=2&gt;; rel=&quot;next&quot;, &lt;https://api.siteleaf.com/v2/sites?page=3&gt;; rel=&quot;last&quot; Listing my sites and specifying the per_page attribute (note the last page is now 18). $ curl -I &#39;https://api.siteleaf.com/v2/sites?per_page=2&#39; HTTP/1.1 200 OK Link: &lt;https://api.siteleaf.com/v2/sites?page=2&amp;per_page=2&gt;; rel=&quot;next&quot;, &lt;https://api.siteleaf.com/v2/sites?page=18&amp;per_page=2&gt;; rel=&quot;last&quot; And following the next link from above to get to page 2. $ curl -I -n &#39;https://api.siteleaf.com/v2/sites?page=2&amp;per_page=2&#39; HTTP/1.1 200 OK Link: &lt;https://api.siteleaf.com/v2/sites?page=3&amp;per_page=2&gt;; rel=&quot;next&quot;, &lt;https://api.siteleaf.com/v2/sites?page=18&amp;per_page=2&gt;; rel=&quot;last&quot;, &lt;https://api.siteleaf.com/v2/sites?page=1&amp;per_page=2&gt;; rel=&quot;first&quot;, &lt;https://api.siteleaf.com/v2/sites?page=1&amp;per_page=2&gt;; rel=&quot;prev&quot;","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://learn.siteleaf.com/api/pagination/"},"url":"https://learn.siteleaf.com/api/pagination/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://learn.siteleaf.com/assets/images/logo.svg"}},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2016-01-15T16:22:50-05:00","datePublished":"2016-01-15T16:22:50-05:00","description":"Overview GET endpoints that return multiple resources support pagination. You can change the page you are on using a page query string, and change the size of the page using the per_page query string. By default you start on page 1 and the page size is 30. The presence of a Link header signifies that a response has been paginated, and includes full urls to the surrounding pages. It is recommended to follow the provided urls and not assemble your own. An example: Listing the first page of my sites. $ curl -I &#39;https://api.siteleaf.com/v2/sites&#39; HTTP/1.1 200 OK Link: &lt;https://api.siteleaf.com/v2/sites?page=2&gt;; rel=&quot;next&quot;, &lt;https://api.siteleaf.com/v2/sites?page=3&gt;; rel=&quot;last&quot; Listing my sites and specifying the per_page attribute (note the last page is now 18). $ curl -I &#39;https://api.siteleaf.com/v2/sites?per_page=2&#39; HTTP/1.1 200 OK Link: &lt;https://api.siteleaf.com/v2/sites?page=2&amp;per_page=2&gt;; rel=&quot;next&quot;, &lt;https://api.siteleaf.com/v2/sites?page=18&amp;per_page=2&gt;; rel=&quot;last&quot; And following the next link from above to get to page 2. $ curl -I -n &#39;https://api.siteleaf.com/v2/sites?page=2&amp;per_page=2&#39; HTTP/1.1 200 OK Link: &lt;https://api.siteleaf.com/v2/sites?page=3&amp;per_page=2&gt;; rel=&quot;next&quot;, &lt;https://api.siteleaf.com/v2/sites?page=18&amp;per_page=2&gt;; rel=&quot;last&quot;, &lt;https://api.siteleaf.com/v2/sites?page=1&amp;per_page=2&gt;; rel=&quot;first&quot;, &lt;https://api.siteleaf.com/v2/sites?page=1&amp;per_page=2&gt;; rel=&quot;prev&quot;","headline":"Pagination","mainEntityOfPage":{"@type":"WebPage","@id":"https://learn.siteleaf.com/api/pagination/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://learn.siteleaf.com/assets/images/logo.svg"}},"url":"https://learn.siteleaf.com/api/pagination/"}</script>
 <!-- End Jekyll SEO tag -->
 
     <title>Pagination - Learn Siteleaf</title>
@@ -53,26 +53,15 @@
     <a href="/" class="header__home"><img src="/assets/images/logo.svg" class="header__logo" alt="Learn Siteleaf" /></a>
     <h1 class="header__title">API</h1>
     
-    <script>
-  (function() {
-    var cx = '004611147431180351508:4g8g1ea_gqi';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
+    <script async src="https://cse.google.com/cse.js?cx=44e987c15485b4a25">
 </script>
 
 <div style="width: 0px; overflow: hidden; height: 0;">
-  <gcse:search></gcse:search>
+  <div class="gcse-search"></div>
 </div>
 
-<form class="search" id="searchbox_004611147431180351508:4g8g1ea_gqi" action="">
-  <input value="004611147431180351508:4g8g1ea_gqi" name="cx" type="hidden">
-  <input value="FORID:11" name="cof" type="hidden">
-  <input id="q" style="" name="q" class="search__input" type="search" placeholder="Search the docs">
+<form class="search">
+  <input name="search" aria-label="search" class="search__input" type="search" placeholder="Search the docs">
 </form>
 
   </header>

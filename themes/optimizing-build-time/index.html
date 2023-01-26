@@ -5,8 +5,8 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
-    <!-- Begin Jekyll SEO tag v2.7.1 -->
-<meta name="generator" content="Jekyll v4.2.1" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Optimizing build time" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="As the size and complexity of your site grows, sometimes the amount of time Jekyll needs to build your site grows with it. There are several strategies you can use to keep your build times down. Upgrade to Jekyll 4.x Jekyll 4.x renders websites much faster now thanks to super-powered caching and content transformations. See our guide Upgrading from Jekyll 3.x to 4.x if you haven’t already upgraded. Excluding unnecessary files and folders A lot of the time there will be files and folders in your site directory that aren’t necessary for building the site. For example, if you’re using Bower, the bower_components directory stores external packages that are not necessary for Jekyll to build the site. You can exclude files and folders from the Jekyll build by adding exclude list metadata to your site. It works the similarly to a .gitignore file. Limiting large and nested for loops for loops can make building your site very slow, especially if you have a lot of content. For example, if you have 1,000 posts, and on each post page you are showing a full archive of your posts, Jekyll will need to loop through your entire set of posts 1,000,000 times! Nesting multiple for loops inside each other can also significantly increase your site build times. Using incremental builds When you’re in development, you can have Jekyll only rebuild parts of the site that it needs to by using the --incremental flag: jekyll serve --incremental Further Reading 13 steps to a faster Jekyll website" />
@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Optimizing build time" />
 <script type="application/ld+json">
-{"headline":"Optimizing build time","dateModified":"2016-03-24T12:15:00-04:00","datePublished":"2016-03-24T12:15:00-04:00","description":"As the size and complexity of your site grows, sometimes the amount of time Jekyll needs to build your site grows with it. There are several strategies you can use to keep your build times down. Upgrade to Jekyll 4.x Jekyll 4.x renders websites much faster now thanks to super-powered caching and content transformations. See our guide Upgrading from Jekyll 3.x to 4.x if you haven’t already upgraded. Excluding unnecessary files and folders A lot of the time there will be files and folders in your site directory that aren’t necessary for building the site. For example, if you’re using Bower, the bower_components directory stores external packages that are not necessary for Jekyll to build the site. You can exclude files and folders from the Jekyll build by adding exclude list metadata to your site. It works the similarly to a .gitignore file. Limiting large and nested for loops for loops can make building your site very slow, especially if you have a lot of content. For example, if you have 1,000 posts, and on each post page you are showing a full archive of your posts, Jekyll will need to loop through your entire set of posts 1,000,000 times! Nesting multiple for loops inside each other can also significantly increase your site build times. Using incremental builds When you’re in development, you can have Jekyll only rebuild parts of the site that it needs to by using the --incremental flag: jekyll serve --incremental Further Reading 13 steps to a faster Jekyll website","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://learn.siteleaf.com/themes/optimizing-build-time/"},"url":"https://learn.siteleaf.com/themes/optimizing-build-time/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://learn.siteleaf.com/assets/images/logo.svg"}},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2016-03-24T12:15:00-04:00","datePublished":"2016-03-24T12:15:00-04:00","description":"As the size and complexity of your site grows, sometimes the amount of time Jekyll needs to build your site grows with it. There are several strategies you can use to keep your build times down. Upgrade to Jekyll 4.x Jekyll 4.x renders websites much faster now thanks to super-powered caching and content transformations. See our guide Upgrading from Jekyll 3.x to 4.x if you haven’t already upgraded. Excluding unnecessary files and folders A lot of the time there will be files and folders in your site directory that aren’t necessary for building the site. For example, if you’re using Bower, the bower_components directory stores external packages that are not necessary for Jekyll to build the site. You can exclude files and folders from the Jekyll build by adding exclude list metadata to your site. It works the similarly to a .gitignore file. Limiting large and nested for loops for loops can make building your site very slow, especially if you have a lot of content. For example, if you have 1,000 posts, and on each post page you are showing a full archive of your posts, Jekyll will need to loop through your entire set of posts 1,000,000 times! Nesting multiple for loops inside each other can also significantly increase your site build times. Using incremental builds When you’re in development, you can have Jekyll only rebuild parts of the site that it needs to by using the --incremental flag: jekyll serve --incremental Further Reading 13 steps to a faster Jekyll website","headline":"Optimizing build time","mainEntityOfPage":{"@type":"WebPage","@id":"https://learn.siteleaf.com/themes/optimizing-build-time/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://learn.siteleaf.com/assets/images/logo.svg"}},"url":"https://learn.siteleaf.com/themes/optimizing-build-time/"}</script>
 <!-- End Jekyll SEO tag -->
 
     <title>Optimizing build time - Learn Siteleaf</title>
@@ -53,26 +53,15 @@
     <a href="/" class="header__home"><img src="/assets/images/logo.svg" class="header__logo" alt="Learn Siteleaf" /></a>
     <h1 class="header__title">Developing Themes</h1>
     
-    <script>
-  (function() {
-    var cx = '004611147431180351508:4g8g1ea_gqi';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
+    <script async src="https://cse.google.com/cse.js?cx=44e987c15485b4a25">
 </script>
 
 <div style="width: 0px; overflow: hidden; height: 0;">
-  <gcse:search></gcse:search>
+  <div class="gcse-search"></div>
 </div>
 
-<form class="search" id="searchbox_004611147431180351508:4g8g1ea_gqi" action="">
-  <input value="004611147431180351508:4g8g1ea_gqi" name="cx" type="hidden">
-  <input value="FORID:11" name="cof" type="hidden">
-  <input id="q" style="" name="q" class="search__input" type="search" placeholder="Search the docs">
+<form class="search">
+  <input name="search" aria-label="search" class="search__input" type="search" placeholder="Search the docs">
 </form>
 
   </header>
