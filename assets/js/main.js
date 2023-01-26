@@ -51,6 +51,11 @@ document.addEventListener('DOMContentLoaded', function() {
     search = document.querySelector('.search');
 
   if (search_input) {
+    search.onsubmit = function(e) {
+      e.preventDefault();
+      document.querySelector('input.gsc-input').value = search_input.value;
+      document.querySelector('button.gsc-search-button').click();
+    };
     search_input.onfocus = function() {
       search.classList.add('search--focused');
     };
