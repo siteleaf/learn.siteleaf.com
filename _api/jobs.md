@@ -1,17 +1,28 @@
 ---
 title: Jobs
-date: 2016-01-15 16:22:50.771000000 -05:00
+date: 2016-01-15 16:22:00 -05:00
 position: 11
 ---
 
 ### Overview
 
-The Jobs endpoint can be used to monitor long running tasks, such as [publishing a site](/api/sites#publish-a-site).
-It uses [Server Sent Events](https://html.spec.whatwg.org/multipage/comms.html#server-sent-events) (SSE) to comunicate with the client.
+The Jobs endpoint can be used to monitor long running tasks, such as syncing, previewing, or [publishing a site](/api/sites#publish-a-site).
+
+### Overview
+
+1. [Listen to a job](#listen-to-a-job)
+1. [Cancel a job](#cancel-a-job)
+{: .api__toc}
+
+
 
 ### Listen to a job
 
-Events are streamed to the client in real time, with event data encoded as JSON. When the job completes or fails the server will close the connection.  The last event is available for 30 minutes, after which the job id expires.
+Events are streamed to the client in real time, with event data encoded as JSON. When the job completes or fails the server will close the connection.  The last event is available for 30 minutes, after which the Job ID expires.
+
+Current Job IDs can be retrieved from the [Site endpoint](https://learn.siteleaf.com/api/sites/#get-a-site).
+
+This endpoint uses [Server Sent Events](https://html.spec.whatwg.org/multipage/comms.html#server-sent-events) (SSE) to communicate with the client.
 
 #### Endpoint
 
@@ -40,3 +51,18 @@ data:{"status":"complete","message":"Done!","updated_at":"1452890745"}
 event:status
 data:{"status":"error","message":"Job not found"}
 ~~~
+
+
+### Cancel a job
+
+Active sync, preview, or publish jobs can be aborted using the following request.
+
+#### Endpoint
+
+~~~
+DELETE {{ site.data.api.url | append: 'jobs/:job_id' }}
+~~~
+
+#### Response
+
+{{ site.data.api.status_ok }}
