@@ -6,7 +6,7 @@
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<meta name="generator" content="Jekyll v4.2.2" />
+<meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Authentication" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Overview The Siteleaf API requires all requests to be authenticated via Basic Auth with an API Key and Secret. These can be found on your account page in the web app, or programmatically via the API as described below. Get an API Key and Secret The authentication endpoint requires Basic Auth with a users email and password, and is the only endpoint that accepts this method of authentication. It returns the unique Key and Secret that can be used to authenticate with the rest of the Siteleaf API. Endpoint POST https://api.siteleaf.com/v2/auth Example $ curl --user &quot;email:password&quot; \ --request POST https://api.siteleaf.com/v2/auth Response Status: 200 OK { &quot;api_key&quot;: &quot;pgYWJZyGvCY60Eys...&quot;, &quot;api_secret&quot;: &quot;m8IibnCkXISebc9b...&quot; } Using your API credentials Once you have your API Key and Secret, you can use these to authenticate on all other endpoints with Basic Auth. Use your API Key in place of username, and API Secret in place of password, combined with a single colon (:) as shown in the example below. Example $ curl --user &quot;api_key:api_secret&quot; \ --request GET https://api.siteleaf.com/v2/sites" />
@@ -284,7 +284,6 @@
     <script src="/assets/js/main.js"></script>
     <script type="text/javascript">
   var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {

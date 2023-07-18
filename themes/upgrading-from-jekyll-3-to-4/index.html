@@ -6,7 +6,7 @@
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<meta name="generator" content="Jekyll v4.2.2" />
+<meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Upgrading from Jekyll 3.x to 4.x" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Jekyll 4.x brings upon many improvements — most notably, faster build time. You can see a full list of changes here. While GitHub Pages is still pinned to Jekyll 3.8.x, it’s possible to start using Jekyll 4 today with a little help from Siteleaf. To work around the GitHub Pages dependency, this upgrade currently requires a paid plan. Updating your theme First of all, make sure to review Jekyll’s guide on Upgrading from 3.x to 4.x to see if you need to make any changes to your theme. If you are using post_url, you no longer need to prepend site.baseurl: - {{ site.baseurl }}/{% post_url 2018-03-20-hello-world.markdown %} + {% post_url 2018-03-20-hello-world.markdown %} Updating your Gemfile To start using Jekyll 4, you’ll need to update (or create) your Gemfile replacing references to github-pages like this: source &#39;https://rubygems.org&#39; gem &#39;github-pages&#39;, group: :jekyll_plugins With jekyll itself: source &#39;https://rubygems.org&#39; gem &#39;jekyll&#39;, &#39;~&gt;4&#39; If you are using any of the plugins that come included with github-pages (like the popular SEO or Sitemap plugin), you’ll need to reference those as well: source &#39;https://rubygems.org&#39; gem &#39;jekyll&#39;, &#39;~&gt;4&#39; group :jekyll_plugins do gem &#39;jekyll-redirect-from&#39; gem &#39;jekyll-sitemap&#39; gem &#39;jekyll-feed&#39; gem &#39;jekyll-paginate&#39; gem &#39;jekyll-seo-tag&#39; end Here’s a full list of plugins that GitHub Pages comes with: https://pages.github.com/versions After making these changes make sure to run the following commands to ensure your site is working as expected: $ bundle update $ bundle exec jekyll serve Updating your config Jekyll excludes Gemfile by default, so to ensure Siteleaf picks up these changes, we recommend updating your _config.yml to something like this: exclude: [&quot;Gemfile.lock&quot;, &quot;node_modules&quot;] You can exclude additional files as needed, just ensure Gemfile is not being excluded. Updating your Hosting settings If using GitHub Pages for hosting, you’ll also need to update your Siteleaf Hosting settings to use the Compiled by Siteleaf option. This option is available on all paid plans, and will ensure your site is built by Siteleaf instead of GitHub Pages. When compiling with Siteleaf on our Team and higher plans, you can also use custom plugins or gems not supported by GitHub Pages. No changes are required if using other hosting options like S3 or SFTP." />
@@ -315,7 +315,6 @@
     <script src="/assets/js/main.js"></script>
     <script type="text/javascript">
   var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {

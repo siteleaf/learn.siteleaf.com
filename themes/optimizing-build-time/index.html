@@ -6,7 +6,7 @@
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<meta name="generator" content="Jekyll v4.2.2" />
+<meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Optimizing build time" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="As the size and complexity of your site grows, sometimes the amount of time Jekyll needs to build your site grows with it. There are several strategies you can use to keep your build times down. Upgrade to Jekyll 4.x Jekyll 4.x renders websites much faster now thanks to super-powered caching and content transformations. See our guide Upgrading from Jekyll 3.x to 4.x if you haven’t already upgraded. Excluding unnecessary files and folders A lot of the time there will be files and folders in your site directory that aren’t necessary for building the site. For example, if you’re using Bower, the bower_components directory stores external packages that are not necessary for Jekyll to build the site. You can exclude files and folders from the Jekyll build by adding exclude list metadata to your site. It works the similarly to a .gitignore file. Limiting large and nested for loops for loops can make building your site very slow, especially if you have a lot of content. For example, if you have 1,000 posts, and on each post page you are showing a full archive of your posts, Jekyll will need to loop through your entire set of posts 1,000,000 times! Nesting multiple for loops inside each other can also significantly increase your site build times. Using incremental builds When you’re in development, you can have Jekyll only rebuild parts of the site that it needs to by using the --incremental flag: jekyll serve --incremental Further Reading 13 steps to a faster Jekyll website" />
@@ -277,7 +277,6 @@
     <script src="/assets/js/main.js"></script>
     <script type="text/javascript">
   var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {

@@ -6,7 +6,7 @@
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<meta name="generator" content="Jekyll v4.2.2" />
+<meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Default fields" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Instead of defining fields each time you create a page, post, or document, you can set defaults in your _config.yml theme file. In most cases, it’ll be handy to set at least the default layout. The defaults key in your _config.yml file is a list of different defaults. Each list item has two objects: scope and values. scope is how you choose which collection and files you’re defining defaults on. values is where you define your default fields as key/value pairs. Keys can be nested and their values are optional. For example: defaults: - scope: path: &quot;&quot; type: &quot;posts&quot; values: layout: &quot;default&quot; author: &quot;Ethan&quot; - scope: path: &quot;&quot; type: &quot;pages&quot; values: layout: &quot;page&quot; - scope: path: &quot;projects&quot; type: &quot;pages&quot; values: colors: [&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;] layout: &quot;project&quot; - scope: path: &quot;&quot; type: &quot;locations&quot; values: map: latitude: longitude: In this case, we’re: Setting the default layout and author for all posts. Setting the default layout for all pages. Overriding the previous default layout for all pages in the projects/ path, and setting a default colors List field with the values red, green, blue. Defining fields for map.latitude and map.longitude for all documents in the locations collection. Using blank values, these fields will show up to content editors but remain optional. Note that type can be posts, pages or any other collection name (e.g. people). Further Reading: Jekyll: Front Matter defaults" />
@@ -285,7 +285,6 @@
     <script src="/assets/js/main.js"></script>
     <script type="text/javascript">
   var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {

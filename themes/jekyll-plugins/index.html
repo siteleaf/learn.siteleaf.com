@@ -6,7 +6,7 @@
     <meta name="generator" content="Siteleaf, http://siteleaf.com">
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<meta name="generator" content="Jekyll v4.2.2" />
+<meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Jekyll Plugins" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Jekyll and Siteleaf support a variety of plugins to extend core functionality, from CoffeeScript conversion to embeddable GitHub Gists. Depending on your site’s plan, you can take advantage of GitHub Pages-approved plugins or third-party plugins. Third-party or custom plugins are supported for sites our new Team, Business, and Enterprise plans. For all other plans, including legacy or the free developer plan, your site can use whitelisted plugins. These whitelisted plugins are also supported by GitHub Pages, so your site will render as expected whether compiled by Siteleaf or GitHub. GitHub Pages-approved plugins Using the GitHub Pages gem You can install Jekyll and all whitelisted plugins by using the github-pages gem: source &#39;http://rubygems.org&#39; gem &#39;github-pages&#39;, group: :jekyll_plugins If you run into the following error, you will need to add a repository: username/repo-name key to your _config.yml file: Liquid Exception: No repo name found. Specify using PAGES_REPO_NWO environment variables, ‘repository’ in your configuration, or set up an ‘origin’ git remote pointing to your github.com repository. Third-party plugins Siteleaf will look for an optional Gemfile and install any custom plugins prior to building. If you’re writing your own plugins, you can also include custom Ruby code in the _plugins directory as outlined in the Jekyll docs. Installing plugins Installation may vary depending on the plugin, but typically involves two steps. 1) Add to or create a Gemfile for your site, and reference any plugins you wish to use within the :jekyll_plugins group. For example, we’ve added the plugin jekyll-feed here: source &#39;https://rubygems.org&#39; gem &#39;jekyll&#39; group :jekyll_plugins do gem &#39;jekyll-feed&#39; end 2) Next, enable your plugins within the gems array in your site’s _config.yml file:" />
@@ -331,7 +331,6 @@ $ bundle exec jekyll serve
     <script src="/assets/js/main.js"></script>
     <script type="text/javascript">
   var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
