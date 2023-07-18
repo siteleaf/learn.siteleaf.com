@@ -16,11 +16,9 @@ The Jobs endpoint can be used to monitor long running tasks, such as syncing, pr
 
 ### Listen to a job
 
-Events are streamed to the client in real time, with event data encoded as JSON. When the job completes or fails the server will close the connection.  The last event is available for 30 minutes, after which the Job ID expires.
+This endpoint uses [Server Sent Events](https://html.spec.whatwg.org/multipage/comms.html#server-sent-events) (SSE) to communicate with the client. Events are streamed in real time, with event data encoded as JSON. When the job completes or fails the server will close the connection.  The last event is available for 30 minutes, after which the Job ID expires.
 
 Current Job IDs can be retrieved from the [Site endpoint](https://learn.siteleaf.com/api/sites/#get-a-site).
-
-This endpoint uses [Server Sent Events](https://html.spec.whatwg.org/multipage/comms.html#server-sent-events) (SSE) to communicate with the client.
 
 #### Endpoint
 
