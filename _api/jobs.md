@@ -53,7 +53,7 @@ data:{"status":"error","message":"Job not found"}
 
 ### Cancel a job
 
-Active sync, preview, or publish jobs can be aborted using the following request.
+Active jobs can be aborted using the following request.
 
 #### Endpoint
 
