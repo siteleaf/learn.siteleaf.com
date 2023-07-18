@@ -8,8 +8,6 @@ position: 11
 
 The Jobs endpoint can be used to monitor long running tasks, such as syncing, previewing, or [publishing a site](/api/sites#publish-a-site).
 
-### Overview
-
 1. [Listen to a job](#listen-to-a-job)
 1. [Cancel a job](#cancel-a-job)
 {: .api__toc}
