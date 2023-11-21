@@ -41,7 +41,7 @@ POST {{ site.data.api.url | append: 'sites/:site_id/roles' }}
 | Name | Type | Desc |
 |------|------|------|
 | `user_id` | `String` | User ID |
-| `body` | `String` | Can be one of `admin`, `publisher` or `writer` |
+| `kind` | `String` | Can be one of `admin`, `publisher` or `writer` |
 
 #### Example
 
@@ -91,7 +91,7 @@ PUT {{ site.data.api.url | append: 'roles/:role_id' }}
 
 | Name | Type | Desc |
 |------|------|------|
-| `body` | `String` | Can be one of `admin`, `publisher` or `writer` |
+| `kind` | `String` | Can be one of `admin`, `publisher` or `writer` |
 
 #### Example
 
