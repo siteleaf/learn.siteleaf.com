@@ -1,6 +1,6 @@
 ---
 title: Users
-date: 2016-01-14 15:50:46.559000000 -05:00
+date: 2016-01-14 15:50:00 -05:00
 position: 12
 example_response: |-
   {
@@ -10,14 +10,15 @@ example_response: |-
     "lastname": "Smith",
     "fullname": "Jill Smith",
     "created_at": "2013-06-03 04:42:35 +0000",
-    "updated_at": "2015-08-30 20:31:31 +0000"
+    "updated_at": "2015-08-30 20:31:31 +0000",
+    "role": "admin"
   }
 ---
 
 ### Overview
 
 1. [List users](#list-users)
-1. [Get the currently authenticated user](#current-user)
+1. [Get currently authenticated user](#current-user)
 {: .api__toc}
 
 
