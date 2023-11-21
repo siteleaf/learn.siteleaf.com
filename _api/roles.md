@@ -28,7 +28,7 @@ example_response: |-
 
 
 
-### Create a role
+### Create a role {#create-role}
 
 #### Endpoint
 
@@ -46,21 +46,21 @@ POST {{ site.data.api.url | append: 'sites/:site_id/roles' }}
 #### Example
 
 ~~~ json
-{{ role.example_input }}
+{{ page.example_input }}
 ~~~
 
 #### Response
 
 {{ site.data.api.status_created }}
 ~~~ json
-{{  role.example_response }}
+{{  page.example_response }}
 ~~~
 
 
 
 
 
-### Get a role
+### Get a role {#get-role}
 
 #### Endpoint
 
@@ -72,14 +72,14 @@ GET {{ site.data.api.url | append: 'roles/:role_id' }}
 
 {{ site.data.api.status_ok }}
 ~~~ json
-{{  role.example_response }}
+{{  page.example_response }}
 ~~~
 
 
 
 
 
-### Update a role
+### Update a role {#update-role}
 
 #### Endpoint
 
@@ -96,20 +96,20 @@ PUT {{ site.data.api.url | append: 'roles/:role_id' }}
 #### Example
 
 ~~~ json
-{{ role.example_input }}
+{{ page.example_input }}
 ~~~
 
 #### Response
 
 {{ site.data.api.status_ok }}
 ~~~ json
-{{  role.example_response }}
+{{  page.example_response }}
 ~~~
 
 
 
 
-### Delete a role
+### Delete a role {#delete-role}
 
 #### Endpoint
 
